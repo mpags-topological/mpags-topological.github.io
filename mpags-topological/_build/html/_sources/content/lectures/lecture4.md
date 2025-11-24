@@ -4,8 +4,8 @@ In this lecture, we turn our attention from topological insulators to topologica
 
 ## The Kitaev Chain
 
-There are many models named after Kitaev (and even a few that are referred to the Kitaev chain), but here we refer to the model of a one-dimensional $p$-wave spinless superconductor. The Hamiltonian is 
+There are many models named after Kitaev (and even others that are referred to the Kitaev chain), but here we refer to the model of a one-dimensional $p$-wave spinless superconductor. The Hamiltonian is 
 
 $$
-H = 
+H = -t\sum_{j=1}^{N-1}\left(c_{j+1}^\dagger c_j + c_j^\dagger c_{j+1}\right)
 $$

@@ -38,3 +38,9 @@ $$
 INSERT AN INTERACTIVE PLOT HERE?
 
 <iframe src="../../_static/plots/ssh_dispersion.html" width="100%" height="800" style="border:none;"></iframe>
+
+## The Haldane Model
+
+## Exercises
+
+Maybe something to do with Haldane model - calculate the Chern number?
