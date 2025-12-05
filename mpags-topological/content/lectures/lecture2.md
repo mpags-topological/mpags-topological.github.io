@@ -5,7 +5,8 @@
 
 The SSH model is a simple model that demonstrates topological properties. In this model we have unit cells consisting of two different sublattices, $A$ and $B$. The intracell and intercell hopping strengths are given by $t_1$ and $t_2$ respectively.
 
-<img src="../../_static/figs/SSH.svg" width="100%" height="200"></img>
+<img src="../../_static/figs/SSH_Model.svg" width="100%" height="200"></img>
+
 
 The Hamiltonian is given by 
 
@@ -71,9 +72,13 @@ Performing this integral gives $\nu=1$ for $|t_1|<|t_2|$ and $\nu = 0$ otherwise
 
 ### Edge States
 
-Let's start by considering the case of 
+Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look at $t_1=1, t_2=0$. In this case, it is easy to see that all sites are "paired up"
 
-NEED TO INSERT FIGURES
+INSERT FIGURE
+
+Therefore there are no edge states in this regime, which is consistent 
+
+
 
 ## The Haldane Model
 
