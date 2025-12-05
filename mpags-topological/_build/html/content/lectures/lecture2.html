@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -346,9 +346,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ssh-model">2.1. The SSH Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ssh-model">2.1. The SSH Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edge-states">2.1.1. Edge States</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-haldane-model">2.2. The Haldane Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.3. Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -365,6 +367,7 @@ document.write(`
 <section id="the-ssh-model">
 <h2><span class="section-number">2.1. </span>The SSH Model<a class="headerlink" href="#the-ssh-model" title="Link to this heading">#</a></h2>
 <p>The SSH model is a simple model that demonstrates topological properties. In this model we have unit cells consisting of two different sublattices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The intracell and intercell hopping strengths are given by <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> respectively.</p>
+<p><img src="../../_static/figs/SSH.svg" width="100%" height="200"></img></p>
 <p>The Hamiltonian is given by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -380,24 +383,48 @@ a_n = \sum_k {\rm e}^{ikn}a_k,
 \[
 H = t_1\sum_k (b_k^\dagger a_k+a_k^\dagger b_k) +t_2 \sum_k\left({\rm e}^{-ik}a_k^\dagger b_k+{\rm e}^{ik}b_k^\dagger a_k\right)
 \]</div>
-<p>We can write this in the form <span class="math notranslate nohighlight">\(H = \sum_k \Psi_k^\dagger H_k \Psi_k\)</span> with <span class="math notranslate nohighlight">\(\Psi_k = \left(a_k, b_k \right)^{\rm T}\)</span> and
-$<span class="math notranslate nohighlight">\(
+<p>We can write this in the form <span class="math notranslate nohighlight">\(H = \sum_k \Psi_k^\dagger H_k \Psi_k\)</span> with <span class="math notranslate nohighlight">\(\Psi_k = \left(a_k, b_k \right)^{\rm T}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 H_k = \left(\begin{matrix}0 &amp;t_1+t_2{\rm e}^{-ik} \\t_1+t_2{\rm e}^{ik} &amp;0 \end{matrix}\right)
-\)</span>$</p>
+\end{split}\]</div>
 <p>We can then obtain the energy spectrum by solving the eigenvalue equation <span class="math notranslate nohighlight">\(H_k \Psi_k = E_k \Psi_k\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 E_k^2 = (t_1+t_2{\rm e}^{-ik})(t_1+t_2{\rm e}^{ik}) \implies E_k = \pm\sqrt{t_1^2+t_2^2+2t_1t_2\cos k}
 \]</div>
-<p>INSERT AN INTERACTIVE PLOT HERE?</p>
 <iframe src="../../_static/plots/ssh_dispersion.html" width="100%" height="800" style="border:none;"></iframe>
+<p>From the expression for the energy, as well as the plot we make a couple of remarks. First if <span class="math notranslate nohighlight">\(|t_1| \neq |t_2|\)</span>, then the spectrum is gapped (no modes that cross zero energy) for all <span class="math notranslate nohighlight">\(k\)</span>. The system in this phase is an insulator. However when <span class="math notranslate nohighlight">\(|t_1| = |t_2|\)</span>, it can be possible to close the gap, such that the system becomes a conductor. The gap closes at</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+k=0 \hspace{4pt}\mathrm{for } \hspace{4pt} t_1=-t_2\\ k=\pi  \hspace{4pt}\mathrm{for} \hspace{4pt} t_1=t_2
+\end{split}\]</div>
+<p>It is precisely at these points that a topological phase transition can occur. We now need to identify when we are in the topological phase and try to understand its properties. Let’s begin by calculating the topological invariant. To do this we write <span class="math notranslate nohighlight">\(H_k\)</span> in the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H_k = \left(\begin{matrix}0 &amp;t_1+t_2\cos k-it_2\sin k \\t_1+t_2cosk +it_2 \sin k &amp;0 \end{matrix}\right) = d_0(k) \sigma_0 + {\bm d}(k)\cdot {\bm \sigma}
+\end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+d_0 = d_z=0,\\
+d_x = t_1 + t_2 \cos k, \hspace{5pt} d_y = t_2 \sin k
+\end{split}\]</div>
+<p>In the above the notation <span class="math notranslate nohighlight">\(\sigma_0\)</span> is the identity and <span class="math notranslate nohighlight">\({\bm \sigma}\)</span> is a three-dimensional vector of Pauli matrices. Using these definitions, the invariants is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\nu = \frac{1}{2\pi}\int {\rm d}k \left(\frac{{\bm d}}{|{\bm d}|}\times \frac{\partial}{\partial k} \frac{{\bm d}}{|{\bm d}|}\right)_z
+\]</div>
+<p>Notice the subscript <span class="math notranslate nohighlight">\(z\)</span>, so when we expand out the cross-product, it doesn’t look too dissimilar from the Chern number. However, it is different and in this case is known as the Winding number. The reason for this name is that as <span class="math notranslate nohighlight">\(k\)</span> goes from <span class="math notranslate nohighlight">\(0\rightarrow 2\pi\)</span>, the vector <span class="math notranslate nohighlight">\({\bm d}\)</span> traces a circle and this invariant simply counts how many time the vector winds around the origin.</p>
+<p>Performing this integral gives <span class="math notranslate nohighlight">\(\nu=1\)</span> for <span class="math notranslate nohighlight">\(|t_1|&lt;|t_2|\)</span> and <span class="math notranslate nohighlight">\(\nu = 0\)</span> otherwise. The non-zero winding signifies a non-trivial topological phase which we will now demonstrate by considering the edge states.</p>
+<section id="edge-states">
+<h3><span class="section-number">2.1.1. </span>Edge States<a class="headerlink" href="#edge-states" title="Link to this heading">#</a></h3>
+<p>Let’s start by considering the case of</p>
+<p>NEED TO INSERT FIGURES</p>
+</section>
 </section>
 <section id="the-haldane-model">
 <h2><span class="section-number">2.2. </span>The Haldane Model<a class="headerlink" href="#the-haldane-model" title="Link to this heading">#</a></h2>
-</section>
-<section id="exercises">
-<h2><span class="section-number">2.3. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
-<p>Maybe something to do with Haldane model - calculate the Chern number?</p>
 </section>
 </section>
 
@@ -465,9 +492,11 @@ E_k^2 = (t_1+t_2{\rm e}^{-ik})(t_1+t_2{\rm e}^{ik}) \implies E_k = \pm\sqrt{t_1^
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ssh-model">2.1. The SSH Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ssh-model">2.1. The SSH Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edge-states">2.1.1. Edge States</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-haldane-model">2.2. The Haldane Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.3. Exercises</a></li>
 </ul>
   </nav></div>
 
