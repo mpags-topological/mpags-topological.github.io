@@ -1,5 +1,7 @@
 # Lecture 2 - Topological Insulators I
 
+In this lecture we will begin to introduce some key topological models - namely the SSH model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties.
+
 
 ## The SSH Model
 
@@ -11,8 +13,10 @@ The SSH model is a simple model that demonstrates topological properties. In thi
 The Hamiltonian is given by 
 
 $$
-H = t_1\sum_n \left(b_n^\dagger a_n+a_n^\dagger b_n\right)+t_2\sum_n \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right).
+H = t_1\sum_{n=1}^N \left(b_n^\dagger a_n+a_n^\dagger b_n\right)+t_2\sum_{n=1}^{N-1} \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right).
 $$
+
+where the sum is over the unit cells, of which there are $N$ in total.
 
 Initially, let's explore the bulk properties of the system. In order to do this we assume periodic boundary conditions, meaning that every unit cell is effectivley in the middle of an infinite system. Assuming these boundary conditions allows us to take the Fourier transform
 
@@ -76,9 +80,44 @@ Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look
 
 INSERT FIGURE
 
-Therefore there are no edge states in this regime, which is consistent 
+Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.
 
+Now if we consider the opposite limit of $t_1=0, t_2=1$, we can see that the pairing now misses out the two edge modes.
+
+INSERT FIGURE
+
+If we look at the Hamiltonian in this limit,
+
+$$
+H = \sum_{n=1}^{N-1} \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right)
+$$
+
+we see that $a_1$ and $b_N$ (the edges of the system) are no longer involved in the Hamiltonian. This means that we can add a mode to these sites at no energy cost - we have zero-energy (gapless) edge modes. This is consistent with $\nu \neq 0$ found earlier.
+
+Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below. This is the topological protection we expect for these modes.
 
 
 ## The Haldane Model
+
+We now turn to the Haldane Model, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.
+
+The Haldane model is defined on the honeycomb lattice (INSERT FIG) and consists on three terms.
+
+
+First, we have the onsite terms where the different sublattices have an energy difference of $2M$
+$$
+H_{\rm site}=M\sum_{i\in A}a^\dagger_ia_i - M\sum_{i \in B} b_i^\dagger b_i
+$$
+
+NEED TO DEFINE WHAT I MEAN BY THE SUBSCRIPTS. USE THE VECTORS DEFINED IN THE FIGURE
+
+There are also nearest neighbout hopping terms
+$$
+H_{\rm n.n.} = t_1\sum_{\langle i, j \rangle} \left( b_{i+j}^\dagger a_i + a_i^\dagger b_{i+j}\right)
+$$
+and next nearest neighbour hopping terms
+$$
+H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\phi}a_{i+j'}^\dagger a_i + {\rm e}^{i\phi}a_i^\dagger a_{i+j'}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\phi}b_{i+\tilde{j}}^\dagger b_i + {\rm e}^{-i\phi}b_i^\dagger a_{i+\tilde{j}}\right)
+$$
+We emphasise that the next nearest neighbour hopping terms have an additional phase associated with them. This phase is precisely what allows for the quantum Hall physics without the magnetic field.
 
