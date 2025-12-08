@@ -346,7 +346,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">4.1. The Kitaev Chain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">4.1. The Kitaev Chain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -380,6 +383,15 @@ H = \frac{1}{2}\sum_k \Psi_k^\dagger H_k \Psi_k, \hspace{20pt} H_k= \left(\begin
 \end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Psi_k = (c_k \hspace{5pt} c_{-k}^\dagger)^{\rm T}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_k = -2t\cos k - \mu\)</span>, and <span class="math notranslate nohighlight">\(\tilde{\Delta}_k=2i\Delta\sin k\)</span>.</p>
 <p>It is then straightforward to obtain the energy spectrum</p>
+<div class="math notranslate nohighlight">
+\[
+E(k) = \pm \sqrt{\varepsilon_k^2 - |\tilde{\Delta}_k|^2}=\pm \sqrt{(2t \cos k +\mu)^2 + 4|\Delta|^2\sin^2 k}
+\]</div>
+<p>For <span class="math notranslate nohighlight">\(\Delta\neq0\)</span>, the gap closes at two points; <span class="math notranslate nohighlight">\((1): 2t=-\mu\)</span> (at <span class="math notranslate nohighlight">\(k=0\)</span>), and <span class="math notranslate nohighlight">\((2):2t=\mu\)</span> (at <span class="math notranslate nohighlight">\(k=\pi\)</span>).</p>
+<p>Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.</p>
+<section id="majorana-modes">
+<h3><span class="section-number">4.1.1. </span>Majorana Modes<a class="headerlink" href="#majorana-modes" title="Link to this heading">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -447,7 +459,10 @@ H = \frac{1}{2}\sum_k \Psi_k^\dagger H_k \Psi_k, \hspace{20pt} H_k= \left(\begin
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">4.1. The Kitaev Chain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">4.1. The Kitaev Chain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -25,3 +25,13 @@ $$
 where $\Psi_k = (c_k \hspace{5pt} c_{-k}^\dagger)^{\rm T}$, $\varepsilon_k = -2t\cos k - \mu$, and $\tilde{\Delta}_k=2i\Delta\sin k$.
 
 It is then straightforward to obtain the energy spectrum
+
+$$
+E(k) = \pm \sqrt{\varepsilon_k^2 - |\tilde{\Delta}_k|^2}=\pm \sqrt{(2t \cos k +\mu)^2 + 4|\Delta|^2\sin^2 k}
+$$
+
+For $\Delta\neq0$, the gap closes at two points; $(1): 2t=-\mu$ (at $k=0$), and $(2):2t=\mu$ (at $k=\pi$).  
+
+Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a $\Z_2$ invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.
+
+### Majorana Modes
