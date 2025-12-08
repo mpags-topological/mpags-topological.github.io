@@ -59,3 +59,46 @@ $$
 $$
 
 We have a four-fold degenerate ground state! 
+
+This ground state degeneracy is directly related to the boundary conditions and is a hallmark of topological order. The order of the degeneracy depends on the topology of the underlying manifold. For a torus, we have found a four-fold degeneracy. If we were to put the system on a surface of genus $g$ (i.e., with $g$ "holes"), the ground state degeneracy would be $4^g$. This dependence on topology is a key feature of topologically ordered systems.
+
+## Explicit form of the Ground States
+
+Since we can solve the toric code exactly, we can write down explicit forms for the ground states. To do so, let us work in a particular basis. We choose the $\sigma^z$ basis, where each spin is either up ($\sigma^z\ket{\uparrow} = \ket{\uparrow}$) or down ($\sigma^z\ket{\downarrow} = -\ket{\downarrow}$) along the $z$-axis. We denote this graphically by using thin black lines for spins in the $\ket{\uparrow}$ state and thick black lines for spins in the $\ket{\downarrow}$ state, that is
+
+```{figure} ../images/GSBasis.pdf
+---
+name: fig:toric_code
+width: 85%
+align: center
+---
+```
+
+### Star operators
+
+Let us first consider the action of the star operators $A_s$. Recall that $A_s$ is the product of $\sigma^z$ operators on the four spins adjacent to the star $s$. Therefore, $A_s$ measures the parity of the number of down spins around the star. If there is an even number of down spins, $A_s$ has eigenvalue +1; if there is an odd number, it has eigenvalue -1. Thus, the ground state condition $A_s \ket{\psi_0} = \ket{\psi_0}$ requires that there be an even number of down spins around each star. That is, in the ground state, we can only have 
+```{figure} ../images/StarAllowed.pdf
+---
+name: fig:StarAllowed
+width: 60%
+align: center
+---
+```
+and not
+```{figure} ../images/StarNotAllowed.pdf
+---
+name: fig:StarNotAllowed
+width: 60%
+align: center
+---
+```
+Therefore, any configuration in the ground state must consist of closed loops of down spins on the lattice. For example, the following configuration is allowed in the ground state:
+```{figure} ../images/StarGSExample.pdf
+---
+name: fig:StarGSExample
+width: 60%
+align: center
+---
+```
+
+### Plaquette operators
