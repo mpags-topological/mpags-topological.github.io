@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -69,7 +66,6 @@
     <link rel="prev" title="5. Lecture 5" href="lecture5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,17 +156,21 @@
     
     
     <img src="../../_static/logo.png" class="logo__image only-light" alt="Introduction to Topological Phases of Matter - Home"/>
-    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Introduction to Topological Phases of Matter - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Introduction to Topological Phases of Matter - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -294,16 +305,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -329,6 +348,13 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-model">6.1. The Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-state-degeneracy">6.2. Ground State Degeneracy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-form-of-the-ground-states">6.3. Explicit form of the Ground States</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-operators">6.3.1. Star operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plaquette-operators">6.3.2. Plaquette operators</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wilson-loop-operators">6.4. Wilson Loop Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">6.5. Anyons</a></li>
 </ul>
             </nav>
         </div>
@@ -350,14 +376,15 @@
 \[
 H = -J_e \sum_s A_s - J_m \sum_p B_p,
 \]</div>
-<p>where the sums are over the stars <span class="math notranslate nohighlight">\(s\)</span> (vertices) and plaquettes <span class="math notranslate nohighlight">\(p\)</span> (faces) of the lattice, as shown in <a class="reference internal" href="#fig-toric-code"><span class="std std-numref">Fig. 6.1</span></a>. The operators <span class="math notranslate nohighlight">\(A_s\)</span> and <span class="math notranslate nohighlight">\(B_p\)</span> are defined as</p>
+<p>where the sums are over the stars <span class="math notranslate nohighlight">\(s\)</span> (vertices) and plaquettes <span class="math notranslate nohighlight">\(p\)</span> (faces) of the lattice, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:toric_code</span></code>. The operators <span class="math notranslate nohighlight">\(A_s\)</span> and <span class="math notranslate nohighlight">\(B_p\)</span> are defined as</p>
 <div class="math notranslate nohighlight">
 \[
 A_s = \prod_{i \in s} \sigma_i^z, \quad B_p = \prod_{i \in p} \sigma_i^x,
 \]</div>
 <p>with the products running over the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span> or around the plaquette <span class="math notranslate nohighlight">\(p\)</span>. Here, <span class="math notranslate nohighlight">\(\sigma_i^x\)</span> and <span class="math notranslate nohighlight">\(\sigma_i^z\)</span> are the Pauli matrices acting on the spin at bond <span class="math notranslate nohighlight">\(i\)</span>. We define the model with periodic boundary conditions, i.e., we put it on a torus (hence the name). The parameters <span class="math notranslate nohighlight">\(J_e\)</span> and <span class="math notranslate nohighlight">\(J_m\)</span> are positive coupling constants. The subscripts <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> stand for “electric” and “magnetic”, corresponding to the types of excitations in the model (which we will revisit later), and the naming comes from the context of lattice gauge theory.</p>
 <figure class="align-center" id="fig-toric-code">
-<a class="reference internal image-reference" href="content/images/ToricCode.pdf"><img alt="content/images/ToricCode.pdf" src="content/images/ToricCode.pdf" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="content/images/ToricCode.pdf"><img alt="content/images/ToricCode.pdf" src="content/images/ToricCode.pdf" style="width: 85%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Caption for toric code…</span><a class="headerlink" href="#fig-toric-code" title="Link to this image">#</a></p>
 </figcaption>
@@ -377,7 +404,116 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 </section>
 <section id="ground-state-degeneracy">
 <h2><span class="section-number">6.2. </span>Ground State Degeneracy<a class="headerlink" href="#ground-state-degeneracy" title="Link to this heading">#</a></h2>
-<p>So far so good, but where does topology come in? Let us consider the Hamiltonian a bit more carefully and count the number of independent constraints imposed by the ground state conditions in Eq.<a class="reference internal" href="#equation-eq-tc-gs-conditions">(6.1)</a>.</p>
+<p>So far so good, but where does topology come in? Let us consider the Hamiltonian a bit more carefully and count the number of independent constraints imposed by the ground state conditions in Eq.<a class="reference internal" href="#equation-eq-tc-gs-conditions">(6.1)</a>. Say our system consists of <span class="math notranslate nohighlight">\(N_x \times N_y\)</span> vertices (stars). Since the spins live on the bonds, there are <span class="math notranslate nohighlight">\(2N_x N_y\)</span> spins in total. This means our Hilbert space has dimension <span class="math notranslate nohighlight">\(2^{2N_x N_y}\)</span>. We also have <span class="math notranslate nohighlight">\(N_x N_y\)</span> star operators and <span class="math notranslate nohighlight">\(N_x N_y\)</span> plaquette operators, giving a total of <span class="math notranslate nohighlight">\(2N_x N_y\)</span> constraints. However, due to the periodic boundary conditions, not all of these contraints are independent. Specifically, we have the relations</p>
+<div class="math notranslate nohighlight">
+\[
+\prod_{\text{all } s} A_s = \mathbb{I}, \quad \prod_{\text{all } p} B_p = \mathbb{I},
+\]</div>
+<p>We therefore only have <span class="math notranslate nohighlight">\(2N_x N_y - 2\)</span> independent constraints. Each independent constraint halves the dimension of the ground state subspace, so the ground state degeneracy is</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Degeneracy} = 2^{2N_x N_y - (2N_x N_y - 2)} = 4.
+\]</div>
+<p>We have a four-fold degenerate ground state!</p>
+<p>This ground state degeneracy is directly related to the boundary conditions and is a hallmark of topological order. The order of the degeneracy depends on the topology of the underlying manifold. For a torus, we have found a four-fold degeneracy. If we were to put the system on a surface of genus <span class="math notranslate nohighlight">\(g\)</span> (i.e., with <span class="math notranslate nohighlight">\(g\)</span> “holes”), the ground state degeneracy would be <span class="math notranslate nohighlight">\(4^g\)</span>. This dependence on topology is a key feature of topologically ordered systems.</p>
+</section>
+<section id="explicit-form-of-the-ground-states">
+<h2><span class="section-number">6.3. </span>Explicit form of the Ground States<a class="headerlink" href="#explicit-form-of-the-ground-states" title="Link to this heading">#</a></h2>
+<p>Since we can solve the toric code exactly, we can write down explicit forms for the ground states. To do so, let us work in a particular basis. We choose the <span class="math notranslate nohighlight">\(\sigma^z\)</span> basis, where each spin is either up (<span class="math notranslate nohighlight">\(\sigma^z\ket{\uparrow} = \ket{\uparrow}\)</span>) or down (<span class="math notranslate nohighlight">\(\sigma^z\ket{\downarrow} = -\ket{\downarrow}\)</span>) along the <span class="math notranslate nohighlight">\(z\)</span>-axis. We denote this graphically by using thin black lines for spins in the <span class="math notranslate nohighlight">\(\ket{\uparrow}\)</span> state and thick black lines for spins in the <span class="math notranslate nohighlight">\(\ket{\downarrow}\)</span> state, that is</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="content/images/GSBasis.pdf"><img alt="content/images/GSBasis.pdf" src="content/images/GSBasis.pdf" style="width: 85%;" />
+</a>
+</figure>
+<section id="star-operators">
+<h3><span class="section-number">6.3.1. </span>Star operators<a class="headerlink" href="#star-operators" title="Link to this heading">#</a></h3>
+<p>Let us first consider the action of the star operators <span class="math notranslate nohighlight">\(A_s\)</span>. Recall that <span class="math notranslate nohighlight">\(A_s\)</span> is the product of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators on the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span>. Therefore, <span class="math notranslate nohighlight">\(A_s\)</span> measures the parity of the number of down spins around the star. If there is an even number of down spins, <span class="math notranslate nohighlight">\(A_s\)</span> has eigenvalue +1; if there is an odd number, it has eigenvalue -1. Thus, the ground state condition <span class="math notranslate nohighlight">\(A_s \ket{\psi_0} = \ket{\psi_0}\)</span> requires that there be an even number of down spins around each star. That is, in the ground state, we can only have</p>
+<figure class="align-center" id="fig-starallowed">
+<a class="reference internal image-reference" href="content/images/StarAllowed.pdf"><img alt="content/images/StarAllowed.pdf" src="content/images/StarAllowed.pdf" style="width: 60%;" />
+</a>
+</figure>
+<p>and not</p>
+<figure class="align-center" id="fig-starnotallowed">
+<a class="reference internal image-reference" href="content/images/StarNotAllowed.pdf"><img alt="content/images/StarNotAllowed.pdf" src="content/images/StarNotAllowed.pdf" style="width: 60%;" />
+</a>
+</figure>
+<p>Therefore, any configuration in the ground state must consist of closed loops of down spins on the lattice. For example, the following configuration is allowed in the ground state:</p>
+<figure class="align-center" id="fig-stargsexample">
+<a class="reference internal image-reference" href="content/images/StarGSExample.pdf"><img alt="content/images/StarGSExample.pdf" src="content/images/StarGSExample.pdf" style="width: 60%;" />
+</a>
+</figure>
+</section>
+<section id="plaquette-operators">
+<h3><span class="section-number">6.3.2. </span>Plaquette operators<a class="headerlink" href="#plaquette-operators" title="Link to this heading">#</a></h3>
+<p>In the Z-basis, the plaquette operators flip all spins aroudn the plaquette, e.g.,</p>
+<figure class="align-center" id="fig-plaquette-example">
+<a class="reference internal image-reference" href="content/images/PlaquetteExample.pdf"><img alt="content/images/PlaquetteExample.pdf" src="content/images/PlaquetteExample.pdf" style="width: 60%;" />
+</a>
+</figure>
+<p>To have <span class="math notranslate nohighlight">\(B_p|\psi_0\rangle = |\psi_0\rangle\)</span>, this means if a particular configuation appears in <span class="math notranslate nohighlight">\(|\psi_0\rangle\)</span>, then the configuration with a plaquette flipped is also in <span class="math notranslate nohighlight">\(|\psi_0\rangle\)</span> with the same amplitude. Therefore, the ground state is an equal superposition of all closed loop configurations that can be reached from one another by flipping plaquettes. E.g.,</p>
+<figure class="align-center" id="fig-plaquettegsexample">
+<a class="reference internal image-reference" href="content/images/PlaquetteGSExample.pdf"><img alt="content/images/PlaquetteGSExample.pdf" src="content/images/PlaquetteGSExample.pdf" style="width: 60%;" />
+</a>
+</figure>
+<p>It looks like we’ve found the ground state, but what about the four-fold degeneracy? To understand this consider the following four spin configurations, labelled <span class="math notranslate nohighlight">\(|\Phi_i\rangle\)</span>, <span class="math notranslate nohighlight">\(i = 0, 1, 2, 3\)</span>:</p>
+<figure class="align-center" id="fig-gsdegeneracy">
+<a class="reference internal image-reference" href="content/images/GSReferenceConfigs.pdf"><img alt="content/images/GSReferenceConfigs.pdf" src="content/images/GSReferenceConfigs.pdf" style="width: 80%;" />
+</a>
+</figure>
+<p>It is not possible to go from one of these configurations to another by flipping plaquettes. Therefore, the ground state must be a superposition of all closed loop configurations that can be reached from each of these four “reference” configurations by flipping plaquettes. These states are characterised by even or odd winding around the two directions of the torus. The four ground states <span class="math notranslate nohighlight">\(|\psi_i\rangle\)</span>, with <span class="math notranslate nohighlight">\(i=0,1,2,3\)</span>, can therefore be written as</p>
+<div class="math notranslate nohighlight">
+\[
+|\psi_i\rangle = \prod_p \frac{1 + B_p}{\sqrt{2}} |\Phi_i\rangle, \quad i = 0, 1, 2, 3.
+\]</div>
+</section>
+</section>
+<section id="wilson-loop-operators">
+<h2><span class="section-number">6.4. </span>Wilson Loop Operators<a class="headerlink" href="#wilson-loop-operators" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="fig-wilson-strings">
+<a class="reference internal image-reference" href="content/images/WilsonStrings.pdf"><img alt="content/images/WilsonStrings.pdf" src="content/images/WilsonStrings.pdf" style="width: 85%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-wilson-strings" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Given that we have a four-fold degenerate ground state, it is natural to ask how we can distinguish between these states. One way to do this is to introduce Wilson loop operators, which are non-local operators that measure the winding of spins around the torus. Let us introduce the operators</p>
+<div class="math notranslate nohighlight">
+\[
+W^v_z = \prod_{i \in \gamma_v} \sigma_i^z, \quad W^h_z = \prod_{i \in \gamma_h} \sigma_i^z,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\gamma_v\)</span> and <span class="math notranslate nohighlight">\(\gamma_h\)</span> are any non-contractible paths on the <em>dual lattice</em> that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.<a class="reference internal" href="#fig-wilson-strings"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators commute with the star and plaquette operators, and therefore with the Hamiltonian. They also commute with each other. Their eigenvalues <span class="math notranslate nohighlight">\(\pm 1\)</span> completely resolve the four-fold degeneracy of the ground state. Specifically, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+W^v_z |\psi_0\rangle &amp;= |\psi_0\rangle, &amp; W^h_z |\psi_0\rangle &amp;= |\psi_0\rangle, \\
+W^v_z |\psi_1\rangle &amp;= |\psi_1\rangle, &amp; W^h_z |\psi_1\rangle &amp;= -|\psi_1\rangle, \\
+W^v_z |\psi_2\rangle &amp;= -|\psi_2\rangle, &amp; W^h_z |\psi_2\rangle &amp;= |\psi_2\rangle, \\
+W^v_z |\psi_3\rangle &amp;= -|\psi_3\rangle, &amp;\quad W^h_z |\psi_3\rangle &amp;= -|\psi_3\rangle.
+\end{aligned}
+\end{split}\]</div>
+<p>The plus and minus signs correspond to the even and odd winding of the reference configurations <span class="math notranslate nohighlight">\(|\Phi_i\rangle\)</span> around the torus, perpendicular to the direction of the Wilson loop operator.</p>
+<p>We could have equally chosen two other Wilson loop operators defined in terms of <span class="math notranslate nohighlight">\(\sigma^x\)</span> operators:</p>
+<div class="math notranslate nohighlight">
+\[
+W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_v\)</span> and <span class="math notranslate nohighlight">\(C_h\)</span> are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.<a class="reference internal" href="#fig-wilson-strings"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of <span class="math notranslate nohighlight">\(\{W^v_z, W^h_z, W^v_x, W^h_x\}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are no <em>local</em> operators that can distinguish between the four ground states. We need <em>non-local</em> operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.</p>
+</div>
+</section>
+<section id="anyons">
+<h2><span class="section-number">6.5. </span>Anyons<a class="headerlink" href="#anyons" title="Link to this heading">#</a></h2>
+<p>Let us now turn to the excitations of the toric code. Here we will encounter one of the most remarkable aspects of topologically ordered systems: anyons. In the remaining lectures, we will develop a more formal theory of anyons.</p>
+<p>Let us apply a <span class="math notranslate nohighlight">\(\sigma^z\)</span> operator to a single spin in the ground state. This has the effect of flipping the eigenvalue of the two adjacent plaquette operators from +1 to -1. These plaquettes with <span class="math notranslate nohighlight">\(B_p = -1\)</span> correspond to local excitations, each costing energy <span class="math notranslate nohighlight">\(2J_m\)</span>. We call these excitations “magnetic” excitations by convention, and denote them by <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<figure class="align-center" id="fig-anyons-creation">
+<a class="reference internal image-reference" href="content/images/AnyonCreation.pdf"><img alt="content/images/AnyonCreation.pdf" src="content/images/AnyonCreation.pdf" style="width: 85%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-anyons-creation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can then move these excitations around by applying further <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators to adjacent spins. If the operators acts on a spin adjacent to one of the excitations, it will move the excitation to the other plaquette adjacent to that spin without costing any additional energy. By applying a string of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators along a path on the lattice, we can create a pair of <span class="math notranslate nohighlight">\(m\)</span> excitations at the endpoints of the path and move them around. See Fig.<a class="reference internal" href="#fig-anyons-creation"><span class="std std-numref">Fig. 6.3</span></a> for an illustration.</p>
 </section>
 </section>
 
@@ -436,8 +572,7 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -448,6 +583,13 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-model">6.1. The Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-state-degeneracy">6.2. Ground State Degeneracy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-form-of-the-ground-states">6.3. Explicit form of the Ground States</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-operators">6.3.1. Star operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plaquette-operators">6.3.2. Plaquette operators</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wilson-loop-operators">6.4. Wilson Loop Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">6.5. Anyons</a></li>
 </ul>
   </nav></div>
 
@@ -496,8 +638,8 @@ By George McArdle and Adam Gammon-Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

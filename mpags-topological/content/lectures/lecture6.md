@@ -102,3 +102,96 @@ align: center
 ```
 
 ### Plaquette operators
+
+In the Z-basis, the plaquette operators flip all spins aroudn the plaquette, e.g.,
+```{figure} ../images/PlaquetteExample.pdf
+---
+name: fig:plaquette_example
+width: 60%
+align: center
+---
+```
+To have $B_p|\psi_0\rangle = |\psi_0\rangle$, this means if a particular configuation appears in $|\psi_0\rangle$, then the configuration with a plaquette flipped is also in $|\psi_0\rangle$ with the same amplitude. Therefore, the ground state is an equal superposition of all closed loop configurations that can be reached from one another by flipping plaquettes. E.g., 
+```{figure} ../images/PlaquetteGSExample.pdf
+---
+name: fig:PlaquetteGSExample
+width: 60%
+align: center
+---
+```
+
+It looks like we've found the ground state, but what about the four-fold degeneracy? To understand this consider the following four spin configurations, labelled $|\Phi_i\rangle$, $i = 0, 1, 2, 3$:
+```{figure} ../images/GSReferenceConfigs.pdf
+---
+name: fig:GSDegeneracy
+width: 80%
+align: center
+---
+```
+It is not possible to go from one of these configurations to another by flipping plaquettes. Therefore, the ground state must be a superposition of all closed loop configurations that can be reached from each of these four "reference" configurations by flipping plaquettes. These states are characterised by even or odd winding around the two directions of the torus. The four ground states $|\psi_i\rangle$, with $i=0,1,2,3$, can therefore be written as
+
+$$
+|\psi_i\rangle = \prod_p \frac{1 + B_p}{\sqrt{2}} |\Phi_i\rangle, \quad i = 0, 1, 2, 3.
+$$
+
+## Wilson Loop Operators
+
+```{figure} ../images/WilsonStrings.pdf
+---
+name: fig:wilson_strings
+width: 85%
+align: center
+---
+Caption...
+```
+
+Given that we have a four-fold degenerate ground state, it is natural to ask how we can distinguish between these states. One way to do this is to introduce Wilson loop operators, which are non-local operators that measure the winding of spins around the torus. Let us introduce the operators
+
+$$
+W^v_z = \prod_{i \in \gamma_v} \sigma_i^z, \quad W^h_z = \prod_{i \in \gamma_h} \sigma_i^z,
+$$
+
+where $\gamma_v$ and $\gamma_h$ are any non-contractible paths on the *dual lattice* that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.{numref}`fig:wilson_strings` for examples of such paths. These operators commute with the star and plaquette operators, and therefore with the Hamiltonian. They also commute with each other. Their eigenvalues $\pm 1$ completely resolve the four-fold degeneracy of the ground state. Specifically, we have
+
+$$
+\begin{aligned}
+W^v_z |\psi_0\rangle &= |\psi_0\rangle, & W^h_z |\psi_0\rangle &= |\psi_0\rangle, \\
+W^v_z |\psi_1\rangle &= |\psi_1\rangle, & W^h_z |\psi_1\rangle &= -|\psi_1\rangle, \\
+W^v_z |\psi_2\rangle &= -|\psi_2\rangle, & W^h_z |\psi_2\rangle &= |\psi_2\rangle, \\
+W^v_z |\psi_3\rangle &= -|\psi_3\rangle, &\quad W^h_z |\psi_3\rangle &= -|\psi_3\rangle.
+\end{aligned}
+$$
+
+The plus and minus signs correspond to the even and odd winding of the reference configurations $|\Phi_i\rangle$ around the torus, perpendicular to the direction of the Wilson loop operator.
+
+We could have equally chosen two other Wilson loop operators defined in terms of $\sigma^x$ operators:
+
+$$
+W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x,
+$$
+
+where $C_v$ and $C_h$ are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.{numref}`fig:wilson_strings` for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of $\{W^v_z, W^h_z, W^v_x, W^h_x\}$.
+
+```{note}
+There are no *local* operators that can distinguish between the four ground states. We need *non-local* operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.
+```
+
+## Anyons
+
+Let us now turn to the excitations of the toric code. Here we will encounter one of the most remarkable aspects of topologically ordered systems: anyons. In the remaining lectures, we will develop a more formal theory of anyons. 
+
+Let us apply a $\sigma^z$ operator to a single spin in the ground state. This has the effect of flipping the eigenvalue of the two adjacent plaquette operators from +1 to -1. These plaquettes with $B_p = -1$ correspond to local excitations, each costing energy $2J_m$. We call these excitations "magnetic" excitations by convention, and denote them by $m$. 
+
+```{figure} ../images/AnyonCreation.pdf
+---
+name: fig:anyons_creation
+width: 85%
+align: center
+---
+Caption...
+```
+
+We can then move these excitations around by applying further $\sigma^z$ operators to adjacent spins. If the operators acts on a spin adjacent to one of the excitations, it will move the excitation to the other plaquette adjacent to that spin without costing any additional energy. By applying a string of $\sigma^z$ operators along a path on the lattice, we can create a pair of $m$ excitations at the endpoints of the path and move them around. See Fig.{numref}`fig:anyons_creation` for an illustration.
+
+
+
