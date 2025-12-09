@@ -140,6 +140,8 @@ There are two ways to get around this problem though:
 1. We could put the model on a cylinder. This has two edges and so we could have two modes at $k=0, E=0$ (one on each edge). We won't focus on this here though.
 2. We could introduce a flux through the system - in other words, introduce vortices.
 
-If we introduce a vortex (which has $\pi$-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed $k$ are now $k = \tfrac{2\pi}{L}n$. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode.
+If we introduce a vortex (which has $\pi$-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed $k$ are now $k = \tfrac{2\pi}{L}n$. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
 
-These modes are 
+These modes have come under a lot of interest in recent years as they have interesting exchange statistics. In fact the zero modes behave as anyons (in particular Ising anyons) and therefore can be used as part of schemes to implement topologically protected quantum computation. We will see more about Ising anyons in the coming lectures.
+
+<span style="color:red;">Summarise and maybe give more detail on non-Abelian stats.</span>

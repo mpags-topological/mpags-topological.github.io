@@ -350,7 +350,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-states">4.2.1. Topological States</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-edge-modes">4.2.1.1. Majorana Edge Modes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vortices">4.2.1.2. Vortices</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -433,6 +440,52 @@ H = it\sum_j \gamma_{2m} \gamma_{2m+1}
 \[\begin{split}
 H = -t\sum_{m,n}(c_{m+1, n}^\dagger c_{m,n} + c_{m, n+1}^\dagger c_{m,n} + c_{m,n}^\dagger c_{m+1, n} + c_{m,n}^\dagger c_{m, n+1}) - \mu\sum_{m,n}c_{m,n}^\dagger c_{m,n} \\ + \sum_{m,n} (\Delta c_{m,n}c_{m+1, n} + i\Delta c_{m,n}c_{m, n+1} + \Delta^* c_{m+1,n}^\dagger c_{m,n}^\dagger -i\Delta^*c_{m, n+1}^\dagger c_{m,n}^\dagger)
 \end{split}\]</div>
+<p>We can perform the Fourier transform and write the Hamiltonian in BdG form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H_{\boldsymbol k}= \left(\begin{matrix}\varepsilon_{\boldsymbol k} &amp; \tilde{\Delta}^*_{\boldsymbol k} \\ \tilde{\Delta}_{\boldsymbol k} &amp;-\varepsilon_{\boldsymbol k}\end{matrix}\right)
+\end{split}\]</div>
+<p>this time with <span class="math notranslate nohighlight">\(\varepsilon_{\boldsymbol k}=-2t(\cos k_x + \cos k_y)-\mu\)</span> and <span class="math notranslate nohighlight">\(\tilde{\Delta}_{\boldsymbol k}=2i\Delta(\sin k_x + i\sin k_y)\)</span>.</p>
+<p>We wish to now highlight a couple of points regarding this Hamiltonian. The first regards the continuum limit (<span class="math notranslate nohighlight">\(k\rightarrow 0\)</span> here), where the pairing term becomes proportional to <span class="math notranslate nohighlight">\(k_x+ik_y\)</span>. Due to the relation <span class="math notranslate nohighlight">\(p=\hbar k\)</span>, this is commonly referred to as the <span class="math notranslate nohighlight">\(p_x+ip_y\)</span>, or <span class="math notranslate nohighlight">\(p+ip\)</span> superconductor.</p>
+<p>The second point we wish to address is the symmetries of the Hamiltonian. Out of the three symmetries we discussed in the last lecture (particle-hole, time-reversal, and chiral) only particle-hole symmetry is present here. Time-reversal symmetry is broken as we have a spinless system. Therefore the invaraint is a <span class="math notranslate nohighlight">\(\Z\)</span>-invariant and is simply the Chern number. We can calculate this numerically to obtain the different phases. We find that <span style="color:red;">Insert some sort of phase diagram and a description</span></p>
+<section id="topological-states">
+<h3><span class="section-number">4.2.1. </span>Topological States<a class="headerlink" href="#topological-states" title="Link to this heading">#</a></h3>
+<p>We now wish to understand the states found in the topological regime of which there are two types we will consider here - edge modes and zero modes.</p>
+<section id="majorana-edge-modes">
+<h4><span class="section-number">4.2.1.1. </span>Majorana Edge Modes<a class="headerlink" href="#majorana-edge-modes" title="Link to this heading">#</a></h4>
+<p><span style="color:red;">Insert cylinder picture showing edge modes</span></p>
+<p>As was true when we looked at the 1d case, the edge modes here are actually Majorana. In this model though they are chiral Majorana modes, described by a Hamiltonian with a linear dispersion <span class="math notranslate nohighlight">\(\varepsilon_k\sim \hbar vk\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+H_M = -i\hbar v \int {\rm d}x \gamma(x)\partial_x \gamma(x) = \hbar v \sum_k k \gamma_{-k}\gamma_k
+\]</div>
+<p>where we have used that <span class="math notranslate nohighlight">\(\gamma_k^\dagger = \gamma_{-k}\)</span>. In general the bulk-boundary correspondence for topological superconductors relates the Chern number of the number of chiral Majorana modes. This is in contrast to what we encountered with topological insulators where the Chern number relates to the number of chiral fermionic modes. We will now see that these two modes are related.</p>
+<p>A chiral fermion is described by
+$<span class="math notranslate nohighlight">\(
+H_M = -i\hbar v_{\rm F} \int {\rm d}x \psi^\dagger (x)\partial_x \psi(x) = \hbar v_{\rm F} \sum_k k \psi^\dagger_{k}\psi_k
+\)</span>$</p>
+<p>We can define Majorana operators via <span class="math notranslate nohighlight">\(\psi_k = \gamma_{1,k}+i\gamma_{2,k}\)</span> and <span class="math notranslate nohighlight">\(\psi_k^\dagger = \gamma_{1,-k}-i\gamma_{2,-k}\)</span>. We see that each fermion here corresponds to two Majoranas and therefore it is perhaps not suprising that when we substitute this into the above Hamiltonian, we find that</p>
+<div class="math notranslate nohighlight">
+\[
+H = \hbar v_{\rm F} \sum_k k (\gamma_{1,-k}\gamma_{1,k}+\gamma_{2,-k}\gamma_{2,k})
+\]</div>
+<p>Therefore we see that a single chiral fermionic mode is equivalent to 2 copies of chiral Majorana fermion. Alternatively we can view a chiral Majorana mode as half a fermionic mode. In particular this relates to the real or imaginary parts, which we can see on the level of the operators. From our above definitions we see that <span class="math notranslate nohighlight">\(\gamma_{1,k}\)</span> is the real part of the fermion (sometimes also called the electron + hole mode as it is proportional to <span class="math notranslate nohighlight">\(\psi_k + \psi_{-k}^\dagger\)</span>) and <span class="math notranslate nohighlight">\(\gamma_{2,k}\)</span> is the imaginary part of the fermion (or the electron - hole mode).</p>
+<p>A natural question to ask at this point could be related to the usefulness or implications of this relation between fermionic and Majoran edge modes. Well this has direct consequences in heterostrucutres that combine and scatter the two modes and has also been proposed as a way to implement certain operations in quantum computing.</p>
+</section>
+<section id="vortices">
+<h4><span class="section-number">4.2.1.2. </span>Vortices<a class="headerlink" href="#vortices" title="Link to this heading">#</a></h4>
+<p>In the 2d topological superconductors there is another type of boundary state - zero modes. Here we will outline a simple argument to show that vortices can host Majorana zero modes.</p>
+<p>Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with <span class="math notranslate nohighlight">\(k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})\)</span>, so that there are no exact zero modes at <span class="math notranslate nohighlight">\(E=0, k=0\)</span>. This arises due to the anti-periodic boundary conditions imposed on the wavefunction in this setyp but a more intuitive explanantion is that the spectrum needs to be symmetric due to the particle-hole symmetry. A single <span class="math notranslate nohighlight">\(k=0\)</span> mode would clearly violate this.</p>
+<p>There are two ways to get around this problem though:</p>
+<ol class="arabic simple">
+<li><p>We could put the model on a cylinder. This has two edges and so we could have two modes at <span class="math notranslate nohighlight">\(k=0, E=0\)</span> (one on each edge). We won’t focus on this here though.</p></li>
+<li><p>We could introduce a flux through the system - in other words, introduce vortices.</p></li>
+</ol>
+<p>If we introduce a vortex (which has <span class="math notranslate nohighlight">\(\pi\)</span>-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed <span class="math notranslate nohighlight">\(k\)</span> are now <span class="math notranslate nohighlight">\(k = \tfrac{2\pi}{L}n\)</span>. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.</p>
+<p>These modes have come under a lot of interest in recent years as they have interesting exchange statistics. In fact the zero modes behave as anyons (in particular Ising anyons) and therefore can be used as part of schemes to implement topologically protected quantum computation. We will see more about Ising anyons in the coming lectures.</p>
+<p><span style="color:red;">Summarise and maybe give more detail on non-Abelian stats.</span></p>
+</section>
+</section>
 </section>
 </section>
 
@@ -504,7 +557,14 @@ H = -t\sum_{m,n}(c_{m+1, n}^\dagger c_{m,n} + c_{m, n+1}^\dagger c_{m,n} + c_{m,
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-states">4.2.1. Topological States</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-edge-modes">4.2.1.1. Majorana Edge Modes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vortices">4.2.1.2. Vortices</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
