@@ -405,7 +405,7 @@ k=0 \hspace{4pt}\mathrm{for } \hspace{4pt} t_1=-t_2\\ k=\pi  \hspace{4pt}\mathrm
 <p>It is precisely at these points that a topological phase transition can occur. We now need to identify when we are in the topological phase and try to understand its properties. Let’s begin by calculating the topological invariant. To do this we write <span class="math notranslate nohighlight">\(H_k\)</span> in the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-H_k = \left(\begin{matrix}0 &amp;t_1+t_2\cos k-it_2\sin k \\t_1+t_2cosk +it_2 \sin k &amp;0 \end{matrix}\right) = d_0(k) \sigma_0 + {\bm d}(k)\cdot {\bm \sigma}
+H_k = \left(\begin{matrix}0 &amp;t_1+t_2\cos k-it_2\sin k \\t_1+t_2cosk +it_2 \sin k &amp;0 \end{matrix}\right) = d_0(k) \sigma_0 + {\boldsymbol d}(k)\cdot {\boldsymbol \sigma}
 \end{split}\]</div>
 <p>with</p>
 <div class="math notranslate nohighlight">
@@ -413,12 +413,12 @@ H_k = \left(\begin{matrix}0 &amp;t_1+t_2\cos k-it_2\sin k \\t_1+t_2cosk +it_2 \s
 d_0 = d_z=0,\\
 d_x = t_1 + t_2 \cos k, \hspace{5pt} d_y = t_2 \sin k
 \end{split}\]</div>
-<p>In the above the notation <span class="math notranslate nohighlight">\(\sigma_0\)</span> is the identity and <span class="math notranslate nohighlight">\({\bm \sigma}\)</span> is a three-dimensional vector of Pauli matrices. Using these definitions, the invariants is defined as</p>
+<p>In the above the notation <span class="math notranslate nohighlight">\(\sigma_0\)</span> is the identity and <span class="math notranslate nohighlight">\({\boldsymbol \sigma}\)</span> is a three-dimensional vector of Pauli matrices. Using these definitions, the invariants is defined as</p>
 <div class="math notranslate nohighlight">
 \[
-\nu = \frac{1}{2\pi}\int {\rm d}k \left(\frac{{\bm d}}{|{\bm d}|}\times \frac{\partial}{\partial k} \frac{{\bm d}}{|{\bm d}|}\right)_z
+\nu = \frac{1}{2\pi}\int {\rm d}k \left(\frac{{\boldsymbol d}}{|{\boldsymbol d}|}\times \frac{\partial}{\partial k} \frac{{\boldsymbol d}}{|{\boldsymbol d}|}\right)_z
 \]</div>
-<p>Notice the subscript <span class="math notranslate nohighlight">\(z\)</span>, so when we expand out the cross-product, it doesn’t look too dissimilar from the Chern number. However, it is different and in this case is known as the Winding number. The reason for this name is that as <span class="math notranslate nohighlight">\(k\)</span> goes from <span class="math notranslate nohighlight">\(0\rightarrow 2\pi\)</span>, the vector <span class="math notranslate nohighlight">\({\bm d}\)</span> traces a circle and this invariant simply counts how many time the vector winds around the origin.</p>
+<p>Notice the subscript <span class="math notranslate nohighlight">\(z\)</span>, so when we expand out the cross-product, it doesn’t look too dissimilar from the Chern number. However, it is different and in this case is known as the Winding number. The reason for this name is that as <span class="math notranslate nohighlight">\(k\)</span> goes from <span class="math notranslate nohighlight">\(0\rightarrow 2\pi\)</span>, the vector <span class="math notranslate nohighlight">\({\boldsymbol d}\)</span> traces a circle and this invariant simply counts how many time the vector winds around the origin.</p>
 <p>Performing this integral gives <span class="math notranslate nohighlight">\(\nu=1\)</span> for <span class="math notranslate nohighlight">\(|t_1|&lt;|t_2|\)</span> and <span class="math notranslate nohighlight">\(\nu = 0\)</span> otherwise. The non-zero winding signifies a non-trivial topological phase which we will now demonstrate by considering the edge states.</p>
 <section id="edge-states">
 <h3><span class="section-number">2.1.1. </span>Edge States<a class="headerlink" href="#edge-states" title="Link to this heading">#</a></h3>
@@ -440,47 +440,51 @@ H = \sum_{n=1}^{N-1} \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right)
 <h2><span class="section-number">2.2. </span>The Haldane Model<a class="headerlink" href="#the-haldane-model" title="Link to this heading">#</a></h2>
 <p>We now turn to the Haldane Model, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.</p>
 <p>The Haldane model is defined on the honeycomb lattice <span style="color:red;">(INSERT FIG)</span> and consists on three terms.</p>
-<p>First, we have the onsite terms where the different sublattices have an energy difference of <span class="math notranslate nohighlight">\(2M\)</span>
-$<span class="math notranslate nohighlight">\(
-H_{\rm site}=M\sum_{i\in A}a^\dagger_ia_i - M\sum_{i \in B} b_i^\dagger b_i
-\)</span>$</p>
-<p><span style="color:red;">NEED TO DEFINE WHAT I MEAN BY THE SUBSCRIPTS. USE THE VECTORS DEFINED IN THE FIGURE</span></p>
-<p>There are also nearest neighbout hopping terms
-$<span class="math notranslate nohighlight">\(
-H_{\rm n.n.} = t_1\sum_{\langle i, j \rangle} \left( b_{i+j}^\dagger a_i + a_i^\dagger b_{i+j}\right)
-\)</span><span class="math notranslate nohighlight">\(
-and next nearest neighbour hopping terms
-\)</span><span class="math notranslate nohighlight">\(
-H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_1}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j_1}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_2}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger a_{i+j_2}\right)
-\)</span>$
-We emphasise that the next nearest neighbour hopping terms have an additional phase associated with them. This phase is precisely what allows for the quantum Hall physics without the magnetic field.</p>
-<p>As with the SSH model, the first step is to obtain the energy spectrum in momentum space. Through this we can identify the parameters at which gaps in the spectrum close and therefore obtain the different topological regimes. These regimes can subsequently be characterised through invariants and topological edge states.</p>
-<p>Using that for this model we can write <span class="math notranslate nohighlight">\(\sum_{i \in A} \rightarrow \tfrac{1}{2}\sum_i\)</span>, the Fourier transform can be expressed in the same way as for the SSH model, <span class="math notranslate nohighlight">\(H=\sum_{\bm k} \Psi_{\bm k}^\dagger H_{\bm k} \Psi_{\bm k}\)</span>, with</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-H_{\bm k} = \left(\begin{matrix}\frac{M}{2}+t_2\sum_j \cos (\varphi+{\bm k}\cdot\tilde{\bm R}_j) &amp;\frac{t_1}{2}\sum_j {\rm e}^{i {\bm k}\cdot{\bm R}_j} \\\frac{t_1}{2}\sum_j {\rm e}^{-i {\bm k}\cdot{\bm R}_j} &amp; -\frac{M}{2}+t_2\sum_j \cos (\varphi-{\bm k}\cdot\tilde{\bm R}_j) \end{matrix}\right)
-\end{split}\]</div>
-<p>In order to diagonalise this, it can be convenient to express this in the form <span class="math notranslate nohighlight">\(H_{\bm k}= d_0({\bm k}) \sigma_0 + {\bm d}({\bm k})\cdot {\bm \sigma}\)</span> as then the energy takes the simple form</p>
+<p>First, we have the onsite terms where the different sublattices have an energy difference of <span class="math notranslate nohighlight">\(2M\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-E({\bm k}) = d_0({\bm k}) \pm \sqrt{d_x^2({\bm k}) + d_y^2 ({\bm k}) + d_z^2({\bm k})}
+H_{\rm site}=M\sum_{i\in A}a^\dagger_ia_i - M\sum_{i \in B} b_i^\dagger b_i
+\]</div>
+<p><span style="color:red;">NEED TO DEFINE WHAT I MEAN BY THE SUBSCRIPTS. USE THE VECTORS DEFINED IN THE FIGURE</span></p>
+<p>There are also nearest neighbout hopping terms</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\rm n.n.} = t_1\sum_{\langle i, j \rangle} \left( b_{i+j}^\dagger a_i + a_i^\dagger b_{i+j}\right)
+\]</div>
+<p>and next nearest neighbour hopping terms</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_1}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j_1}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_2}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger a_{i+j_2}\right)
+\]</div>
+<p>We emphasise that the next nearest neighbour hopping terms have an additional phase associated with them. This phase is precisely what allows for the quantum Hall physics without the magnetic field.</p>
+<p>As with the SSH model, the first step is to obtain the energy spectrum in momentum space. Through this we can identify the parameters at which gaps in the spectrum close and therefore obtain the different topological regimes. These regimes can subsequently be characterised through invariants and topological edge states.</p>
+<p>Using that for this model we can write <span class="math notranslate nohighlight">\(\sum_{i \in A} \rightarrow \tfrac{1}{2}\sum_i\)</span>, the Fourier transform can be expressed in the same way as for the SSH model, <span class="math notranslate nohighlight">\(H=\sum_{\boldsymbol k} \Psi_{\boldsymbol k}^\dagger H_{\boldsymbol k} \Psi_{\boldsymbol k}\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H_{\boldsymbol k} = \left(\begin{matrix}\frac{M}{2}+t_2\sum_j \cos (\varphi+{\boldsymbol k}\cdot\tilde{\boldsymbol R}_j) &amp;\frac{t_1}{2}\sum_j {\rm e}^{i {\boldsymbol k}\cdot{\boldsymbol R}_j} \\\frac{t_1}{2}\sum_j {\rm e}^{-i {\boldsymbol k}\cdot{\boldsymbol R}_j} &amp; -\frac{M}{2}+t_2\sum_j \cos (\varphi-{\boldsymbol k}\cdot\tilde{\boldsymbol R}_j) \end{matrix}\right)
+\end{split}\]</div>
+<p>In order to diagonalise this, it can be convenient to express this in the form <span class="math notranslate nohighlight">\(H_{\boldsymbol k}= d_0({\boldsymbol k}) \sigma_0 + {\boldsymbol d}({\boldsymbol k})\cdot {\boldsymbol \sigma}\)</span> as then the energy takes the simple form</p>
+<div class="math notranslate nohighlight">
+\[
+E({\boldsymbol k}) = d_0({\boldsymbol k}) \pm \sqrt{d_x^2({\boldsymbol k}) + d_y^2 ({\boldsymbol k}) + d_z^2({\boldsymbol k})}
 \]</div>
 <p><span style="color:red;">MENTION HOW THIS FORM IS MORE GENERAL - IS IT ANY TWO BAND MODEL????</span></p>
-<p>For the Haldane model,
-$<span class="math notranslate nohighlight">\(
-d_0({\bm k})= t_2\sum_j \cos \varphi \cos({\bm k}\cdot\tilde{\bm R}_j)\\
-d_x({\bm k})=\frac{t_1}{2}\sum_j \cos({\bm k}\cdot {\bm R}_j) \\
-d_y({\bm k})=-\frac{t_1}{2}\sum_j \sin({\bm k}\cdot {\bm R}_j) \\
-d_z({\bm k})= \frac{M}{2}-t_2\sum_j \sin \varphi \sin({\bm k}\cdot\tilde{\bm R}_j)
-\)</span>$</p>
-<p>We now wish to look at where the spectrum is gapless. In order to identify these points we need <span class="math notranslate nohighlight">\(d_x^2({\bm k}) + d_y^2 ({\bm k}) + d_z^2({\bm k})=0\)</span> for a given <span class="math notranslate nohighlight">\({\bm k}\)</span>. As each of the components are real, this condition means that we need <span class="math notranslate nohighlight">\(d_x({\bm k}) = d_y ({\bm k}) = d_z({\bm k})=0\)</span> for a given <span class="math notranslate nohighlight">\({\bm k}\)</span>.</p>
-<p>To find the parameters at which this occurs, let’s start by considering <span class="math notranslate nohighlight">\(d_x({\bm k}) = d_y ({\bm k})=0\)</span> and finding how to satisfy this. In particular, we will find the <span class="math notranslate nohighlight">\({\bm k}\)</span> at which this is satisfied. Then, by substituting this into <span class="math notranslate nohighlight">\(d_z({\bm k})=0\)</span>, we can find the parameters (and the <span class="math notranslate nohighlight">\({\bm k}\)</span>) at which the spectrum is gapless.</p>
+<p>For the Haldane model,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+d_0({\boldsymbol k})= t_2\sum_j \cos \varphi \cos({\boldsymbol k}\cdot\tilde{\boldsymbol R}_j)\\
+d_x({\boldsymbol k})=\frac{t_1}{2}\sum_j \cos({\boldsymbol k}\cdot {\boldsymbol R}_j) \\
+d_y({\boldsymbol k})=-\frac{t_1}{2}\sum_j \sin({\boldsymbol k}\cdot {\boldsymbol R}_j) \\
+d_z({\boldsymbol k})= \frac{M}{2}-t_2\sum_j \sin \varphi \sin({\boldsymbol k}\cdot\tilde{\boldsymbol R}_j)
+\end{split}\]</div>
+<p>We now wish to look at where the spectrum is gapless. In order to identify these points we need <span class="math notranslate nohighlight">\(d_x^2({\boldsymbol k}) + d_y^2 ({\boldsymbol k}) + d_z^2({\boldsymbol k})=0\)</span> for a given <span class="math notranslate nohighlight">\({\boldsymbol k}\)</span>. As each of the components are real, this condition means that we need <span class="math notranslate nohighlight">\(d_x({\boldsymbol k}) = d_y ({\boldsymbol k}) = d_z({\boldsymbol k})=0\)</span> for a given <span class="math notranslate nohighlight">\({\boldsymbol k}\)</span>.</p>
+<p>To find the parameters at which this occurs, let’s start by considering <span class="math notranslate nohighlight">\(d_x({\boldsymbol k}) = d_y ({\boldsymbol k})=0\)</span> and finding how to satisfy this. In particular, we will find the <span class="math notranslate nohighlight">\({\boldsymbol k}\)</span> at which this is satisfied. Then, by substituting this into <span class="math notranslate nohighlight">\(d_z({\boldsymbol k})=0\)</span>, we can find the parameters (and the <span class="math notranslate nohighlight">\({\boldsymbol k}\)</span>) at which the spectrum is gapless.</p>
 <p>Starting with the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components we need to solve</p>
 <div class="math notranslate nohighlight">
 \[
-\sum_j \cos({\bm k}\cdot{\bm R}_j) = \sum_j \sin({\bm k}\cdot{\bm R}_j) = 0
+\sum_j \cos({\boldsymbol k}\cdot{\boldsymbol R}_j) = \sum_j \sin({\boldsymbol k}\cdot{\boldsymbol R}_j) = 0
 \]</div>
-<p>Using that for the honeycomb lattice we have depicted, <span class="math notranslate nohighlight">\({\bm R}_1 = \hat{\bm y}\)</span>, <span class="math notranslate nohighlight">\({\bm R}_2=-\tfrac{\sqrt{3}}{2}\hat{\bm x}-\tfrac{1}{2}\hat{\bm y}\)</span>, <span class="math notranslate nohighlight">\({\bm R}_3=\tfrac{\sqrt{3}}{2}\hat{\bm x}-\tfrac{1}{2}\hat{\bm y}\)</span>, we find that the above conditions lead to the following equations</p>
+<p>Using that for the honeycomb lattice we have depicted, <span class="math notranslate nohighlight">\({\boldsymbol R}_1 = \hat{\boldsymbol y}\)</span>, <span class="math notranslate nohighlight">\({\boldsymbol R}_2=-\tfrac{\sqrt{3}}{2}\hat{\boldsymbol x}-\tfrac{1}{2}\hat{\boldsymbol y}\)</span>, <span class="math notranslate nohighlight">\({\boldsymbol R}_3=\tfrac{\sqrt{3}}{2}\hat{\boldsymbol x}-\tfrac{1}{2}\hat{\boldsymbol y}\)</span>, we find that the above conditions lead to the following equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \cos k_y= -2\cos\left( \frac{\sqrt{3}}{2} k_x \right)\cos\left( \frac{1}{2} k_y \right) \\ \sin k_y= 2\cos\left( \frac{\sqrt{3}}{2} k_x \right)\sin\left( \frac{1}{2} k_y \right)
@@ -488,9 +492,9 @@ d_z({\bm k})= \frac{M}{2}-t_2\sum_j \sin \varphi \sin({\bm k}\cdot\tilde{\bm R}_
 <p>By dividing the first equation by the second, we easily obtain <span class="math notranslate nohighlight">\(k_y = 0\)</span>, which means the second equation above is automatically satisfied. Substituting this result into the top equation though then gives that <span class="math notranslate nohighlight">\(k_x = \pm \tfrac{4\pi}{3\sqrt{3}}\)</span> (these momenta are those contained within the first Brillouin zone). We find then that this condition is closed at two inequivalent points in momentum space, known as the <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span> points,</p>
 <div class="math notranslate nohighlight">
 \[
-{\bm K} = \left(\tfrac{4\pi}{3\sqrt{3}}, 0 \right), \hspace{10pt} {\bm K'} = -\left(\tfrac{4\pi}{3\sqrt{3}}, 0 \right)
+{\boldsymbol K} = \left(\tfrac{4\pi}{3\sqrt{3}}, 0 \right), \hspace{10pt} {\boldsymbol K'} = -\left(\tfrac{4\pi}{3\sqrt{3}}, 0 \right)
 \]</div>
-<p>In order to find where the spectrum is gapless, we also need to find where <span class="math notranslate nohighlight">\(d_z({\bm k})=0\)</span>. Substituing the nearest neighbours and the <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span> points into the expression for <span class="math notranslate nohighlight">\(d_z\)</span>, we find that to satisfy <span class="math notranslate nohighlight">\(d_z=0\)</span>, we require</p>
+<p>In order to find where the spectrum is gapless, we also need to find where <span class="math notranslate nohighlight">\(d_z({\boldsymbol k})=0\)</span>. Substituing the nearest neighbours and the <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span> points into the expression for <span class="math notranslate nohighlight">\(d_z\)</span>, we find that to satisfy <span class="math notranslate nohighlight">\(d_z=0\)</span>, we require</p>
 <div class="math notranslate nohighlight">
 \[
 M = \pm 3\sqrt{3}t_2\sin \varphi
