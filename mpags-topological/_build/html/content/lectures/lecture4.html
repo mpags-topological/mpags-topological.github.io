@@ -350,6 +350,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a></li>
 </ul>
             </nav>
         </div>
@@ -369,7 +370,7 @@ document.write(`
 <p>There are many models named after Kitaev (and even others that are referred to the Kitaev chain), but here we refer to the model of a one-dimensional <span class="math notranslate nohighlight">\(p\)</span>-wave spinless superconductor. The Hamiltonian is</p>
 <div class="math notranslate nohighlight">
 \[
-H = -t\sum_{j=1}^{N-1}\left(c_{j+1}^\dagger c_j + c_j^\dagger c_{j+1}\right) - \mu\sum_{j=1}^Nc_j^\dagger c_j + \sum_{j=1}^{N-1}\Delta c_j c_{j+1} + \Delta^*c_{j+1}^\dagger c_j^\dagger
+H = -t\sum_{m=1}^{N-1}\left(c_{m+1}^\dagger c_m + c_m^\dagger c_{m+1}\right) - \mu\sum_{m=1}^Nc_m^\dagger c_m + \sum_{m=1}^{N-1}\Delta c_m c_{m+1} + \Delta^*c_{m+1}^\dagger c_m^\dagger
 \]</div>
 <p>As is the usual first step, we explore the bulk spectrum by performing the Fourier transform</p>
 <div class="math notranslate nohighlight">
@@ -387,11 +388,51 @@ H = \frac{1}{2}\sum_k \Psi_k^\dagger H_k \Psi_k, \hspace{20pt} H_k= \left(\begin
 \[
 E(k) = \pm \sqrt{\varepsilon_k^2 - |\tilde{\Delta}_k|^2}=\pm \sqrt{(2t \cos k +\mu)^2 + 4|\Delta|^2\sin^2 k}
 \]</div>
-<p>For <span class="math notranslate nohighlight">\(\Delta\neq0\)</span>, the gap closes at two points; <span class="math notranslate nohighlight">\((1): 2t=-\mu\)</span> (at <span class="math notranslate nohighlight">\(k=0\)</span>), and <span class="math notranslate nohighlight">\((2):2t=\mu\)</span> (at <span class="math notranslate nohighlight">\(k=\pi\)</span>).</p>
+<p>For <span class="math notranslate nohighlight">\(\Delta\neq0\)</span>, the gap closes at two points; <span class="math notranslate nohighlight">\((1): \mu=-2t\)</span> (at <span class="math notranslate nohighlight">\(k=0\)</span>), and <span class="math notranslate nohighlight">\((2):\mu=2t\)</span> (at <span class="math notranslate nohighlight">\(k=\pi\)</span>).</p>
 <p>Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.</p>
 <section id="majorana-modes">
 <h3><span class="section-number">4.1.1. </span>Majorana Modes<a class="headerlink" href="#majorana-modes" title="Link to this heading">#</a></h3>
+<p>By writing the pairing amplitude in the form <span class="math notranslate nohighlight">\(\Delta = |\Delta|{\rm e}^{i\phi}\)</span>, we can introduce Majorana operators  (often called Majorana fermions) in the following way</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gamma_{2m-1}= {\rm e}^{i\phi/2}c_m + {\rm e}^{-i\phi/2}c_m^\dagger
+\\ \gamma_{2m} = -i\left({\rm e}^{i\phi/2}c_m - {\rm e}^{-i\phi/2}c_m^\dagger \right)
+\end{split}\]</div>
+<p>We wish to make a few notes regarding the introduction of these operators</p>
+<ol class="arabic simple">
+<li><p>Both <span class="math notranslate nohighlight">\(\gamma_{2m-1}\)</span> and <span class="math notranslate nohighlight">\(\gamma_{2m}\)</span> are associated with the site <span class="math notranslate nohighlight">\(j\)</span>.</p></li>
+<li><p>The Majorana operators obey anticommutation relations, <span class="math notranslate nohighlight">\(\{\gamma_m, \gamma_n\} = 2\delta_{m,n}\)</span>, as well as <span class="math notranslate nohighlight">\(\gamma_{2m}^\dagger = \gamma_{2m}\)</span> and <span class="math notranslate nohighlight">\(\gamma_{2m}^2=1\)</span>.</p></li>
+<li><p>In theory, we can write any fermionic Hamiltonian in terms of these Majorana fermions, although this is often not useful.</p></li>
+</ol>
+<p>Using these operators, we can rewrite the Hamiltonian in the form</p>
+<div class="math notranslate nohighlight">
+\[
+H = \frac{i}{2}\sum_m\left(-\mu \gamma_{2m-1}\gamma_{2m} + (t+|\Delta|)\gamma_{2m}\gamma_{2m+1} +(-t+|\Delta|)\gamma_{2m-1}\gamma_{2m+2} \right)
+\]</div>
+<p>As we have found with previous models, one of the benefits of the topological protection is that we can study specific parameters and providing we don’t close a bulk gap, the effects remain robust.</p>
+<p>Let’s start with <span class="math notranslate nohighlight">\(t=|\Delta|=0, \mu \neq0\)</span>. This means that depending on the sign of <span class="math notranslate nohighlight">\(\mu\)</span>, we can satisfy either <span class="math notranslate nohighlight">\(\mu&lt;-2t\)</span> or <span class="math notranslate nohighlight">\(\mu &gt;2t\)</span>. For these parameter the Hamiltonian simply reduces to</p>
+<div class="math notranslate nohighlight">
+\[
+H=-\frac{i\mu}{2}\sum_m \gamma_{2m-1}\gamma_{2m} = -\mu\sum_j c_m^\dagger c_m
+\]</div>
+<p>Here, we have effectively paired the Majorana fermions belonging to the same lattice site. As we saw with the SSH model, all sites are paired up in this limit and the edges aren’t particularly relevant. This is therefore the trivial regime. The second equality above, allows us to easily understand this ground state. For <span class="math notranslate nohighlight">\(\mu &lt;0\)</span>, adding a spinless fermion to the lattice costs energy and so the ground state is simply the empty (vacuum state). For <span class="math notranslate nohighlight">\(\mu&gt;0\)</span>, the opposite happens and the ground state is the completely filled state.</p>
+<p>The region we now need to understand is <span class="math notranslate nohighlight">\(-2t&lt;\mu&lt;2t\)</span>. To analyse this we take <span class="math notranslate nohighlight">\(t=|\Delta|&gt;0, \mu=0\)</span>. In this limit the Hamiltonian becomes</p>
+<div class="math notranslate nohighlight">
+\[
+H = it\sum_j \gamma_{2m} \gamma_{2m+1} 
+\]</div>
+<p><span style="color:red;">be careful with sum limits in this lecture</span></p>
+<p>We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of <strong>Majorana</strong> zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by <span class="math notranslate nohighlight">\(f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})\)</span> and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!</p>
+<p><span style="color:red;">Insert summary of what we have found</span></p>
 </section>
+</section>
+<section id="p-ip-superconductor">
+<h2><span class="section-number">4.2. </span>p+ip Superconductor<a class="headerlink" href="#p-ip-superconductor" title="Link to this heading">#</a></h2>
+<p>We now turn our attention to two dimensions (although we still assume the system is spinless). The Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H = -t\sum_{m,n}(c_{m+1, n}^\dagger c_{m,n} + c_{m, n+1}^\dagger c_{m,n} + c_{m,n}^\dagger c_{m+1, n} + c_{m,n}^\dagger c_{m, n+1}) - \mu\sum_{m,n}c_{m,n}^\dagger c_{m,n} \\ + \sum_{m,n} (\Delta c_{m,n}c_{m+1, n} + i\Delta c_{m,n}c_{m, n+1} + \Delta^* c_{m+1,n}^\dagger c_{m,n}^\dagger -i\Delta^*c_{m, n+1}^\dagger c_{m,n}^\dagger)
+\end{split}\]</div>
 </section>
 </section>
 
@@ -463,6 +504,7 @@ E(k) = \pm \sqrt{\varepsilon_k^2 - |\tilde{\Delta}_k|^2}=\pm \sqrt{(2t \cos k +\
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a></li>
 </ul>
   </nav></div>
 
