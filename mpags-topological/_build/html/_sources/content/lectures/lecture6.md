@@ -21,10 +21,9 @@ with the products running over the four spins adjacent to the star $s$ or around
 ```{figure} ../images/ToricCode.pdf
 ---
 name: fig:toric_code
-width: 85%
+width: 70%
 align: center
 ---
-
 Caption for toric code...
 ``` 
 
@@ -68,8 +67,8 @@ Since we can solve the toric code exactly, we can write down explicit forms for 
 
 ```{figure} ../images/GSBasis.pdf
 ---
-name: fig:toric_code
-width: 85%
+name: fig:gs_basis
+width: 60%
 align: center
 ---
 ```
@@ -80,7 +79,7 @@ Let us first consider the action of the star operators $A_s$. Recall that $A_s$ 
 ```{figure} ../images/StarAllowed.pdf
 ---
 name: fig:StarAllowed
-width: 60%
+width: 65%
 align: center
 ---
 ```
@@ -88,7 +87,7 @@ and not
 ```{figure} ../images/StarNotAllowed.pdf
 ---
 name: fig:StarNotAllowed
-width: 60%
+width: 55%
 align: center
 ---
 ```
@@ -96,7 +95,7 @@ Therefore, any configuration in the ground state must consist of closed loops of
 ```{figure} ../images/StarGSExample.pdf
 ---
 name: fig:StarGSExample
-width: 60%
+width: 40%
 align: center
 ---
 ```
@@ -107,7 +106,7 @@ In the Z-basis, the plaquette operators flip all spins aroudn the plaquette, e.g
 ```{figure} ../images/PlaquetteExample.pdf
 ---
 name: fig:plaquette_example
-width: 60%
+width: 80%
 align: center
 ---
 ```
@@ -115,16 +114,16 @@ To have $B_p|\psi_0\rangle = |\psi_0\rangle$, this means if a particular configu
 ```{figure} ../images/PlaquetteGSExample.pdf
 ---
 name: fig:PlaquetteGSExample
-width: 60%
+width: 90%
 align: center
 ---
 ```
 
 It looks like we've found the ground state, but what about the four-fold degeneracy? To understand this consider the following four spin configurations, labelled $|\Phi_i\rangle$, $i = 0, 1, 2, 3$:
-```{figure} ../images/GSReferenceConfigs.pdf
+```{figure} ../images/GSDegeneracy.pdf
 ---
 name: fig:GSDegeneracy
-width: 80%
+width: 90%
 align: center
 ---
 ```
@@ -136,10 +135,10 @@ $$
 
 ## Wilson Loop Operators
 
-```{figure} ../images/WilsonStrings.pdf
+```{figure} ../images/WilsonLoops.pdf
 ---
-name: fig:wilson_strings
-width: 85%
+name: fig:wilson_loops
+width: 60%
 align: center
 ---
 Caption...
@@ -151,7 +150,7 @@ $$
 W^v_z = \prod_{i \in \gamma_v} \sigma_i^z, \quad W^h_z = \prod_{i \in \gamma_h} \sigma_i^z,
 $$
 
-where $\gamma_v$ and $\gamma_h$ are any non-contractible paths on the *dual lattice* that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.{numref}`fig:wilson_strings` for examples of such paths. These operators commute with the star and plaquette operators, and therefore with the Hamiltonian. They also commute with each other. Their eigenvalues $\pm 1$ completely resolve the four-fold degeneracy of the ground state. Specifically, we have
+where $\gamma_v$ and $\gamma_h$ are any non-contractible paths on the *dual lattice* that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See {numref}`fig:wilson_loops` for examples of such paths. These operators commute with the star and plaquette operators, and therefore with the Hamiltonian. They also commute with each other. Their eigenvalues $\pm 1$ completely resolve the four-fold degeneracy of the ground state. Specifically, we have
 
 $$
 \begin{aligned}
@@ -170,7 +169,7 @@ $$
 W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x,
 $$
 
-where $C_v$ and $C_h$ are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.{numref}`fig:wilson_strings` for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of $\{W^v_z, W^h_z, W^v_x, W^h_x\}$.
+where $C_v$ and $C_h$ are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See {numref}`fig:wilson_loops` for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of $\{W^v_z, W^h_z, W^v_x, W^h_x\}$.
 
 ```{note}
 There are no **local** operators that can distinguish between the four ground states. We need **non-local** operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.
@@ -189,7 +188,7 @@ The excitations in the toric code (at least with periodic boundary conditions) m
 ```{figure} ../images/AnyonCreation.pdf
 ---
 name: fig:anyons_creation
-width: 85%
+width: 70%
 align: center
 ---
 This can be a combined figure with star and plaquette excitations, including the Wilson string operators. 
@@ -224,27 +223,44 @@ We have shown that the toric code has two types of point-like excitations, elect
 ```{figure} ../images/AnyonStatistics.pdf
 ---
 name: fig:anyons_statistics
-width: 85%
+width: 95%
 align: center
 ---
 Caption...
 ```
 
-Consider the following set up, shown in Fig.{numref}`fig:anyons_statistics`. We create a pair of $e$ excitations and a pair of $m$ excitations. We then move one of the $m$ exciations in a loop around one of the $e$ excitations, using the Wilson string operator $W^z(\gamma)$ in a closed loop.
+Consider the following set up, shown in {numref}`fig:anyons_statistics`. We create a pair of $e$ excitations and a pair of $m$ excitations. We then move one of the $m$ exciations in a loop around one of the $e$ excitations, using the Wilson string operator $W^z(\gamma)$ in a closed loop.
 
 Now, if this Wilson loop did not enclose the $e$ excitation, it would commute with all the star operators, and thus have no effect on the state. However, since it does enclose the $e$ excitation, we have to cross the string of $\sigma^z$ operators with the string of $\sigma^x$ operators that created the $e$ excitation. At the crossing point, we have the anti-commutation relation $\sigma^z \sigma^x = - \sigma^x \sigma^z$. Therefore, moving the $m$ excitation around the $e$ excitation results in an overall phase of -1. We say that the $e$ and $m$ anyons have **non-trivial mutual statistics**.
 
-```{admonition} What is mutual statistics?}
+````{admonition} What is mutual statistics?
 We are familiar with exchange statistics of fermions and bosons. That is, if we consider two indistinguishable particles and exchange their positions, the wavefunction picks up a phase of +1 for bosons and -1 for fermions. This is called exchange statistics. However, in two dimensions, we can have more general statistics. If we have two distinguishable particles of different types, there is now the possibility that moving one particle around the other results in a non-trivial phase. This is called mutual statistics. In the toric code, the $e$ and $m$ anyons exhibit such non-trivial mutual statistics.
+
+```{figure} ../images/AnyonStatisticsSchematic.pdf
+---
+name: fig:anyons_statistics_schematic
+width: 45%
+align: center
+---
 ```
+
+````
 
 The $e$ and $m$ excitation are examples of anyons with statistics other than simple bosons or fermions. This is also an example of fractionalisation, that is the quasi-particle excitations are not simple composites of the underlying spin-1/2 degrees of freedom. They are emergent collective excitations!
 
-```{admonition} Exercise}
+```{admonition} Exercise
 By creating two pairs of the same type of excitations, e.g., two pairs of $e$ anyons, and exchanging one excitation from each pair, show that both the $e$ and $m$ excitations have bosonic exchange statistics. That is, exchanging two $e$ anyons results in a phase of +1, and similarly for two $m$ anyons.
 ```
 
 ## Emergent Fermions
+
+```{figure} ../images/FermionDefinition.pdf
+---
+name: fig:fermion_definition
+width: 65%
+align: center
+---
+```
 
 An interesting consequence of the non-trivial mutual statistics between the $e$ and $m$ anyons is that we can combine them to form a new type of excitation, called the $\epsilon$ anyon, defined as the bound state of an $e$ and an $m$ anyon. What are the statistics of this new $\epsilon$ anyon?
 
@@ -257,12 +273,12 @@ align: center
 Caption...
 ```
 
-While the $e$ and $m$ anyons individually have bosonic exchange statistics (see Fig.{numref}`fig:boson_statistics`), the $\epsilon$ anyon inherits a phase of -1 when exchanged with another $\epsilon$ anyon due to the mutual statistics between its constituent $e$ and $m$ anyons (see Fig.{numref}`fig:fermion_statistics`). Therefore, the $\epsilon$ anyon is a fermion! This anyon also have a Wilson string operator defined as the product of the electric and magnetic Wilson string operators along the same path.
+While the $e$ and $m$ anyons individually have bosonic exchange statistics (see {numref}`fig:boson_statistics`), the $\epsilon$ anyon inherits a phase of -1 when exchanged with another $\epsilon$ anyon due to the mutual statistics between its constituent $e$ and $m$ anyons (see {numref}`fig:fermion_statistics`). Therefore, the $\epsilon$ anyon is a fermion! This anyon also have a Wilson string operator defined as the product of the electric and magnetic Wilson string operators along the same path.
 
 ```{figure} ../images/FermionStatistics.pdf
 ---
 name: fig:fermion_statistics
-width: 85%
+width: 45%
 align: center
 ---
 Caption...

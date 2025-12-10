@@ -359,14 +359,14 @@
 \[
 H = -J_e \sum_s A_s - J_m \sum_p B_p,
 \]</div>
-<p>where the sums are over the stars <span class="math notranslate nohighlight">\(s\)</span> (vertices) and plaquettes <span class="math notranslate nohighlight">\(p\)</span> (faces) of the lattice, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:toric_code</span></code>. The operators <span class="math notranslate nohighlight">\(A_s\)</span> and <span class="math notranslate nohighlight">\(B_p\)</span> are defined as</p>
+<p>where the sums are over the stars <span class="math notranslate nohighlight">\(s\)</span> (vertices) and plaquettes <span class="math notranslate nohighlight">\(p\)</span> (faces) of the lattice, as shown in <a class="reference internal" href="#fig-toric-code"><span class="std std-numref">Fig. 6.1</span></a>. The operators <span class="math notranslate nohighlight">\(A_s\)</span> and <span class="math notranslate nohighlight">\(B_p\)</span> are defined as</p>
 <div class="math notranslate nohighlight">
 \[
 A_s = \prod_{i \in s} \sigma_i^z, \quad B_p = \prod_{i \in p} \sigma_i^x,
 \]</div>
 <p>with the products running over the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span> or around the plaquette <span class="math notranslate nohighlight">\(p\)</span>. Here, <span class="math notranslate nohighlight">\(\sigma_i^x\)</span> and <span class="math notranslate nohighlight">\(\sigma_i^z\)</span> are the Pauli matrices acting on the spin at bond <span class="math notranslate nohighlight">\(i\)</span>. We define the model with periodic boundary conditions, i.e., we put it on a torus (hence the name). The parameters <span class="math notranslate nohighlight">\(J_e\)</span> and <span class="math notranslate nohighlight">\(J_m\)</span> are positive coupling constants. The subscripts <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> stand for “electric” and “magnetic”, corresponding to the types of excitations in the model (which we will revisit later), and the naming comes from the context of lattice gauge theory.</p>
 <figure class="align-center" id="fig-toric-code">
-<a class="reference internal image-reference" href="../../_images/ToricCode.pdf"><img alt="../../_images/ToricCode.pdf" src="../../_images/ToricCode.pdf" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../../_images/ToricCode.pdf"><img alt="../../_images/ToricCode.pdf" src="../../_images/ToricCode.pdf" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Caption for toric code…</span><a class="headerlink" href="#fig-toric-code" title="Link to this image">#</a></p>
 </figcaption>
@@ -402,37 +402,37 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 <section id="explicit-form-of-the-ground-states">
 <h2><span class="section-number">6.3. </span>Explicit form of the Ground States<a class="headerlink" href="#explicit-form-of-the-ground-states" title="Link to this heading">#</a></h2>
 <p>Since we can solve the toric code exactly, we can write down explicit forms for the ground states. To do so, let us work in a particular basis. We choose the <span class="math notranslate nohighlight">\(\sigma^z\)</span> basis, where each spin is either up (<span class="math notranslate nohighlight">\(\sigma^z\ket{\uparrow} = \ket{\uparrow}\)</span>) or down (<span class="math notranslate nohighlight">\(\sigma^z\ket{\downarrow} = -\ket{\downarrow}\)</span>) along the <span class="math notranslate nohighlight">\(z\)</span>-axis. We denote this graphically by using thin black lines for spins in the <span class="math notranslate nohighlight">\(\ket{\uparrow}\)</span> state and thick black lines for spins in the <span class="math notranslate nohighlight">\(\ket{\downarrow}\)</span> state, that is</p>
-<figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/GSBasis.pdf"><img alt="../../_images/GSBasis.pdf" src="../../_images/GSBasis.pdf" style="width: 85%;" /></a>
+<figure class="align-center" id="fig-gs-basis">
+<a class="reference internal image-reference" href="../../_images/GSBasis.pdf"><img alt="../../_images/GSBasis.pdf" src="../../_images/GSBasis.pdf" style="width: 60%;" /></a>
 </figure>
 <section id="star-operators">
 <h3><span class="section-number">6.3.1. </span>Star operators<a class="headerlink" href="#star-operators" title="Link to this heading">#</a></h3>
 <p>Let us first consider the action of the star operators <span class="math notranslate nohighlight">\(A_s\)</span>. Recall that <span class="math notranslate nohighlight">\(A_s\)</span> is the product of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators on the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span>. Therefore, <span class="math notranslate nohighlight">\(A_s\)</span> measures the parity of the number of down spins around the star. If there is an even number of down spins, <span class="math notranslate nohighlight">\(A_s\)</span> has eigenvalue +1; if there is an odd number, it has eigenvalue -1. Thus, the ground state condition <span class="math notranslate nohighlight">\(A_s \ket{\psi_0} = \ket{\psi_0}\)</span> requires that there be an even number of down spins around each star. That is, in the ground state, we can only have</p>
 <figure class="align-center" id="fig-starallowed">
-<a class="reference internal image-reference" href="../../_images/StarAllowed.pdf"><img alt="../../_images/StarAllowed.pdf" src="../../_images/StarAllowed.pdf" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/StarAllowed.pdf"><img alt="../../_images/StarAllowed.pdf" src="../../_images/StarAllowed.pdf" style="width: 65%;" /></a>
 </figure>
 <p>and not</p>
 <figure class="align-center" id="fig-starnotallowed">
-<a class="reference internal image-reference" href="../../_images/StarNotAllowed.pdf"><img alt="../../_images/StarNotAllowed.pdf" src="../../_images/StarNotAllowed.pdf" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/StarNotAllowed.pdf"><img alt="../../_images/StarNotAllowed.pdf" src="../../_images/StarNotAllowed.pdf" style="width: 55%;" /></a>
 </figure>
 <p>Therefore, any configuration in the ground state must consist of closed loops of down spins on the lattice. For example, the following configuration is allowed in the ground state:</p>
 <figure class="align-center" id="fig-stargsexample">
-<a class="reference internal image-reference" href="../../_images/StarGSExample.pdf"><img alt="../../_images/StarGSExample.pdf" src="../../_images/StarGSExample.pdf" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/StarGSExample.pdf"><img alt="../../_images/StarGSExample.pdf" src="../../_images/StarGSExample.pdf" style="width: 40%;" /></a>
 </figure>
 </section>
 <section id="plaquette-operators">
 <h3><span class="section-number">6.3.2. </span>Plaquette operators<a class="headerlink" href="#plaquette-operators" title="Link to this heading">#</a></h3>
 <p>In the Z-basis, the plaquette operators flip all spins aroudn the plaquette, e.g.,</p>
 <figure class="align-center" id="fig-plaquette-example">
-<a class="reference internal image-reference" href="../../_images/PlaquetteExample.pdf"><img alt="../../_images/PlaquetteExample.pdf" src="../../_images/PlaquetteExample.pdf" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/PlaquetteExample.pdf"><img alt="../../_images/PlaquetteExample.pdf" src="../../_images/PlaquetteExample.pdf" style="width: 80%;" /></a>
 </figure>
 <p>To have <span class="math notranslate nohighlight">\(B_p|\psi_0\rangle = |\psi_0\rangle\)</span>, this means if a particular configuation appears in <span class="math notranslate nohighlight">\(|\psi_0\rangle\)</span>, then the configuration with a plaquette flipped is also in <span class="math notranslate nohighlight">\(|\psi_0\rangle\)</span> with the same amplitude. Therefore, the ground state is an equal superposition of all closed loop configurations that can be reached from one another by flipping plaquettes. E.g.,</p>
 <figure class="align-center" id="fig-plaquettegsexample">
-<a class="reference internal image-reference" href="../../_images/PlaquetteGSExample.pdf"><img alt="../../_images/PlaquetteGSExample.pdf" src="../../_images/PlaquetteGSExample.pdf" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/PlaquetteGSExample.pdf"><img alt="../../_images/PlaquetteGSExample.pdf" src="../../_images/PlaquetteGSExample.pdf" style="width: 90%;" /></a>
 </figure>
 <p>It looks like we’ve found the ground state, but what about the four-fold degeneracy? To understand this consider the following four spin configurations, labelled <span class="math notranslate nohighlight">\(|\Phi_i\rangle\)</span>, <span class="math notranslate nohighlight">\(i = 0, 1, 2, 3\)</span>:</p>
 <figure class="align-center" id="fig-gsdegeneracy">
-<a class="reference internal image-reference" href="content/images/GSReferenceConfigs.pdf"><img alt="content/images/GSReferenceConfigs.pdf" src="content/images/GSReferenceConfigs.pdf" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../_images/GSDegeneracy.pdf"><img alt="../../_images/GSDegeneracy.pdf" src="../../_images/GSDegeneracy.pdf" style="width: 90%;" /></a>
 </figure>
 <p>It is not possible to go from one of these configurations to another by flipping plaquettes. Therefore, the ground state must be a superposition of all closed loop configurations that can be reached from each of these four “reference” configurations by flipping plaquettes. These states are characterised by even or odd winding around the two directions of the torus. The four ground states <span class="math notranslate nohighlight">\(|\psi_i\rangle\)</span>, with <span class="math notranslate nohighlight">\(i=0,1,2,3\)</span>, can therefore be written as</p>
 <div class="math notranslate nohighlight">
@@ -443,10 +443,10 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 </section>
 <section id="wilson-loop-operators">
 <h2><span class="section-number">6.4. </span>Wilson Loop Operators<a class="headerlink" href="#wilson-loop-operators" title="Link to this heading">#</a></h2>
-<figure class="align-center" id="fig-wilson-strings">
-<a class="reference internal image-reference" href="content/images/WilsonStrings.pdf"><img alt="content/images/WilsonStrings.pdf" src="content/images/WilsonStrings.pdf" style="width: 85%;" /></a>
+<figure class="align-center" id="fig-wilson-loops">
+<a class="reference internal image-reference" href="../../_images/WilsonLoops.pdf"><img alt="../../_images/WilsonLoops.pdf" src="../../_images/WilsonLoops.pdf" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-wilson-strings" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-wilson-loops" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Given that we have a four-fold degenerate ground state, it is natural to ask how we can distinguish between these states. One way to do this is to introduce Wilson loop operators, which are non-local operators that measure the winding of spins around the torus. Let us introduce the operators</p>
@@ -454,7 +454,7 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 \[
 W^v_z = \prod_{i \in \gamma_v} \sigma_i^z, \quad W^h_z = \prod_{i \in \gamma_h} \sigma_i^z,
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\gamma_v\)</span> and <span class="math notranslate nohighlight">\(\gamma_h\)</span> are any non-contractible paths on the <em>dual lattice</em> that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.<a class="reference internal" href="#fig-wilson-strings"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators commute with the star and plaquette operators, and therefore with the Hamiltonian. They also commute with each other. Their eigenvalues <span class="math notranslate nohighlight">\(\pm 1\)</span> completely resolve the four-fold degeneracy of the ground state. Specifically, we have</p>
+<p>where <span class="math notranslate nohighlight">\(\gamma_v\)</span> and <span class="math notranslate nohighlight">\(\gamma_h\)</span> are any non-contractible paths on the <em>dual lattice</em> that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See <a class="reference internal" href="#fig-wilson-loops"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators commute with the star and plaquette operators, and therefore with the Hamiltonian. They also commute with each other. Their eigenvalues <span class="math notranslate nohighlight">\(\pm 1\)</span> completely resolve the four-fold degeneracy of the ground state. Specifically, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -470,7 +470,7 @@ W^v_z |\psi_3\rangle &amp;= -|\psi_3\rangle, &amp;\quad W^h_z |\psi_3\rangle &am
 \[
 W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x,
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(C_v\)</span> and <span class="math notranslate nohighlight">\(C_h\)</span> are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.<a class="reference internal" href="#fig-wilson-strings"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of <span class="math notranslate nohighlight">\(\{W^v_z, W^h_z, W^v_x, W^h_x\}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(C_v\)</span> and <span class="math notranslate nohighlight">\(C_h\)</span> are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See <a class="reference internal" href="#fig-wilson-loops"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of <span class="math notranslate nohighlight">\(\{W^v_z, W^h_z, W^v_x, W^h_x\}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There are no <strong>local</strong> operators that can distinguish between the four ground states. We need <strong>non-local</strong> operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.</p>
@@ -485,7 +485,7 @@ W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x
 <p>The excitations in the toric code (at least with periodic boundary conditions) must always come in pairs. This is because applying a <span class="math notranslate nohighlight">\(\sigma^z\)</span> operator flips the eigenvalues of two adjacent plaquettes. Therefore, we cannot create a single <span class="math notranslate nohighlight">\(m\)</span> excitation in isolation; they must be created in pairs.</p>
 </div>
 <figure class="align-center" id="fig-anyons-creation">
-<a class="reference internal image-reference" href="content/images/AnyonCreation.pdf"><img alt="content/images/AnyonCreation.pdf" src="content/images/AnyonCreation.pdf" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../../_images/AnyonCreation.pdf"><img alt="../../_images/AnyonCreation.pdf" src="../../_images/AnyonCreation.pdf" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">This can be a combined figure with star and plaquette excitations, including the Wilson string operators.</span><a class="headerlink" href="#fig-anyons-creation" title="Link to this image">#</a></p>
 </figcaption>
@@ -512,35 +512,41 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
 <h2><span class="section-number">6.6. </span>Anyon Statistics<a class="headerlink" href="#anyon-statistics" title="Link to this heading">#</a></h2>
 <p>We have shown that the toric code has two types of point-like excitations, electric <span class="math notranslate nohighlight">\(e\)</span> and magnetic <span class="math notranslate nohighlight">\(m\)</span>. The excitations are then energetically free to move around the lattice by applying Wilson string operators. But what happens when we move one excitations around another? This is where things get interesting. This is where we reveal the <em>statistics</em> of the excitations.</p>
 <figure class="align-center" id="fig-anyons-statistics">
-<a class="reference internal image-reference" href="content/images/AnyonStatistics.pdf"><img alt="content/images/AnyonStatistics.pdf" src="content/images/AnyonStatistics.pdf" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../../_images/AnyonStatistics.pdf"><img alt="../../_images/AnyonStatistics.pdf" src="../../_images/AnyonStatistics.pdf" style="width: 95%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-anyons-statistics" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the following set up, shown in Fig.<a class="reference internal" href="#fig-anyons-statistics"><span class="std std-numref">Fig. 6.4</span></a>. We create a pair of <span class="math notranslate nohighlight">\(e\)</span> excitations and a pair of <span class="math notranslate nohighlight">\(m\)</span> excitations. We then move one of the <span class="math notranslate nohighlight">\(m\)</span> exciations in a loop around one of the <span class="math notranslate nohighlight">\(e\)</span> excitations, using the Wilson string operator <span class="math notranslate nohighlight">\(W^z(\gamma)\)</span> in a closed loop.</p>
+<p>Consider the following set up, shown in <a class="reference internal" href="#fig-anyons-statistics"><span class="std std-numref">Fig. 6.4</span></a>. We create a pair of <span class="math notranslate nohighlight">\(e\)</span> excitations and a pair of <span class="math notranslate nohighlight">\(m\)</span> excitations. We then move one of the <span class="math notranslate nohighlight">\(m\)</span> exciations in a loop around one of the <span class="math notranslate nohighlight">\(e\)</span> excitations, using the Wilson string operator <span class="math notranslate nohighlight">\(W^z(\gamma)\)</span> in a closed loop.</p>
 <p>Now, if this Wilson loop did not enclose the <span class="math notranslate nohighlight">\(e\)</span> excitation, it would commute with all the star operators, and thus have no effect on the state. However, since it does enclose the <span class="math notranslate nohighlight">\(e\)</span> excitation, we have to cross the string of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators with the string of <span class="math notranslate nohighlight">\(\sigma^x\)</span> operators that created the <span class="math notranslate nohighlight">\(e\)</span> excitation. At the crossing point, we have the anti-commutation relation <span class="math notranslate nohighlight">\(\sigma^z \sigma^x = - \sigma^x \sigma^z\)</span>. Therefore, moving the <span class="math notranslate nohighlight">\(m\)</span> excitation around the <span class="math notranslate nohighlight">\(e\)</span> excitation results in an overall phase of -1. We say that the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons have <strong>non-trivial mutual statistics</strong>.</p>
 <div class="admonition-what-is-mutual-statistics admonition">
-<p class="admonition-title">What is mutual statistics?}</p>
+<p class="admonition-title">What is mutual statistics?</p>
 <p>We are familiar with exchange statistics of fermions and bosons. That is, if we consider two indistinguishable particles and exchange their positions, the wavefunction picks up a phase of +1 for bosons and -1 for fermions. This is called exchange statistics. However, in two dimensions, we can have more general statistics. If we have two distinguishable particles of different types, there is now the possibility that moving one particle around the other results in a non-trivial phase. This is called mutual statistics. In the toric code, the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons exhibit such non-trivial mutual statistics.</p>
+<figure class="align-center" id="fig-anyons-statistics-schematic">
+<a class="reference internal image-reference" href="../../_images/AnyonStatisticsSchematic.pdf"><img alt="../../_images/AnyonStatisticsSchematic.pdf" src="../../_images/AnyonStatisticsSchematic.pdf" style="width: 45%;" /></a>
+</figure>
 </div>
 <p>The <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> excitation are examples of anyons with statistics other than simple bosons or fermions. This is also an example of fractionalisation, that is the quasi-particle excitations are not simple composites of the underlying spin-1/2 degrees of freedom. They are emergent collective excitations!</p>
 <div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise}</p>
+<p class="admonition-title">Exercise</p>
 <p>By creating two pairs of the same type of excitations, e.g., two pairs of <span class="math notranslate nohighlight">\(e\)</span> anyons, and exchanging one excitation from each pair, show that both the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> excitations have bosonic exchange statistics. That is, exchanging two <span class="math notranslate nohighlight">\(e\)</span> anyons results in a phase of +1, and similarly for two <span class="math notranslate nohighlight">\(m\)</span> anyons.</p>
 </div>
 </section>
 <section id="emergent-fermions">
 <h2><span class="section-number">6.7. </span>Emergent Fermions<a class="headerlink" href="#emergent-fermions" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="fig-fermion-definition">
+<a class="reference internal image-reference" href="../../_images/FermionDefinition.pdf"><img alt="../../_images/FermionDefinition.pdf" src="../../_images/FermionDefinition.pdf" style="width: 65%;" /></a>
+</figure>
 <p>An interesting consequence of the non-trivial mutual statistics between the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons is that we can combine them to form a new type of excitation, called the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon, defined as the bound state of an <span class="math notranslate nohighlight">\(e\)</span> and an <span class="math notranslate nohighlight">\(m\)</span> anyon. What are the statistics of this new <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon?</p>
 <figure class="align-center" id="fig-boson-statistics">
-<a class="reference internal image-reference" href="content/images/BosonStatistics.pdf"><img alt="content/images/BosonStatistics.pdf" src="content/images/BosonStatistics.pdf" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../../_images/BosonStatistics.pdf"><img alt="../../_images/BosonStatistics.pdf" src="../../_images/BosonStatistics.pdf" style="width: 85%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-boson-statistics" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>While the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons individually have bosonic exchange statistics (see Fig.<a class="reference internal" href="#fig-boson-statistics"><span class="std std-numref">Fig. 6.5</span></a>), the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon inherits a phase of -1 when exchanged with another <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon due to the mutual statistics between its constituent <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons (see Fig.<a class="reference internal" href="#fig-fermion-statistics"><span class="std std-numref">Fig. 6.6</span></a>). Therefore, the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon is a fermion! This anyon also have a Wilson string operator defined as the product of the electric and magnetic Wilson string operators along the same path.</p>
+<p>While the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons individually have bosonic exchange statistics (see <a class="reference internal" href="#fig-boson-statistics"><span class="std std-numref">Fig. 6.5</span></a>), the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon inherits a phase of -1 when exchanged with another <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon due to the mutual statistics between its constituent <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons (see <a class="reference internal" href="#fig-fermion-statistics"><span class="std std-numref">Fig. 6.6</span></a>). Therefore, the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon is a fermion! This anyon also have a Wilson string operator defined as the product of the electric and magnetic Wilson string operators along the same path.</p>
 <figure class="align-center" id="fig-fermion-statistics">
-<a class="reference internal image-reference" href="content/images/FermionStatistics.pdf"><img alt="content/images/FermionStatistics.pdf" src="content/images/FermionStatistics.pdf" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../../_images/FermionStatistics.pdf"><img alt="../../_images/FermionStatistics.pdf" src="../../_images/FermionStatistics.pdf" style="width: 45%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-fermion-statistics" title="Link to this image">#</a></p>
 </figcaption>
