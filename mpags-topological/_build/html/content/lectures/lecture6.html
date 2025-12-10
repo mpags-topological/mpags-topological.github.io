@@ -499,7 +499,7 @@ W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x
 <p>where <span class="math notranslate nohighlight">\(C_v\)</span> and <span class="math notranslate nohighlight">\(C_h\)</span> are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.<a class="reference internal" href="#fig-wilson-strings"><span class="std std-numref">Fig. 6.2</span></a> for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of <span class="math notranslate nohighlight">\(\{W^v_z, W^h_z, W^v_x, W^h_x\}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are no <em>local</em> operators that can distinguish between the four ground states. We need <em>non-local</em> operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.</p>
+<p>There are no <strong>local</strong> operators that can distinguish between the four ground states. We need <strong>non-local</strong> operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.</p>
 </div>
 </section>
 <section id="anyons">
@@ -510,10 +510,26 @@ W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x
 <a class="reference internal image-reference" href="content/images/AnyonCreation.pdf"><img alt="content/images/AnyonCreation.pdf" src="content/images/AnyonCreation.pdf" style="width: 85%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-anyons-creation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">This can be a combined figure with star and plaquette excitations, including the Wilson string operators.</span><a class="headerlink" href="#fig-anyons-creation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We can then move these excitations around by applying further <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators to adjacent spins. If the operators acts on a spin adjacent to one of the excitations, it will move the excitation to the other plaquette adjacent to that spin without costing any additional energy. By applying a string of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators along a path on the lattice, we can create a pair of <span class="math notranslate nohighlight">\(m\)</span> excitations at the endpoints of the path and move them around. See Fig.<a class="reference internal" href="#fig-anyons-creation"><span class="std std-numref">Fig. 6.3</span></a> for an illustration.</p>
+<p>We can define open <strong>Wilson string operators</strong> that create and move these excitations. For a path <span class="math notranslate nohighlight">\(\gamma\)</span> on the dual lattice, we define</p>
+<div class="math notranslate nohighlight">
+\[
+W^z(\gamma) = \prod_{i \in \gamma} \sigma_i^z.
+\]</div>
+<p>The operator created a pair of magnetic (plaquette) excitations at the endpoints of the path <span class="math notranslate nohighlight">\(\gamma\)</span>, or moves existing excitations if they are already present at the endpoints. Note that the Wilson loop operators we defined earlier are special cases of these string operators, where the path winds around the torus and has no endpoints, thus creating no excitations.</p>
+<p>Similarly, we can define the electric Wilson string operators</p>
+<div class="math notranslate nohighlight">
+\[
+W^x(C) = \prod_{i \in C} \sigma_i^x,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a path on the lattice. These operators create and move “electric” (star) excitations, which we denote by <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Wilson string operators are explicitly defined in terms of a given path <span class="math notranslate nohighlight">\(\gamma\)</span> or <span class="math notranslate nohighlight">\(C\)</span>. However, the excitations they create at the endpoints do not depend on the specific path taken, only on the endpoints themselves. More precisely, two Wilson string operators defined on different paths with the same endpoints may be related by multiplication with plaquette or star operators, and if there are no excitations in the region between the two paths, these operators act identically on the state.</p>
+</div>
 </section>
 </section>
 

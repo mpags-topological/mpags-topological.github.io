@@ -173,7 +173,7 @@ $$
 where $C_v$ and $C_h$ are any non-contractible paths on the lattice that wind an odd number of times around the vertical and horizontal directions of the torus, respectively. See Fig.{numref}`fig:wilson_strings` for examples of such paths. These operators also commute with the Hamiltonian and with each other, but they do not commute with the previous Wilson loop operators. We can distinguish the ground states using any commuting pair of $\{W^v_z, W^h_z, W^v_x, W^h_x\}$.
 
 ```{note}
-There are no *local* operators that can distinguish between the four ground states. We need *non-local* operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.
+There are no **local** operators that can distinguish between the four ground states. We need **non-local** operators like the Wilson loop operators to do so. This is another hallmark of topological order. There is said to be a topological ground state degeneracy. An important consequence of this is that local perturbations to the Hamiltonian cannot lift the ground state degeneracy, making it robust against local noise. More precisely, any local operator can at most cause energy splittings that are exponentially small in the system size.
 ```
 
 ## Anyons
@@ -188,10 +188,29 @@ name: fig:anyons_creation
 width: 85%
 align: center
 ---
-Caption...
+This can be a combined figure with star and plaquette excitations, including the Wilson string operators. 
 ```
 
 We can then move these excitations around by applying further $\sigma^z$ operators to adjacent spins. If the operators acts on a spin adjacent to one of the excitations, it will move the excitation to the other plaquette adjacent to that spin without costing any additional energy. By applying a string of $\sigma^z$ operators along a path on the lattice, we can create a pair of $m$ excitations at the endpoints of the path and move them around. See Fig.{numref}`fig:anyons_creation` for an illustration.
 
+We can define open **Wilson string operators** that create and move these excitations. For a path $\gamma$ on the dual lattice, we define
+
+$$
+W^z(\gamma) = \prod_{i \in \gamma} \sigma_i^z.
+$$
+
+The operator created a pair of magnetic (plaquette) excitations at the endpoints of the path $\gamma$, or moves existing excitations if they are already present at the endpoints. Note that the Wilson loop operators we defined earlier are special cases of these string operators, where the path winds around the torus and has no endpoints, thus creating no excitations.
+
+Similarly, we can define the electric Wilson string operators
+
+$$
+W^x(C) = \prod_{i \in C} \sigma_i^x,
+$$
+
+where $C$ is a path on the lattice. These operators create and move "electric" (star) excitations, which we denote by $e$. 
+
+```{note}
+The Wilson string operators are explicitly defined in terms of a given path $\gamma$ or $C$. However, the excitations they create at the endpoints do not depend on the specific path taken, only on the endpoints themselves. More precisely, two Wilson string operators defined on different paths with the same endpoints may be related by multiplication with plaquette or star operators, and if there are no excitations in the region between the two paths, these operators act identically on the state.
+```
 
 
