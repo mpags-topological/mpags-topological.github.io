@@ -57,6 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture3';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -358,9 +360,31 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-3-topological-insulators-ii">
 <h1><span class="section-number">3. </span>Lecture 3 - Topological Insulators II<a class="headerlink" href="#lecture-3-topological-insulators-ii" title="Link to this heading">#</a></h1>
-<p>In the previous lecture we looked at a couple of key models in the theory of topological insulators. These were the SSH model which is a 1d topological insulator and the Haldane model which is a Chern insulator. So what’s the difference between a Chern insulator and a topological insulator. Both are insulating phases with topological properties</p>
+<p>In the previous lecture we looked at a couple of key models in the theory of topological insulators. These were the SSH model which is a 1d topological insulator and the Haldane model which is a Chern insulator. So what’s the difference between a Chern insulator and a topological insulator? Both are insulating phases with topological properties and sometimes (depending on who you ask) Chern insulators are considered a subset of topological insulators. An alternative definition for topological insulators is related to symmetry protected topological (SPT) phases. In this definition, the topological modes are also protected by an additional symmetry, however this excludes Chern insulators from being a topological insulator.</p>
+<p>In this lecture we will look to understand the importance of symmetries further. To begin, we introduce a classic model for a symmetry-protected topological insulator - the Kane-Mele model</p>
 <section id="kane-mele">
 <h2><span class="section-number">3.1. </span>Kane-Mele<a class="headerlink" href="#kane-mele" title="Link to this heading">#</a></h2>
+<p>The foundation of the Kane-Mele model is the Haldane model we saw in the last lecture, though we now add two additional components; spin and spin-orbit coupling.
+In order to add spin, we simply take two copies of the Haldane model with opposite spin. We additionally let <span class="math notranslate nohighlight">\(\varphi \rightarrow -\varphi\)</span> for <span class="math notranslate nohighlight">\(\uparrow\rightarrow\downarrow\)</span>. Therefore, we have</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\rm site}=M\sum_{i\in A}\sum_{\sigma=\uparrow, \downarrow}a^\dagger_{i,\sigma}a_{i, \sigma} - M\sum_{i \in B}\sum_{\sigma=\uparrow, \downarrow} b_{i,\sigma}^\dagger b_{i,\sigma}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+H_{\rm n.n.} = t_1\sum_{\langle i, j \rangle} \sum_{\sigma}\left( b_{i+j, \sigma}^\dagger a_{i, \sigma} + a_{i,\sigma}^\dagger b_{i+j, \sigma}\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_1, \uparrow}^\dagger a_{i,\uparrow} + {\rm e}^{i\varphi}a_{i,\uparrow}^\dagger a_{i+j_1, \uparrow}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_2, \uparrow}^\dagger b_{i, \uparrow} + {\rm e}^{-i\varphi}b_{i, \uparrow}^\dagger a_{i+j_2, \uparrow}\right) \\ + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}a_{i+j_1, \downarrow}^\dagger a_{i,\downarrow} + {\rm e}^{-i\varphi}a_{i,\downarrow}^\dagger a_{i+j_1, \downarrow}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}b_{i+j_2, \downarrow}^\dagger b_{i, \downarrow} + {\rm e}^{i\varphi}b_{i, \downarrow}^\dagger a_{i+j_2, \downarrow}\right)
+\end{split}\]</div>
+<p>We then incorporate spin-orbit coupling using a nearest neighbour Rashba term, which has the form</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+j}({\boldsymbol \sigma} \times {\boldsymbol R_j})_z a_i - a^\dagger_i({\boldsymbol \sigma} \times {\boldsymbol R_j})_z b_{i+j}\right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the coupling strength and the operators here are actually spinors, <span class="math notranslate nohighlight">\(a_i = (a_{i, \uparrow}, a_{i, \downarrow})^{\rm T}\)</span> with the Pauli matrices acting in the acting in this spin subspace.</p>
+<p>As we saw in the previous lecture, it is possible to analyse the spectrum in order to identify the topological phases, however in this case the invariant is not the Chern number. Later on we will address what the invariant is for this model, but for now let’s explore why this model is different to the Haldane model.</p>
 </section>
 </section>
 
