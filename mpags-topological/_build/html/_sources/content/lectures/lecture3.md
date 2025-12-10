@@ -30,3 +30,26 @@ $$
 where $\alpha$ is the coupling strength and the operators here are actually spinors, $a_i = (a_{i, \uparrow}, a_{i, \downarrow})^{\rm T}$ with the Pauli matrices acting in the acting in this spin subspace.
 
 As we saw in the previous lecture, it is possible to analyse the spectrum in order to identify the topological phases, however in this case the invariant is not the Chern number. Later on we will address what the invariant is for this model, but for now let's explore why this model is different to the Haldane model.
+
+### Kramers' theorem
+
+One of the key differences between the Kane-Mele and Haldane models appears in the edge modes
+
+<span style="color:red;">Insert sketch of the edge modes</span>
+
+In the case of a Chern insulator, we exhibit quantum Hall physics without the magentic field (the quantum anomalous Hall effect) and therefore have chiral edge modes. In contrast to this, topological insulators (in the SPT sense) exhibit the quantum spin Hall effect and have helical edge modes. These are counterpropagating edge modes with opposite spin polarisation. This is expected even in the limit $\alpha \rightarrow 0$, where we have two copies of the Haldane model with opposite spins and phases. The question then becomes why don't these edge modes gap out? The answer is Kramers' theorem.
+
+Kramers' theorem (in the context of spin-$\tfrac{1}{2}$) says that
+
+Given a spin-$\tfrac{1}{2}$, time-reversal symmetric system, then for every eigenstate, there must be a second degenerate eigenstate related by time-reversal symmetry.
+
+What does this mean in practice? The Kane-Mele model is a time-reversal symmetric model (we will define what we mean by this shortly) and so for each eigenstate, there must be a second eigenstate with the same energy. This second eigenstate will be related to the first by TRS which here corresponds to ${\boldsymbol k} \rightarrow -{\boldsymbol k}$ (up to a lattice vector) and the flipping the spin polarisation.
+
+Therefore at time-reversal symmetric momenta, the spectrum must be degenerate at this point and the edge modes will cross at these momenta. Hypothetically, if we were to allow scatterings that gapped out the modes without breaking TRS, then the degeneracy would be lifted and Kramers' theorem would be violated. Therefore such perturbations are not allowed and any scattering processes that gap out the modes must break the symmetry, giving us a notion of symmetry protected topological (SPT) phases.
+
+<span style="color:red;">Insert sketch of the above argument</span>
+
+### Symmetries
+
+SPT phases are more general than what we have outlined above using Kramers' theorem, but what they share is that the topological effects are robust to any symmetry-preserving perturbation. Therefore, it is now worth looking into symmetries in more detail.
+

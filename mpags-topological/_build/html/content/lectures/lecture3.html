@@ -346,7 +346,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kane-mele">3.1. Kane-Mele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kane-mele">3.1. Kane-Mele</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kramers-theorem">3.1.1. Kramers’ theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries">3.1.2. Symmetries</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -385,6 +389,21 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the coupling strength and the operators here are actually spinors, <span class="math notranslate nohighlight">\(a_i = (a_{i, \uparrow}, a_{i, \downarrow})^{\rm T}\)</span> with the Pauli matrices acting in the acting in this spin subspace.</p>
 <p>As we saw in the previous lecture, it is possible to analyse the spectrum in order to identify the topological phases, however in this case the invariant is not the Chern number. Later on we will address what the invariant is for this model, but for now let’s explore why this model is different to the Haldane model.</p>
+<section id="kramers-theorem">
+<h3><span class="section-number">3.1.1. </span>Kramers’ theorem<a class="headerlink" href="#kramers-theorem" title="Link to this heading">#</a></h3>
+<p>One of the key differences between the Kane-Mele and Haldane models appears in the edge modes</p>
+<p><span style="color:red;">Insert sketch of the edge modes</span></p>
+<p>In the case of a Chern insulator, we exhibit quantum Hall physics without the magentic field (the quantum anomalous Hall effect) and therefore have chiral edge modes. In contrast to this, topological insulators (in the SPT sense) exhibit the quantum spin Hall effect and have helical edge modes. These are counterpropagating edge modes with opposite spin polarisation. This is expected even in the limit <span class="math notranslate nohighlight">\(\alpha \rightarrow 0\)</span>, where we have two copies of the Haldane model with opposite spins and phases. The question then becomes why don’t these edge modes gap out? The answer is Kramers’ theorem.</p>
+<p>Kramers’ theorem (in the context of spin-<span class="math notranslate nohighlight">\(\tfrac{1}{2}\)</span>) says that</p>
+<p>Given a spin-<span class="math notranslate nohighlight">\(\tfrac{1}{2}\)</span>, time-reversal symmetric system, then for every eigenstate, there must be a second degenerate eigenstate related by time-reversal symmetry.</p>
+<p>What does this mean in practice? The Kane-Mele model is a time-reversal symmetric model (we will define what we mean by this shortly) and so for each eigenstate, there must be a second eigenstate with the same energy. This second eigenstate will be related to the first by TRS which here corresponds to <span class="math notranslate nohighlight">\({\boldsymbol k} \rightarrow -{\boldsymbol k}\)</span> (up to a lattice vector) and the flipping the spin polarisation.</p>
+<p>Therefore at time-reversal symmetric momenta, the spectrum must be degenerate at this point and the edge modes will cross at these momenta. Hypothetically, if we were to allow scatterings that gapped out the modes without breaking TRS, then the degeneracy would be lifted and Kramers’ theorem would be violated. Therefore such perturbations are not allowed and any scattering processes that gap out the modes must break the symmetry, giving us a notion of symmetry protected topological (SPT) phases.</p>
+<p><span style="color:red;">Insert sketch of the above argument</span></p>
+</section>
+<section id="symmetries">
+<h3><span class="section-number">3.1.2. </span>Symmetries<a class="headerlink" href="#symmetries" title="Link to this heading">#</a></h3>
+<p>SPT phases are more general than what we have outlined above using Kramers’ theorem, but what they share is that the topological effects are robust to any symmetry-preserving perturbation. Therefore, it is now worth looking into symmetries in more detail.</p>
+</section>
 </section>
 </section>
 
@@ -452,7 +471,11 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kane-mele">3.1. Kane-Mele</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kane-mele">3.1. Kane-Mele</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kramers-theorem">3.1.1. Kramers’ theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries">3.1.2. Symmetries</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
