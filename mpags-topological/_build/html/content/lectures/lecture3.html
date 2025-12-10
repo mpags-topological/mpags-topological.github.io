@@ -348,7 +348,13 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kane-mele">3.1. Kane-Mele</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kramers-theorem">3.1.1. Kramers’ theorem</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries">3.1.2. Symmetries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries">3.1.2. Symmetries</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-reversal">3.1.2.1. Time-Reversal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-hole">3.1.2.2. Particle-Hole</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chiral">3.1.2.3. Chiral</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">3.1.3. Classification</a></li>
 </ul>
 </li>
 </ul>
@@ -402,7 +408,45 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 </section>
 <section id="symmetries">
 <h3><span class="section-number">3.1.2. </span>Symmetries<a class="headerlink" href="#symmetries" title="Link to this heading">#</a></h3>
-<p>SPT phases are more general than what we have outlined above using Kramers’ theorem, but what they share is that the topological effects are robust to any symmetry-preserving perturbation. Therefore, it is now worth looking into symmetries in more detail.</p>
+<p>SPT phases are more general than what we have outlined above using Kramers’ theorem, but what they share is that the topological effects are robust to any symmetry-preserving perturbation. Therefore, it is now worth looking into symmetries in more detail. Symmetries play an important role throughout physics and there are many different types. Here we will focus on three in particular, as they are relevant for classifying topological phases. These are</p>
+<ul class="simple">
+<li><p>Time-reversal symmetry</p></li>
+<li><p>Particle-hole symmetry</p></li>
+<li><p>Chiral symmetry</p></li>
+</ul>
+<section id="time-reversal">
+<h4><span class="section-number">3.1.2.1. </span>Time-Reversal<a class="headerlink" href="#time-reversal" title="Link to this heading">#</a></h4>
+<p>As we have already alluded to, this is the key difference between the Haldane and Kane-Mele models. The essence of this symmetry is that a Hamiltonian/state/operator will remain invariant under the change <span class="math notranslate nohighlight">\(t \rightarrow -t\)</span>. We define a time-reversal operator <span class="math notranslate nohighlight">\(\mathcal{T}\)</span> such that the symmetry is then expressed as</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{T}X(t)\mathcal{T}^{-1}=X(t), \hspace{10pt} \mathcal{T}\ket{\psi(t)} = \ket{\psi(t)}
+\]</div>
+<p>for operators and states respectively. The particular form of this operator depends on the problem but we can make a few general remarks and provide the form used for the Kane-Mele model.</p>
+<p>We know intuitively that reversing time should reverse the direction of motion, in other words send <span class="math notranslate nohighlight">\({\boldsymbol k} \rightarrow -{\boldsymbol k}\)</span>. This can be obtained by taking the complex conjugate, <span class="math notranslate nohighlight">\(\mathcal{K}\)</span>, (as <span class="math notranslate nohighlight">\({\boldsymbol k} = -i{\boldsymbol \nabla}\)</span>). Further to this, it should flip the spin, such that <span class="math notranslate nohighlight">\(\mathcal{T}\sigma_i\mathcal{T}^{-1}=-\sigma_i\)</span></p>
+<p>It’s easy to verify that the operator that acheives this is</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{T} = -i\sigma_y\mathcal{K}
+\]</div>
+<p>In general, the operator has the form <span class="math notranslate nohighlight">\(\mathcal{T} = U\mathcal{K}\)</span>, where <span class="math notranslate nohighlight">\(U\)</span> is a unitary matrix. Additionally it should have the property that <span class="math notranslate nohighlight">\(\mathcal{T}^2 =\pm 1\)</span>, and it is precisely this condition that leads us to Kramers’ theorem.</p>
+</section>
+<section id="particle-hole">
+<h4><span class="section-number">3.1.2.2. </span>Particle-Hole<a class="headerlink" href="#particle-hole" title="Link to this heading">#</a></h4>
+<p>Sometimes also called charge conjugation, this symmetry swaps particle and holes and therefore takes <span class="math notranslate nohighlight">\({\boldsymbol k} \rightarrow -{\boldsymbol k}\)</span> and <span class="math notranslate nohighlight">\(E \rightarrow -E\)</span>. In this course we will encounter this symmetry in superconductors when the Hamiltonians have the form <span class="math notranslate nohighlight">\(H = \tfrac{1}{2}\sum_{\boldsymbol k} \Psi^\dagger({\boldsymbol k}) H_{\boldsymbol k} \Psi({\boldsymbol k})\)</span> with <span class="math notranslate nohighlight">\(\Psi({\boldsymbol k}) = (c_{\boldsymbol k} \hspace{5pt} c_{-\boldsymbol k}^\dagger)^{\rm T}\)</span>. In this case the symmetry operator is</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{P} = \tau_x\mathcal{K}
+\]</div>
+<p><span class="math notranslate nohighlight">\(\tau_x\)</span> is a Pauli matrix acting in the particle-hole (sometimes called Nambu) subspace. As with the time-reversal operator, the general form is <span class="math notranslate nohighlight">\(\mathcal{P} = U'\mathcal{K}\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{P}^2=\pm 1\)</span>.  <span class="math notranslate nohighlight">\(U'\)</span> is a different unitary matrix.</p>
+</section>
+<section id="chiral">
+<h4><span class="section-number">3.1.2.3. </span>Chiral<a class="headerlink" href="#chiral" title="Link to this heading">#</a></h4>
+<p>This is the least intuitive and we will not go into much detail here. Generally, we have <span class="math notranslate nohighlight">\(\mathcal{S} = \mathcal{T} \cdot \mathcal{P}\)</span> unless both of the other symmetries are not present in which case <span class="math notranslate nohighlight">\(\mathcal{S}^2 = 0,1\)</span>.</p>
+<p>The SSH model we saw last lecture displayed chiral symmetry due to the presence of the two sublattices (although this does not guarantee chiral symmetry in general). We won’t go into further detail in this course.</p>
+</section>
+</section>
+<section id="classification">
+<h3><span class="section-number">3.1.3. </span>Classification<a class="headerlink" href="#classification" title="Link to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -473,7 +517,13 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kane-mele">3.1. Kane-Mele</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kramers-theorem">3.1.1. Kramers’ theorem</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries">3.1.2. Symmetries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries">3.1.2. Symmetries</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-reversal">3.1.2.1. Time-Reversal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-hole">3.1.2.2. Particle-Hole</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chiral">3.1.2.3. Chiral</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">3.1.3. Classification</a></li>
 </ul>
 </li>
 </ul>
