@@ -21,6 +21,9 @@ $$
 H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_1, \uparrow}^\dagger a_{i,\uparrow} + {\rm e}^{i\varphi}a_{i,\uparrow}^\dagger a_{i+j_1, \uparrow}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_2, \uparrow}^\dagger b_{i, \uparrow} + {\rm e}^{-i\varphi}b_{i, \uparrow}^\dagger a_{i+j_2, \uparrow}\right) \\ + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}a_{i+j_1, \downarrow}^\dagger a_{i,\downarrow} + {\rm e}^{-i\varphi}a_{i,\downarrow}^\dagger a_{i+j_1, \downarrow}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}b_{i+j_2, \downarrow}^\dagger b_{i, \downarrow} + {\rm e}^{i\varphi}b_{i, \downarrow}^\dagger a_{i+j_2, \downarrow}\right)
 $$
 
+This two copies of the Haldane model means that the Chern number is zero for this model. Is does not mean however that the model is topologically non-trivial, it is simply the wrong invariant to consider for this model. We will see the correct invariant towards the end of the lecture.
+
+
 We then incorporate spin-orbit coupling using a nearest neighbour Rashba term, which has the form
 
 $$
@@ -96,3 +99,17 @@ This is the least intuitive and we will not go into much detail here. Generally,
 The SSH model we saw last lecture displayed chiral symmetry due to the presence of the two sublattices (although this does not guarantee chiral symmetry in general). We won't go into further detail in this course.
 
 ### Classification
+
+One of the key reasons to study symmetries is their relation to the classification to topological phases and identifying the corresponding invariants. In particular is the Altland-Zirnbauer classification scheme (sometimes referred to as a periodic table)
+
+<img src="../../_static/figs/AltlandZirnbauer.svg" width="100%" height="200"></img>
+
+<span style="color:red;">Taken from Shinsei Ryu et al 2010 New J. Phys. 12 065010 (https://iopscience.iop.org/article/10.1088/1367-2630/12/6/065010 - on this webpage not in the actual paper???)</span>
+
+This table gives the invariants in various dimensions for different symmetry classes.
+
+
+### The Kane-Mele invariant
+
+We now return to the Kane-Mele model, which has a $\Z_2$ invariant.
+
