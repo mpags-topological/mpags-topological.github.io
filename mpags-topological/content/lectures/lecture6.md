@@ -182,6 +182,10 @@ Let us now turn to the excitations of the toric code. Here we will encounter one
 
 Let us apply a $\sigma^z$ operator to a single spin in the ground state. This has the effect of flipping the eigenvalue of the two adjacent plaquette operators from +1 to -1. These plaquettes with $B_p = -1$ correspond to local excitations, each costing energy $2J_m$. We call these excitations "magnetic" excitations by convention, and denote them by $m$. 
 
+```{note}
+The excitations in the toric code (at least with periodic boundary conditions) must always come in pairs. This is because applying a $\sigma^z$ operator flips the eigenvalues of two adjacent plaquettes. Therefore, we cannot create a single $m$ excitation in isolation; they must be created in pairs.
+```
+
 ```{figure} ../images/AnyonCreation.pdf
 ---
 name: fig:anyons_creation
@@ -213,4 +217,55 @@ where $C$ is a path on the lattice. These operators create and move "electric" (
 The Wilson string operators are explicitly defined in terms of a given path $\gamma$ or $C$. However, the excitations they create at the endpoints do not depend on the specific path taken, only on the endpoints themselves. More precisely, two Wilson string operators defined on different paths with the same endpoints may be related by multiplication with plaquette or star operators, and if there are no excitations in the region between the two paths, these operators act identically on the state.
 ```
 
+## Anyon Statistics
 
+We have shown that the toric code has two types of point-like excitations, electric $e$ and magnetic $m$. The excitations are then energetically free to move around the lattice by applying Wilson string operators. But what happens when we move one excitations around another? This is where things get interesting. This is where we reveal the *statistics* of the excitations. 
+
+```{figure} ../images/AnyonStatistics.pdf
+---
+name: fig:anyons_statistics
+width: 85%
+align: center
+---
+Caption...
+```
+
+Consider the following set up, shown in Fig.{numref}`fig:anyons_statistics`. We create a pair of $e$ excitations and a pair of $m$ excitations. We then move one of the $m$ exciations in a loop around one of the $e$ excitations, using the Wilson string operator $W^z(\gamma)$ in a closed loop.
+
+Now, if this Wilson loop did not enclose the $e$ excitation, it would commute with all the star operators, and thus have no effect on the state. However, since it does enclose the $e$ excitation, we have to cross the string of $\sigma^z$ operators with the string of $\sigma^x$ operators that created the $e$ excitation. At the crossing point, we have the anti-commutation relation $\sigma^z \sigma^x = - \sigma^x \sigma^z$. Therefore, moving the $m$ excitation around the $e$ excitation results in an overall phase of -1. We say that the $e$ and $m$ anyons have **non-trivial mutual statistics**.
+
+```{admonition} What is mutual statistics?}
+We are familiar with exchange statistics of fermions and bosons. That is, if we consider two indistinguishable particles and exchange their positions, the wavefunction picks up a phase of +1 for bosons and -1 for fermions. This is called exchange statistics. However, in two dimensions, we can have more general statistics. If we have two distinguishable particles of different types, there is now the possibility that moving one particle around the other results in a non-trivial phase. This is called mutual statistics. In the toric code, the $e$ and $m$ anyons exhibit such non-trivial mutual statistics.
+```
+
+The $e$ and $m$ excitation are examples of anyons with statistics other than simple bosons or fermions. This is also an example of fractionalisation, that is the quasi-particle excitations are not simple composites of the underlying spin-1/2 degrees of freedom. They are emergent collective excitations!
+
+```{admonition} Exercise}
+By creating two pairs of the same type of excitations, e.g., two pairs of $e$ anyons, and exchanging one excitation from each pair, show that both the $e$ and $m$ excitations have bosonic exchange statistics. That is, exchanging two $e$ anyons results in a phase of +1, and similarly for two $m$ anyons.
+```
+
+## Emergent Fermions
+
+An interesting consequence of the non-trivial mutual statistics between the $e$ and $m$ anyons is that we can combine them to form a new type of excitation, called the $\epsilon$ anyon, defined as the bound state of an $e$ and an $m$ anyon. What are the statistics of this new $\epsilon$ anyon?
+
+```{figure} ../images/BosonStatistics.pdf
+---
+name: fig:boson_statistics
+width: 85%
+align: center
+---
+Caption...
+```
+
+While the $e$ and $m$ anyons individually have bosonic exchange statistics (see Fig.{numref}`fig:boson_statistics`), the $\epsilon$ anyon inherits a phase of -1 when exchanged with another $\epsilon$ anyon due to the mutual statistics between its constituent $e$ and $m$ anyons (see Fig.{numref}`fig:fermion_statistics`). Therefore, the $\epsilon$ anyon is a fermion! This anyon also have a Wilson string operator defined as the product of the electric and magnetic Wilson string operators along the same path.
+
+```{figure} ../images/FermionStatistics.pdf
+---
+name: fig:fermion_statistics
+width: 85%
+align: center
+---
+Caption...
+```
+
+As we will see, there is a deep connection between the anyons in the toric code and the ground state degeneracy on the torus. We will see that we can label the four ground states by $\{1, e, m, \epsilon\}$, matching the four types of anyons in the theory (including the vacuum $1$). This is a general feature of topologically ordered systems, where the ground state degeneracy on a torus is equal to the number of distinct anyon types in the theory.

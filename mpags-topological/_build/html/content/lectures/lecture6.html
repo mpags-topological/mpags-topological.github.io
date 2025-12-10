@@ -16,30 +16,33 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -66,6 +69,7 @@
     <link rel="prev" title="5. Lecture 5" href="lecture5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -126,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +149,17 @@
     
     
     <img src="../../_static/logo.png" class="logo__image only-light" alt="Introduction to Topological Phases of Matter - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Introduction to Topological Phases of Matter - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Introduction to Topological Phases of Matter - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -305,24 +294,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -355,6 +336,8 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wilson-loop-operators">6.4. Wilson Loop Operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">6.5. Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyon-statistics">6.6. Anyon Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergent-fermions">6.7. Emergent Fermions</a></li>
 </ul>
             </nav>
         </div>
@@ -383,8 +366,7 @@ A_s = \prod_{i \in s} \sigma_i^z, \quad B_p = \prod_{i \in p} \sigma_i^x,
 \]</div>
 <p>with the products running over the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span> or around the plaquette <span class="math notranslate nohighlight">\(p\)</span>. Here, <span class="math notranslate nohighlight">\(\sigma_i^x\)</span> and <span class="math notranslate nohighlight">\(\sigma_i^z\)</span> are the Pauli matrices acting on the spin at bond <span class="math notranslate nohighlight">\(i\)</span>. We define the model with periodic boundary conditions, i.e., we put it on a torus (hence the name). The parameters <span class="math notranslate nohighlight">\(J_e\)</span> and <span class="math notranslate nohighlight">\(J_m\)</span> are positive coupling constants. The subscripts <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> stand for “electric” and “magnetic”, corresponding to the types of excitations in the model (which we will revisit later), and the naming comes from the context of lattice gauge theory.</p>
 <figure class="align-center" id="fig-toric-code">
-<a class="reference internal image-reference" href="content/images/ToricCode.pdf"><img alt="content/images/ToricCode.pdf" src="content/images/ToricCode.pdf" style="width: 85%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/ToricCode.pdf"><img alt="content/images/ToricCode.pdf" src="content/images/ToricCode.pdf" style="width: 85%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Caption for toric code…</span><a class="headerlink" href="#fig-toric-code" title="Link to this image">#</a></p>
 </figcaption>
@@ -421,43 +403,36 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 <h2><span class="section-number">6.3. </span>Explicit form of the Ground States<a class="headerlink" href="#explicit-form-of-the-ground-states" title="Link to this heading">#</a></h2>
 <p>Since we can solve the toric code exactly, we can write down explicit forms for the ground states. To do so, let us work in a particular basis. We choose the <span class="math notranslate nohighlight">\(\sigma^z\)</span> basis, where each spin is either up (<span class="math notranslate nohighlight">\(\sigma^z\ket{\uparrow} = \ket{\uparrow}\)</span>) or down (<span class="math notranslate nohighlight">\(\sigma^z\ket{\downarrow} = -\ket{\downarrow}\)</span>) along the <span class="math notranslate nohighlight">\(z\)</span>-axis. We denote this graphically by using thin black lines for spins in the <span class="math notranslate nohighlight">\(\ket{\uparrow}\)</span> state and thick black lines for spins in the <span class="math notranslate nohighlight">\(\ket{\downarrow}\)</span> state, that is</p>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="content/images/GSBasis.pdf"><img alt="content/images/GSBasis.pdf" src="content/images/GSBasis.pdf" style="width: 85%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/GSBasis.pdf"><img alt="content/images/GSBasis.pdf" src="content/images/GSBasis.pdf" style="width: 85%;" /></a>
 </figure>
 <section id="star-operators">
 <h3><span class="section-number">6.3.1. </span>Star operators<a class="headerlink" href="#star-operators" title="Link to this heading">#</a></h3>
 <p>Let us first consider the action of the star operators <span class="math notranslate nohighlight">\(A_s\)</span>. Recall that <span class="math notranslate nohighlight">\(A_s\)</span> is the product of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators on the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span>. Therefore, <span class="math notranslate nohighlight">\(A_s\)</span> measures the parity of the number of down spins around the star. If there is an even number of down spins, <span class="math notranslate nohighlight">\(A_s\)</span> has eigenvalue +1; if there is an odd number, it has eigenvalue -1. Thus, the ground state condition <span class="math notranslate nohighlight">\(A_s \ket{\psi_0} = \ket{\psi_0}\)</span> requires that there be an even number of down spins around each star. That is, in the ground state, we can only have</p>
 <figure class="align-center" id="fig-starallowed">
-<a class="reference internal image-reference" href="content/images/StarAllowed.pdf"><img alt="content/images/StarAllowed.pdf" src="content/images/StarAllowed.pdf" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/StarAllowed.pdf"><img alt="content/images/StarAllowed.pdf" src="content/images/StarAllowed.pdf" style="width: 60%;" /></a>
 </figure>
 <p>and not</p>
 <figure class="align-center" id="fig-starnotallowed">
-<a class="reference internal image-reference" href="content/images/StarNotAllowed.pdf"><img alt="content/images/StarNotAllowed.pdf" src="content/images/StarNotAllowed.pdf" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/StarNotAllowed.pdf"><img alt="content/images/StarNotAllowed.pdf" src="content/images/StarNotAllowed.pdf" style="width: 60%;" /></a>
 </figure>
 <p>Therefore, any configuration in the ground state must consist of closed loops of down spins on the lattice. For example, the following configuration is allowed in the ground state:</p>
 <figure class="align-center" id="fig-stargsexample">
-<a class="reference internal image-reference" href="content/images/StarGSExample.pdf"><img alt="content/images/StarGSExample.pdf" src="content/images/StarGSExample.pdf" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/StarGSExample.pdf"><img alt="content/images/StarGSExample.pdf" src="content/images/StarGSExample.pdf" style="width: 60%;" /></a>
 </figure>
 </section>
 <section id="plaquette-operators">
 <h3><span class="section-number">6.3.2. </span>Plaquette operators<a class="headerlink" href="#plaquette-operators" title="Link to this heading">#</a></h3>
 <p>In the Z-basis, the plaquette operators flip all spins aroudn the plaquette, e.g.,</p>
 <figure class="align-center" id="fig-plaquette-example">
-<a class="reference internal image-reference" href="content/images/PlaquetteExample.pdf"><img alt="content/images/PlaquetteExample.pdf" src="content/images/PlaquetteExample.pdf" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/PlaquetteExample.pdf"><img alt="content/images/PlaquetteExample.pdf" src="content/images/PlaquetteExample.pdf" style="width: 60%;" /></a>
 </figure>
 <p>To have <span class="math notranslate nohighlight">\(B_p|\psi_0\rangle = |\psi_0\rangle\)</span>, this means if a particular configuation appears in <span class="math notranslate nohighlight">\(|\psi_0\rangle\)</span>, then the configuration with a plaquette flipped is also in <span class="math notranslate nohighlight">\(|\psi_0\rangle\)</span> with the same amplitude. Therefore, the ground state is an equal superposition of all closed loop configurations that can be reached from one another by flipping plaquettes. E.g.,</p>
 <figure class="align-center" id="fig-plaquettegsexample">
-<a class="reference internal image-reference" href="content/images/PlaquetteGSExample.pdf"><img alt="content/images/PlaquetteGSExample.pdf" src="content/images/PlaquetteGSExample.pdf" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/PlaquetteGSExample.pdf"><img alt="content/images/PlaquetteGSExample.pdf" src="content/images/PlaquetteGSExample.pdf" style="width: 60%;" /></a>
 </figure>
 <p>It looks like we’ve found the ground state, but what about the four-fold degeneracy? To understand this consider the following four spin configurations, labelled <span class="math notranslate nohighlight">\(|\Phi_i\rangle\)</span>, <span class="math notranslate nohighlight">\(i = 0, 1, 2, 3\)</span>:</p>
 <figure class="align-center" id="fig-gsdegeneracy">
-<a class="reference internal image-reference" href="content/images/GSReferenceConfigs.pdf"><img alt="content/images/GSReferenceConfigs.pdf" src="content/images/GSReferenceConfigs.pdf" style="width: 80%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/GSReferenceConfigs.pdf"><img alt="content/images/GSReferenceConfigs.pdf" src="content/images/GSReferenceConfigs.pdf" style="width: 80%;" /></a>
 </figure>
 <p>It is not possible to go from one of these configurations to another by flipping plaquettes. Therefore, the ground state must be a superposition of all closed loop configurations that can be reached from each of these four “reference” configurations by flipping plaquettes. These states are characterised by even or odd winding around the two directions of the torus. The four ground states <span class="math notranslate nohighlight">\(|\psi_i\rangle\)</span>, with <span class="math notranslate nohighlight">\(i=0,1,2,3\)</span>, can therefore be written as</p>
 <div class="math notranslate nohighlight">
@@ -469,8 +444,7 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 <section id="wilson-loop-operators">
 <h2><span class="section-number">6.4. </span>Wilson Loop Operators<a class="headerlink" href="#wilson-loop-operators" title="Link to this heading">#</a></h2>
 <figure class="align-center" id="fig-wilson-strings">
-<a class="reference internal image-reference" href="content/images/WilsonStrings.pdf"><img alt="content/images/WilsonStrings.pdf" src="content/images/WilsonStrings.pdf" style="width: 85%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/WilsonStrings.pdf"><img alt="content/images/WilsonStrings.pdf" src="content/images/WilsonStrings.pdf" style="width: 85%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-wilson-strings" title="Link to this image">#</a></p>
 </figcaption>
@@ -506,9 +480,12 @@ W^v_x = \prod_{i \in C_v} \sigma_i^x, \quad W^h_x = \prod_{i \in C_h} \sigma_i^x
 <h2><span class="section-number">6.5. </span>Anyons<a class="headerlink" href="#anyons" title="Link to this heading">#</a></h2>
 <p>Let us now turn to the excitations of the toric code. Here we will encounter one of the most remarkable aspects of topologically ordered systems: anyons. In the remaining lectures, we will develop a more formal theory of anyons.</p>
 <p>Let us apply a <span class="math notranslate nohighlight">\(\sigma^z\)</span> operator to a single spin in the ground state. This has the effect of flipping the eigenvalue of the two adjacent plaquette operators from +1 to -1. These plaquettes with <span class="math notranslate nohighlight">\(B_p = -1\)</span> correspond to local excitations, each costing energy <span class="math notranslate nohighlight">\(2J_m\)</span>. We call these excitations “magnetic” excitations by convention, and denote them by <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The excitations in the toric code (at least with periodic boundary conditions) must always come in pairs. This is because applying a <span class="math notranslate nohighlight">\(\sigma^z\)</span> operator flips the eigenvalues of two adjacent plaquettes. Therefore, we cannot create a single <span class="math notranslate nohighlight">\(m\)</span> excitation in isolation; they must be created in pairs.</p>
+</div>
 <figure class="align-center" id="fig-anyons-creation">
-<a class="reference internal image-reference" href="content/images/AnyonCreation.pdf"><img alt="content/images/AnyonCreation.pdf" src="content/images/AnyonCreation.pdf" style="width: 85%;" />
-</a>
+<a class="reference internal image-reference" href="content/images/AnyonCreation.pdf"><img alt="content/images/AnyonCreation.pdf" src="content/images/AnyonCreation.pdf" style="width: 85%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">This can be a combined figure with star and plaquette excitations, including the Wilson string operators.</span><a class="headerlink" href="#fig-anyons-creation" title="Link to this image">#</a></p>
 </figcaption>
@@ -530,6 +507,45 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
 <p class="admonition-title">Note</p>
 <p>The Wilson string operators are explicitly defined in terms of a given path <span class="math notranslate nohighlight">\(\gamma\)</span> or <span class="math notranslate nohighlight">\(C\)</span>. However, the excitations they create at the endpoints do not depend on the specific path taken, only on the endpoints themselves. More precisely, two Wilson string operators defined on different paths with the same endpoints may be related by multiplication with plaquette or star operators, and if there are no excitations in the region between the two paths, these operators act identically on the state.</p>
 </div>
+</section>
+<section id="anyon-statistics">
+<h2><span class="section-number">6.6. </span>Anyon Statistics<a class="headerlink" href="#anyon-statistics" title="Link to this heading">#</a></h2>
+<p>We have shown that the toric code has two types of point-like excitations, electric <span class="math notranslate nohighlight">\(e\)</span> and magnetic <span class="math notranslate nohighlight">\(m\)</span>. The excitations are then energetically free to move around the lattice by applying Wilson string operators. But what happens when we move one excitations around another? This is where things get interesting. This is where we reveal the <em>statistics</em> of the excitations.</p>
+<figure class="align-center" id="fig-anyons-statistics">
+<a class="reference internal image-reference" href="content/images/AnyonStatistics.pdf"><img alt="content/images/AnyonStatistics.pdf" src="content/images/AnyonStatistics.pdf" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-anyons-statistics" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Consider the following set up, shown in Fig.<a class="reference internal" href="#fig-anyons-statistics"><span class="std std-numref">Fig. 6.4</span></a>. We create a pair of <span class="math notranslate nohighlight">\(e\)</span> excitations and a pair of <span class="math notranslate nohighlight">\(m\)</span> excitations. We then move one of the <span class="math notranslate nohighlight">\(m\)</span> exciations in a loop around one of the <span class="math notranslate nohighlight">\(e\)</span> excitations, using the Wilson string operator <span class="math notranslate nohighlight">\(W^z(\gamma)\)</span> in a closed loop.</p>
+<p>Now, if this Wilson loop did not enclose the <span class="math notranslate nohighlight">\(e\)</span> excitation, it would commute with all the star operators, and thus have no effect on the state. However, since it does enclose the <span class="math notranslate nohighlight">\(e\)</span> excitation, we have to cross the string of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators with the string of <span class="math notranslate nohighlight">\(\sigma^x\)</span> operators that created the <span class="math notranslate nohighlight">\(e\)</span> excitation. At the crossing point, we have the anti-commutation relation <span class="math notranslate nohighlight">\(\sigma^z \sigma^x = - \sigma^x \sigma^z\)</span>. Therefore, moving the <span class="math notranslate nohighlight">\(m\)</span> excitation around the <span class="math notranslate nohighlight">\(e\)</span> excitation results in an overall phase of -1. We say that the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons have <strong>non-trivial mutual statistics</strong>.</p>
+<div class="admonition-what-is-mutual-statistics admonition">
+<p class="admonition-title">What is mutual statistics?}</p>
+<p>We are familiar with exchange statistics of fermions and bosons. That is, if we consider two indistinguishable particles and exchange their positions, the wavefunction picks up a phase of +1 for bosons and -1 for fermions. This is called exchange statistics. However, in two dimensions, we can have more general statistics. If we have two distinguishable particles of different types, there is now the possibility that moving one particle around the other results in a non-trivial phase. This is called mutual statistics. In the toric code, the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons exhibit such non-trivial mutual statistics.</p>
+</div>
+<p>The <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> excitation are examples of anyons with statistics other than simple bosons or fermions. This is also an example of fractionalisation, that is the quasi-particle excitations are not simple composites of the underlying spin-1/2 degrees of freedom. They are emergent collective excitations!</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise}</p>
+<p>By creating two pairs of the same type of excitations, e.g., two pairs of <span class="math notranslate nohighlight">\(e\)</span> anyons, and exchanging one excitation from each pair, show that both the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> excitations have bosonic exchange statistics. That is, exchanging two <span class="math notranslate nohighlight">\(e\)</span> anyons results in a phase of +1, and similarly for two <span class="math notranslate nohighlight">\(m\)</span> anyons.</p>
+</div>
+</section>
+<section id="emergent-fermions">
+<h2><span class="section-number">6.7. </span>Emergent Fermions<a class="headerlink" href="#emergent-fermions" title="Link to this heading">#</a></h2>
+<p>An interesting consequence of the non-trivial mutual statistics between the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons is that we can combine them to form a new type of excitation, called the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon, defined as the bound state of an <span class="math notranslate nohighlight">\(e\)</span> and an <span class="math notranslate nohighlight">\(m\)</span> anyon. What are the statistics of this new <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon?</p>
+<figure class="align-center" id="fig-boson-statistics">
+<a class="reference internal image-reference" href="content/images/BosonStatistics.pdf"><img alt="content/images/BosonStatistics.pdf" src="content/images/BosonStatistics.pdf" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-boson-statistics" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>While the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons individually have bosonic exchange statistics (see Fig.<a class="reference internal" href="#fig-boson-statistics"><span class="std std-numref">Fig. 6.5</span></a>), the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon inherits a phase of -1 when exchanged with another <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon due to the mutual statistics between its constituent <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons (see Fig.<a class="reference internal" href="#fig-fermion-statistics"><span class="std std-numref">Fig. 6.6</span></a>). Therefore, the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon is a fermion! This anyon also have a Wilson string operator defined as the product of the electric and magnetic Wilson string operators along the same path.</p>
+<figure class="align-center" id="fig-fermion-statistics">
+<a class="reference internal image-reference" href="content/images/FermionStatistics.pdf"><img alt="content/images/FermionStatistics.pdf" src="content/images/FermionStatistics.pdf" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Caption…</span><a class="headerlink" href="#fig-fermion-statistics" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As we will see, there is a deep connection between the anyons in the toric code and the ground state degeneracy on the torus. We will see that we can label the four ground states by <span class="math notranslate nohighlight">\(\{1, e, m, \epsilon\}\)</span>, matching the four types of anyons in the theory (including the vacuum <span class="math notranslate nohighlight">\(1\)</span>). This is a general feature of topologically ordered systems, where the ground state degeneracy on a torus is equal to the number of distinct anyon types in the theory.</p>
 </section>
 </section>
 
@@ -588,7 +604,8 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -606,6 +623,8 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wilson-loop-operators">6.4. Wilson Loop Operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">6.5. Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyon-statistics">6.6. Anyon Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergent-fermions">6.7. Emergent Fermions</a></li>
 </ul>
   </nav></div>
 
@@ -654,8 +673,8 @@ By George McArdle and Adam Gammon-Smith
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
