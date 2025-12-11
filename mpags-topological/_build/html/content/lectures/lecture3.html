@@ -437,13 +437,13 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 <p>Sometimes also called charge conjugation, this symmetry swaps particle and holes and therefore takes <span class="math notranslate nohighlight">\({\boldsymbol k} \rightarrow -{\boldsymbol k}\)</span> and <span class="math notranslate nohighlight">\(E \rightarrow -E\)</span>. In this course we will encounter this symmetry in superconductors when the Hamiltonians have the form <span class="math notranslate nohighlight">\(H = \tfrac{1}{2}\sum_{\boldsymbol k} \Psi^\dagger({\boldsymbol k}) H_{\boldsymbol k} \Psi({\boldsymbol k})\)</span> with <span class="math notranslate nohighlight">\(\Psi({\boldsymbol k}) = (c_{\boldsymbol k} \hspace{5pt} c_{-\boldsymbol k}^\dagger)^{\rm T}\)</span>. In this case the symmetry operator is</p>
 <div class="math notranslate nohighlight">
 \[
-\mathcal{P} = \tau_x\mathcal{K}
+\mathcal{C} = \tau_x\mathcal{K}
 \]</div>
-<p><span class="math notranslate nohighlight">\(\tau_x\)</span> is a Pauli matrix acting in the particle-hole (sometimes called Nambu) subspace. As with the time-reversal operator, the general form is <span class="math notranslate nohighlight">\(\mathcal{P} = U'\mathcal{K}\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{P}^2=\pm 1\)</span>.  <span class="math notranslate nohighlight">\(U'\)</span> is a different unitary matrix.</p>
+<p><span class="math notranslate nohighlight">\(\tau_x\)</span> is a Pauli matrix acting in the particle-hole (sometimes called Nambu) subspace. As with the time-reversal operator, the general form is <span class="math notranslate nohighlight">\(\mathcal{C} = U'\mathcal{K}\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{C}^2=\pm 1\)</span>.  <span class="math notranslate nohighlight">\(U'\)</span> is a different unitary matrix.</p>
 </section>
 <section id="chiral">
 <h4><span class="section-number">3.1.2.3. </span>Chiral<a class="headerlink" href="#chiral" title="Link to this heading">#</a></h4>
-<p>This is the least intuitive and we will not go into much detail here. Generally, we have <span class="math notranslate nohighlight">\(\mathcal{S} = \mathcal{T} \cdot \mathcal{P}\)</span> unless both of the other symmetries are not present in which case <span class="math notranslate nohighlight">\(\mathcal{S}^2 = 0,1\)</span>.</p>
+<p>This is the least intuitive and we will not go into much detail here. Generally, we have <span class="math notranslate nohighlight">\(\mathcal{S} = \mathcal{T} \cdot \mathcal{C}\)</span> unless both of the other symmetries are not present in which case <span class="math notranslate nohighlight">\(\mathcal{S}^2 = 0,1\)</span>.</p>
 <p>The SSH model we saw last lecture displayed chiral symmetry due to the presence of the two sublattices (although this does not guarantee chiral symmetry in general). We won’t go into further detail in this course.</p>
 </section>
 </section>
@@ -452,11 +452,41 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 <p>One of the key reasons to study symmetries is their relation to the classification to topological phases and identifying the corresponding invariants. In particular is the Altland-Zirnbauer classification scheme (sometimes referred to as a periodic table)</p>
 <p><img src="../../_static/figs/AltlandZirnbauer.svg" width="100%" height="200"></img></p>
 <p><span style="color:red;">Taken from Shinsei Ryu et al 2010 New J. Phys. 12 065010 (<a class="reference external" href="https://iopscience.iop.org/article/10.1088/1367-2630/12/6/065010">https://iopscience.iop.org/article/10.1088/1367-2630/12/6/065010</a> - on this webpage not in the actual paper???)</span></p>
-<p>This table gives the invariants in various dimensions for different symmetry classes.</p>
+<p>This table gives the invariants in various dimensions for different symmetry classes. Let’s now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of <span class="math notranslate nohighlight">\(\pm 1\)</span> gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions <span class="math notranslate nohighlight">\(d\)</span>. A value of zero means there is no topological phase, a <span class="math notranslate nohighlight">\(\Z\)</span> invariant can be any integer (positive or negative), such as the Chern number and a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant can only take two values.</p>
+<p>Lets now see where the models we have considered so far fit in</p>
+<ul class="simple">
+<li><p>IQHE/QAHE (e.g. Haldane model): Class A - not truly an SPT as no symmetries present</p></li>
+<li><p>SSH Model: Class BDI - all three symmetries are present and in 1d the invariant is a <span class="math notranslate nohighlight">\(\Z\)</span> invariant</p></li>
+<li><p>Kane-Mele: Class AII - TRS is the only symmetry and in 2d has a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant</p></li>
+<li><p>The topological superconductors that we will consider next lecture will sit in class D as they will have particle-hole symmetry but break time-reversal, as they will be spinless. We won’t say any more about this now.</p></li>
+</ul>
 </section>
 <section id="the-kane-mele-invariant">
 <h3><span class="section-number">3.1.4. </span>The Kane-Mele invariant<a class="headerlink" href="#the-kane-mele-invariant" title="Link to this heading">#</a></h3>
-<p>We now return to the Kane-Mele model, which has a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant.</p>
+<p>We now return to the Kane-Mele model, which has a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant. Let’s aim to understand this invariant.</p>
+<p>Consider a Kramers’ pair of edge states, <span class="math notranslate nohighlight">\(\ket{\psi_k^{(1)}}\)</span> and <span class="math notranslate nohighlight">\(\ket{\psi_{-k}^{(2)}}\)</span>, related by TRS.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathcal{T}\ket{\psi_k^{(1)}} = -{\rm e}^{-i\theta_{-k}}\ket{\psi_{-k}^{(2)}} \\ \mathcal{T}\ket{\psi_k^{(2)}} = {\rm e}^{-i\theta_{k}}\ket{\psi_{-k}^{(1)}}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta_k\)</span> is a <span class="math notranslate nohighlight">\(k\)</span>-dependent phase. We define a matrix known as a sewing matrix, <span class="math notranslate nohighlight">\(\omega\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\omega = \left(\begin{matrix}\bra{\psi_{-k}^{(1)}}\mathcal{T}\ket{\psi_k^{(1)}} &amp;  \bra{\psi_{-k}^{(1)}}\mathcal{T}\ket{\psi_k^{(2)}} \\ \bra{\psi_{-k}^{(2)}}\mathcal{T}\ket{\psi_k^{(1)}} &amp;  \bra{\psi_{-k}^{(2)}}\mathcal{T}\ket{\psi_k^{(2)}}\end{matrix} \right) = \left(\begin{matrix} 0 &amp; {\rm e}^{-i\theta_{k}} \\ -{\rm e}^{-i\theta_{-k}}&amp; 0 \end{matrix} \right)
+\end{split}\]</div>
+<p>We note that if there are more pairs, this matrix simply becomes block-diagonal. Now, if <span class="math notranslate nohighlight">\(k=-k\)</span> (i.e. at the time-reversal invariant momenta, <span class="math notranslate nohighlight">\(\Lambda_i\)</span>), it is clear that this matrix becomes antisymmetric <span class="math notranslate nohighlight">\((\omega^{\rm T} = -\omega)\)</span> and we can defined a quantity known as the Pfaffian</p>
+<div class="math notranslate nohighlight">
+\[
+({\rm Pf}[\omega(\Lambda_i)])^2 = \det [\omega(\Lambda_i)]
+\]</div>
+<p>The invariant, <span class="math notranslate nohighlight">\(\nu\)</span> is then defined in terms of the Pfaffian,</p>
+<div class="math notranslate nohighlight">
+\[
+(-1)^\nu = \prod_{i} \frac{{\rm Pf}[\omega(\Lambda_i)]}{\sqrt{\det [\omega(\Lambda_i)]}}
+\]</div>
+<p>Given the defintion of the Pfaffian above, it is not surprising that the right hand side of this equation is always equal to <span class="math notranslate nohighlight">\(\pm 1\)</span> and therefore <span class="math notranslate nohighlight">\(\nu =0,1\)</span>. It is a <span class="math notranslate nohighlight">\(\Z_2\)</span> invariant as expected.</p>
+<p>The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers’ pairs. If we have an even number of pairs then the we are in the trivial phase, <span class="math notranslate nohighlight">\(\nu=0\)</span> and if the number of pairs is odd then we can have gapless edge modes and <span class="math notranslate nohighlight">\(\nu = 1\)</span>.</p>
+<p><span style="color:red;">Insert diagram to show this and add summary</span></p>
 </section>
 </section>
 </section>

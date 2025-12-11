@@ -86,15 +86,15 @@ In general, the operator has the form $\mathcal{T} = U\mathcal{K}$, where $U$ is
 Sometimes also called charge conjugation, this symmetry swaps particle and holes and therefore takes ${\boldsymbol k} \rightarrow -{\boldsymbol k}$ and $E \rightarrow -E$. In this course we will encounter this symmetry in superconductors when the Hamiltonians have the form $H = \tfrac{1}{2}\sum_{\boldsymbol k} \Psi^\dagger({\boldsymbol k}) H_{\boldsymbol k} \Psi({\boldsymbol k})$ with $\Psi({\boldsymbol k}) = (c_{\boldsymbol k} \hspace{5pt} c_{-\boldsymbol k}^\dagger)^{\rm T}$. In this case the symmetry operator is 
 
 $$
-\mathcal{P} = \tau_x\mathcal{K}
+\mathcal{C} = \tau_x\mathcal{K}
 $$
 
-$\tau_x$ is a Pauli matrix acting in the particle-hole (sometimes called Nambu) subspace. As with the time-reversal operator, the general form is $\mathcal{P} = U'\mathcal{K}$, and $\mathcal{P}^2=\pm 1$.  $U'$ is a different unitary matrix.
+$\tau_x$ is a Pauli matrix acting in the particle-hole (sometimes called Nambu) subspace. As with the time-reversal operator, the general form is $\mathcal{C} = U'\mathcal{K}$, and $\mathcal{C}^2=\pm 1$.  $U'$ is a different unitary matrix.
 
 
 #### Chiral
 
-This is the least intuitive and we will not go into much detail here. Generally, we have $\mathcal{S} = \mathcal{T} \cdot \mathcal{P}$ unless both of the other symmetries are not present in which case $\mathcal{S}^2 = 0,1$.
+This is the least intuitive and we will not go into much detail here. Generally, we have $\mathcal{S} = \mathcal{T} \cdot \mathcal{C}$ unless both of the other symmetries are not present in which case $\mathcal{S}^2 = 0,1$.
 
 The SSH model we saw last lecture displayed chiral symmetry due to the presence of the two sublattices (although this does not guarantee chiral symmetry in general). We won't go into further detail in this course.
 
@@ -106,10 +106,46 @@ One of the key reasons to study symmetries is their relation to the classificati
 
 <span style="color:red;">Taken from Shinsei Ryu et al 2010 New J. Phys. 12 065010 (https://iopscience.iop.org/article/10.1088/1367-2630/12/6/065010 - on this webpage not in the actual paper???)</span>
 
-This table gives the invariants in various dimensions for different symmetry classes.
+This table gives the invariants in various dimensions for different symmetry classes. Let's now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of $\pm 1$ gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions $d$. A value of zero means there is no topological phase, a $\Z$ invariant can be any integer (positive or negative), such as the Chern number and a $\Z_2$ invariant can only take two values.
+
+Lets now see where the models we have considered so far fit in
+
+- IQHE/QAHE (e.g. Haldane model): Class A - not truly an SPT as no symmetries present
+- SSH Model: Class BDI - all three symmetries are present and in 1d the invariant is a $\Z$ invariant
+- Kane-Mele: Class AII - TRS is the only symmetry and in 2d has a $\Z_2$ invariant
+- The topological superconductors that we will consider next lecture will sit in class D as they will have particle-hole symmetry but break time-reversal, as they will be spinless. We won't say any more about this now.
 
 
 ### The Kane-Mele invariant
 
-We now return to the Kane-Mele model, which has a $\Z_2$ invariant.
+We now return to the Kane-Mele model, which has a $\Z_2$ invariant. Let's aim to understand this invariant.
 
+Consider a Kramers' pair of edge states, $\ket{\psi_k^{(1)}}$ and $\ket{\psi_{-k}^{(2)}}$, related by TRS.
+
+$$
+\mathcal{T}\ket{\psi_k^{(1)}} = -{\rm e}^{-i\theta_{-k}}\ket{\psi_{-k}^{(2)}} \\ \mathcal{T}\ket{\psi_k^{(2)}} = {\rm e}^{-i\theta_{k}}\ket{\psi_{-k}^{(1)}}
+$$
+
+where $\theta_k$ is a $k$-dependent phase. We define a matrix known as a sewing matrix, $\omega$
+
+$$
+\omega = \left(\begin{matrix}\bra{\psi_{-k}^{(1)}}\mathcal{T}\ket{\psi_k^{(1)}} &  \bra{\psi_{-k}^{(1)}}\mathcal{T}\ket{\psi_k^{(2)}} \\ \bra{\psi_{-k}^{(2)}}\mathcal{T}\ket{\psi_k^{(1)}} &  \bra{\psi_{-k}^{(2)}}\mathcal{T}\ket{\psi_k^{(2)}}\end{matrix} \right) = \left(\begin{matrix} 0 & {\rm e}^{-i\theta_{k}} \\ -{\rm e}^{-i\theta_{-k}}& 0 \end{matrix} \right)
+$$
+
+We note that if there are more pairs, this matrix simply becomes block-diagonal. Now, if $k=-k$ (i.e. at the time-reversal invariant momenta, $\Lambda_i$), it is clear that this matrix becomes antisymmetric $(\omega^{\rm T} = -\omega)$ and we can defined a quantity known as the Pfaffian
+
+$$
+({\rm Pf}[\omega(\Lambda_i)])^2 = \det [\omega(\Lambda_i)]
+$$
+
+The invariant, $\nu$ is then defined in terms of the Pfaffian,
+
+$$
+(-1)^\nu = \prod_{i} \frac{{\rm Pf}[\omega(\Lambda_i)]}{\sqrt{\det [\omega(\Lambda_i)]}}
+$$
+
+Given the defintion of the Pfaffian above, it is not surprising that the right hand side of this equation is always equal to $\pm 1$ and therefore $\nu =0,1$. It is a $\Z_2$ invariant as expected.
+
+The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers' pairs. If we have an even number of pairs then the we are in the trivial phase, $\nu=0$ and if the number of pairs is odd then we can have gapless edge modes and $\nu = 1$.
+
+<span style="color:red;">Insert diagram to show this and add summary</span>
