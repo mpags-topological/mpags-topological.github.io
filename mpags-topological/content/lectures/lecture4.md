@@ -49,6 +49,8 @@ We wish to make a few notes regarding the introduction of these operators
 2. The Majorana operators obey anticommutation relations, $\{\gamma_m, \gamma_n\} = 2\delta_{m,n}$, as well as $\gamma_{2m}^\dagger = \gamma_{2m}$ and $\gamma_{2m}^2=1$.
 3. In theory, we can write any fermionic Hamiltonian in terms of these Majorana fermions, although this is often not useful.
 
+<img src="../../_static/figs/Majoranas.svg" width="100%" height="200"></img>
+
 Using these operators, we can rewrite the Hamiltonian in the form
 
 $$
@@ -63,6 +65,9 @@ $$
 H=-\frac{i\mu}{2}\sum_m \gamma_{2m-1}\gamma_{2m} = -\mu\sum_j c_m^\dagger c_m
 $$
 
+<img src="../../_static/figs/MajoranaTrivial.svg" width="100%" height="200"></img>
+
+
 Here, we have effectively paired the Majorana fermions belonging to the same lattice site. As we saw with the SSH model, all sites are paired up in this limit and the edges aren't particularly relevant. This is therefore the trivial regime. The second equality above, allows us to easily understand this ground state. For $\mu <0$, adding a spinless fermion to the lattice costs energy and so the ground state is simply the empty (vacuum state). For $\mu>0$, the opposite happens and the ground state is the completely filled state.
 
 The region we now need to understand is $-2t<\mu<2t$. To analyse this we take $t=|\Delta|>0, \mu=0$. In this limit the Hamiltonian becomes 
@@ -72,6 +77,8 @@ H = it\sum_j \gamma_{2m} \gamma_{2m+1}
 $$
 
 <span style="color:red;">be careful with sum limits in this lecture</span>
+
+<img src="../../_static/figs/MajoranaEdgeModes.svg" width="100%" height="200"></img>
 
 We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of **Majorana** zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by $f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})$ and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!
 
@@ -141,6 +148,8 @@ There are two ways to get around this problem though:
 2. We could introduce a flux through the system - in other words, introduce vortices.
 
 If we introduce a vortex (which has $\pi$-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed $k$ are now $k = \tfrac{2\pi}{L}n$. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
+
+<img src="../../_static/figs/Vortices.svg" width="100%" height="400"></img>
 
 These modes have come under a lot of interest in recent years as they have interesting exchange statistics. In fact the zero modes behave as anyons (in particular Ising anyons) and therefore can be used as part of schemes to implement topologically protected quantum computation. We will see more about Ising anyons in the coming lectures.
 
