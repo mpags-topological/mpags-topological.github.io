@@ -125,7 +125,7 @@ $$
 and next nearest neighbour hopping terms
 
 $$
-H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_1}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j_1}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_2}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger a_{i+j_2}\right)
+H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_a}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j_a}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_b}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger b_{i+j_b}\right)
 $$
 
 We emphasise that the next nearest neighbour hopping terms have an additional phase associated with them. This phase is precisely what allows for the quantum Hall physics without the magnetic field.

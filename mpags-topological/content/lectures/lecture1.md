@@ -6,7 +6,7 @@ In this course, we aim to give an overview of many different aspects of topology
 
 The role of topology in condensed matter physics has been a key area of research in recent years with a key motivator being the desire to further our classification of phases of matter. 'Traditional' phases of matter are characterised by a local order parameter which we can use to identify the phase. Transitions to more ordered states then involve the breaking of a symmetry. This is the Ginzburg-Landau theory of spontaneous symmetry breaking and underpins many of the phase transitions we are familiar with - for example, magnetisation, superconductors and the water phase diagram.
 
-<span style="color:red;">Insert fig of SSB</span>
+<img src="../../_static/figs/SSB.svg" width="100%" height="400"></img>
 
 However not all phases of matter are characterised by a local parameter, examples of which are the topological phases that will be discussed in this course (as well as those that go beyond the scope of these introductory lectures). In particular we will consider three classes
  
@@ -16,15 +16,16 @@ However not all phases of matter are characterised by a local parameter, example
 
 A simplistic view of a topological state is that it remains the same under continuous deformations - the classic example is that a coffee cup is the same as a doughnut, with the characterisation being that they have the same number of holes.
 
-INSERT IMAGE HERE
+<img src="../../_static/figs/CoffeeCup_Doghnut.gif" width="100%" height="400"></img>
 
 In quantum mechanics the topology is often viewed as continuous deformations of the Hamiltonian and providing a gap in the spectrum is not closed then a phase transition does not occur. In this way we have topologically protected states.
-
-NEED TO IMPROVE/REWORD THIS
 
 ## The Quantum Hall Effect
 
 One of the classic examples when introducing topology in condensed matter physics is the quantum Hall effect, so it would be wrong to leave it out here.
+
+
+<img src="../../_static/figs/IQHE.svg" width="100%" height="400"></img>
 
 Let's begin with a discussion of the classical Hall effect
 
@@ -104,9 +105,3 @@ $$
 A natural question to ask is why a current that is characterisitc of the edge modes in the system can be characterised by the Chern number which is a bulk property of the system (remember that the Brillouin zone is periodic in the calculation of the Chern number). Well, the solution to this is a principle known as the bulk-boundary correspondence. This states that
 
 
-THINK ABOUT HOW TO FINISH THIS LECTURE 
-MAKE SURE I HAVE ENOUGH CONTENT
-
-## Exercises
-
-### Two-level System
