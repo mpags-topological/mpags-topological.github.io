@@ -42,7 +42,7 @@ $$
 E_k^2 = (t_1+t_2{\rm e}^{-ik})(t_1+t_2{\rm e}^{ik}) \implies E_k = \pm\sqrt{t_1^2+t_2^2+2t_1t_2\cos k}
 $$
 
-<iframe src="../../_static/plots/ssh_dispersion.html" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="../../_static/plots/ssh_dispersion.html" width="100%" height="600" style="border:none;"></iframe>
 
 From the expression for the energy, as well as the plot we make a couple of remarks. First if $|t_1| \neq |t_2|$, then the spectrum is gapped (no modes that cross zero energy) for all $k$. The system in this phase is an insulator. However when $|t_1| = |t_2|$, it can be possible to close the gap, such that the system becomes a conductor. The gap closes at 
 
@@ -78,13 +78,15 @@ Performing this integral gives $\nu=1$ for $|t_1|<|t_2|$ and $\nu = 0$ otherwise
 
 Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look at $t_1=1, t_2=0$. In this case, it is easy to see that all sites are "paired up"
 
-INSERT FIGURE
+<img src="../../_static/figs/SSH_pairing.svg" width="100%" height="200"></img>
+
 
 Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.
 
 Now if we consider the opposite limit of $t_1=0, t_2=1$, we can see that the pairing now misses out the two edge modes.
 
-INSERT FIGURE
+<img src="../../_static/figs/SSH_Edge_Modes.svg" width="100%" height="200"></img>
+
 
 If we look at the Hamiltonian in this limit,
 
@@ -101,7 +103,9 @@ Even away from the the values of parameters considered here, the topological edg
 
 We now turn to the Haldane Model, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.
 
-The Haldane model is defined on the honeycomb lattice <span style="color:red;">(INSERT FIG)</span> and consists on three terms.
+The Haldane model is defined on the honeycomb lattice  and consists on three terms.
+
+<img src="../../_static/figs/HaldaneModel.svg" width="100%" height="400"></img>
 
 
 First, we have the onsite terms where the different sublattices have an energy difference of $2M$
