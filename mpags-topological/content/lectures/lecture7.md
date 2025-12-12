@@ -139,6 +139,92 @@ S = \frac{1}{2} \begin{pmatrix}
 \end{pmatrix}
 $$
 
-
+The $\sigma$ anyon corresponds to a Majorana fermion and can describe the non-Abelian statistics of Majorana zero modes in $p$-wave topological superconductors.
 
 ````
+
+
+## Fusion
+
+In addition to exchange and mutual statistics, anyons also have a set of rules for how they can combine, or "fuse", together. This is described by the **fusion rules**. For example, in the toric code, we saw that the $e$ and $m$ anyons could combine to form the $\epsilon$ anyon. 
+
+There are two ways to think of fusion:
+1. **Particle Perspective**: Two anyons of types $a$ and $b$ can come together to form a new anyon of type $c$. This very similar to the idea of particle - antiparticle annihilation in high-energy physics, except that the resulting particle type is not necessarily the vacuum (trivial) particle.
+```{figure} ../images/fusion_particle.svg
+---
+name: fusion_particle
+width: 60%
+align: center
+---
+```
+
+
+2. **Collective Perspective**: Two anyons of types $a$ and $b$ are brought close together, and we consider the combined system as a whole. The total topological charge of the combined system can be measured, yielding a result of type $c$. They collectively behave as a single anyon of type $c$. This is similar to how a hydrogen atom, consisting of a proton and an electron (fermions), can be treated as a single entity with bosonic properties.
+```{figure} ../images/fusion_collective.svg
+---
+name: fusion_collective
+width: 60%
+align: center
+---
+```
+
+We write the fusion rules in the form (for abelian anyons) as 
+
+$$
+a \times b = c
+$$
+
+meaning that anyons of type $a$ and $b$ fuse to form an anyon of type $c$.
+
+### Multiple Fusion Outcomes: Non-Abelian Anyons
+
+While we have seen the abelian fusion above in the context of the toric code, this can be generalised to allow for multiple possible fusion outcomes. That is, we can have
+
+$$
+a \times b = \sum_c N_{ab}^c \, c
+$$
+
+where $N_{ab}^c$ is an integer indicating how many ways anyons of type $a$ and $b$ can fuse to form an anyon of type $c$. For instance we could have $a \times b = c + d$, meaning that $a$ and $b$ can fuse to form either $c$ or $d$. 
+
+But what does having multiple fusion channels mean? A good analogy is the combination of two spin-1/2 particles. When we combine two spin-1/2 particles, the possible states can be split into two types: a singlet state with total spin 0, and a triplet state with total spin 1. i.e.
+
+$$
+\frac{1}{2} \otimes \frac{1}{2} = 0 \oplus 1
+$$
+
+```{note}
+When we say there are two channels, the actual state of a pair of anyons can be in a superposition of both channels. This is similar to how two spin-1/2 particles can be in a superposition of the singlet and triplet states. The amplitudes in this superposition will depend on all other anyons in the system!
+```
+
+````{admonition} Examples: Non-abelian fusion
+
+### Fibonacci Anyons
+Fibonacci anyons have the following fusion rules:
+
+$$
+1 \times 1 = 1 \\
+1 \times \tau = \tau \\
+\tau \times \tau = 1 + \tau
+$$
+
+That is, two $\tau$ anyons can fuse to form either the trivial anyon $1$ or another $\tau$ anyon.
+
+### Ising Anyons
+
+Ising anyons have the following fusion rules:
+
+$$
+1 \times 1 = 1 \\
+1 \times \sigma = \sigma \\
+1 \times \psi = \psi \\
+\sigma \times \sigma = 1 + \psi \\
+\sigma \times \psi = \sigma \\
+\psi \times \psi = 1
+$$
+
+That is, two $\sigma$ anyons can fuse to form either the trivial anyon $1$ or the fermionic anyon $\psi$.
+
+````
+
+
+## Braiding
