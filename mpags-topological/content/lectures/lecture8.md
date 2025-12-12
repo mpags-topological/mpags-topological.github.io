@@ -1,1 +1,1 @@
-# Lecture 8
+# Lecture 8 - Topological Quantum Field Theory: Fusion and Braiding

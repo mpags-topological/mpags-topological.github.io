@@ -1,3 +1,3 @@
-# Lecture 10
+# Lecture 10 - Topological Quantum Computing
 
 ## TQC
