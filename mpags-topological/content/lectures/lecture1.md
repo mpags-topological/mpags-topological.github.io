@@ -46,17 +46,17 @@ This robustness suggests that topology may be useful in explaining these results
 
 ## Classical Hall Effect
 
-Let's begin with a discussion of the classical Hall effect. The setup is similar. We consider a 2d metal with an in-plane electric field and a magnetic field perpendicular, ${\bm B} = B_z \hat{\bm z}$ to the sample.
+Let's begin with a discussion of the classical Hall effect. The setup is similar. We consider a 2d metal with an in-plane electric field and a magnetic field perpendicular, ${\boldsymbol B} = B_z \hat{\boldsymbol z}$ to the sample.
 
 INSERT FIG
 
 The equation of motion for the electrons is given by 
 
 $$
-m\dot{\bm v} = -e{\bm E} - e{\bm v}\times {\bm B} - \frac{m {\bm v}}{\tau}
+m\dot{\boldsymbol v} = -e{\boldsymbol E} - e{\boldsymbol v}\times {\boldsymbol B} - \frac{m {\boldsymbol v}}{\tau}
 $$
 
-where the last term is a scattering term, with the scattering rate given by $\tau^{-1}$. In equilibrium, $ \dot{\bm v} =0$ and we can use that for an electron density of $n$, the current density is given by ${\bm J}=-ne{\bm v}=\sigma{\bm E}$. The conductivity is then a matrix given by
+where the last term is a scattering term, with the scattering rate given by $\tau^{-1}$. In equilibrium, $ \dot{\boldsymbol v} =0$ and we can use that for an electron density of $n$, the current density is given by ${\boldsymbol J}=-ne{\boldsymbol v}=\sigma{\boldsymbol E}$. The conductivity is then a matrix given by
 
 $$
 \sigma = \frac{\sigma_0}{1+\omega_{\rm c}\tau^2}\left(\begin{matrix} 1 &-\omega_{\rm c}\tau \\ \omega_{\rm c}\tau & 1 \end{matrix}\right)
@@ -80,17 +80,26 @@ $$
 E_n = \hbar \omega_{\rm c}(n+\tfrac{1}{2})
 $$
 
-This looks like the harmonic oscialltor, however the levels here are highly degenerate. We can break this degeneracy using an electric field
+This looks like the harmonic oscialltor, however the levels here are highly degenerate, with the number of degenerate levels being given by $N=eB_z L^2/h$. We can break this degeneracy using an electric field
 
 INSERT FIG
+
+The velocity associated with these modes is then propotional to the gradient which is given by $E_x/B_z$. Therefore we have
+
+$$
+J_y = -nev_y = - \frac{N\nu}{L^2}e\frac{E_x}{B_z} = -\frac{e^2}{h}\nu E_x 
+$$
+
+We then find that $\rho_{12} = -1/\sigma_{21} = {h}/(e^2\nu)$, exactly as is observed in the experiments. 
+
+The Landau level picture can be expanded upon in order to explain the importance of disorder too and the robustness of the results. However, for this course we will now turn our focus to topological arguments which can explain this too.
 
 ## Topology
 
 
-An alternative way of understanding the integer quantum Hall effect is through topology.
+In order to understand the quantum Hall effect in terms of topology, it is necessary to introduce a couple of concepts that frequenctly appear in condensed matter, namely the Berry phase and the Chern number.
 
-## Berry Phase and Topological Invariants
-As we emphasised in the introduction, this course will not focus on the mathematical field of topology, however there are number of related concepts that appear in condensed matter and here we aim to introduce a couple of them.
+### Berry Phase 
 
 Let's consider a Hamiltonian that depends on various parameters ${\boldsymbol \lambda} = {\boldsymbol \lambda}(t)$ that vary with time. At a given instant of time the eigenstates are given by
 
@@ -126,10 +135,9 @@ $$
 
 where in the second line we have used that the time dependence of the states originates from the time dependence of ${\boldsymbol \lambda}$ in order to write it in a form where it depends on the path through parameter space but is independent of time. For this reason, the Berry phase is sometimes known as a geometric phase. 
 
-An additional comment is that the integral is over a closed path. We won't delve into details of the gauge invariance here, but the essential point is that the Berry phase can not be removed by a simple gauge transformation for closed paths, but rather it is modified by an integer$\times 2\pi$. 
+We note here that in the last line the integral is over a closed path in parameter space.  We won't delve into details of the gauge invariance here, but the key point is that the Berry phase can not be removed by a simple gauge transformation for closed paths. 
 
-
-In addition to the Berry phase, there are a couple of other quantities that are useful to be aware of. The first is the the Berry Connection (sometimes called the Berry vector potential),
+There are a couple of additional quantities related to the Berry phase that we now introduce. The first is the the Berry Connection (sometimes called the Berry vector potential),
 
 $$
 {\boldsymbol A_n}({\boldsymbol \lambda})=i\bra{n_{\boldsymbol \lambda}}\nabla_{\boldsymbol \lambda}\ket{n_{\boldsymbol \lambda}}. 
@@ -138,12 +146,20 @@ $$
 This is not a gauge invariant quantity but it can be useful to define one, which leads to the Berry connection. In 3-dimensions, this takes the form
 
 $$
-\Omega_n({\boldsymbol \lambda}) = \nabla_{\boldsymbol \lambda} \times {\boldsymbol A_n}({\boldsymbol \lambda})
+{\boldsymbol \Omega_n}({\boldsymbol \lambda}) = \nabla_{\boldsymbol \lambda} \times {\boldsymbol A_n}({\boldsymbol \lambda})
 $$
 
-## Returning to Quantum Hall
+### Chern Number
 
-In condensed matter, a common surface of interest is the 2d Brillouin zone (which is peridioc due to points only being defined up to a lattice vector). Using the above ideas, we define a topological invariant
+Using Stokes' theorem we can rewrite the Berry phase as 
+
+$$
+\gamma_n = \int_S d{\boldsymbol S}\cdot {\boldsymbol \Omega_n}({\boldsymbol \lambda})
+$$
+
+If the surface is a closed two-dimenstional surface, then the integral above is given by $2\pi n$, with $n \in \Z$ due to the Chern/Gauss-Bonnet theorem. 
+
+In condensed matter, a common surface of interest is the 2d Brillouin zone (which is peridioc due to points only being defined up to a lattice vector). Using the above ideas, we can therefore define an integer quantity 
 
 $$
 C = \frac{1}{2\pi}\int_{BZ}\Omega({\boldsymbol k}) \hspace{2pt} {\rm d}{\bf k}
@@ -151,14 +167,22 @@ $$
 
 where $\Omega({\boldsymbol k}) = \partial_{k_x}A_y({\boldsymbol k}) -  \partial_{k_y}A_x({\boldsymbol k})$. 
 
-This an integer known as the Chern number and only changes when we have a energy gap closing (i.e. a topological phase transition). TALK ABOUT THE CHERN NUMBER BEING OVER FULL BANDS AS THE SUM OVER ALL BANDS IS ZERO.
+This an integer known as the Chern number and only changes when we have a energy gap closing (i.e. a topological phase transition). 
 
-Now, it can be shown that the conductance in the QHE can be expressed in terms of the Chern number
+## Topology in integer quantum Hall
+
+The link between the Chern number and the integer quantum Hall effect turns out to be remarkably simple, with the Hall conducitivty being given by
 
 $$
-\sigma = 
+\sigma_{12} = \frac{e^2}{h}\sum_n C_n
 $$
 
-A natural question to ask is why a current that is characterisitc of the edge modes in the system can be characterised by the Chern number which is a bulk property of the system (remember that the Brillouin zone is periodic in the calculation of the Chern number). Well, the solution to this is a principle known as the bulk-boundary correspondence. This states that
+where the sum is over all filled bands. The Landau levels then have a Chern number of 1 and so we recover the previous results.Since the Chern number is an integer that is robust to perturbations, this explains the robusteness of the quantum Hall results that are observed. 
+
+There is also an additional remark we wish to make about this result. This is that a non-zero Chern number corresponds to the presence of gapless edge modes ($C$ of them to be precise) due a result known as the bulk-boundary correspondence. It is easy to see why the quantum Hall system might host these and how they might contribute to the conductivity even in the semiclassical picture. In the bulk of the system we know that we have cyclotron orbits. Now, near the edge of the system, these orbit must give rise to so-called `skipping orbits', which can carry current across the system. Such a result can also be explained in the Landau level picture, but this topological approach makes clear their presence, importance and robustness.
+
+INSERT FIGURE
+
+## Summary
 
 
