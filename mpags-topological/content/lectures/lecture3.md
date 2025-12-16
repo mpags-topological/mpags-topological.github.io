@@ -103,7 +103,6 @@ One of the key reasons to study symmetries is their relation to the classificati
 
 <img src="../../_static/figs/AltlandZirnbauer.svg" width="100%" height="200"></img>
 
-<span style="color:red;">Taken from Shinsei Ryu et al 2010 New J. Phys. 12 065010 (https://iopscience.iop.org/article/10.1088/1367-2630/12/6/065010 - on this webpage not in the actual paper???)</span>
 
 This table gives the invariants in various dimensions for different symmetry classes. Let's now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of $\pm 1$ gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions $d$. A value of zero means there is no topological phase, a $\Z$ invariant can be any integer (positive or negative), such as the Chern number and a $\Z_2$ invariant can only take two values.
 

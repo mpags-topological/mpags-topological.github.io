@@ -48,7 +48,7 @@ This robustness suggests that topology may be useful in explaining these results
 
 Let's begin with a discussion of the classical Hall effect. The setup is similar. We consider a 2d metal with an in-plane electric field and a magnetic field perpendicular, ${\boldsymbol B} = B_z \hat{\boldsymbol z}$ to the sample.
 
-INSERT FIG
+<img src="../../_static/figs/HallEffect.svg" width="100%" height="200"></img>
 
 The equation of motion for the electrons is given by 
 
@@ -70,7 +70,7 @@ $$
 
 This result along with the relationship between the components of $\rho$ and $\sigma$ allow us to explain the first two points reagrding the quantum Hall results we highlighted above. We now need to understand the plateaus and this is done using Landau levels.
 
-## Landua Levels
+## Landau Levels
 
 In this course we won't provide the details of Landau levels but rather summarise some results that allow us to see how we may explain the plateuas observed in quantum Hall.
 
@@ -82,7 +82,7 @@ $$
 
 This looks like the harmonic oscialltor, however the levels here are highly degenerate, with the number of degenerate levels being given by $N=eB_z L^2/h$. We can break this degeneracy using an electric field
 
-INSERT FIG
+<img src="../../_static/figs/LandauLevels.svg" width="100%" height="200"></img>
 
 The velocity associated with these modes is then propotional to the gradient which is given by $E_x/B_z$. Therefore we have
 
@@ -181,8 +181,9 @@ where the sum is over all filled bands. The Landau levels then have a Chern numb
 
 There is also an additional remark we wish to make about this result. This is that a non-zero Chern number corresponds to the presence of gapless edge modes ($C$ of them to be precise) due a result known as the bulk-boundary correspondence. It is easy to see why the quantum Hall system might host these and how they might contribute to the conductivity even in the semiclassical picture. In the bulk of the system we know that we have cyclotron orbits. Now, near the edge of the system, these orbit must give rise to so-called `skipping orbits', which can carry current across the system. Such a result can also be explained in the Landau level picture, but this topological approach makes clear their presence, importance and robustness.
 
-INSERT FIGURE
+<img src="../../_static/figs/SkippingOrbits.svg" width="100%" height="200"></img>
 
 ## Summary
 
+To summarise, we have introduced topological physics in condensed matter and motivated its importance using the integer quantum Hall effect. By defining the Berry phase and Chern number, which are key topics in this field of physics, we were able to explain the robustness of the results that are seen in experiments.
 
