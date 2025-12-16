@@ -7,7 +7,7 @@ In this lecture we will begin to introduce some key topological models - namely 
 
 The SSH model is a simple model that demonstrates topological properties. In this model we have unit cells consisting of two different sublattices, $A$ and $B$. The intracell and intercell hopping strengths are given by $t_1$ and $t_2$ respectively.
 
-<img src="../../_static/figs/SSH_Model.svg" width="100%" height="200"></img>
+<img src="../../_static/figs/SSH_Model.svg" width="100%" height="100"></img>
 
 
 The Hamiltonian is given by 
@@ -78,14 +78,14 @@ Performing this integral gives $\nu=1$ for $|t_1|<|t_2|$ and $\nu = 0$ otherwise
 
 Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look at $t_1=1, t_2=0$. In this case, it is easy to see that all sites are "paired up"
 
-<img src="../../_static/figs/SSH_pairing.svg" width="100%" height="200"></img>
+<img src="../../_static/figs/SSH_pairing.svg" width="100%" height="100"></img>
 
 
 Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.
 
 Now if we consider the opposite limit of $t_1=0, t_2=1$, we can see that the pairing now misses out the two edge modes.
 
-<img src="../../_static/figs/SSH_Edge_Modes.svg" width="100%" height="200"></img>
+<img src="../../_static/figs/SSH_Edge_Modes.svg" width="100%" height="150"></img>
 
 
 If we look at the Hamiltonian in this limit,
