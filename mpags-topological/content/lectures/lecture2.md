@@ -98,6 +98,7 @@ we see that $a_1$ and $b_N$ (the edges of the system) are no longer involved in 
 
 Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below. This is the topological protection we expect for these modes.
 
+<img src="../../_static/plots/SSH_RealSpace.svg" width="100%" height="300"></img>
 
 ## The Haldane Model
 
@@ -114,18 +115,16 @@ $$
 H_{\rm site}=M\sum_{i\in A}a^\dagger_ia_i - M\sum_{i \in B} b_i^\dagger b_i
 $$
 
-<span style="color:red;">NEED TO DEFINE WHAT I MEAN BY THE SUBSCRIPTS. USE THE VECTORS DEFINED IN THE FIGURE</span>
-
-There are also nearest neighbout hopping terms
+Here, by $a_i$ we mean the annihilation operator defined on the site located at ${\boldsymbol r}_i$. The nearest neighbours will be located at ${\boldsymbol r}_i + {\boldsymbol R}_j$ and belong to opposite lattice. Denoting the corresponding operators as $b_{i+j}$, the nearest neighbour hopping term becomes
 
 $$
 H_{\rm n.n.} = t_1\sum_{\langle i, j \rangle} \left( b_{i+j}^\dagger a_i + a_i^\dagger b_{i+j}\right)
 $$
 
-and next nearest neighbour hopping terms
+The next nearest neighbours in this model connect sites belonging to the same sublattice and sit at ${\boldsymbol r}_i + \widetilde{\boldsymbol R}_j$. Denoting the operators as $a_{i+j'}$ and $b_{i+j'}$, the Hamiltonian for next nearest neighbour hopping is 
 
 $$
-H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_a}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j_a}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_b}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger b_{i+j_b}\right)
+H_{\rm n.n.n.} = t_2\sum_{\langle i, j' \rangle} \left( {\rm e}^{-i\varphi}a_{i+j'}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j'}\right) + t_2\sum_{\langle i, j' \rangle} \left( {\rm e}^{i\varphi}b_{i+j'}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger b_{i+j'}\right)
 $$
 
 We emphasise that the next nearest neighbour hopping terms have an additional phase associated with them. This phase is precisely what allows for the quantum Hall physics without the magnetic field.
@@ -143,7 +142,7 @@ In order to diagonalise this, it can be convenient to express this in the form $
 $$
 E({\boldsymbol k}) = d_0({\boldsymbol k}) \pm \sqrt{d_x^2({\boldsymbol k}) + d_y^2 ({\boldsymbol k}) + d_z^2({\boldsymbol k})}
 $$
-<span style="color:red;">MENTION HOW THIS FORM IS MORE GENERAL - IS IT ANY TWO BAND MODEL????</span>
+
 
 For the Haldane model, 
 
@@ -191,3 +190,5 @@ The final thing we wish to demonstrate is the edge modes. To do this we consider
 <span style="color:red;">INSERT FIG</span>
 
 ## Summary
+
+In this lecture, we have introduced two key models in the field of topological insulators. These are the SSH model and the Haldane model. We have demonstrated that both contain topological phases, characterised by non-trivial invariants which are related to the presence of protected edge modes. These ideas that we will carry forward into future lectures. In the next lecture we will look to build on the Haldane model in order to explore different types of topological phases with different invariants.
