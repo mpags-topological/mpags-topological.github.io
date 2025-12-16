@@ -228,3 +228,81 @@ That is, two $\sigma$ anyons can fuse to form either the trivial anyon $1$ or th
 
 
 ## Braiding
+
+So far we have looked at the properties of a pair of anyons. When we have more than two, things get more complicated and interesting. With more than two anyons we can introduce "braiding" operations, where we move anyons around each other in specific ways. We will use Fibonacci anyons as an example.
+
+```{note}
+Exchange (T) and mutual statistics (S) are special cases of braiding.
+```
+
+For Fibonacci anyons we have the following fusion rule
+
+$$
+\tau \times \tau = 1 + \tau
+$$
+
+meaning there are three possible states for a system of three $\tau$ anyons, depending on how they fuse together. These are 
+
+```{figure} ../images/fibonacci_three_anyons.svg
+---
+name: fibonacci_three_anyons
+width: 80%
+align: center
+---
+```
+
+Here, we have drawn circles around groups of anyons and indicated the total fusion outcome for that group. We have also labelled these $|0\rangle$, $|1\rangle$, and $|N\rangle$ in relations to quantum computation (more on this later). Let us then consider the following two braids
+
+```{figure} ../images/fibonacci_braids.svg
+---
+name: fibonacci_braids
+width: 80%
+align: center
+---
+```
+
+These braids can be represented as matrices acting on the three-dimensional Hilbert space spanned by the states $|0\rangle$, $|1\rangle$, and $|N\rangle$. If use a matrix-vector notation where
+
+$$
+|0\rangle = \begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}, \quad
+|1\rangle = \begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}, \quad
+|N\rangle = \begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}
+$$  
+
+then braid $A$ is represented by the matrix
+
+$$
+\begin{pmatrix}
+e^{-i4\pi/5} & 0 & 0 \\
+0 & e^{i3\pi/5} & 0 \\
+0 & 0 & e^{i3\pi/5} \\
+\end{pmatrix}
+$$
+
+This matrix is diagonal, and its elements correspond to the exchange statistics of the anyons depending on their fusion channel. Braid $B$, on the other hand, is represented by the matrix
+
+$$
+\begin{pmatrix}
+\phi^{-1} e^{4\pi i / 5} & \phi^{-1/2} e^{-3\pi i / 5} & 0 \\
+\phi^{-1/2} e^{-3\pi i / 5} & -\phi^{-1} & 0 \\
+0 & 0 & e^{3\pi i / 5} \\
+\end{pmatrix}
+$$
+
+Importantly, we see that braiding corresponds to unitary matrices and does not simply result in a phase factor. This is a hallmark of non-Abelian anyons, where braiding operations can change the state of the system in a non-trivial way. The name non-abelian is related to the fact that these braiding matrices do not commute with each other, i.e. $AB \neq BA$.
+
+An interesting property of these particular matrices is that they split into a $2\times2$ block acting on the subspace spanned by $|0\rangle$ and $|1\rangle$, and a $1\times1$ block acting on $|N\rangle$. This means that if we restrict ourselves to the subspace spanned by $|0\rangle$ and $|1\rangle$, these braids keep us within that subspace. Furthermore, the matrices on this subspace
+
+$$
+\sigma_1 = \begin{pmatrix}
+e^{-i4\pi/5} & 0 \\
+0 & e^{i3\pi/5} \\
+\end{pmatrix},
+\qquad
+\sigma_2 = \begin{pmatrix}
+\phi^{-1} e^{4\pi i / 5} & \phi^{-1/2} e^{-3\pi i / 5} \\
+\phi^{-1/2} e^{-3\pi i / 5} & -\phi^{-1} \\
+\end{pmatrix}
+$$
+
+are sufficient to approximate any $2\times2$ unitary matrix to arbitrary accuracy, in other words they can approximate an arbitrary single qubit gate. By finding the correct sequence of these two braids, we can implement any single qubit gate using Fibonacci anyons! This is the basis of topological quantum computation, which we will return to later in the course.
