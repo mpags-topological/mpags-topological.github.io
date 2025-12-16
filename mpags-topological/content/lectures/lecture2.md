@@ -54,7 +54,7 @@ It is precisely at these points that a topological phase transition can occur. W
 
 
 $$
-H_k = \left(\begin{matrix}0 &t_1+t_2\cos k-it_2\sin k \\t_1+t_2cosk +it_2 \sin k &0 \end{matrix}\right) = d_0(k) \sigma_0 + {\boldsymbol d}(k)\cdot {\boldsymbol \sigma}
+H_k = \left(\begin{matrix}0 &t_1+t_2\cos k-it_2\sin k \\t_1+t_2\cos k +it_2 \sin k &0 \end{matrix}\right) = d_0(k) \sigma_0 + {\boldsymbol d}(k)\cdot {\boldsymbol \sigma}
 $$
 
 with
@@ -96,7 +96,7 @@ $$
 
 we see that $a_1$ and $b_N$ (the edges of the system) are no longer involved in the Hamiltonian. This means that we can add a mode to these sites at no energy cost - we have zero-energy (gapless) edge modes. This is consistent with $\nu \neq 0$ found earlier.
 
-Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below. This is the topological protection we expect for these modes.
+Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below, where we plot the energy spectrum for 30 sites and the probability distribution for the highlighted mode, which is the mode with the smallest absolute energy. 
 
 <img src="../../_static/plots/SSH_RealSpace.svg" width="100%" height="300"></img>
 
