@@ -2,7 +2,7 @@
 
 In the previous lecture we looked at a couple of key models in the theory of topological insulators. These were the SSH model which is a 1d topological insulator and the Haldane model which is a Chern insulator. So what's the difference between a Chern insulator and a topological insulator? Both are insulating phases with topological properties and sometimes (depending on who you ask) Chern insulators are considered a subset of topological insulators. An alternative definition for topological insulators is related to symmetry protected topological (SPT) phases. In this definition, the topological modes are also protected by an additional symmetry, however this excludes Chern insulators from being a topological insulator.
 
-In this lecture we will look to understand the importance of symmetries further. To begin, we introduce a classic model for a symmetry-protected topological insulator - the Kane-Mele model
+In this lecture we will look to understand the importance of symmetries further. To begin, we introduce a classic model for a symmetry-protected topological insulator - the Kane-Mele model.
 
 ## Kane-Mele
 
@@ -144,6 +144,17 @@ $$
 
 Given the defintion of the Pfaffian above, it is not surprising that the right hand side of this equation is always equal to $\pm 1$ and therefore $\nu =0,1$. It is a $\Z_2$ invariant as expected.
 
-The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers' pairs. If we have an even number of pairs then the we are in the trivial phase, $\nu=0$ and if the number of pairs is odd then we can have gapless edge modes and $\nu = 1$.
+The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers' pairs of gapless edge modes. If we have an even number of pairs then the we are in the trivial phase, $\nu=0$ and if the number of pairs is odd then we can have gapless edge modes and $\nu = 1$.
 
-<span style="color:red;">Insert diagram to show this and add summary</span>
+<img src="../../_static/figs/KaneMeleEdgeModes.svg" width="100%" height="300"></img>
+
+
+## Summary
+
+In this lecture we have seen the importance of symmetries in classifying different topological phases. The three symmetries used to identify the phase, whcih each have associated invariants are
+
+- Particle-hole
+- Time-reversal
+- Chiral
+
+Over the last two lectures we have also encountered different types of invariants, such as the Chern number and the so-called $\Z_2$ invariant. These allow us to identify non-trivial topological phases as well as make statements on protected edge modes via the bulk boundary correspondence.

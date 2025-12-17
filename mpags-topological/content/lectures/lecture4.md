@@ -65,7 +65,7 @@ $$
 H=-\frac{i\mu}{2}\sum_m \gamma_{2m-1}\gamma_{2m} = -\mu\sum_j c_m^\dagger c_m
 $$
 
-<img src="../../_static/figs/MajoranaTrivial.svg" width="100%" height="200"></img>
+<img src="../../_static/figs/MajoranaTrivial.svg" width="100%" height="100"></img>
 
 
 Here, we have effectively paired the Majorana fermions belonging to the same lattice site. As we saw with the SSH model, all sites are paired up in this limit and the edges aren't particularly relevant. This is therefore the trivial regime. The second equality above, allows us to easily understand this ground state. For $\mu <0$, adding a spinless fermion to the lattice costs energy and so the ground state is simply the empty (vacuum state). For $\mu>0$, the opposite happens and the ground state is the completely filled state.
