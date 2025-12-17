@@ -157,4 +157,4 @@ In this lecture we have seen the importance of symmetries in classifying differe
 - Time-reversal
 - Chiral
 
-Over the last two lectures we have also encountered different types of invariants, such as the Chern number and the so-called $\Z_2$ invariant. These allow us to identify non-trivial topological phases as well as make statements on protected edge modes via the bulk boundary correspondence.
+Over the last two lectures we have also encountered different types of invariants, such as the Chern number and the so-called $\Z_2$ invariant. These allow us to identify non-trivial topological phases as well as make statements on protected edge modes via the bulk boundary correspondence. In the next lecture, we will turn our attention to topological superconductors where particle-hole symmetry plays a key role too.
