@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 
 
@@ -23,19 +24,6 @@ def Ham(kx, ky, t1, t2, M, phi):
     H[...,1,0] = dx + 1j*dy
     return H
 
-def bulk_gap(kx, ky, t1, t2, M, phi):
-
-    H = Ham(kx, ky, t1, t2, M, phi)
-
-    eigvals = np.linalg.eigh(H)[0]
-
-    # Extract the lowest positive eigenvalue for each (kx, ky) pair
-    upper_band_min = np.min(eigvals[..., 1])  # There are 2 bands, the 2nd one is the lowest positive eigenvalue
-    lower_band_max = np.max(eigvals[..., 0])  
-    bulk_gap = upper_band_min - lower_band_max
-    if bulk_gap <= 0:
-        bulk_gap = 0
-    return bulk_gap
 
 def Chern(N, t1, t2, M, phi):
     chern  = 0
@@ -55,75 +43,83 @@ def Chern(N, t1, t2, M, phi):
     # The rest of the code should now proceed as the square lattice case
     # Check this by reproducing the Haldane model results
 
-    gap = bulk_gap(kx, ky, t1, t2, M, phi)
-    if gap > 0:
 
-        H = Ham(kx, ky, t1, t2, M, phi)
-        _, eigenvec = np.linalg.eigh(H)
+    H = Ham(kx, ky, t1, t2, M, phi)
+    _, eigenvec = np.linalg.eigh(H)
 
-        eigenvecs_Array = eigenvec[..., 0]  # Only interested in the lowest band as this is the filled band
+    eigenvecs_Array = eigenvec[..., 0]  # Only interested in the lowest band as this is the filled band
 
-        #Shape is (N,N, 2,2) -> (N,N,2,1) where 2 is the size of the eignevector
-        # For every (kx,ky) we have 1 eigenvector
+    #Shape is (N,N, 2,2) -> (N,N,2,1) where 2 is the size of the eignevector
+    # For every (kx,ky) we have 1 eigenvector
 
-        # Shift eigenvectors to get neighbors in order to compute overlaps.
-        # The roll naturally incoprporates periodic boundary conditions
-        eigvecs_right = np.roll(eigenvecs_Array, shift=-1, axis=0)  # Shift along kx (right neighbor)
-        eigvecs_up = np.roll(eigenvecs_Array, shift=-1, axis=1)     # Shift along ky (up neighbor)
-        eigvecs_diag = np.roll(eigvecs_right, shift=-1, axis=1)     # Diagonal neighbor (right and up)
+    # Shift eigenvectors to get neighbors in order to compute overlaps.
+    # The roll naturally incoprporates periodic boundary conditions
+    eigvecs_right = np.roll(eigenvecs_Array, shift=-1, axis=0)  # Shift along kx (right neighbor)
+    eigvecs_up = np.roll(eigenvecs_Array, shift=-1, axis=1)     # Shift along ky (up neighbor)
+    eigvecs_diag = np.roll(eigvecs_right, shift=-1, axis=1)     # Diagonal neighbor (right and up)
 
-        # Compute overlaps for all plaquettes and bands simultaneously
+    # Compute overlaps for all plaquettes and bands simultaneously
 
-        P1 = np.einsum('ijk,ijk->ij', np.conj(eigenvecs_Array), eigvecs_right)
-        P1 /= np.abs(P1)
+    P1 = np.einsum('ijk,ijk->ij', np.conj(eigenvecs_Array), eigvecs_right)
+    P1 /= np.abs(P1)
 
-        P2 = np.einsum('ijk,ijk->ij', np.conj(eigvecs_right), eigvecs_diag)
-        P2 /= np.abs(P2)
+    P2 = np.einsum('ijk,ijk->ij', np.conj(eigvecs_right), eigvecs_diag)
+    P2 /= np.abs(P2)
 
-        P3 = np.einsum('ijk,ijk->ij', np.conj(eigvecs_diag), eigvecs_up)
-        P3 /= np.abs(P3)
+    P3 = np.einsum('ijk,ijk->ij', np.conj(eigvecs_diag), eigvecs_up)
+    P3 /= np.abs(P3)
 
-        P4 = np.einsum('ijk,ijk->ij', np.conj(eigvecs_up), eigenvecs_Array)
-        P4 /= np.abs(P4)
+    P4 = np.einsum('ijk,ijk->ij', np.conj(eigvecs_up), eigenvecs_Array)
+    P4 /= np.abs(P4)
 
-        # Compute the plaquette phase for all plaquettes and bands, by combining the 4 overlaps
-        plaquette_phase = 1j * np.log(P1 * P2 * P3 * P4)  #Shape (N, N, 2)
-        # Sum over the bands and plaquettes
+    # Compute the plaquette phase for all plaquettes and bands, by combining the 4 overlaps
+    plaquette_phase = 1j * np.log(P1 * P2 * P3 * P4)  #Shape (N, N, 2)
+    # Sum over the bands and plaquettes
 
-        chern = np.sum(plaquette_phase)
+    chern = np.sum(plaquette_phase)
 
-        chern = chern/(2*np.pi)
-        chern = chern.real #Take real part to get rid of very small imaginary part due to numerical errors. Then want absolute value
+    chern = chern/(2*np.pi)
+    chern = chern.real #Take real part to get rid of very small imaginary part due to numerical errors. Then want absolute value
 
-    else:
-        chern = np.nan  #Value given if the band is not gapped
     return round(chern,2)   
 
 
 
 t1 = 1
-t2 = 1/(3*np.sqrt(3))   #This value is chosen to match up with the graph in Hannah's lecture notes
+t2 = 1 
 
-N = 101
+N = 21
 
-phi_values = np.linspace(-np.pi, np.pi, 100)
-M_values = np.linspace(-1.5, 1.5, 100)
+phi_values = np.linspace(-np.pi, np.pi, 250)
+M_values = np.linspace(-6, 6, 250)
 
-# Want to parallelize the loop over paramters
-chern = Parallel(n_jobs=6)(
-    delayed(Chern)(N, t1, t2, M, phi) 
-    for phi in tqdm(phi_values) 
-    for M in M_values)
+Chern_values = []
+for M in tqdm(M_values):
+    for phi in phi_values:
+        chern_number = Chern(N, t1, t2, M, phi)
+        Chern_values.append(chern_number)
 
-# Reshape the results into a 2D array
-Chern_values = np.array(chern).reshape(len(phi_values), len(M_values))
-#This means that Chern[i,j] corresponds to phi[i], M[j]
-#When plotting with coulormesh need to transpose to match matrix indexing which is used in these plots
+Chern_values = np.array(Chern_values).reshape(len(M_values), len(phi_values))
 
 
-plt.figure()
-plt.pcolormesh(phi_values, M_values, Chern_values.T, shading='gouraud')
-plt.colorbar(label=r'Chern Number')
-plt.xlabel(r'$\phi$')
-plt.ylabel(r'$M$')
-plt.show()
+plt.rcParams['font.size'] = '18'
+
+
+plt.figure(figsize=(16,10))
+
+plt.imshow(Chern_values, extent=[phi_values[0], phi_values[-1], M_values[0], M_values[-1]],
+           origin='lower', aspect='auto', cmap='viridis', interpolation='bicubic', rasterized=True)
+
+#plt.pcolormesh(phi_values, M_values, Chern_values, shading='gouraud')
+cbar = plt.colorbar(label=r'Chern Number')
+cbar.set_ticks([-1, 0, 1])
+cbar.set_ticklabels(['-1', '0', '1'])
+cbar.set_label(r'$C$', rotation=0, labelpad=15)
+plt.xlabel(r'$\varphi$')
+plt.ylabel(r'$M$', rotation=0)
+plt.yticks([-3*np.sqrt(3), 0, 3*np.sqrt(3)], [r'$-3\sqrt{3}$', '0', r'$3\sqrt{3}$'])
+plt.xticks([-np.pi, -np.pi/2, 0, np.pi/2, np.pi],
+           [r'$-\pi$', r'$-\pi/2$', '0', r'$\pi/2$', r'$\pi$'])
+
+plt.savefig('../mpags-topological/_static/plots/Haldane_Chern.svg')
+#plt.show()

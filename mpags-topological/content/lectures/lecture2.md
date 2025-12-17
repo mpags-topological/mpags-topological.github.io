@@ -183,7 +183,7 @@ $$
 
 where the plus sign is for the $K$ point and the minus is at the $K'$ point. So we have now identified that when this condition is satisfied, the specturm will have a gap closure (at either the $K$ or $K'$ point). We can therefore plot a phase diagram of the Haldane model of $M$ vs $\varphi$ and calculate the invariant in each regime. For the Haldane model, the invariant is the Chern number and the result is shown below.
 
-<span style="color:red;">INSERT FIG</span>
+<img src="../../_static/plots/Haldane_Chern.svg" width="100%" height="300"></img>
 
 The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the $y$ direction and open boundary conditions in the $x$. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum in this setup and clearly highlight the edge modes.
 
