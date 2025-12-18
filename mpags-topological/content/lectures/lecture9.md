@@ -1,3 +1,5 @@
-# Lecture 9 - Topological Quantum Field Theory: Modular S and T
+# Lecture 9
 
-This lecture could focus on Ising anyons, tying together the topological superconductor part with the TQFT part. 
+## Experimental Considerations
+
+## FQHE
