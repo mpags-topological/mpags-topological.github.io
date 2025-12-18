@@ -170,3 +170,90 @@ Therefore, $F(N) \sim \phi^{N} = d_\tau^N$, for large $N$, where $\phi = (1 + \s
 Q. What fusion diagrams do we get for $N$ $\sigma$-type Ising anyons?
 
 ```
+
+## F-moves
+
+An important point when defining the states in the previous section was that we had to fix the order in which we fused the anyons. However, we can change the order in which we fuse the anyons and also get a valid state. For example, as shown in {numref}`fig:different_fusion_orders` for three anyons $a$, $b$ and $c$, we can either fuse $a$ and $b$ first, and then fuse the result with $c$, or we can fuse $b$ and $c$ first, and then fuse the result with $a$. 
+
+```{figure} ../images/DifferentFusionOrders.svg
+---
+align: center
+width: 60%
+name: fig:different_fusion_orders
+---
+Two different fusion orders for three anyons a, b and c.
+```
+
+The question is: how are these two different fusion orders related? To relate the two we need to add a new ingredient into our TQFT, known as the **F-symbols** or **F-moves**. The F-symbols are complex numbers that relate different fusion orders. For three anyons $a$, $b$ and $c$ fusing to form anyon $d$, the F-move is written as
+
+```{figure} ../images/FMove.svg
+---
+align: center
+width: 60%
+name: fig:f_move
+---
+An F-move relating two different fusion orders for three anyons a, b and c fusing to form anyon d.
+```
+
+For us, we consider the case where the F-moves are unitary transformations, i.e. $[F^{abc}_d]^{-1}_{fe} = [F^{abc}_d]^{*}_{ef}$. We also have that $F^{abc}_d$ is *trivial* if any of $a$, $b$, $c$ or $d$ is the vacuum anyon. What trivial means will depend on which anyon is the vacuum, in these cases the diagram boils down to a slightly deformed version of two-anyon fusion.  
+
+### The Pentagon Equation
+
+While the F-moves are an ingredient we add into our definition of the TQFT, they cannot be chosen arbitrarily. The F-moves must satisfy a consistency condition known as the **pentagon equation**. The pentagon equation arises when we consider four anyons $a$, $b$, $c$ and $d$ fusing to form anyon $e$. Given any two fusion orders, there are two distinct sequences of F-moves that relate them, as shown in {numref}`fig:pentagon_equation`. For the TQFT to be consistent, these two sequences of F-moves must give the same result. This requirement leads to the pentagon equation, which can be written as
+
+```{figure} ../images/PentagonEquation.svg
+---
+align: center
+width: 60%
+name: fig:pentagon_equation
+---
+The pentagon equation relating two different sequences of F-moves for four anyons a, b, c and d fusing to form anyon e.
+```
+
+Mathematically, the pentagon equation is written as
+
+$$
+\left[ F^{fcd}_e \right]_{gl} \left[ F^{abl}_e \right]_{fk} = \sum_{h} \left[ F^{abc}_g \right]_{fh}  \left[ F^{ahd}_e \right]_{gk} \left[ F^{bcd}_k \right]_{hl}. 
+$$
+
+So when we have four anyons, we must have F-moves that satisfy this equation. You might ask, "what about more than four anyons?" It turns out that if the F-moves satisfy the pentagon equation for four anyons, then they will automatically satisfy all higher consistency conditions for more than four anyons. Thus, the pentagon equation is the key consistency condition for the F-moves. This is a consequence of Mac Lane's coherence theorem in category theory.
+
+```{admonition} Exercise
+For the Fibonacci anyon model, show that only $F^{\tau \tau \tau}_1$ and $F^{\tau \tau \tau}_\tau$ are non-trivial. Using an (unexplained) gauge freedom in the choice of F-moves, we can set $F^{\tau \tau \tau}_1 = 1$. Therefore, solve the pentagon equation to find the solution
+
+$$
+F^{\tau \tau \tau}_\tau = \begin{pmatrix}
+\phi^{-1} & \phi^{-1/2} \\
+\phi^{-1/2} & -\phi^{-1}
+\end{pmatrix},
+$$
+where $\phi = (1 + \sqrt{5})/2$ is the golden ratio.
+
+```
+
+
+## R-moves
+
+So far, we have only considered fusion of anyons, but we also need to be able to exchange or braid anyons. To describe the braiding of anyons, we introduce another ingredient into our TQFT, known as the **R-symbols** or **R-moves**. The R-moves are complex numbers that relate a diagram with a crossing (i.e. an exchange of two anyons) to a diagram without a crossing. For two anyons $a$ and $b$ fusing to form anyon $c$, the R-move is written as
+
+```{figure} ../images/RMove.svg
+---
+align: center
+width: 60%
+name: fig:r_move
+---
+An R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.
+```
+
+We have introduced crossing in our diagrams. We should think of having another spatial dimension sticking out of the page, so that we can have one anyon going "over" another anyon.
+
+```{figure} ../images/RMoveTopDown.svg
+---
+align: center
+width: 60%
+name: fig:r_move_topdown
+---
+A top-down view of an R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.
+```
+
+
