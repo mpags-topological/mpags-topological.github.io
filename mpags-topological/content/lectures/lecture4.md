@@ -1,13 +1,15 @@
 # Lecture 4 - Topological Superconductors
 
-In this lecture, we turn our attention from topological insulators to topological superconductors. These systems have gained increasing interest in recent years, both due to their interesting fundamental physics but also for their potential use in realising a topological quantum computer.
+In this lecture, we turn our attention from topological insulators to topological superconductors. These systems have gained increasing interest in recent years, both due to their interesting fundamental physics but also for their potential use in realising a topological quantum computer. 
+
+In order to introduce the concepts we start with a one-dimensional model initially introduced by Kitaev. Again, we will see that the topological properties are characterised by an invariant with associated edge modes. In the second half of the lecture we will look at a two-dimensional topological superconductor, where again there are edge modes, but in this case there are zero modes which are localised to the edge or to vortices and it is these modes that used in proposed implementations for topological quantum computing.
 
 ## The Kitaev Chain
 
 There are many models named after Kitaev (and even others that are referred to the Kitaev chain), but here we refer to the model of a one-dimensional $p$-wave spinless superconductor. The Hamiltonian is 
 
 $$
-H = -t\sum_{m=1}^{N-1}\left(c_{m+1}^\dagger c_m + c_m^\dagger c_{m+1}\right) - \mu\sum_{m=1}^Nc_m^\dagger c_m + \sum_{m=1}^{N-1}\Delta c_m c_{m+1} + \Delta^*c_{m+1}^\dagger c_m^\dagger
+H = -t\sum_{m=1}^{N-1}\left(c_{m+1}^\dagger c_m + c_m^\dagger c_{m+1}\right) - \mu\sum_{m=1}^Nc_m^\dagger c_m + \sum_{m=1}^{N-1}\left(\Delta c_m c_{m+1} + \Delta^*c_{m+1}^\dagger c_m^\dagger\right)
 $$
 
 As is the usual first step, we explore the bulk spectrum by performing the Fourier transform
@@ -49,10 +51,12 @@ We wish to make a few notes regarding the introduction of these operators
 2. The Majorana operators obey anticommutation relations, $\{\gamma_m, \gamma_n\} = 2\delta_{m,n}$, as well as $\gamma_{2m}^\dagger = \gamma_{2m}$ and $\gamma_{2m}^2=1$.
 3. In theory, we can write any fermionic Hamiltonian in terms of these Majorana fermions, although this is often not useful.
 
+<img src="../../_static/figs/Majoranas.svg" width="100%" height="100"></img>
+
 Using these operators, we can rewrite the Hamiltonian in the form
 
 $$
-H = \frac{i}{2}\sum_m\left(-\mu \gamma_{2m-1}\gamma_{2m} + (t+|\Delta|)\gamma_{2m}\gamma_{2m+1} +(-t+|\Delta|)\gamma_{2m-1}\gamma_{2m+2} \right)
+H = \frac{-i\mu}{2}\sum_{m=1}^{N}\gamma_{2m-1}\gamma_{2m} +\frac{i}{2}\sum_{m=1}^{N-1} \left( (t+|\Delta|)\gamma_{2m}\gamma_{2m+1} +(-t+|\Delta|)\gamma_{2m-1}\gamma_{2m+2} \right)
 $$
 
 As we have found with previous models, one of the benefits of the topological protection is that we can study specific parameters and providing we don't close a bulk gap, the effects remain robust. 
@@ -60,23 +64,24 @@ As we have found with previous models, one of the benefits of the topological pr
 Let's start with $t=|\Delta|=0, \mu \neq0$. This means that depending on the sign of $\mu$, we can satisfy either $\mu<-2t$ or $\mu >2t$. For these parameter the Hamiltonian simply reduces to
 
 $$
-H=-\frac{i\mu}{2}\sum_m \gamma_{2m-1}\gamma_{2m} = -\mu\sum_j c_m^\dagger c_m
+H=-\frac{i\mu}{2}\sum_{m=1}^N \gamma_{2m-1}\gamma_{2m} = -\mu\sum_{m=1}^N c_m^\dagger c_m
 $$
+
+<img src="../../_static/figs/MajoranaTrivial.svg" width="100%" height="100"></img>
+
 
 Here, we have effectively paired the Majorana fermions belonging to the same lattice site. As we saw with the SSH model, all sites are paired up in this limit and the edges aren't particularly relevant. This is therefore the trivial regime. The second equality above, allows us to easily understand this ground state. For $\mu <0$, adding a spinless fermion to the lattice costs energy and so the ground state is simply the empty (vacuum state). For $\mu>0$, the opposite happens and the ground state is the completely filled state.
 
 The region we now need to understand is $-2t<\mu<2t$. To analyse this we take $t=|\Delta|>0, \mu=0$. In this limit the Hamiltonian becomes 
 
 $$
-H = it\sum_j \gamma_{2m} \gamma_{2m+1} 
+H = it\sum_{m=1}^{N-1} \gamma_{2m} \gamma_{2m+1} 
 $$
 
-<span style="color:red;">be careful with sum limits in this lecture</span>
+
+<img src="../../_static/figs/MajoranaEdgeModes.svg" width="100%" height="100"></img>
 
 We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of **Majorana** zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by $f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})$ and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!
-
-
-<span style="color:red;">Insert summary of what we have found</span>
 
 
 ## p+ip Superconductor
@@ -97,7 +102,9 @@ this time with $\varepsilon_{\boldsymbol k}=-2t(\cos k_x + \cos k_y)-\mu$ and $\
 
 We wish to now highlight a couple of points regarding this Hamiltonian. The first regards the continuum limit ($k\rightarrow 0$ here), where the pairing term becomes proportional to $k_x+ik_y$. Due to the relation $p=\hbar k$, this is commonly referred to as the $p_x+ip_y$, or $p+ip$ superconductor.
 
-The second point we wish to address is the symmetries of the Hamiltonian. Out of the three symmetries we discussed in the last lecture (particle-hole, time-reversal, and chiral) only particle-hole symmetry is present here. Time-reversal symmetry is broken as we have a spinless system. Therefore the invaraint is a $\Z$-invariant and is simply the Chern number. We can calculate this numerically to obtain the different phases. We find that <span style="color:red;">Insert some sort of phase diagram and a description</span>
+The second point we wish to address is the symmetries of the Hamiltonian. Out of the three symmetries we discussed in the last lecture (particle-hole, time-reversal, and chiral) only particle-hole symmetry is present here. Time-reversal symmetry is broken as we have a spinless system. Therefore the invaraint is a $\Z$-invariant and is simply the Chern number. We can calculate this numerically to obtain the following result.
+
+<img src="../../_static/plots/p_ip_Chern.svg" width="100%" height="300"></img>
 
 ### Topological States
 
@@ -105,7 +112,6 @@ We now wish to understand the states found in the topological regime of which th
 
 #### Majorana Edge Modes
  
-<span style="color:red;">Insert cylinder picture showing edge modes</span>
 
 As was true when we looked at the 1d case, the edge modes here are actually Majorana. In this model though they are chiral Majorana modes, described by a Hamiltonian with a linear dispersion $\varepsilon_k\sim \hbar vk$
 
@@ -142,6 +148,10 @@ There are two ways to get around this problem though:
 
 If we introduce a vortex (which has $\pi$-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed $k$ are now $k = \tfrac{2\pi}{L}n$. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
 
+<img src="../../_static/figs/Vortices.svg" width="100%" height="400"></img>
+
 These modes have come under a lot of interest in recent years as they have interesting exchange statistics. In fact the zero modes behave as anyons (in particular Ising anyons) and therefore can be used as part of schemes to implement topologically protected quantum computation. We will see more about Ising anyons in the coming lectures.
 
-<span style="color:red;">Summarise and maybe give more detail on non-Abelian stats.</span>
+## Summary
+
+In this lecture we have introduced topological superconductors and shown that, like the other topological phases we have encountered, there are gapless edge modes that are protected. Unique to the topological superconductors however is the possibility of using vortices to host Majorana zero modes. Spatially separating these modes allows us to define a protected qubit. Additionally, the vortices have non-abelian anyonic exchange statistics, which is something we will consider further in the coming lectures. Towards the end of this course we will aslo see why these anyons are relevant for quantum computing, which is an ongoing research area.

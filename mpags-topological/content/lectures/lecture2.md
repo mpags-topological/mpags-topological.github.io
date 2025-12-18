@@ -7,7 +7,7 @@ In this lecture we will begin to introduce some key topological models - namely 
 
 The SSH model is a simple model that demonstrates topological properties. In this model we have unit cells consisting of two different sublattices, $A$ and $B$. The intracell and intercell hopping strengths are given by $t_1$ and $t_2$ respectively.
 
-<img src="../../_static/figs/SSH_Model.svg" width="100%" height="200"></img>
+<img src="../../_static/figs/SSH_Model.svg" width="100%" height="100"></img>
 
 
 The Hamiltonian is given by 
@@ -42,7 +42,7 @@ $$
 E_k^2 = (t_1+t_2{\rm e}^{-ik})(t_1+t_2{\rm e}^{ik}) \implies E_k = \pm\sqrt{t_1^2+t_2^2+2t_1t_2\cos k}
 $$
 
-<iframe src="../../_static/plots/ssh_dispersion.html" width="100%" height="800" style="border:none;"></iframe>
+<iframe src="../../_static/plots/ssh_dispersion.html" width="100%" height="600" style="border:none;"></iframe>
 
 From the expression for the energy, as well as the plot we make a couple of remarks. First if $|t_1| \neq |t_2|$, then the spectrum is gapped (no modes that cross zero energy) for all $k$. The system in this phase is an insulator. However when $|t_1| = |t_2|$, it can be possible to close the gap, such that the system becomes a conductor. The gap closes at 
 
@@ -54,7 +54,7 @@ It is precisely at these points that a topological phase transition can occur. W
 
 
 $$
-H_k = \left(\begin{matrix}0 &t_1+t_2\cos k-it_2\sin k \\t_1+t_2cosk +it_2 \sin k &0 \end{matrix}\right) = d_0(k) \sigma_0 + {\boldsymbol d}(k)\cdot {\boldsymbol \sigma}
+H_k = \left(\begin{matrix}0 &t_1+t_2\cos k-it_2\sin k \\t_1+t_2\cos k +it_2 \sin k &0 \end{matrix}\right) = d_0(k) \sigma_0 + {\boldsymbol d}(k)\cdot {\boldsymbol \sigma}
 $$
 
 with
@@ -78,13 +78,15 @@ Performing this integral gives $\nu=1$ for $|t_1|<|t_2|$ and $\nu = 0$ otherwise
 
 Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look at $t_1=1, t_2=0$. In this case, it is easy to see that all sites are "paired up"
 
-INSERT FIGURE
+<img src="../../_static/figs/SSH_pairing.svg" width="100%" height="100"></img>
+
 
 Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.
 
 Now if we consider the opposite limit of $t_1=0, t_2=1$, we can see that the pairing now misses out the two edge modes.
 
-INSERT FIGURE
+<img src="../../_static/figs/SSH_Edge_Modes.svg" width="100%" height="150"></img>
+
 
 If we look at the Hamiltonian in this limit,
 
@@ -94,14 +96,17 @@ $$
 
 we see that $a_1$ and $b_N$ (the edges of the system) are no longer involved in the Hamiltonian. This means that we can add a mode to these sites at no energy cost - we have zero-energy (gapless) edge modes. This is consistent with $\nu \neq 0$ found earlier.
 
-Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below. This is the topological protection we expect for these modes.
+Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below, where we plot the energy spectrum for 30 sites and the probability distribution for the highlighted mode, which is the mode with the smallest absolute energy. 
 
+<img src="../../_static/plots/SSH_RealSpace.svg" width="100%" height="300"></img>
 
 ## The Haldane Model
 
 We now turn to the Haldane Model, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.
 
-The Haldane model is defined on the honeycomb lattice <span style="color:red;">(INSERT FIG)</span> and consists on three terms.
+The Haldane model is defined on the honeycomb lattice  and consists on three terms.
+
+<img src="../../_static/figs/HaldaneModel.svg" width="100%" height="400"></img>
 
 
 First, we have the onsite terms where the different sublattices have an energy difference of $2M$
@@ -110,18 +115,16 @@ $$
 H_{\rm site}=M\sum_{i\in A}a^\dagger_ia_i - M\sum_{i \in B} b_i^\dagger b_i
 $$
 
-<span style="color:red;">NEED TO DEFINE WHAT I MEAN BY THE SUBSCRIPTS. USE THE VECTORS DEFINED IN THE FIGURE</span>
-
-There are also nearest neighbout hopping terms
+Here, by $a_i$ we mean the annihilation operator defined on the site located at ${\boldsymbol r}_i$. The nearest neighbours will be located at ${\boldsymbol r}_i + {\boldsymbol R}_j$ and belong to opposite lattice. Denoting the corresponding operators as $b_{i+j}$, the nearest neighbour hopping term becomes
 
 $$
 H_{\rm n.n.} = t_1\sum_{\langle i, j \rangle} \left( b_{i+j}^\dagger a_i + a_i^\dagger b_{i+j}\right)
 $$
 
-and next nearest neighbour hopping terms
+The next nearest neighbours in this model connect sites belonging to the same sublattice and sit at ${\boldsymbol r}_i + \widetilde{\boldsymbol R}_j$. Denoting the operators as $a_{i+j'}$ and $b_{i+j'}$, the Hamiltonian for next nearest neighbour hopping is 
 
 $$
-H_{\rm n.n.n.} = t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{-i\varphi}a_{i+j_1}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j_1}\right) + t_2\sum_{\langle i, j \rangle} \left( {\rm e}^{i\varphi}b_{i+j_2}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger a_{i+j_2}\right)
+H_{\rm n.n.n.} = t_2\sum_{\langle i, j' \rangle} \left( {\rm e}^{-i\varphi}a_{i+j'}^\dagger a_i + {\rm e}^{i\varphi}a_i^\dagger a_{i+j'}\right) + t_2\sum_{\langle i, j' \rangle} \left( {\rm e}^{i\varphi}b_{i+j'}^\dagger b_i + {\rm e}^{-i\varphi}b_i^\dagger b_{i+j'}\right)
 $$
 
 We emphasise that the next nearest neighbour hopping terms have an additional phase associated with them. This phase is precisely what allows for the quantum Hall physics without the magnetic field.
@@ -139,7 +142,7 @@ In order to diagonalise this, it can be convenient to express this in the form $
 $$
 E({\boldsymbol k}) = d_0({\boldsymbol k}) \pm \sqrt{d_x^2({\boldsymbol k}) + d_y^2 ({\boldsymbol k}) + d_z^2({\boldsymbol k})}
 $$
-<span style="color:red;">MENTION HOW THIS FORM IS MORE GENERAL - IS IT ANY TWO BAND MODEL????</span>
+
 
 For the Haldane model, 
 
@@ -180,10 +183,12 @@ $$
 
 where the plus sign is for the $K$ point and the minus is at the $K'$ point. So we have now identified that when this condition is satisfied, the specturm will have a gap closure (at either the $K$ or $K'$ point). We can therefore plot a phase diagram of the Haldane model of $M$ vs $\varphi$ and calculate the invariant in each regime. For the Haldane model, the invariant is the Chern number and the result is shown below.
 
-<span style="color:red;">INSERT FIG</span>
+<img src="../../_static/plots/Haldane_Chern.svg" width="100%" height="300"></img>
 
 The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the $y$ direction and open boundary conditions in the $x$. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum in this setup and clearly highlight the edge modes.
 
-<span style="color:red;">INSERT FIG</span>
+<img src="../../_static/figs/CylinderEdgeSketch.svg" width="100%" height="200"></img>
 
 ## Summary
+
+In this lecture, we have introduced two key models in the field of topological insulators. These are the SSH model and the Haldane model. We have demonstrated that both contain topological phases, characterised by non-trivial invariants which are related to the presence of protected edge modes. These ideas that we will carry forward into future lectures. In the next lecture we will look to build on the Haldane model in order to explore different types of topological phases with different invariants.

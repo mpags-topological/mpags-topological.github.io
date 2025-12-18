@@ -1,39 +1,105 @@
 # Lecture 1 - Introduction to Topology in Condensed Matter Physics
 
+In this course, we aim to give an overview of many different aspects of topology in condensed matter physics. We hope to show the its importance in this area of physics and why it is an active research field. We will begin in this lecture by demonstrating the usefulness of a topological description and how it can be used to explain robust phenomena. To do this we will explore the integer quantum Hall effect. However, first we wish to introduce why we may wish to study topological phases.
+
 ## Topological Phases of Matter - An Overview
 
 The role of topology in condensed matter physics has been a key area of research in recent years with a key motivator being the desire to further our classification of phases of matter. 'Traditional' phases of matter are characterised by a local order parameter which we can use to identify the phase. Transitions to more ordered states then involve the breaking of a symmetry. This is the Ginzburg-Landau theory of spontaneous symmetry breaking and underpins many of the phase transitions we are familiar with - for example, magnetisation, superconductors and the water phase diagram.
 
+<img src="../../_static/figs/SSB.svg" width="100%" height="400"></img>
+
 However not all phases of matter are characterised by a local parameter, examples of which are the topological phases that will be discussed in this course (as well as those that go beyond the scope of these introductory lectures). In particular we will consider three classes
  
 - Free fermions
-- SPT
+- Symmetry protected topological (SPT) phases
 - Topologically ordered states
 
 A simplistic view of a topological state is that it remains the same under continuous deformations - the classic example is that a coffee cup is the same as a doughnut, with the characterisation being that they have the same number of holes.
 
-INSERT IMAGE HERE
+<img src="../../_static/figs/CoffeeCup_Doghnut.gif" width="100%" height="400"></img>
 
 In quantum mechanics the topology is often viewed as continuous deformations of the Hamiltonian and providing a gap in the spectrum is not closed then a phase transition does not occur. In this way we have topologically protected states.
 
-NEED TO IMPROVE/REWORD THIS
-
 ## The Quantum Hall Effect
 
-One of the classic examples when introducing topology in condensed matter physics is the quantum Hall effect, so it would be wrong to leave it out here.
+One of the early examples of using topology to explain physical phenomena came in the form of the integer quantum Hall effect. 
 
-Let's begin with a discussion of the classical Hall effect
+This is an experiment performed on a two-dimensional semiconducting structure (often referred to as a 2d electron gas, or 2DEG). A voltage is applied in the $x$-direction and then in the presence of a magnetic field, a current is observed in the $y$-direction too. In the integer quantum Hall effect, we find that in a disordered system there are plateaus in the Hall resistance (the resistance in the $y$-direction). We show the typical results from an integer quantum Hall epxeriment below.
+
+
+<img src="../../_static/figs/IQHE.svg" width="100%" height="400"></img>
+
+
+We wish to highlight the following results
+
+- Initially the Hall resistance is linear in the magnetic field. This region can be explained using the classical Hall effect as we will see shortly.
+- The resistance in the $x$-diection peaks when there are jumps in the Hall resistance.
+- There are clear plateuas in the Hall resistance. They have a height (if we consider resistivity rather than resistance) of 
 
 $$
-\sigma = 
+\rho_{\rm H} = \frac{h}{e^2}\frac{1}{\nu}
 $$
 
+where $\nu \in \Z$. The height and positions of these plateaus are robust to disorder (and in fact they even require disorder), as well as the size and geometry of the sample. 
+
+This robustness suggests that topology may be useful in explaining these results, but first let's explore one of the other explanations.
+
+## Classical Hall Effect
+
+Let's begin with a discussion of the classical Hall effect. The setup is similar. We consider a 2d metal with an in-plane electric field and a magnetic field perpendicular, ${\boldsymbol B} = B_z \hat{\boldsymbol z}$ to the sample.
+
+<img src="../../_static/figs/HallEffect.svg" width="100%" height="200"></img>
+
+The equation of motion for the electrons is given by 
+
+$$
+m\dot{\boldsymbol v} = -e{\boldsymbol E} - e{\boldsymbol v}\times {\boldsymbol B} - \frac{m {\boldsymbol v}}{\tau}
+$$
+
+where the last term is a scattering term, with the scattering rate given by $\tau^{-1}$. In equilibrium, $ \dot{\boldsymbol v} =0$ and we can use that for an electron density of $n$, the current density is given by ${\boldsymbol J}=-ne{\boldsymbol v}=\sigma{\boldsymbol E}$. The conductivity is then a matrix given by
+
+$$
+\sigma = \frac{\sigma_0}{1+\omega_{\rm c}\tau^2}\left(\begin{matrix} 1 &-\omega_{\rm c}\tau \\ \omega_{\rm c}\tau & 1 \end{matrix}\right)
+$$
+
+where $\sigma_0 = ne^2\tau/m$ is the standard Drude conductivity and $\omega_{\rm c} = eB_z/m$ is the cyclotron frequency. We can take the inverse of this matrix to obtain the resistivity, with the Hall resistivity then being given by
+
+$$
+\rho_{\rm H}\equiv \rho_{12}=\frac{B}{ne}
+$$
+
+This result along with the relationship between the components of $\rho$ and $\sigma$ allow us to explain the first two points reagrding the quantum Hall results we highlighted above. We now need to understand the plateaus and this is done using Landau levels.
+
+## Landau Levels
+
+In this course we won't provide the details of Landau levels but rather summarise some results that allow us to see how we may explain the plateuas observed in quantum Hall.
+
+In the presence of a magnetic field, electrons will perform cyclotron orbits, with a frequency $\omega_{\rm c}$ and will have discrete energy levels given by
+
+$$
+E_n = \hbar \omega_{\rm c}(n+\tfrac{1}{2})
+$$
+
+This looks like the harmonic oscialltor, however the levels here are highly degenerate, with the number of degenerate levels being given by $N=eB_z L^2/h$. We can break this degeneracy using an electric field
+
+<img src="../../_static/figs/LandauLevels.svg" width="100%" height="200"></img>
+
+The velocity associated with these modes is then propotional to the gradient which is given by $E_x/B_z$. Therefore we have
+
+$$
+J_y = -nev_y = - \frac{N\nu}{L^2}e\frac{E_x}{B_z} = -\frac{e^2}{h}\nu E_x 
+$$
+
+We then find that $\rho_{12} = -1/\sigma_{21} = {h}/(e^2\nu)$, exactly as is observed in the experiments. 
+
+The Landau level picture can be expanded upon in order to explain the importance of disorder too and the robustness of the results. However, for this course we will now turn our focus to topological arguments which can explain this too.
+
+## Topology
 
 
-An alternative way of understanding the integer quantum Hall effect is through topology.
+In order to understand the quantum Hall effect in terms of topology, it is necessary to introduce a couple of concepts that frequenctly appear in condensed matter, namely the Berry phase and the Chern number.
 
-## Berry Phase and Topological Invariants
-As we emphasised in the introduction, this course will not focus on the mathematical field of topology, however there are number of related concepts that appear in condensed matter and here we aim to introduce a couple of them.
+### Berry Phase 
 
 Let's consider a Hamiltonian that depends on various parameters ${\boldsymbol \lambda} = {\boldsymbol \lambda}(t)$ that vary with time. At a given instant of time the eigenstates are given by
 
@@ -54,21 +120,25 @@ $$
 $$
 
 Integrating with respect to time we find two contributions to the phase $\theta (t) = \varphi (t) - \gamma_n$.The first of these is the standard dynamical phase encountered in untiary evolution
+
 $$
 \varphi (t) = \frac{1}{\hbar}\int_0^t E_{n_{\boldsymbol \lambda}}(t') \hspace{5pt} {\rm d}t',
 $$
+
 and the second contribution (which is also real so that $\theta$ is just a phase - there is no decay involved) is known as the Berry phase
+
 $$
 \begin{aligned}
 \gamma_n &= i\int_0^t \bra{n_{\boldsymbol \lambda}(t')}\partial_{t'}\ket{n_{\boldsymbol \lambda}(t')} {\rm d}t' \\ &= i \oint \bra{n_{\boldsymbol \lambda}}\nabla_{\boldsymbol \lambda}\ket{n_{\boldsymbol \lambda}} \cdot {\rm d}{\boldsymbol \lambda}
 \end{aligned}
 $$
+
 where in the second line we have used that the time dependence of the states originates from the time dependence of ${\boldsymbol \lambda}$ in order to write it in a form where it depends on the path through parameter space but is independent of time. For this reason, the Berry phase is sometimes known as a geometric phase. 
 
-An additional comment is that the integral is over a closed path. We won't delve into details of the gauge invariance here, but the essential point is that the Berry phase can not be removed by a simple gauge transformation for closed paths, but rather it is modified by an integer$\times 2\pi$. 
+We note here that in the last line the integral is over a closed path in parameter space.  We won't delve into details of the gauge invariance here, but the key point is that the Berry phase can not be removed by a simple gauge transformation for closed paths. 
 
+There are a couple of additional quantities related to the Berry phase that we now introduce. The first is the the Berry Connection (sometimes called the Berry vector potential),
 
-In addition to the Berry phase, there are a couple of other quantities that are useful to be aware of. The first is the the Berry Connection (sometimes called the Berry vector potential),
 $$
 {\boldsymbol A_n}({\boldsymbol \lambda})=i\bra{n_{\boldsymbol \lambda}}\nabla_{\boldsymbol \lambda}\ket{n_{\boldsymbol \lambda}}. 
 $$
@@ -76,12 +146,20 @@ $$
 This is not a gauge invariant quantity but it can be useful to define one, which leads to the Berry connection. In 3-dimensions, this takes the form
 
 $$
-\Omega_n({\boldsymbol \lambda}) = \nabla_{\boldsymbol \lambda} \times {\boldsymbol A_n}({\boldsymbol \lambda})
+{\boldsymbol \Omega_n}({\boldsymbol \lambda}) = \nabla_{\boldsymbol \lambda} \times {\boldsymbol A_n}({\boldsymbol \lambda})
 $$
 
-## Returning to Quantum Hall
+### Chern Number
 
-In condensed matter, a common surface of interest is the 2d Brillouin zone (which is peridioc due to points only being defined up to a lattice vector). Using the above ideas, we define a topological invariant
+Using Stokes' theorem we can rewrite the Berry phase as 
+
+$$
+\gamma_n = \int_S d{\boldsymbol S}\cdot {\boldsymbol \Omega_n}({\boldsymbol \lambda})
+$$
+
+If the surface is a closed two-dimenstional surface, then the integral above is given by $2\pi n$, with $n \in \Z$ due to the Chern/Gauss-Bonnet theorem. 
+
+In condensed matter, a common surface of interest is the 2d Brillouin zone (which is peridioc due to points only being defined up to a lattice vector). Using the above ideas, we can therefore define an integer quantity 
 
 $$
 C = \frac{1}{2\pi}\int_{BZ}\Omega({\boldsymbol k}) \hspace{2pt} {\rm d}{\bf k}
@@ -89,20 +167,23 @@ $$
 
 where $\Omega({\boldsymbol k}) = \partial_{k_x}A_y({\boldsymbol k}) -  \partial_{k_y}A_x({\boldsymbol k})$. 
 
-This an integer known as the Chern number and only changes when we have a energy gap closing (i.e. a topological phase transition). TALK ABOUT THE CHERN NUMBER BEING OVER FULL BANDS AS THE SUM OVER ALL BANDS IS ZERO.
+This an integer known as the Chern number and only changes when we have a energy gap closing (i.e. a topological phase transition). 
 
-Now, it can be shown that the conductance in the QHE can be expressed in terms of the Chern number
+## Topology in integer quantum Hall
+
+The link between the Chern number and the integer quantum Hall effect turns out to be remarkably simple, with the Hall conducitivty being given by
 
 $$
-\sigma = 
+\sigma_{12} = \frac{e^2}{h}\sum_n C_n
 $$
 
-A natural question to ask is why a current that is characterisitc of the edge modes in the system can be characterised by the Chern number which is a bulk property of the system (remember that the Brillouin zone is periodic in the calculation of the Chern number). Well, the solution to this is a principle known as the bulk-boundary correspondence. This states that
+where the sum is over all filled bands. The Landau levels then have a Chern number of 1 and so we recover the previous results.Since the Chern number is an integer that is robust to perturbations, this explains the robusteness of the quantum Hall results that are observed. 
 
+There is also an additional remark we wish to make about this result. This is that a non-zero Chern number corresponds to the presence of gapless edge modes ($C$ of them to be precise) due a result known as the bulk-boundary correspondence. It is easy to see why the quantum Hall system might host these and how they might contribute to the conductivity even in the semiclassical picture. In the bulk of the system we know that we have cyclotron orbits. Now, near the edge of the system, these orbit must give rise to so-called `skipping orbits', which can carry current across the system. Such a result can also be explained in the Landau level picture, but this topological approach makes clear their presence, importance and robustness.
 
-THINK ABOUT HOW TO FINISH THIS LECTURE 
-MAKE SURE I HAVE ENOUGH CONTENT
+<img src="../../_static/figs/SkippingOrbits.svg" width="100%" height="200"></img>
 
-## Exercises
+## Summary
 
-### Two-level System
+To summarise, we have introduced topological physics in condensed matter and motivated its importance using the integer quantum Hall effect. By defining the Berry phase and Chern number, which are key topics in this field of physics, we were able to explain the robustness of the results that are seen in experiments.
+
