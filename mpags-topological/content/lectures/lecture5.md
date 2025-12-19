@@ -288,3 +288,5 @@ align: center
 ```
 
 As we will see, there is a deep connection between the anyons in the toric code and the ground state degeneracy on the torus. We will see that we can label the four ground states by $\{1, e, m, \epsilon\}$, matching the four types of anyons in the theory (including the vacuum $1$). This is a general feature of topologically ordered systems, where the ground state degeneracy on a torus is equal to the number of distinct anyon types in the theory.
+
+## Summary

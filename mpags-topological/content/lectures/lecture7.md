@@ -288,7 +288,7 @@ An instance of the Maclance coherence theorem states that if the F- and R-moves 
 The pentagon and hexagon equations are generally a complicated set of coupled equations and there is no general closed-form solution for arbitrary anyon models. However, for specific anyon models, solutions can be found. 
 
 ```{admonition} Exercise
-1. Using that $R^{a1}{a} = R^{1a}{a} = 1$, and that $R^{ab}_c = 0$ if $N_{ab}^c = 0$, show that for the Fibonacci anyon model, only $R^{\tau \tau}_1$ and $R^{\tau \tau}_\tau$ are non-trivial.
+1. Using that $R^{a1}_{a} = R^{1a}_{a} = 1$, and that $R^{ab}_c = 0$ if $N_{ab}^c = 0$, show that for the Fibonacci anyon model, only $R^{\tau \tau}_1$ and $R^{\tau \tau}_\tau$ are non-trivial.
 
 2. Solve the hexagon equation with $a = b = c = d = \tau$ to find the remaining R-moves. Note there are two solutions related by complex conjugation. One solution is
 
@@ -297,4 +297,8 @@ R^{\tau \tau}_1 = e^{-4 \pi i / 5}, \quad R^{\tau \tau}_\tau = e^{3 \pi i / 5}.
 $$  
 
 ```
+
+We have now defined our TQFT in terms of anyon types, fusion rules, F-moves and R-moves. In the next lecture, we will see how to use these ingredients to define modular S and T matrices, which encode the braiding properties of the anyons.
+
+## Summary
 

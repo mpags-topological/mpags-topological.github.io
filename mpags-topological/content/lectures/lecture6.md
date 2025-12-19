@@ -6,7 +6,7 @@ All fundamental particles in Nature of one of two types: fermions or bosons. The
 
 **For bosons**, the wavefunction is symmetric under exchange:
 
-```{figure} ../images/boson_exchange.svg
+```{figure} ../images/BosonExchange.svg
 ---
 name: boson_exchange
 width: 60%
@@ -18,7 +18,7 @@ that is, we get exactly the same state when we swap two indistinguishable bosons
 
 **For fermions**, on the other hand, the wavefunction is antisymmetric under exchange:
 
-```{figure} ../images/fermion_exchange.svg
+```{figure} ../images/FermionExchange.svg
 ---
 name: fermion_exchange
 width: 60%
@@ -31,17 +31,17 @@ This small difference has huge ramifications: Bosons can occupy the same quantum
 
 But why only fermions or bosons? Is there anything else? Let us consider a simple argument for why these are the only two possibilities in three-dimensional space. Let us add a ficticious label to each particle and consider what happens when we exchange two particles twice:
 
-```{figure} ../images/double_exchange.svg
+```{figure} ../images/DoubleExchange.svg
 ---
 name: double_exchange
-width: 60%
+width: 90%
 align: center
 ---
 ```
 
 Swapping the particles gives the same state, possibly up to a phase $e^{i\phi}$. Swapping them again must return us to the original state, resulting in a total phase of $e^{i2\phi}$. However, let us change the centre of mass frame to one where particle $a$ is stationary.
 
-```{figure} ../images/double_exchange_cmf.svg
+```{figure} ../images/DoubleExchangeCMF.svg
 ---
 name: double_exchange_cmf
 width: 60%
@@ -61,10 +61,10 @@ The name "anyon" was coined by Frank Wilczek, who proposed that in two-dimension
 
 As well as the exchange statistics, in two-dimensions we can also have non-trivial **mutual statistics** between distinguishable particles. Roughly speaking, we have the two following processes
 
-```{figure} ../images/mutual_statistics.svg
+```{figure} ../images/MutualStatistics.svg
 ---
 name: mutual_statistics
-width: 60%
+width: 95%
 align: center
 ---
 ```
@@ -150,7 +150,7 @@ In addition to exchange and mutual statistics, anyons also have a set of rules f
 
 There are two ways to think of fusion:
 1. **Particle Perspective**: Two anyons of types $a$ and $b$ can come together to form a new anyon of type $c$. This very similar to the idea of particle - antiparticle annihilation in high-energy physics, except that the resulting particle type is not necessarily the vacuum (trivial) particle.
-```{figure} ../images/fusion_particle.svg
+```{figure} ../images/FusionParticle.svg
 ---
 name: fusion_particle
 width: 60%
@@ -160,10 +160,10 @@ align: center
 
 
 2. **Collective Perspective**: Two anyons of types $a$ and $b$ are brought close together, and we consider the combined system as a whole. The total topological charge of the combined system can be measured, yielding a result of type $c$. They collectively behave as a single anyon of type $c$. This is similar to how a hydrogen atom, consisting of a proton and an electron (fermions), can be treated as a single entity with bosonic properties.
-```{figure} ../images/fusion_collective.svg
+```{figure} ../images/FusionCollective.svg
 ---
 name: fusion_collective
-width: 60%
+width: 75%
 align: center
 ---
 ```
@@ -243,20 +243,20 @@ $$
 
 meaning there are three possible states for a system of three $\tau$ anyons, depending on how they fuse together. These are 
 
-```{figure} ../images/fibonacci_three_anyons.svg
+```{figure} ../images/FibonacciThreeAnyons.svg
 ---
 name: fibonacci_three_anyons
-width: 80%
+width: 45%
 align: center
 ---
 ```
 
 Here, we have drawn circles around groups of anyons and indicated the total fusion outcome for that group. We have also labelled these $|0\rangle$, $|1\rangle$, and $|N\rangle$ in relations to quantum computation (more on this later). Let us then consider the following two braids
 
-```{figure} ../images/fibonacci_braids.svg
+```{figure} ../images/FibonacciBraids.svg
 ---
 name: fibonacci_braids
-width: 80%
+width: 70%
 align: center
 ---
 ```
@@ -306,3 +306,5 @@ e^{-i4\pi/5} & 0 \\
 $$
 
 are sufficient to approximate any $2\times2$ unitary matrix to arbitrary accuracy, in other words they can approximate an arbitrary single qubit gate. By finding the correct sequence of these two braids, we can implement any single qubit gate using Fibonacci anyons! This is the basis of topological quantum computation, which we will return to later in the course.
+
+## Summary
