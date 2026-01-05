@@ -185,9 +185,11 @@ where the plus sign is for the $K$ point and the minus is at the $K'$ point. So 
 
 <img src="../../_static/plots/Haldane_Chern.svg" width="100%" height="300"></img>
 
-The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the $y$ direction and open boundary conditions in the $x$. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum in this setup and clearly highlight the edge modes.
+The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the $y$ direction and open boundary conditions in the $x$. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum for $M=2, \varphi=\pi/2$, in this setup and clearly highlight the edge modes.
 
 <img src="../../_static/figs/CylinderEdgeSketch.svg" width="100%" height="200"></img>
+
+<img src="../../_static/plots/Haldane_Cylinder.svg" width="100%" height="300"></img>
 
 ## Summary
 
