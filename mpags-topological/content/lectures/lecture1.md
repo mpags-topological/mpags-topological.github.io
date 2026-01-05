@@ -40,7 +40,7 @@ $$
 \rho_{\rm H} = \frac{h}{e^2}\frac{1}{\nu}
 $$
 
-where $\nu \in \Z$. The height and positions of these plateaus are robust to disorder (and in fact they even require disorder), as well as the size and geometry of the sample. 
+where $\nu \in \mathbb{Z}$. The height and positions of these plateaus are robust to disorder (and in fact they even require disorder), as well as the size and geometry of the sample. 
 
 This robustness suggests that topology may be useful in explaining these results, but first let's explore one of the other explanations.
 

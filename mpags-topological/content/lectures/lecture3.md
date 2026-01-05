@@ -104,19 +104,19 @@ One of the key reasons to study symmetries is their relation to the classificati
 <img src="../../_static/figs/AltlandZirnbauer.svg" width="100%" height="200"></img>
 
 
-This table gives the invariants in various dimensions for different symmetry classes. Let's now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of $\pm 1$ gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions $d$. A value of zero means there is no topological phase, a $\Z$ invariant can be any integer (positive or negative), such as the Chern number and a $\Z_2$ invariant can only take two values.
+This table gives the invariants in various dimensions for different symmetry classes. Let's now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of $\pm 1$ gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions $d$. A value of zero means there is no topological phase, a $\mathbb{Z}$ invariant can be any integer (positive or negative), such as the Chern number and a $\mathbb{Z}_2$ invariant can only take two values.
 
 Lets now see where the models we have considered so far fit in
 
 - IQHE/QAHE (e.g. Haldane model): Class A - not truly an SPT as no symmetries present
-- SSH Model: Class BDI - all three symmetries are present and in 1d the invariant is a $\Z$ invariant
-- Kane-Mele: Class AII - TRS is the only symmetry and in 2d has a $\Z_2$ invariant
+- SSH Model: Class BDI - all three symmetries are present and in 1d the invariant is a $\mathbb{Z}$ invariant
+- Kane-Mele: Class AII - TRS is the only symmetry and in 2d has a $\mathbb{Z}_2$ invariant
 - The topological superconductors that we will consider next lecture will sit in class D as they will have particle-hole symmetry but break time-reversal, as they will be spinless. We won't say any more about this now.
 
 
 ## The Kane-Mele invariant
 
-We now return to the Kane-Mele model, which has a $\Z_2$ invariant. Let's aim to understand this invariant.
+We now return to the Kane-Mele model, which has a $\mathbb{Z}_2$ invariant. Let's aim to understand this invariant.
 
 Consider a Kramers' pair of edge states, $\ket{\psi_k^{(1)}}$ and $\ket{\psi_{-k}^{(2)}}$, related by TRS.
 
@@ -142,7 +142,7 @@ $$
 (-1)^\nu = \prod_{i} \frac{{\rm Pf}[\omega(\Lambda_i)]}{\sqrt{\det [\omega(\Lambda_i)]}}
 $$
 
-Given the defintion of the Pfaffian above, it is not surprising that the right hand side of this equation is always equal to $\pm 1$ and therefore $\nu =0,1$. It is a $\Z_2$ invariant as expected.
+Given the defintion of the Pfaffian above, it is not surprising that the right hand side of this equation is always equal to $\pm 1$ and therefore $\nu =0,1$. It is a $\mathbb{Z}_2$ invariant as expected.
 
 The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers' pairs of gapless edge modes. If we have an even number of pairs then the we are in the trivial phase, $\nu=0$ and if the number of pairs is odd then we can have gapless edge modes and $\nu = 1$.
 
@@ -157,4 +157,4 @@ In this lecture we have seen the importance of symmetries in classifying differe
 - Time-reversal
 - Chiral
 
-Over the last two lectures we have also encountered different types of invariants, such as the Chern number and the so-called $\Z_2$ invariant. These allow us to identify non-trivial topological phases as well as make statements on protected edge modes via the bulk boundary correspondence. In the next lecture, we will turn our attention to topological superconductors where particle-hole symmetry plays a key role too.
+Over the last two lectures we have also encountered different types of invariants, such as the Chern number and the so-called $\mathbb{Z}_2$ invariant. These allow us to identify non-trivial topological phases as well as make statements on protected edge modes via the bulk boundary correspondence. In the next lecture, we will turn our attention to topological superconductors where particle-hole symmetry plays a key role too.
