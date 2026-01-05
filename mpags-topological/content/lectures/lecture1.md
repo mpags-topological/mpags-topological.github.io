@@ -157,7 +157,7 @@ $$
 \gamma_n = \int_S d{\boldsymbol S}\cdot {\boldsymbol \Omega_n}({\boldsymbol \lambda})
 $$
 
-If the surface is a closed two-dimenstional surface, then the integral above is given by $2\pi n$, with $n \in \Z$ due to the Chern/Gauss-Bonnet theorem. 
+If the surface is a closed two-dimenstional surface, then the integral above is given by $2\pi n$, with $n \in \mathbb{Z}$ due to the Chern/Gauss-Bonnet theorem. 
 
 In condensed matter, a common surface of interest is the 2d Brillouin zone (which is peridioc due to points only being defined up to a lattice vector). Using the above ideas, we can therefore define an integer quantity 
 
