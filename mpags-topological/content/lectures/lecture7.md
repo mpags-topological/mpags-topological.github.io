@@ -9,7 +9,7 @@ The mathematical formulation of anyon models is (2+1)-dimensional topological qu
 ```{figure} ../images/AnyonTypes.svg
 ---
 align: center
-width: 60%
+width: 65%
 name: fig:anyon_types
 ---
 Different anyon types represented as labelled lines. The arrows indicate the direction of time.
@@ -104,7 +104,7 @@ To define a tensor category (the core structure underlying TQFTs), the fusion ru
 ```{figure} ../images/QuantumDimension.svg
 ---
 align: center
-width: 60%
+width: 30%
 name: fig:quantum_dimension
 ---
 ```
@@ -124,7 +124,7 @@ We can think of fusion rules as specifying the allowed ways that two anyons can 
 ```{figure} ../images/FusionDiagram.svg
 ---
 align: center
-width: 60%
+width: 50%
 name: fig:fusion_diagram
 ---
 A fusion diagram showing anyons a and b fusing to form anyon c. A splitting diagram is also shown, where anyon c splits into anyons a and b.
@@ -135,7 +135,7 @@ We can also use an alternative representation where we take a top-down view of t
 ```{figure} ../images/FusionDiagramTopDown.svg
 ---
 align: center
-width: 60%
+width: 65%
 name: fig:fusion_diagram_topdown
 ---
 ```
@@ -145,7 +145,7 @@ For a given set of anyons, we can define a vector space of states associated wit
 ```{figure} ../images/FibonacciTwoAnyonStates.svg
 ---
 align: center
-width: 60%
+width: 40%
 name: fig:fibonacci_two_anyon_states
 ---
 ```
@@ -155,7 +155,7 @@ For three Fibonacci anyons, we have three possible fusion diagrams,
 ```{figure} ../images/FibonacciThreeAnyonStates.svg
 ---
 align: center
-width: 60%
+width: 75%
 name: fig:fibonacci_three_anyon_states
 ---
 ```
@@ -185,7 +185,7 @@ An important point when defining the states in the previous section was that we 
 ```{figure} ../images/DifferentFusionOrders.svg
 ---
 align: center
-width: 60%
+width: 70%
 name: fig:different_fusion_orders
 ---
 Two different fusion orders for three anyons a, b and c.
@@ -196,7 +196,7 @@ The question is: how are these two different fusion orders related? To relate th
 ```{figure} ../images/FMove.svg
 ---
 align: center
-width: 60%
+width: 80%
 name: fig:f_move
 ---
 An F-move relating two different fusion orders for three anyons a, b and c fusing to form anyon d.
@@ -211,7 +211,7 @@ While the F-moves are an ingredient we add into our definition of the TQFT, they
 ```{figure} ../images/PentagonEquation.svg
 ---
 align: center
-width: 60%
+width: 95%
 name: fig:pentagon_equation
 ---
 The pentagon equation relating two different sequences of F-moves for four anyons a, b, c and d fusing to form anyon e.
@@ -246,7 +246,7 @@ So far, we have only considered fusion of anyons, but we also need to be able to
 ```{figure} ../images/RMove.svg
 ---
 align: center
-width: 60%
+width: 50%
 name: fig:r_move
 ---
 An R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.
@@ -272,7 +272,7 @@ Just as for the F-moves, not all choices of R-moves are allowed. Here the choice
 ```{figure} ../images/HexagonEquation.svg
 ---
 align: center
-width: 60%
+width: 95%
 name: fig:hexagon_equation
 ---
 ```
