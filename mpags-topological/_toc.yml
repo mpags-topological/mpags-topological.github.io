@@ -7,7 +7,7 @@ parts:
 - caption: Information about the course
   chapters:
   - file: content/outline/courseStructure
-  - file: content/outline/assessment
+  # - file: content/outline/assessment
 - caption: Lectures
   numbered: true
   chapters:
