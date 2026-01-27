@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture 6 - Intoduction to Anyons &#8212; Introduction to Topological Phases of Matter</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture6';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Introduction to Topological Phases of Matter - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Introduction to Topological Phases of Matter - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction to Topological Phases of Matter
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information about the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/lectures/lecture6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 6 - Intoduction to Anyons</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-and-bose-statistics-revisited">Fermi and Bose Statistics Revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-and-mutual-statistics">Exchange and Mutual Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-fusion-outcomes-non-abelian-anyons">Multiple Fusion Outcomes: Non-Abelian Anyons</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braiding">Braiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-6-intoduction-to-anyons">
+<h1>Lecture 6 - Intoduction to Anyons<a class="headerlink" href="#lecture-6-intoduction-to-anyons" title="Link to this heading">#</a></h1>
+<section id="fermi-and-bose-statistics-revisited">
+<h2>Fermi and Bose Statistics Revisited<a class="headerlink" href="#fermi-and-bose-statistics-revisited" title="Link to this heading">#</a></h2>
+<p>All fundamental particles in Nature of one of two types: fermions or bosons. The difference between the two can be neatly summarised by what happends when we exchange a pair of indistinguishable particles.</p>
+<p><strong>For bosons</strong>, the wavefunction is symmetric under exchange:</p>
+<figure class="align-center" id="boson-exchange">
+<a class="reference internal image-reference" href="../../_images/BosonExchange.svg"><img alt="../../_images/BosonExchange.svg" src="../../_images/BosonExchange.svg" style="width: 60%;" />
+</a>
+</figure>
+<p>that is, we get exactly the same state when we swap two indistinguishable bosons.</p>
+<p><strong>For fermions</strong>, on the other hand, the wavefunction is antisymmetric under exchange:</p>
+<figure class="align-center" id="fermion-exchange">
+<a class="reference internal image-reference" href="../../_images/FermionExchange.svg"><img alt="../../_images/FermionExchange.svg" src="../../_images/FermionExchange.svg" style="width: 60%;" />
+</a>
+</figure>
+<p>that is, we pick up a minus sign when we swap two indistinguishable fermions.</p>
+<p>This small difference has huge ramifications: Bosons can occupy the same quantum state, leading to phenomena such as Bose-Einstein condensation, superfluidity, and the coherent light of lasers. Fermions, on the other hand, are subject to the Pauli exclusion principle, which follows directly from the antisymmetric nature of their wavefunction. This means that no two fermions can occupy the same quantum state simultaneously. This principle is fundamental to the structure of matter, as it explains the arrangement of electrons in atoms, the behaviour of chemical reactions, and the stability of matter itself.</p>
+<p>But why only fermions or bosons? Is there anything else? Let us consider a simple argument for why these are the only two possibilities in three-dimensional space. Let us add a ficticious label to each particle and consider what happens when we exchange two particles twice:</p>
+<figure class="align-center" id="double-exchange">
+<a class="reference internal image-reference" href="../../_images/DoubleExchange.svg"><img alt="../../_images/DoubleExchange.svg" src="../../_images/DoubleExchange.svg" style="width: 90%;" />
+</a>
+</figure>
+<p>Swapping the particles gives the same state, possibly up to a phase <span class="math notranslate nohighlight">\(e^{i\phi}\)</span>. Swapping them again must return us to the original state, resulting in a total phase of <span class="math notranslate nohighlight">\(e^{i2\phi}\)</span>. However, let us change the centre of mass frame to one where particle <span class="math notranslate nohighlight">\(a\)</span> is stationary.</p>
+<figure class="align-center" id="double-exchange-cmf">
+<a class="reference internal image-reference" href="../../_images/DoubleExchangeCMF.svg"><img alt="../../_images/DoubleExchangeCMF.svg" src="../../_images/DoubleExchangeCMF.svg" style="width: 60%;" />
+</a>
+</figure>
+<p>Then, swapping the particles twice is equivalent to moving particle <span class="math notranslate nohighlight">\(b\)</span> around a closed loop encircling particle <span class="math notranslate nohighlight">\(a\)</span>. In three dimensions, we can continuously deform this loop to a point without crossing particle <span class="math notranslate nohighlight">\(a\)</span>, meaning that the wavefunction must return to its original value (up to some non-universal path dependent phase that we can ignore). That is, this process is <em>topologically equivalent</em> to doing nothing. Therefore, we must have <span class="math notranslate nohighlight">\(e^{i2\phi} = 1\)</span>, which implies that <span class="math notranslate nohighlight">\(\phi\)</span> can only be <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\pi\)</span>. This leads us to the conclusion that in three-dimensional space, particles can only be fermions or bosons.</p>
+<p>The important part of this argument is the ability to continuously deform the loop in three dimensions. If we instead lived in a two-dimensional world, we could not continuously deform the loop without crossing particle <span class="math notranslate nohighlight">\(a\)</span>. This opens up the possibility of particles with exchange statistics that are neither fermionic nor bosonic. Such particles are known as <strong>anyons</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The name “anyon” was coined by Frank Wilczek, who proposed that in two-dimensional systems, particles could exhibit a continuous range of statistical behaviours, interpolating between fermions and bosons. The term reflects the idea that these particles can have “any” phase upon exchange, not limited to the discrete values associated with fermions and bosons. However, in actual fact, not all values are allowed for the exchange phase.</p>
+</div>
+</section>
+<section id="exchange-and-mutual-statistics">
+<h2>Exchange and Mutual Statistics<a class="headerlink" href="#exchange-and-mutual-statistics" title="Link to this heading">#</a></h2>
+<p>As well as the exchange statistics, in two-dimensions we can also have non-trivial <strong>mutual statistics</strong> between distinguishable particles. Roughly speaking, we have the two following processes</p>
+<figure class="align-center" id="mutual-statistics">
+<a class="reference internal image-reference" href="../../_images/MutualStatistics.svg"><img alt="../../_images/MutualStatistics.svg" src="../../_images/MutualStatistics.svg" style="width: 95%;" />
+</a>
+</figure>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta_a = e^{ih_a}\)</span> is the topological twist of particle <span class="math notranslate nohighlight">\(a\)</span>, corresponding to exchanging two identical particles of type <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{ab} = e^{i\phi_{ab}}\)</span> is the mutual statistics between particles of type <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, corresponding to moving particle <span class="math notranslate nohighlight">\(a\)</span> around particle <span class="math notranslate nohighlight">\(b\)</span> in a closed loop.</p></li>
+</ul>
+<p>Often this information is summarised in the form of two matrices, the <span class="math notranslate nohighlight">\(T\)</span>-matrix and the <span class="math notranslate nohighlight">\(S\)</span>-matrix, where the <span class="math notranslate nohighlight">\(T\)</span>-matrix contains the topological twists on the diagonal, i.e. <span class="math notranslate nohighlight">\(T_{ab} = \theta_a \delta_{ab}\)</span>, and the <span class="math notranslate nohighlight">\(S\)</span>-matrix contains the mutual statistics, <span class="math notranslate nohighlight">\(S_{ab} \propto M_{ab}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(M_{ab}\)</span> is sometimes also called the monodromy between particles <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. There is a simple but non-tivial relationship between <span class="math notranslate nohighlight">\(S_{ab}\)</span> and <span class="math notranslate nohighlight">\(M_{ab}\)</span>. Ultimately, they contain the same information, but are normalised differently.</p>
+</div>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<h3 class="rubric" id="toric-code">Toric Code</h3>
+<p>The toric code has four types of anyons <span class="math notranslate nohighlight">\(\{1, e, m, \epsilon\}\)</span>, with the following <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> matrices:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T = \begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -1 \\
+\end{pmatrix},
+\qquad
+S = \frac{1}{2} \begin{pmatrix}
+1 &amp; 1 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -1 &amp; -1 \\
+1 &amp; -1 &amp; 1 &amp; -1 \\
+1 &amp; -1 &amp; -1 &amp; 1 \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>That is, the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons are bosons with respect to themselves, but have mutual statistics of <span class="math notranslate nohighlight">\(-1\)</span> with each other. The <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon is a fermion with respect to itself, and has mutual statistics of <span class="math notranslate nohighlight">\(-1\)</span> with both <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span>. You may see it said that the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons are “mutual semions” (not a term I particularly like).</p>
+<h3 class="rubric" id="fibonacci-anyons">Fibonacci Anyons</h3>
+<p>Fibonacci anyons are an important example of <strong>non-Abelian anyons</strong> (an idea we will return to). There are two types of anyons, the trivial <span class="math notranslate nohighlight">\(1\)</span> and the non-trivial <span class="math notranslate nohighlight">\(\tau\)</span>. Their <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> matrices are given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T = \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; e^{4\pi i / 5} \\
+\end{pmatrix},
+\qquad
+S = \frac{1}{\sqrt{1 + \phi^2}} \begin{pmatrix}
+1 &amp; \phi \\
+\phi &amp; 1-\phi \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi = \frac{1 + \sqrt{5}}{2}\)</span> is the golden ratio. Here, the <span class="math notranslate nohighlight">\(\tau\)</span> anyon has non-trivial exchange statistics, and the mutual statistics between two <span class="math notranslate nohighlight">\(\tau\)</span> anyons is also non-trivial.</p>
+<h3 class="rubric" id="ising-anyons">Ising Anyons</h3>
+<p>Ising anyons are another important example of non-Abelian anyons, relevant to topological superconductors. There are three types of anyons <span class="math notranslate nohighlight">\(\{1, \sigma, \psi\}\)</span>, with the following <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> matrices:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T = e^{-i\frac{\pi}{24}}\begin{pmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; e^{\pi i / 8} &amp; 0 \\
+0 &amp; 0 &amp; -1 \\
+\end{pmatrix},
+\qquad
+S = \frac{1}{2} \begin{pmatrix}
+1 &amp; \sqrt{2} &amp; 1 \\
+\sqrt{2} &amp; 0 &amp; -\sqrt{2} \\
+1 &amp; -\sqrt{2} &amp; 1 \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(\sigma\)</span> anyon corresponds to a Majorana fermion and can describe the non-Abelian statistics of Majorana zero modes in <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductors.</p>
+</div>
+</section>
+<section id="fusion">
+<h2>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
+<p>In addition to exchange and mutual statistics, anyons also have a set of rules for how they can combine, or “fuse”, together. This is described by the <strong>fusion rules</strong>. For example, in the toric code, we saw that the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons could combine to form the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon.</p>
+<p>There are two ways to think of fusion:</p>
+<ol class="arabic simple">
+<li><p><strong>Particle Perspective</strong>: Two anyons of types <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> can come together to form a new anyon of type <span class="math notranslate nohighlight">\(c\)</span>. This very similar to the idea of particle - antiparticle annihilation in high-energy physics, except that the resulting particle type is not necessarily the vacuum (trivial) particle.</p></li>
+</ol>
+<figure class="align-center" id="fusion-particle">
+<a class="reference internal image-reference" href="../../_images/FusionParticle.svg"><img alt="../../_images/FusionParticle.svg" src="../../_images/FusionParticle.svg" style="width: 60%;" />
+</a>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p><strong>Collective Perspective</strong>: Two anyons of types <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are brought close together, and we consider the combined system as a whole. The total topological charge of the combined system can be measured, yielding a result of type <span class="math notranslate nohighlight">\(c\)</span>. They collectively behave as a single anyon of type <span class="math notranslate nohighlight">\(c\)</span>. This is similar to how a hydrogen atom, consisting of a proton and an electron (fermions), can be treated as a single entity with bosonic properties.</p></li>
+</ol>
+<figure class="align-center" id="fusion-collective">
+<a class="reference internal image-reference" href="../../_images/FusionCollective.svg"><img alt="../../_images/FusionCollective.svg" src="../../_images/FusionCollective.svg" style="width: 75%;" />
+</a>
+</figure>
+<p>We write the fusion rules in the form (for abelian anyons) as</p>
+<div class="math notranslate nohighlight">
+\[
+a \times b = c
+\]</div>
+<p>meaning that anyons of type <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> fuse to form an anyon of type <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<section id="multiple-fusion-outcomes-non-abelian-anyons">
+<h3>Multiple Fusion Outcomes: Non-Abelian Anyons<a class="headerlink" href="#multiple-fusion-outcomes-non-abelian-anyons" title="Link to this heading">#</a></h3>
+<p>While we have seen the abelian fusion above in the context of the toric code, this can be generalised to allow for multiple possible fusion outcomes. That is, we can have</p>
+<div class="math notranslate nohighlight">
+\[
+a \times b = \sum_c N_{ab}^c \, c
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_{ab}^c\)</span> is an integer indicating how many ways anyons of type <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> can fuse to form an anyon of type <span class="math notranslate nohighlight">\(c\)</span>. For instance we could have <span class="math notranslate nohighlight">\(a \times b = c + d\)</span>, meaning that <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> can fuse to form either <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>But what does having multiple fusion channels mean? A good analogy is the combination of two spin-1/2 particles. When we combine two spin-1/2 particles, the possible states can be split into two types: a singlet state with total spin 0, and a triplet state with total spin 1. i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} \otimes \frac{1}{2} = 0 \oplus 1
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When we say there are two channels, the actual state of a pair of anyons can be in a superposition of both channels. This is similar to how two spin-1/2 particles can be in a superposition of the singlet and triplet states. The amplitudes in this superposition will depend on all other anyons in the system!</p>
+</div>
+<div class="admonition-examples-non-abelian-fusion admonition">
+<p class="admonition-title">Examples: Non-abelian fusion</p>
+<h3 class="rubric" id="id1">Fibonacci Anyons</h3>
+<p>Fibonacci anyons have the following fusion rules:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+1 \times 1 = 1 \\
+1 \times \tau = \tau \\
+\tau \times \tau = 1 + \tau
+\end{split}\]</div>
+<p>That is, two <span class="math notranslate nohighlight">\(\tau\)</span> anyons can fuse to form either the trivial anyon <span class="math notranslate nohighlight">\(1\)</span> or another <span class="math notranslate nohighlight">\(\tau\)</span> anyon.</p>
+<h3 class="rubric" id="id2">Ising Anyons</h3>
+<p>Ising anyons have the following fusion rules:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+1 \times 1 = 1 \\
+1 \times \sigma = \sigma \\
+1 \times \psi = \psi \\
+\sigma \times \sigma = 1 + \psi \\
+\sigma \times \psi = \sigma \\
+\psi \times \psi = 1
+\end{split}\]</div>
+<p>That is, two <span class="math notranslate nohighlight">\(\sigma\)</span> anyons can fuse to form either the trivial anyon <span class="math notranslate nohighlight">\(1\)</span> or the fermionic anyon <span class="math notranslate nohighlight">\(\psi\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="braiding">
+<h2>Braiding<a class="headerlink" href="#braiding" title="Link to this heading">#</a></h2>
+<p>So far we have looked at the properties of a pair of anyons. When we have more than two, things get more complicated and interesting. With more than two anyons we can introduce “braiding” operations, where we move anyons around each other in specific ways. We will use Fibonacci anyons as an example.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Exchange (T) and mutual statistics (S) are special cases of braiding.</p>
+</div>
+<p>For Fibonacci anyons we have the following fusion rule</p>
+<div class="math notranslate nohighlight">
+\[
+\tau \times \tau = 1 + \tau
+\]</div>
+<p>meaning there are three possible states for a system of three <span class="math notranslate nohighlight">\(\tau\)</span> anyons, depending on how they fuse together. These are</p>
+<figure class="align-center" id="fibonacci-three-anyons">
+<a class="reference internal image-reference" href="../../_images/FibonacciThreeAnyons.svg"><img alt="../../_images/FibonacciThreeAnyons.svg" src="../../_images/FibonacciThreeAnyons.svg" style="width: 45%;" />
+</a>
+</figure>
+<p>Here, we have drawn circles around groups of anyons and indicated the total fusion outcome for that group. We have also labelled these <span class="math notranslate nohighlight">\(|0\rangle\)</span>, <span class="math notranslate nohighlight">\(|1\rangle\)</span>, and <span class="math notranslate nohighlight">\(|N\rangle\)</span> in relations to quantum computation (more on this later). Let us then consider the following two braids</p>
+<figure class="align-center" id="fibonacci-braids">
+<a class="reference internal image-reference" href="../../_images/FibonacciBraids.svg"><img alt="../../_images/FibonacciBraids.svg" src="../../_images/FibonacciBraids.svg" style="width: 70%;" />
+</a>
+</figure>
+<p>These braids can be represented as matrices acting on the three-dimensional Hilbert space spanned by the states <span class="math notranslate nohighlight">\(|0\rangle\)</span>, <span class="math notranslate nohighlight">\(|1\rangle\)</span>, and <span class="math notranslate nohighlight">\(|N\rangle\)</span>. If use a matrix-vector notation where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+|0\rangle = \begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}, \quad
+|1\rangle = \begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}, \quad
+|N\rangle = \begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}
+\end{split}\]</div>
+<p>then braid <span class="math notranslate nohighlight">\(A\)</span> is represented by the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+e^{-i4\pi/5} &amp; 0 &amp; 0 \\
+0 &amp; e^{i3\pi/5} &amp; 0 \\
+0 &amp; 0 &amp; e^{i3\pi/5} \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>This matrix is diagonal, and its elements correspond to the exchange statistics of the anyons depending on their fusion channel. Braid <span class="math notranslate nohighlight">\(B\)</span>, on the other hand, is represented by the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+\phi^{-1} e^{4\pi i / 5} &amp; \phi^{-1/2} e^{-3\pi i / 5} &amp; 0 \\
+\phi^{-1/2} e^{-3\pi i / 5} &amp; -\phi^{-1} &amp; 0 \\
+0 &amp; 0 &amp; e^{3\pi i / 5} \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>Importantly, we see that braiding corresponds to unitary matrices and does not simply result in a phase factor. This is a hallmark of non-Abelian anyons, where braiding operations can change the state of the system in a non-trivial way. The name non-abelian is related to the fact that these braiding matrices do not commute with each other, i.e. <span class="math notranslate nohighlight">\(AB \neq BA\)</span>.</p>
+<p>An interesting property of these particular matrices is that they split into a <span class="math notranslate nohighlight">\(2\times2\)</span> block acting on the subspace spanned by <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, and a <span class="math notranslate nohighlight">\(1\times1\)</span> block acting on <span class="math notranslate nohighlight">\(|N\rangle\)</span>. This means that if we restrict ourselves to the subspace spanned by <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, these braids keep us within that subspace. Furthermore, the matrices on this subspace</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sigma_1 = \begin{pmatrix}
+e^{-i4\pi/5} &amp; 0 \\
+0 &amp; e^{i3\pi/5} \\
+\end{pmatrix},
+\qquad
+\sigma_2 = \begin{pmatrix}
+\phi^{-1} e^{4\pi i / 5} &amp; \phi^{-1/2} e^{-3\pi i / 5} \\
+\phi^{-1/2} e^{-3\pi i / 5} &amp; -\phi^{-1} \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>are sufficient to approximate any <span class="math notranslate nohighlight">\(2\times2\)</span> unitary matrix to arbitrary accuracy, in other words they can approximate an arbitrary single qubit gate. By finding the correct sequence of these two braids, we can implement any single qubit gate using Fibonacci anyons! This is the basis of topological quantum computation, which we will return to later in the course.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-and-bose-statistics-revisited">Fermi and Bose Statistics Revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-and-mutual-statistics">Exchange and Mutual Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-fusion-outcomes-non-abelian-anyons">Multiple Fusion Outcomes: Non-Abelian Anyons</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braiding">Braiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By George McArdle and Adam Gammon-Smith
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
