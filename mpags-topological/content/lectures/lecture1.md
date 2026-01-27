@@ -4,9 +4,14 @@ In this course, we aim to give an overview of many different aspects of topology
 
 ## Topological Phases of Matter - An Overview
 
-The role of topology in condensed matter physics has been a key area of research in recent years with a key motivator being the desire to further our classification of phases of matter. 'Traditional' phases of matter are characterised by a local order parameter which we can use to identify the phase. Transitions to more ordered states then involve the breaking of a symmetry. This is the Ginzburg-Landau theory of spontaneous symmetry breaking and underpins many of the phase transitions we are familiar with - for example, magnetisation, superconductors and the water phase diagram.
+The role of topology in condensed matter physics has been a key area of research in recent years with a key motivator being the desire to further our classification of phases of matter. 'Traditional' phases of matter are characterised by a local order parameter which we can use to identify the phase. Transitions to more ordered states then involve the breaking of a symmetry. This is the Ginzburg-Landau theory of spontaneous symmetry breaking and underpins many of the phase transitions we are familiar with {cite}`Tinkham_SC, Coleman_ManyBody` - for example, magnetisation, superconductors and the water phase diagram.
 
-<img src="../../_static/figs/SSB.svg" width="100%" height="400"></img>
+```{figure} ../../_static/figs/SSB.svg
+:width: 100%
+:height: 400
+
+Spontaneous symmetry breaking in a superconductor leads to a non-zero superconducting density below the transition temperature.
+```
 
 However not all phases of matter are characterised by a local parameter, examples of which are the topological phases that will be discussed in this course (as well as those that go beyond the scope of these introductory lectures). In particular we will consider three classes
  
@@ -16,25 +21,32 @@ However not all phases of matter are characterised by a local parameter, example
 
 A simplistic view of a topological state is that it remains the same under continuous deformations - the classic example is that a coffee cup is the same as a doughnut, with the characterisation being that they have the same number of holes.
 
-<img src="../../_static/figs/CoffeeCup_Doghnut.gif" width="100%" height="400"></img>
+
+
+
+```{figure} ../../_static/figs/CoffeeCup_Doghnut.gif
+:width: 100%
+:height: 400
+
+A coffee cup is topologically equivalent to a doughnut. {cite}`TopologyGif` 
+```
 
 In quantum mechanics the topology is often viewed as continuous deformations of the Hamiltonian and providing a gap in the spectrum is not closed then a phase transition does not occur. In this way we have topologically protected states.
 
 ## The Quantum Hall Effect
 
-One of the early examples of using topology to explain physical phenomena came in the form of the integer quantum Hall effect. 
+One of the early examples of using topology to explain physical phenomena came in the form of the integer quantum Hall effect. We will introduce it here and focus on the links to topology, but for a more complete overview, see {cite}`DavidTong`.
 
-This is an experiment performed on a two-dimensional semiconducting structure (often referred to as a 2d electron gas, or 2DEG). A voltage is applied in the $x$-direction and then in the presence of a magnetic field, a current is observed in the $y$-direction too. In the integer quantum Hall effect, we find that in a disordered system there are plateaus in the Hall resistance (the resistance in the $y$-direction). We show the typical results from an integer quantum Hall epxeriment below.
+The integer quantum Hall effect was first measured in 1980 {cite}`IQHE_FirstMeasurement`, with typical experimental results being shown below. 
 
+```{figure} ../../_static/figs/IQHE.svg
+:width: 100%
+:height: 400
 
-<img src="../../_static/figs/IQHE.svg" width="100%" height="400"></img>
+Experimental results for the Integer quantum Hall effect. Figure from {cite}`IQHE_Measurement`
+```
 
-
-We wish to highlight the following results
-
-- Initially the Hall resistance is linear in the magnetic field. This region can be explained using the classical Hall effect as we will see shortly.
-- The resistance in the $x$-diection peaks when there are jumps in the Hall resistance.
-- There are clear plateuas in the Hall resistance. They have a height (if we consider resistivity rather than resistance) of 
+The experiments are performed on a two-dimensional semiconducting structure (often referred to as a 2d electron gas, or 2DEG). A voltage is applied in the $x$-direction and then in the presence of a magnetic field, a current is observed in the $y$-direction too. In the integer quantum Hall effect, we find that in a disordered system there are plateaus in the Hall resistance (the resistance in the $y$-direction). These have a height (if we consider resistivity rather than resistance) of 
 
 $$
 \rho_{\rm H} = \frac{h}{e^2}\frac{1}{\nu}
@@ -42,13 +54,24 @@ $$
 
 where $\nu \in \mathbb{Z}$. The height and positions of these plateaus are robust to disorder (and in fact they even require disorder), as well as the size and geometry of the sample. 
 
-This robustness suggests that topology may be useful in explaining these results, but first let's explore one of the other explanations.
+```{note}
+Other results in these experiments include
+- Initially the Hall resistance is linear in the magnetic field. This region can be explained using the classical Hall effect as we will see shortly.
+- The resistance in the $x$-diection peaks when there are jumps in the Hall resistance. For a discussion of this - see {cite}`DavidTong`
+```
+
+The robustness of the results to disorder and geometry suggests that topology may be useful in explaining these results, but first let's explore one of the other explanations.
 
 ## Classical Hall Effect
 
 Let's begin with a discussion of the classical Hall effect. The setup is similar. We consider a 2d metal with an in-plane electric field and a magnetic field perpendicular, ${\boldsymbol B} = B_z \hat{\boldsymbol z}$ to the sample.
 
-<img src="../../_static/figs/HallEffect.svg" width="100%" height="200"></img>
+```{figure} ../../_static/figs/HallEffect.svg
+:width: 100%
+:height: 200
+
+Setup for the classical Hall effect.
+```
 
 The equation of motion for the electrons is given by 
 
@@ -59,7 +82,7 @@ $$
 where the last term is a scattering term, with the scattering rate given by $\tau^{-1}$. In equilibrium, $ \dot{\boldsymbol v} =0$ and we can use that for an electron density of $n$, the current density is given by ${\boldsymbol J}=-ne{\boldsymbol v}=\sigma{\boldsymbol E}$. The conductivity is then a matrix given by
 
 $$
-\sigma = \frac{\sigma_0}{1+\omega_{\rm c}\tau^2}\left(\begin{matrix} 1 &-\omega_{\rm c}\tau \\ \omega_{\rm c}\tau & 1 \end{matrix}\right)
+\sigma = \frac{\sigma_0}{1+(\omega_{\rm c}\tau)^2}\left(\begin{matrix} 1 &-\omega_{\rm c}\tau \\ \omega_{\rm c}\tau & 1 \end{matrix}\right)
 $$
 
 where $\sigma_0 = ne^2\tau/m$ is the standard Drude conductivity and $\omega_{\rm c} = eB_z/m$ is the cyclotron frequency. We can take the inverse of this matrix to obtain the resistivity, with the Hall resistivity then being given by
@@ -82,22 +105,26 @@ $$
 
 This looks like the harmonic oscialltor, however the levels here are highly degenerate, with the number of degenerate levels being given by $N=eB_z L^2/h$. We can break this degeneracy using an electric field
 
-<img src="../../_static/figs/LandauLevels.svg" width="100%" height="200"></img>
+```{figure} ../../_static/figs/LandauLevels.svg
+:width: 100%
+:height: 200
 
-The velocity associated with these modes is then propotional to the gradient which is given by $E_x/B_z$. Therefore we have
+The degeneracy of the Landau levels is lifted by the presence of an electric field.
+```
+
+The velocity associated with these modes is then propotional to the gradient which is given by $-(E_x/B_z)$. Therefore we have
 
 $$
-J_y = -nev_y = - \frac{N\nu}{L^2}e\frac{E_x}{B_z} = -\frac{e^2}{h}\nu E_x 
+J_y = -nev_y = - \frac{N\nu}{L^2}e\left(-\frac{E_x}{B_z}\right) = \frac{e^2}{h}\nu E_x 
 $$
 
-We then find that $\rho_{12} = -1/\sigma_{21} = {h}/(e^2\nu)$, exactly as is observed in the experiments. 
+We then find that $\rho_{\rm H} = \rho_{12} =  {h}/(e^2\nu)$, exactly as is observed in the experiments. 
 
 The Landau level picture can be expanded upon in order to explain the importance of disorder too and the robustness of the results. However, for this course we will now turn our focus to topological arguments which can explain this too.
 
 ## Topology
 
-
-In order to understand the quantum Hall effect in terms of topology, it is necessary to introduce a couple of concepts that frequenctly appear in condensed matter, namely the Berry phase and the Chern number.
+In order to understand the quantum Hall effect in terms of topology, it is necessary to introduce a couple of concepts that frequenctly appear in condensed matter, namely the Berry phase and the Chern number. Here, we follow a similar approach to that presented in {cite}`BernevigHughes` and for further details, this book should be consulted.
 
 ### Berry Phase 
 
@@ -171,7 +198,7 @@ This an integer known as the Chern number and only changes when we have a energy
 
 ## Topology in integer quantum Hall
 
-The link between the Chern number and the integer quantum Hall effect turns out to be remarkably simple, with the Hall conducitivty being given by
+The link between the Chern number and the integer quantum Hall effect is often referred to as a TKNN invariant after the authors who discovered it - Thouless, Kohmoto, Nightingale, and den Nijs {cite}`TKNN`. The relation turns out to be remarkably simple, with the Hall conducitivty being given by
 
 $$
 \sigma_{12} = \frac{e^2}{h}\sum_n C_n
@@ -179,11 +206,27 @@ $$
 
 where the sum is over all filled bands. The Landau levels then have a Chern number of 1 and so we recover the previous results.Since the Chern number is an integer that is robust to perturbations, this explains the robusteness of the quantum Hall results that are observed. 
 
-There is also an additional remark we wish to make about this result. This is that a non-zero Chern number corresponds to the presence of gapless edge modes ($C$ of them to be precise) due a result known as the bulk-boundary correspondence. It is easy to see why the quantum Hall system might host these and how they might contribute to the conductivity even in the semiclassical picture. In the bulk of the system we know that we have cyclotron orbits. Now, near the edge of the system, these orbit must give rise to so-called `skipping orbits', which can carry current across the system. Such a result can also be explained in the Landau level picture, but this topological approach makes clear their presence, importance and robustness.
+### Edge Modes
+There is also an additional remark we wish to make about this result. This is that a non-zero Chern number corresponds to the presence of gapless edge modes ($C$ of them to be precise) due a result known as the bulk-boundary correspondence. It is easy to see why the quantum Hall system might host these and how they might contribute to the conductivity even in the semiclassical picture. In the bulk of the system we know that we have cyclotron orbits. Now, near the edge of the system, these orbit must give rise to so-called `skipping orbits', which can carry current across the system. Such a result can also be explained in the Landau level picture, but this topological approach makes clear their presence, importance and robustness. We will encounter edge modes further in the coming lectures.
 
-<img src="../../_static/figs/SkippingOrbits.svg" width="100%" height="200"></img>
+
+```{figure} ../../_static/figs/SkippingOrbits.svg
+:width: 100%
+:height: 200
+
+A semiclassical view of the edge modes. Cyclotron modes near the edge of the sample result in modes that propagate along the edge.
+```
+
+
 
 ## Summary
 
 To summarise, we have introduced topological physics in condensed matter and motivated its importance using the integer quantum Hall effect. By defining the Berry phase and Chern number, which are key topics in this field of physics, we were able to explain the robustness of the results that are seen in experiments.
 
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
