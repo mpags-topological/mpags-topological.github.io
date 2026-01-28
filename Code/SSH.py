@@ -3,64 +3,52 @@ import plotly.graph_objects as go
 # import matplotlib.pyplot as plt
 # from matplotlib.widgets import Slider, Button
 
-def Energy(t1, t2, k):
-    return np.sqrt(t1**2 + t2**2 + 2*t1*t2*np.cos(k))
+def Energy(ratio, k):
+    return np.sqrt(ratio**2 + 1 + 2*ratio*np.cos(k))
 
-k = np.linspace(-np.pi, np.pi, 100)
+k = np.linspace(-np.pi, np.pi, 101)
 
 
 # Slider values
-t_values = np.linspace(0, 1, 10)
+ratio_values = np.linspace(-2, 2, 41, endpoint=True)
+
 
 # Create initial figure
 fig = go.Figure()
 
 # Add the first frame (initial t1, t2)
-initial_t1 = 0.5
-initial_t2 = 0.5
+initial_ratio = 0
+active_index = np.where(ratio_values == initial_ratio)[0][0]
 
 # Create figure
 fig = go.Figure()
 
 # Upper and lower bands
-fig.add_trace(go.Scatter(x=k, y=Energy(initial_t1, initial_t2, k), name="+E(k)", line=dict(color="blue")))
-fig.add_trace(go.Scatter(x=k, y=-Energy(initial_t1, initial_t2, k), name="-E(k)", line=dict(color="red")))
+fig.add_trace(go.Scatter(x=k, y=Energy(initial_ratio, k), name="+E(k)", line=dict(color="blue")))
+fig.add_trace(go.Scatter(x=k, y=-Energy(initial_ratio, k), name="-E(k)", line=dict(color="red")))
 
-# Slider values
-t1_values = np.linspace(0, 1, 21)
-t2_values = np.linspace(0, 1, 21)
+
 
 # Slider for t1
-t1_steps = []
-for t1 in t1_values:
+ratio_steps = []
+for ratio in ratio_values:
     step = dict(
         method="update",
-        args=[{"y": [Energy(t1, initial_t2, k), -Energy(t1, initial_t2, k)]}],
-        label=f"{t1:.2f}"
+        args=[{"y": [Energy(ratio, k), -Energy(ratio, k)]}],
+        label=f"{ratio:.2f}"
     )
-    t1_steps.append(step)
-
-# Slider for t2
-t2_steps = []
-for t2 in t2_values:
-    step = dict(
-        method="update",
-        args=[{"y": [Energy(initial_t1, t2, k), -Energy(initial_t1, t2, k)]}],
-        label=f"{t2:.2f}"
-    )
-    t2_steps.append(step)
+    ratio_steps.append(step)
 
 # Combine sliders
 sliders = [
-    dict(active=int(initial_t1*20), currentvalue={"prefix": "t1="}, pad={"t": 50}, steps=t1_steps),
-    dict(active=int(initial_t2*20), currentvalue={"prefix": "t2="}, pad={"t": 150}, steps=t2_steps)
+    dict(active=active_index, currentvalue={"prefix": "t1/t2="}, pad={"t": 50}, steps=ratio_steps),
 ]
 
 fig.update_layout(
     sliders=sliders,
     xaxis_title="k",
-    yaxis_title="E(k)",
-    yaxis=dict(range=[-2, 2]),
+    yaxis_title="E(k)/t2",
+    yaxis=dict(range=[-4, 4]),
     width=500,
     height=500
 )
