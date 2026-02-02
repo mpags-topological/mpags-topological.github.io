@@ -1,13 +1,18 @@
 # Lecture 2 - Topological Insulators I
 
-In this lecture we will begin to introduce some key topological models - namely the Su-Schrieffer-Heeger (SSH) model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties.
+In this lecture we will begin to introduce some key topological models - namely the Su-Schrieffer-Heeger (SSH) model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties. Should you wish to read more about the models in this lecture then some useful references are {cite}`BernevigHughes, QiZhang_Review, Asboth_TI_Course, HasanKane_Review`.
 
 
 ## The SSH Model
 
-The SSH model is a simple model that demonstrates topological properties. In this model we have unit cells consisting of two different sublattices, $A$ and $B$. The intracell and intercell hopping strengths are given by $t_1$ and $t_2$ respectively.
+The SSH model is a simple model that demonstrates topological properties. Initially introdiced as a simple model of a polymer {cite}`SSH_Model`, in this model there are unit cells consisting of two different sublattices, $A$ and $B$. The intracell and intercell hopping strengths are given by $t_1$ and $t_2$ respectively.
 
-<img src="../../_static/figs/SSH_Model.svg" width="100%" height="100"></img>
+```{figure} ../../_static/figs/SSH_Model.svg
+:width: 100%
+:height: 100
+
+The SSH Model
+```
 
 
 The Hamiltonian is given by 
@@ -47,7 +52,9 @@ $$
 From the expression for the energy, as well as the plot we make a couple of remarks. First if $|t_1| \neq |t_2|$, then the spectrum is gapped (no modes that cross zero energy) for all $k$. The system in this phase is an insulator. However when $|t_1| = |t_2|$, it can be possible to close the gap, such that the system becomes a conductor. The gap closes at 
 
 $$
-k=0 \hspace{4pt}\mathrm{for } \hspace{4pt} t_1=-t_2\\ k=\pi  \hspace{4pt}\mathrm{for} \hspace{4pt} t_1=t_2
+\begin{align}
+k&=0 \hspace{4pt}\mathrm{for } \hspace{4pt} t_1=-t_2\\ k&=\pi  \hspace{4pt}\mathrm{for} \hspace{4pt} t_1=t_2
+\end{align}
 $$
 
 It is precisely at these points that a topological phase transition can occur. We now need to identify when we are in the topological phase and try to understand its properties. Let's begin by calculating the topological invariant. To do this we write $H_k$ in the form
@@ -60,8 +67,10 @@ $$
 with
 
 $$
-d_0 = d_z=0,\\
-d_x = t_1 + t_2 \cos k, \hspace{5pt} d_y = t_2 \sin k
+\begin{align}
+d_0 &= d_z=0,\\
+d_x &= t_1 + t_2 \cos k, \\ d_y &= t_2 \sin k
+\end{align}
 $$
 
 In the above the notation $\sigma_0$ is the identity and ${\boldsymbol \sigma}$ is a three-dimensional vector of Pauli matrices. Using these definitions, the invariants is defined as 
@@ -70,22 +79,34 @@ $$
 \nu = \frac{1}{2\pi}\int {\rm d}k \left(\frac{{\boldsymbol d}}{|{\boldsymbol d}|}\times \frac{\partial}{\partial k} \frac{{\boldsymbol d}}{|{\boldsymbol d}|}\right)_z
 $$
 
-Notice the subscript $z$, so when we expand out the cross-product, it doesn't look too dissimilar from the Chern number. However, it is different and in this case is known as the Winding number. The reason for this name is that as $k$ goes from $0\rightarrow 2\pi$, the vector ${\boldsymbol d}$ traces a circle and this invariant simply counts how many time the vector winds around the origin. 
+```{note}
+Notice the subscript $z$ in the above equation, so when we expand out the cross-product, it doesn't look too dissimilar from the Chern number. However, it is different and in this case is known as the Winding number. The reason for this name is that as $k$ goes from $0\rightarrow 2\pi$, the vector ${\boldsymbol d}$ traces a circle and this invariant simply counts how many time the vector winds around the origin. 
+```
 
 Performing this integral gives $\nu=1$ for $|t_1|<|t_2|$ and $\nu = 0$ otherwise. The non-zero winding signifies a non-trivial topological phase which we will now demonstrate by considering the edge states. 
 
 ### Edge States
 
-Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look at $t_1=1, t_2=0$. In this case, it is easy to see that all sites are "paired up"
+Let's start by considering the case where $|t_1|>|t_2|$. To do this we will look at $t_1=1, t_2=0$. In this case, it is easy to see that all sites are "paired up".
 
-<img src="../../_static/figs/SSH_pairing.svg" width="100%" height="100"></img>
 
+```{figure} ../../_static/figs/SSH_pairing.svg
+:width: 100%
+:height: 100
+
+All sites are paired in the trivial regime and there are no edge modes.
+```
 
 Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.
 
 Now if we consider the opposite limit of $t_1=0, t_2=1$, we can see that the pairing now misses out the two edge modes.
 
-<img src="../../_static/figs/SSH_Edge_Modes.svg" width="100%" height="150"></img>
+```{figure} ../../_static/figs/SSH_Edge_Modes.svg
+:width: 100%
+:height: 100
+
+In the topological regime we have edge modes that are unpaired and sit at zero energy
+```
 
 
 If we look at the Hamiltonian in this limit,
@@ -98,16 +119,26 @@ we see that $a_1$ and $b_N$ (the edges of the system) are no longer involved in 
 
 Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below, where we plot the energy spectrum for 30 sites and the probability distribution for the highlighted mode, which is the mode with the smallest absolute energy. 
 
-<img src="../../_static/plots/SSH_RealSpace.svg" width="100%" height="300"></img>
+```{figure} ../../_static/plots/SSH_RealSpace.svg
+:width: 100%
+:height: 300
+
+The real space structure of the lowest energy modes (highlighted in the inset) of the SSH model in the trivial (left) and topological (right) regimes.
+```
+
 
 ## The Haldane Model
 
-We now turn to the Haldane Model, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.
+We now turn to the Haldane Model {cite}`Haldane_Model`, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.
 
 The Haldane model is defined on the honeycomb lattice  and consists on three terms.
 
-<img src="../../_static/figs/HaldaneModel.svg" width="100%" height="400"></img>
+```{figure} ../../_static/figs/HaldaneModel.svg
+:width: 100%
+:height: 400
 
+The Haldane model. The $A$ sublattice is purple and the $B$ sublattice is green. The orange hops have an associated phase of $\varphi$.
+```
 
 First, we have the onsite terms where the different sublattices have an energy difference of $2M$
 
@@ -183,12 +214,42 @@ $$
 
 where the plus sign is for the $K$ point and the minus is at the $K'$ point. So we have now identified that when this condition is satisfied, the specturm will have a gap closure (at either the $K$ or $K'$ point). We can therefore plot a phase diagram of the Haldane model of $M$ vs $\varphi$ and calculate the invariant in each regime. For the Haldane model, the invariant is the Chern number and the result is shown below.
 
-<img src="../../_static/plots/Haldane_Chern.svg" width="100%" height="300"></img>
 
-The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the $y$ direction and open boundary conditions in the $x$. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum in this setup and clearly highlight the edge modes.
+```{figure} ../../_static/plots/Haldane_Chern.svg
+:width: 100%
+:height: 300
 
-<img src="../../_static/figs/CylinderEdgeSketch.svg" width="100%" height="200"></img>
+The Chern number for the Haldane model. Changes is Chern number occur when the bulk gap closes.
+```
+
+```{note}
+Sometimes in the literature, the $-1$ and $+1$ phases will be the other way around. This corresponds to letting $\varphi \rightarrow -\varphi$ in the original model
+```
+
+The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the $y$ direction and open boundary conditions in the $x$. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum for $M=2, \varphi=\pi/2$, in this setup and clearly highlight the edge modes.
+
+```{figure} ../../_static/figs/CylinderEdgeSketch.svg
+:width: 100%
+:height: 200
+
+A sketch of how chiral edge modes appear on a cylinder geometry.
+```
+
+```{figure} ../../_static/plots/Haldane_Cylinder.svg
+:width: 100%
+:height: 300
+
+The energy spectrum of the Haldane model in a cylinder setup. The colour shows the localisation of the edge modes. 
+```
 
 ## Summary
 
 In this lecture, we have introduced two key models in the field of topological insulators. These are the SSH model and the Haldane model. We have demonstrated that both contain topological phases, characterised by non-trivial invariants which are related to the presence of protected edge modes. These ideas that we will carry forward into future lectures. In the next lecture we will look to build on the Haldane model in order to explore different types of topological phases with different invariants.
+
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

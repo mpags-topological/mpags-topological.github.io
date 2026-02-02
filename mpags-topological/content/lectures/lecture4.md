@@ -34,7 +34,7 @@ $$
 
 For $\Delta\neq0$, the gap closes at two points; $(1): \mu=-2t$ (at $k=0$), and $(2):\mu=2t$ (at $k=\pi$). 
 
-Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a $\Z_2$ invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.
+Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a $\mathbb{Z}_2$ invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.
 
 ### Majorana Modes
 
@@ -102,7 +102,7 @@ this time with $\varepsilon_{\boldsymbol k}=-2t(\cos k_x + \cos k_y)-\mu$ and $\
 
 We wish to now highlight a couple of points regarding this Hamiltonian. The first regards the continuum limit ($k\rightarrow 0$ here), where the pairing term becomes proportional to $k_x+ik_y$. Due to the relation $p=\hbar k$, this is commonly referred to as the $p_x+ip_y$, or $p+ip$ superconductor.
 
-The second point we wish to address is the symmetries of the Hamiltonian. Out of the three symmetries we discussed in the last lecture (particle-hole, time-reversal, and chiral) only particle-hole symmetry is present here. Time-reversal symmetry is broken as we have a spinless system. Therefore the invaraint is a $\Z$-invariant and is simply the Chern number. We can calculate this numerically to obtain the following result.
+The second point we wish to address is the symmetries of the Hamiltonian. Out of the three symmetries we discussed in the last lecture (particle-hole, time-reversal, and chiral) only particle-hole symmetry is present here. Time-reversal symmetry is broken as we have a spinless system. Therefore the invaraint is a $\mathbb{Z}$-invariant and is simply the Chern number. We can calculate this numerically to obtain the following result.
 
 <img src="../../_static/plots/p_ip_Chern.svg" width="100%" height="300"></img>
 
