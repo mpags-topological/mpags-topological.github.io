@@ -15,7 +15,7 @@ $$
 As is the usual first step, we explore the bulk spectrum by performing the Fourier transform
 
 $$
-H = \sum_k (-2t \cos k -\mu)c_k^\dagger c_k + \sum_k(i\Delta \sin k \hspace{3pt}c_{-k}c_k-i\Delta \sin k \hspace{3pt} c_k^\dagger c_{-k}^\dagger)
+H = \sum_k (-2t \cos k -\mu)c_k^\dagger c_k + \sum_k(i\Delta \sin k \hspace{3pt}c_{-k}c_k-i\Delta^* \sin k \hspace{3pt} c_k^\dagger c_{-k}^\dagger)
 $$
 
 One of the key differences of this compared to the models we have looked at so far is that $k$ and $-k$ are mixed. This is a feature of superconductors and the standard way to solve Bardeen-Cooper-Schrieffer (BCS) superconductors is to use a Bogoliubov transformation that mixes electron (with energy-momentum $(E,k)$) and hole ($E,-k$) operators. The resulting eigenstates (quasiparticles) of the theory are known as Bogoliubov quasiparticles. We effectively perform the same transformation here by writing the Hamiltonian in Bogoliubov-de Gennes (BdG) form. This symmetrises $k$ and $-k$ and in this case leads to
@@ -34,7 +34,7 @@ $$
 
 For $\Delta\neq0$, the gap closes at two points; $(1): \mu=-2t$ (at $k=0$), and $(2):\mu=2t$ (at $k=\pi$). 
 
-Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a $\mathbb{Z}_2$ invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.
+Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a topological invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.
 
 ### Majorana Modes
 
