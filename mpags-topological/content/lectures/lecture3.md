@@ -2,7 +2,7 @@
 
 In the previous lecture we looked at a couple of key models in the theory of topological insulators. These were the SSH model which is a 1d topological insulator and the Haldane model which is a Chern insulator. So what's the difference between a Chern insulator and a topological insulator? Both are insulating phases with topological properties and sometimes (depending on who you ask) Chern insulators are considered a subset of topological insulators. An alternative definition for topological insulators is related to symmetry protected topological (SPT) phases. In this definition, the topological modes are also protected by an additional symmetry, however this excludes Chern insulators from being a topological insulator.
 
-In this lecture we will look to understand the importance of symmetries further. To begin, we introduce a classic model for a symmetry-protected topological insulator - the Kane-Mele model.
+In this lecture we will look to understand the importance of symmetries further. To begin, we introduce a classic model for a symmetry-protected topological insulator - the Kane-Mele model {cite}`KaneMele, KaneMele2`.
 
 ## Kane-Mele
 
@@ -38,7 +38,13 @@ As we saw in the previous lecture, it is possible to analyse the spectrum in ord
 
 One of the key differences between the Kane-Mele and Haldane models appears in the edge modes
 
-<img src="../../_static/figs/HelicalEdgeModes.svg" width="100%" height="300"></img>
+
+```{figure} ../../_static/figs/HelicalEdgeModes.svg
+:width: 100%
+:height: 300
+
+The edge modes in a Chern insulator and a topological insulator.
+```
 
 In the case of a Chern insulator, we exhibit quantum Hall physics without the magentic field (the quantum anomalous Hall effect) and therefore have chiral edge modes. In contrast to this, topological insulators (in the SPT sense) exhibit the quantum spin Hall effect and have helical edge modes. These are counterpropagating edge modes with opposite spin polarisation. This is expected even in the limit $\alpha \rightarrow 0$, where we have two copies of the Haldane model with opposite spins and phases. The question then becomes why don't these edge modes gap out? The answer is Kramers' theorem.
 
@@ -61,15 +67,13 @@ SPT phases are more general than what we have outlined above using Kramers' theo
 
 ### Time-Reversal
 
-As we have already alluded to, this is the key difference between the Haldane and Kane-Mele models. The essence of this symmetry is that a Hamiltonian/state/operator will remain invariant under the change $t \rightarrow -t$. We define a time-reversal operator $\mathcal{T}$ such that the symmetry is then expressed as 
+As we have already alluded to, this is the key difference between the Haldane and Kane-Mele models. The essence of this symmetry is that a Hamiltonian/state/operator will remain invariant under the change $t \rightarrow -t$. We know intuitively that reversing time should reverse the direction of motion, in other words send ${\boldsymbol k} \rightarrow -{\boldsymbol k}$. Therefore we time-reversal operator $\mathcal{T}$ acting on a Hamiltonian such that the symmetry is then expressed as 
 
 $$
-\mathcal{T}X(t)\mathcal{T}^{-1}=X(t), \hspace{10pt} \mathcal{T}\ket{\psi(t)} = \ket{\psi(t)}
+\mathcal{T}H({\boldsymbol k})\mathcal{T}^{-1}=H(-{\boldsymbol k})
 $$
 
-for operators and states respectively. The particular form of this operator depends on the problem but we can make a few general remarks and provide the form used for the Kane-Mele model.
-
-We know intuitively that reversing time should reverse the direction of motion, in other words send ${\boldsymbol k} \rightarrow -{\boldsymbol k}$. This can be obtained by taking the complex conjugate, $\mathcal{K}$, (as ${\boldsymbol k} = -i{\boldsymbol \nabla}$). Further to this, it should flip the spin, such that $\mathcal{T}\sigma_i\mathcal{T}^{-1}=-\sigma_i$
+The particular form of this operator depends on the problem but we can make a few general remarks and provide the form used for the Kane-Mele model. In order to reverse the direction of momentum we can simply take the complex conjugate, $\mathcal{K}$, (as ${\boldsymbol k} = -i{\boldsymbol \nabla}$). Further to this, when spin is included in the model it should flip the spin, such that $\mathcal{T}\sigma_i\mathcal{T}^{-1}=-\sigma_i$
 
 It's easy to verify that the operator that acheives this is
 
@@ -82,7 +86,14 @@ In general, the operator has the form $\mathcal{T} = U\mathcal{K}$, where $U$ is
 
 ### Particle-Hole
 
-Sometimes also called charge conjugation, this symmetry swaps particle and holes and therefore takes ${\boldsymbol k} \rightarrow -{\boldsymbol k}$ and $E \rightarrow -E$. In this course we will encounter this symmetry in superconductors when the Hamiltonians have the form $H = \tfrac{1}{2}\sum_{\boldsymbol k} \Psi^\dagger({\boldsymbol k}) H_{\boldsymbol k} \Psi({\boldsymbol k})$ with $\Psi({\boldsymbol k}) = (c_{\boldsymbol k} \hspace{5pt} c_{-\boldsymbol k}^\dagger)^{\rm T}$. In this case the symmetry operator is 
+Sometimes also called charge conjugation, this symmetry swaps particle and holes and therefore takes ${\boldsymbol k} \rightarrow -{\boldsymbol k}$ and $E \rightarrow -E$. Therefore the symmetry takes the form
+
+$$
+\mathcal{C}H({\boldsymbol k})\mathcal{C}^{-1} = -H(-{\boldsymbol k})
+$$
+
+
+In this course we will encounter this symmetry in superconductors when the Hamiltonians have the form $H = \tfrac{1}{2}\sum_{\boldsymbol k} \Psi^\dagger({\boldsymbol k}) H_{\boldsymbol k} \Psi({\boldsymbol k})$ with $\Psi({\boldsymbol k}) = (c_{\boldsymbol k} \hspace{5pt} c_{-\boldsymbol k}^\dagger)^{\rm T}$. In this case the symmetry operator is 
 
 $$
 \mathcal{C} = \tau_x\mathcal{K}
@@ -99,9 +110,14 @@ The SSH model we saw last lecture displayed chiral symmetry due to the presence 
 
 ## Classification
 
-One of the key reasons to study symmetries is their relation to the classification to topological phases and identifying the corresponding invariants. In particular is the Altland-Zirnbauer classification scheme (sometimes referred to as a periodic table)
+One of the key reasons to study symmetries is their relation to the classification to topological phases and identifying the corresponding invariants. In particular is the Altland-Zirnbauer classification scheme {cite}`AltlandZirnbauer` (sometimes referred to as a periodic table)
 
-<img src="../../_static/figs/AltlandZirnbauer.svg" width="100%" height="200"></img>
+```{figure} ../../_static/figs/AltlandZirnbauer.svg
+:width: 100%
+:height: 200
+
+The Altland-Zirnbauer Periodic Table. Figure from {cite}`AZ_Table`.
+```
 
 
 This table gives the invariants in various dimensions for different symmetry classes. Let's now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of $\pm 1$ gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions $d$. A value of zero means there is no topological phase, a $\mathbb{Z}$ invariant can be any integer (positive or negative), such as the Chern number and a $\mathbb{Z}_2$ invariant can only take two values.
@@ -111,7 +127,7 @@ Lets now see where the models we have considered so far fit in
 - IQHE/QAHE (e.g. Haldane model): Class A - not truly an SPT as no symmetries present
 - SSH Model: Class BDI - all three symmetries are present and in 1d the invariant is a $\mathbb{Z}$ invariant
 - Kane-Mele: Class AII - TRS is the only symmetry and in 2d has a $\mathbb{Z}_2$ invariant
-- The topological superconductors that we will consider next lecture will sit in class D as they will have particle-hole symmetry but break time-reversal, as they will be spinless. We won't say any more about this now.
+- The $p+ip$ topological superconductor that we will consider next lecture is in class D as it has particle-hole symmetry but breaks time-reversal. We won't say any more about this now.
 
 
 ## The Kane-Mele invariant
@@ -146,8 +162,12 @@ Given the defintion of the Pfaffian above, it is not surprising that the right h
 
 The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers' pairs of gapless edge modes. If we have an even number of pairs then the we are in the trivial phase, $\nu=0$ and if the number of pairs is odd then we can have gapless edge modes and $\nu = 1$.
 
-<img src="../../_static/figs/KaneMeleEdgeModes.svg" width="100%" height="300"></img>
+```{figure} ../../_static/figs/KaneMeleEdgeModes.svg
+:width: 100%
+:height: 300
 
+The edge modes in the Kane-Mele model. Figure from {cite}`KaneMele2`.
+```
 
 ## Summary
 
