@@ -79,6 +79,7 @@ Often this information is summarised in the form of two matrices, the $T$-matrix
 $M_{ab}$ is sometimes also called the monodromy between particles $a$ and $b$. There is a simple but non-tivial relationship between $S_{ab}$ and $M_{ab}$. Ultimately, they contain the same information, but are normalised differently.
 ```
 
+<!--
 ````{admonition} Examples
 
 ### Toric Code
@@ -142,6 +143,7 @@ $$
 The $\sigma$ anyon corresponds to a Majorana fermion and can describe the non-Abelian statistics of Majorana zero modes in $p$-wave topological superconductors.
 
 ````
+-->
 
 
 ## Fusion
@@ -196,6 +198,7 @@ $$
 When we say there are two channels, the actual state of a pair of anyons can be in a superposition of both channels. This is similar to how two spin-1/2 particles can be in a superposition of the singlet and triplet states. The amplitudes in this superposition will depend on all other anyons in the system!
 ```
 
+<!--
 ````{admonition} Examples: Non-abelian fusion
 
 ### Fibonacci Anyons
@@ -225,6 +228,7 @@ $$
 That is, two $\sigma$ anyons can fuse to form either the trivial anyon $1$ or the fermionic anyon $\psi$.
 
 ````
+-->
 
 
 ## Braiding
@@ -308,3 +312,16 @@ $$
 are sufficient to approximate any $2\times2$ unitary matrix to arbitrary accuracy, in other words they can approximate an arbitrary single qubit gate. By finding the correct sequence of these two braids, we can implement any single qubit gate using Fibonacci anyons! This is the basis of topological quantum computation, which we will return to later in the course.
 
 ## Summary
+
+In this session we revisted the statistics of fermions and bosons and showed that other options - anyons - are possible in two dimensions. These anyons can have non-trivial exchange and mutual statistics. We also introduced the concepts of fusion and braiding. We saw that for non-Abelian anyons, braiding can be represented by matrices instead of simple phase factors. In the next two sessions we formalise the ideas that we have introduced here. 
+
+<!--
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+-->
