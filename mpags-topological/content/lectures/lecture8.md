@@ -9,7 +9,7 @@ Equipped with the F and R-moves, we can now describe more general braiding opera
 ```{figure} ../images/BraidDiagram.svg
 ---
 align: center
-width: 80%
+width: 95%
 name: braid_diagram
 ---
 ```
@@ -19,7 +19,7 @@ where we have acted on a chosen basis state. To express this braid in our chosen
 ```{figure} ../images/BraidOperation.svg
 ---
 align: center
-width: 80%
+width: 70%
 name: braid_operation
 ---
 ```
@@ -59,7 +59,7 @@ We can interpret this diagram physically by taking a top-down view, that is
 ```{figure} ../images/TopologicalSpinTopDown.svg
 ---
 align: center
-width: 50%
+width: 95%
 name: topological_spin_top_down
 ---
 ```
@@ -69,7 +69,7 @@ which nicely matches with our previous definition of exchange statistics. Let us
 ```{figure} ../images/TopologicalSpinEvaluation.svg
 ---
 align: center
-width: 80%
+width: 90%
 name: topological_spin_evaluation
 ---
 ```
@@ -86,10 +86,11 @@ and we can collect this into a diagonal matrix called the **T matrix**, with ele
 For abelian anyons, formula for the topological spin simplifies since we have only one fusion channel and all quantum dimensions $d_a=1$, so if $a\times a = c$, then $\theta_a = R^{aa}_c$.
 ```
 
-```{admonition} Exercise
+<!-- ```{admonition} Exercise
 1. Compute $\theta_\tau$ for the Fibonacci anyon model using the F- and R-moves we derived previously.
 2. Compute $\theta_a$ for your favourite anyon model.
-```
+``` 
+-->
 
 ## Mutual Statistics: The S matrix
 
@@ -110,7 +111,7 @@ Again, we can interpret this diagram physically by taking a top-down view, that 
 ```{figure} ../images/ModularSMatrixTopDown.svg
 ---
 align: center
-width: 50%
+width: 95%
 name: modular_s_matrix_top_down
 ---
 ```
@@ -120,10 +121,12 @@ which matches our previous definition of mutual statistics. Let us now *evaluate
 ```{figure} ../images/ModularSMatrixEvaluation.svg
 ---
 align: center
-width: 80%
+width: 90%
 name: modular_s_matrix_evaluation
 ---
 ```
+
+## Summary
 
 
 
