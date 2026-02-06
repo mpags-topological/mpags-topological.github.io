@@ -189,6 +189,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
 </ul>
 
     </div>
@@ -349,6 +351,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyon-statistics">Anyon Statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergent-fermions">Emergent Fermions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -362,7 +365,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-5-the-toric-code">
 <h1>Lecture 5 - The Toric Code<a class="headerlink" href="#lecture-5-the-toric-code" title="Link to this heading">#</a></h1>
-<p>The toric code is a beautifually simple model for topological order introduced by Alexei Kitaev. It is simple, soluble, and contains many of the key features of more general topologically ordered systems. In particular, it has anyonic excitations and ground state degeneracy that depends on the topology of the underlying manifold. We introduce it here as a key example of topological order, and to motivate the more formal theory of anyons that will follow.</p>
+<p>The toric code is a beautifually simple model for topological order introduced by Alexei Kitaev <span id="id1">[<a class="reference internal" href="#id5" title="A.Yu. Kitaev. Fault-tolerant quantum computation by anyons. Annals of Physics, 303(1):2-30, 2003. URL: https://www.sciencedirect.com/science/article/pii/S0003491602000180, doi:https://doi.org/10.1016/S0003-4916(02)00018-0.">Kit03</a>, <a class="reference internal" href="#id4" title="Steven H. Simon. Topological Quantum. Oxford University Press, 09 2023. ISBN 9780198886723. URL: https://doi.org/10.1093/oso/9780198886723.001.0001, doi:10.1093/oso/9780198886723.001.0001.">Sim23</a>]</span>. It is simple, soluble, and contains many of the key features of more general topologically ordered systems. In particular, it has anyonic excitations and ground state degeneracy that depends on the topology of the underlying manifold. We introduce it here as a key example of topological order, and to motivate the more formal theory of anyons that will follow.</p>
 <section id="the-model">
 <h2>The Model<a class="headerlink" href="#the-model" title="Link to this heading">#</a></h2>
 <p>The toric code is a system of spin-1/2 degrees of freedom living on the bonds of a square lattice, and is defined by the Hamiltonian</p>
@@ -418,6 +421,10 @@ A_s \ket{\psi_0} = \ket{\psi_0}, \quad B_p \ket{\psi_0} = \ket{\psi_0},
 <a class="reference internal image-reference" href="../../_images/GSBasis.svg"><img alt="../../_images/GSBasis.svg" src="../../_images/GSBasis.svg" style="width: 60%;" />
 </a>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will find the opposite convention with <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> swapped in the original reference <span id="id2">[<a class="reference internal" href="#id5" title="A.Yu. Kitaev. Fault-tolerant quantum computation by anyons. Annals of Physics, 303(1):2-30, 2003. URL: https://www.sciencedirect.com/science/article/pii/S0003491602000180, doi:https://doi.org/10.1016/S0003-4916(02)00018-0.">Kit03</a>]</span>. You will find both conventions in the literature.</p>
+</div>
 <section id="star-operators">
 <h3>Star operators<a class="headerlink" href="#star-operators" title="Link to this heading">#</a></h3>
 <p>Let us first consider the action of the star operators <span class="math notranslate nohighlight">\(A_s\)</span>. Recall that <span class="math notranslate nohighlight">\(A_s\)</span> is the product of <span class="math notranslate nohighlight">\(\sigma^z\)</span> operators on the four spins adjacent to the star <span class="math notranslate nohighlight">\(s\)</span>. Therefore, <span class="math notranslate nohighlight">\(A_s\)</span> measures the parity of the number of down spins around the star. If there is an even number of down spins, <span class="math notranslate nohighlight">\(A_s\)</span> has eigenvalue +1; if there is an odd number, it has eigenvalue -1. Thus, the ground state condition <span class="math notranslate nohighlight">\(A_s \ket{\psi_0} = \ket{\psi_0}\)</span> requires that there be an even number of down spins around each star. That is, in the ground state, we can only have</p>
@@ -553,10 +560,11 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
 </figure>
 </div>
 <p>The <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> excitation are examples of anyons with statistics other than simple bosons or fermions. This is also an example of fractionalisation, that is the quasi-particle excitations are not simple composites of the underlying spin-1/2 degrees of freedom. They are emergent collective excitations!</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>By creating two pairs of the same type of excitations, e.g., two pairs of <span class="math notranslate nohighlight">\(e\)</span> anyons, and exchanging one excitation from each pair, show that both the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> excitations have bosonic exchange statistics. That is, exchanging two <span class="math notranslate nohighlight">\(e\)</span> anyons results in a phase of +1, and similarly for two <span class="math notranslate nohighlight">\(m\)</span> anyons.</p>
-</div>
+<!--
+```{admonition} Exercise
+By creating two pairs of the same type of excitations, e.g., two pairs of $e$ anyons, and exchanging one excitation from each pair, show that both the $e$ and $m$ excitations have bosonic exchange statistics. That is, exchanging two $e$ anyons results in a phase of +1, and similarly for two $m$ anyons.
+```
+-->
 </section>
 <section id="emergent-fermions">
 <h2>Emergent Fermions<a class="headerlink" href="#emergent-fermions" title="Link to this heading">#</a></h2>
@@ -584,6 +592,24 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>We have introduced the toric code as an important and simple example of topological order. We have connected the ground state degeneracy to the topology (boundary conditions) of the system. We have also seen that the excitations of the toric code are anyons with non-trivial exchange and mutual statistics, and that we have an emergent fermion excitation in this spin model. In the next lectures, we will develop a more formal theory of anyons.</p>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id3">
+<div role="list" class="citation-list">
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kit03<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>A.Yu. Kitaev. Fault-tolerant quantum computation by anyons. <em>Annals of Physics</em>, 303(1):2–30, 2003. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0003491602000180">https://www.sciencedirect.com/science/article/pii/S0003491602000180</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/S0003-4916(02)00018-0">doi:https://doi.org/10.1016/S0003-4916(02)00018-0</a>.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Sim23</a><span class="fn-bracket">]</span></span>
+<p>Steven H. Simon. <em>Topological Quantum</em>. Oxford University Press, 09 2023. ISBN 9780198886723. URL: <a class="reference external" href="https://doi.org/10.1093/oso/9780198886723.001.0001">https://doi.org/10.1093/oso/9780198886723.001.0001</a>, <a class="reference external" href="https://doi.org/10.1093/oso/9780198886723.001.0001">doi:10.1093/oso/9780198886723.001.0001</a>.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -645,6 +671,7 @@ W^x(C) = \prod_{i \in C} \sigma_i^x,
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyon-statistics">Anyon Statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergent-fermions">Emergent Fermions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 

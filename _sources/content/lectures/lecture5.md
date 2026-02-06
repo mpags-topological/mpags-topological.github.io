@@ -1,6 +1,6 @@
 # Lecture 5 - The Toric Code
 
-The toric code is a beautifually simple model for topological order introduced by Alexei Kitaev. It is simple, soluble, and contains many of the key features of more general topologically ordered systems. In particular, it has anyonic excitations and ground state degeneracy that depends on the topology of the underlying manifold. We introduce it here as a key example of topological order, and to motivate the more formal theory of anyons that will follow.
+The toric code is a beautifually simple model for topological order introduced by Alexei Kitaev {cite}`Kitaev2003, TopologicalQuantum`. It is simple, soluble, and contains many of the key features of more general topologically ordered systems. In particular, it has anyonic excitations and ground state degeneracy that depends on the topology of the underlying manifold. We introduce it here as a key example of topological order, and to motivate the more formal theory of anyons that will follow.
 
 ## The Model
 
@@ -72,6 +72,11 @@ width: 60%
 align: center
 ---
 ```
+
+```{note}
+You will find the opposite convention with $X$ and $Z$ swapped in the original reference {cite}`Kitaev2003`. You will find both conventions in the literature. 
+```
+
 
 ### Star operators
 
@@ -250,9 +255,11 @@ align: center
 
 The $e$ and $m$ excitation are examples of anyons with statistics other than simple bosons or fermions. This is also an example of fractionalisation, that is the quasi-particle excitations are not simple composites of the underlying spin-1/2 degrees of freedom. They are emergent collective excitations!
 
+<!--
 ```{admonition} Exercise
 By creating two pairs of the same type of excitations, e.g., two pairs of $e$ anyons, and exchanging one excitation from each pair, show that both the $e$ and $m$ excitations have bosonic exchange statistics. That is, exchanging two $e$ anyons results in a phase of +1, and similarly for two $m$ anyons.
 ```
+-->
 
 ## Emergent Fermions
 
@@ -290,3 +297,13 @@ align: center
 As we will see, there is a deep connection between the anyons in the toric code and the ground state degeneracy on the torus. We will see that we can label the four ground states by $\{1, e, m, \epsilon\}$, matching the four types of anyons in the theory (including the vacuum $1$). This is a general feature of topologically ordered systems, where the ground state degeneracy on a torus is equal to the number of distinct anyon types in the theory.
 
 ## Summary
+
+We have introduced the toric code as an important and simple example of topological order. We have connected the ground state degeneracy to the topology (boundary conditions) of the system. We have also seen that the excitations of the toric code are anyons with non-trivial exchange and mutual statistics, and that we have an emergent fermion excitation in this spin model. In the next lectures, we will develop a more formal theory of anyons.
+
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

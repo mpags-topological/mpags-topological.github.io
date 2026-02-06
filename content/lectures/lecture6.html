@@ -189,6 +189,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
 </ul>
 
     </div>
@@ -408,60 +410,71 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p><span class="math notranslate nohighlight">\(M_{ab}\)</span> is sometimes also called the monodromy between particles <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. There is a simple but non-tivial relationship between <span class="math notranslate nohighlight">\(S_{ab}\)</span> and <span class="math notranslate nohighlight">\(M_{ab}\)</span>. Ultimately, they contain the same information, but are normalised differently.</p>
 </div>
-<div class="admonition-examples admonition">
-<p class="admonition-title">Examples</p>
-<h3 class="rubric" id="toric-code">Toric Code</h3>
-<p>The toric code has four types of anyons <span class="math notranslate nohighlight">\(\{1, e, m, \epsilon\}\)</span>, with the following <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> matrices:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<!--
+````{admonition} Examples
+
+### Toric Code
+
+The toric code has four types of anyons $\{1, e, m, \epsilon\}$, with the following $T$ and $S$ matrices:
+
+$$
 T = \begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; -1 \\
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1 \\
 \end{pmatrix},
 \qquad
 S = \frac{1}{2} \begin{pmatrix}
-1 &amp; 1 &amp; 1 &amp; 1 \\
-1 &amp; 1 &amp; -1 &amp; -1 \\
-1 &amp; -1 &amp; 1 &amp; -1 \\
-1 &amp; -1 &amp; -1 &amp; 1 \\
+1 & 1 & 1 & 1 \\
+1 & 1 & -1 & -1 \\
+1 & -1 & 1 & -1 \\
+1 & -1 & -1 & 1 \\
 \end{pmatrix}
-\end{split}\]</div>
-<p>That is, the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons are bosons with respect to themselves, but have mutual statistics of <span class="math notranslate nohighlight">\(-1\)</span> with each other. The <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon is a fermion with respect to itself, and has mutual statistics of <span class="math notranslate nohighlight">\(-1\)</span> with both <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span>. You may see it said that the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons are “mutual semions” (not a term I particularly like).</p>
-<h3 class="rubric" id="fibonacci-anyons">Fibonacci Anyons</h3>
-<p>Fibonacci anyons are an important example of <strong>non-Abelian anyons</strong> (an idea we will return to). There are two types of anyons, the trivial <span class="math notranslate nohighlight">\(1\)</span> and the non-trivial <span class="math notranslate nohighlight">\(\tau\)</span>. Their <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> matrices are given by:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+$$
+
+That is, the $e$ and $m$ anyons are bosons with respect to themselves, but have mutual statistics of $-1$ with each other. The $\epsilon$ anyon is a fermion with respect to itself, and has mutual statistics of $-1$ with both $e$ and $m$. You may see it said that the $e$ and $m$ anyons are "mutual semions" (not a term I particularly like).
+
+### Fibonacci Anyons
+
+Fibonacci anyons are an important example of **non-Abelian anyons** (an idea we will return to). There are two types of anyons, the trivial $1$ and the non-trivial $\tau$. Their $T$ and $S$ matrices are given by:
+
+$$
 T = \begin{pmatrix}
-1 &amp; 0 \\
-0 &amp; e^{4\pi i / 5} \\
+1 & 0 \\
+0 & e^{4\pi i / 5} \\
 \end{pmatrix},
 \qquad
 S = \frac{1}{\sqrt{1 + \phi^2}} \begin{pmatrix}
-1 &amp; \phi \\
-\phi &amp; 1-\phi \\
+1 & \phi \\
+\phi & 1-\phi \\
 \end{pmatrix}
-\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi = \frac{1 + \sqrt{5}}{2}\)</span> is the golden ratio. Here, the <span class="math notranslate nohighlight">\(\tau\)</span> anyon has non-trivial exchange statistics, and the mutual statistics between two <span class="math notranslate nohighlight">\(\tau\)</span> anyons is also non-trivial.</p>
-<h3 class="rubric" id="ising-anyons">Ising Anyons</h3>
-<p>Ising anyons are another important example of non-Abelian anyons, relevant to topological superconductors. There are three types of anyons <span class="math notranslate nohighlight">\(\{1, \sigma, \psi\}\)</span>, with the following <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> matrices:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+$$
+
+where $\phi = \frac{1 + \sqrt{5}}{2}$ is the golden ratio. Here, the $\tau$ anyon has non-trivial exchange statistics, and the mutual statistics between two $\tau$ anyons is also non-trivial. 
+
+### Ising Anyons
+
+Ising anyons are another important example of non-Abelian anyons, relevant to topological superconductors. There are three types of anyons $\{1, \sigma, \psi\}$, with the following $T$ and $S$ matrices:
+
+$$
 T = e^{-i\frac{\pi}{24}}\begin{pmatrix}
-1 &amp; 0 &amp; 0 \\
-0 &amp; e^{\pi i / 8} &amp; 0 \\
-0 &amp; 0 &amp; -1 \\
+1 & 0 & 0 \\
+0 & e^{\pi i / 8} & 0 \\
+0 & 0 & -1 \\
 \end{pmatrix},
 \qquad
 S = \frac{1}{2} \begin{pmatrix}
-1 &amp; \sqrt{2} &amp; 1 \\
-\sqrt{2} &amp; 0 &amp; -\sqrt{2} \\
-1 &amp; -\sqrt{2} &amp; 1 \\
+1 & \sqrt{2} & 1 \\
+\sqrt{2} & 0 & -\sqrt{2} \\
+1 & -\sqrt{2} & 1 \\
 \end{pmatrix}
-\end{split}\]</div>
-<p>The <span class="math notranslate nohighlight">\(\sigma\)</span> anyon corresponds to a Majorana fermion and can describe the non-Abelian statistics of Majorana zero modes in <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductors.</p>
-</div>
+$$
+
+The $\sigma$ anyon corresponds to a Majorana fermion and can describe the non-Abelian statistics of Majorana zero modes in $p$-wave topological superconductors.
+
+````
+-->
 </section>
 <section id="fusion">
 <h2>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
@@ -504,30 +517,37 @@ a \times b = \sum_c N_{ab}^c \, c
 <p class="admonition-title">Note</p>
 <p>When we say there are two channels, the actual state of a pair of anyons can be in a superposition of both channels. This is similar to how two spin-1/2 particles can be in a superposition of the singlet and triplet states. The amplitudes in this superposition will depend on all other anyons in the system!</p>
 </div>
-<div class="admonition-examples-non-abelian-fusion admonition">
-<p class="admonition-title">Examples: Non-abelian fusion</p>
-<h3 class="rubric" id="id1">Fibonacci Anyons</h3>
-<p>Fibonacci anyons have the following fusion rules:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<!--
+````{admonition} Examples: Non-abelian fusion
+
+### Fibonacci Anyons
+Fibonacci anyons have the following fusion rules:
+
+$$
 1 \times 1 = 1 \\
 1 \times \tau = \tau \\
 \tau \times \tau = 1 + \tau
-\end{split}\]</div>
-<p>That is, two <span class="math notranslate nohighlight">\(\tau\)</span> anyons can fuse to form either the trivial anyon <span class="math notranslate nohighlight">\(1\)</span> or another <span class="math notranslate nohighlight">\(\tau\)</span> anyon.</p>
-<h3 class="rubric" id="id2">Ising Anyons</h3>
-<p>Ising anyons have the following fusion rules:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+$$
+
+That is, two $\tau$ anyons can fuse to form either the trivial anyon $1$ or another $\tau$ anyon.
+
+### Ising Anyons
+
+Ising anyons have the following fusion rules:
+
+$$
 1 \times 1 = 1 \\
 1 \times \sigma = \sigma \\
 1 \times \psi = \psi \\
 \sigma \times \sigma = 1 + \psi \\
 \sigma \times \psi = \sigma \\
 \psi \times \psi = 1
-\end{split}\]</div>
-<p>That is, two <span class="math notranslate nohighlight">\(\sigma\)</span> anyons can fuse to form either the trivial anyon <span class="math notranslate nohighlight">\(1\)</span> or the fermionic anyon <span class="math notranslate nohighlight">\(\psi\)</span>.</p>
-</div>
+$$
+
+That is, two $\sigma$ anyons can fuse to form either the trivial anyon $1$ or the fermionic anyon $\psi$.
+
+````
+-->
 </section>
 </section>
 <section id="braiding">
@@ -595,7 +615,17 @@ e^{-i4\pi/5} &amp; 0 \\
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
-</section>
+<p>In this session we revisted the statistics of fermions and bosons and showed that other options - anyons - are possible in two dimensions. These anyons can have non-trivial exchange and mutual statistics. We also introduced the concepts of fusion and braiding. We saw that for non-Abelian anyons, braiding can be represented by matrices instead of simple phase factors. In the next two sessions we formalise the ideas that we have introduced here.</p>
+<!--
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+--></section>
 </section>
 
     <script type="text/x-thebe-config">

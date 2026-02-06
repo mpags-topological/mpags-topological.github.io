@@ -189,6 +189,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
 </ul>
 
     </div>
@@ -340,8 +342,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">Topological Insulators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">Mercury Telluride</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">Band Inversion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatives">Alternatives</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-quantum-hall">Fractional Quantum Hall</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -372,7 +381,7 @@ Simple models of semiconductors consist of a filled valence band and an empty co
 <p>The first example of a topological insulator was in mercury telluride heterostructures. These consisted of mercury telluride in conjunction with cadmium telluride.</p>
 <p>Cadmium telluride is a standard semiconductor in that it has an “s-wave” band (called the E1 band), with angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{1}{2}, \tfrac{1}{2})\)</span> at a higher energy than a “p-wave” band (the H1 band) which has angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{3}{2}, -\tfrac{1}{2}, \tfrac{1}{2}, \tfrac{3}{2})\)</span>. Mercury telluride has an inverted structure</p>
 <p><span style="color:red">Insert Figure</span></p>
-<p>When the two are brought together to form a quantum well, the ordering of the levels depends on the thickness of the well formed. Below a critical thickness, <span class="math notranslate nohighlight">\(d_c\sim 6-7 {\rm nm}\)</span>, the ordering is that of a conventional semiconductor and we have a topologically trivial regime. However, as the thickness of the well is increased beyond the critical value, the energy ordering of the bands switches or inverts and we are left with a topological regime.</p>
+<p>When the two are brought together to form a quantum well, the ordering of the levels depends on the width of the well formed. Below a critical width, <span class="math notranslate nohighlight">\(w_c\sim 6-7 {\rm nm}\)</span>, the ordering is that of a conventional semiconductor and we have a topologically trivial regime. However, as the width of the well is increased beyond the critical value, the energy ordering of the bands switches or inverts and we are left with a topological regime.</p>
 <p><span style="color:red">Insert Figure</span></p>
 </section>
 <section id="band-inversion">
@@ -397,10 +406,54 @@ H = \left(\begin{matrix}H_{\bm k} &amp; 0 \\ 0 &amp; H^*_{-{\bm k}}\end{matrix}\
 <p>where the upper block can be viewed as acting on spin-up and the lower block on spin-down. The two blocks are then related by time-reversal symmetry. The blocks have the standard two band form <span class="math notranslate nohighlight">\(H_{\bm k}=d_0\sigma_0+{\bm d}\cdot {\bm \sigma}\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{align}d_0 &amp;= \alpha_1-\alpha_2(k_x^2+k_y^2)\\d_x+id_y&amp;=\alpha_3(k_x+ik_y)\\ d_z &amp;= M-\alpha_4(k_x^2+k_y^2)\end{align}
+\begin{align*}d_0 &amp;= \alpha_1-\alpha_2(k_x^2+k_y^2)\\d_x+id_y&amp;=\alpha_3(k_x+ik_y)\\ d_z &amp;= M-\alpha_4(k_x^2+k_y^2)\end{align*}
 \end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\{\alpha_i\}\)</span> are material specific parameters. Let’s consider the <span class="math notranslate nohighlight">\(\Gamma\)</span> point for simplicity</p>
+<p>where <span class="math notranslate nohighlight">\(\{\alpha_i\}\)</span> are material specific parameters. Let’s consider the <span class="math notranslate nohighlight">\(\Gamma\)</span> point for simplicity. There, the Hamiltonian is simply</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\bm k}=\alpha_1\sigma_0+M\sigma_z
+\]</div>
+<p>From this it is clear that <span class="math notranslate nohighlight">\(\alpha_1\)</span> is simply an energy offset and <span class="math notranslate nohighlight">\(M\)</span> acts in the same way as the mass parameter in the Dirac equation. In particular, it gives the energy gap between the two-levels at the <span class="math notranslate nohighlight">\(\Gamma\)</span>-point. Now when the width of the well is increased beyond <span class="math notranslate nohighlight">\(w_c\)</span>, the bands invert and therefore the sign of <span class="math notranslate nohighlight">\(M\)</span> has flipped. As for the Dirac equation this leads to a change in the conductivity</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_{xy}^{\uparrow} = \frac{e^2}{h}
+\]</div>
+<p>However, in our original Hamiltonian, we also have <span class="math notranslate nohighlight">\(H^*_{-{\bm k}}\)</span> for spin down. Due to time-reversal symmetry in this model, the change in conductivity for this block after the band inversion is</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_{xy}^{\downarrow} = -\frac{e^2}{h}
+\]</div>
+<p>These conductance changes effectively signify going from a region that is topologically trivial to one with opposite spin counter-propagating edge states. In other words the region we move to has a pair of helical edge modes as we saw in the Kane-Mele model. To confirm this, we identify the presence of the spin Hall effect by defining the electrical (or charge) and spin Hall conductances as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}\Delta \sigma_{xy}^{(e)} &amp;= \Delta \sigma_{xy}^{\uparrow} +  \Delta \sigma_{xy}^{\downarrow}=0\\ \Delta \sigma_{xy}^{(s)} &amp;= \Delta \sigma_{xy}^{\uparrow} -  \Delta \sigma_{xy}^{\downarrow}=\frac{2e^2}{h}\end{align*}
+\end{split}\]</div>
+<p>Such an effect can be detected experimentally <span style="color:red">Insert Figure</span></p>
 </section>
+<section id="alternatives">
+<h3>Alternatives<a class="headerlink" href="#alternatives" title="Link to this heading">#</a></h3>
+<p>There are alternatives to the solid state setup described here, although we won’t go into much detial. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this cases, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised. <span style="color:red">Need to check this is true and ref. Also need to think how to finish this section. Pros and cons of this method perhaps</span></p>
+</section>
+</section>
+<section id="topological-superconductors">
+<h2>Topological Superconductors<a class="headerlink" href="#topological-superconductors" title="Link to this heading">#</a></h2>
+<p>Now we wish to look at experimental implementations of topological superconductors. These are of particular interest at the moment due to the prediction of Majorana zero modes which can be used in implementations of quantum computing. Before we turn our attention to topological superconductors however, we should be briefly mention another setup where Majoranas are predicted. This is the Franctional Quantum Hall Effect (FQHE).</p>
+<section id="fractional-quantum-hall">
+<h3>Fractional Quantum Hall<a class="headerlink" href="#fractional-quantum-hall" title="Link to this heading">#</a></h3>
+<p>In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of <span class="math notranslate nohighlight">\(e^2/h\)</span> (which can be viewed as having a fractional filling factor, <span class="math notranslate nohighlight">\(\nu\)</span>.)</p>
+<p>Whilst abelian anyons have been observed in the <span class="math notranslate nohighlight">\(\nu=\tfrac{1}{3}\)</span> state through observation of the braiding statistics, no such confirmation has occured for Majorana modes, which are predicted in the <span class="math notranslate nohighlight">\(\nu=\tfrac{5}{2}\)</span> state. As we will see is also true for topological superconductors, there has been some suggestive evidence in transport experiments, but so far nothing conclusive such as measurement of the braiding statistics.</p>
+<p><span style="color:red">Need to check this is all correct and ref</span></p>
+</section>
+<section id="engineering-topological-superconductors">
+<h3>Engineering Topological Superconductors<a class="headerlink" href="#engineering-topological-superconductors" title="Link to this heading">#</a></h3>
+<p>Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductor is using a semiconducting heterostructure.</p>
+<p>In particular a semiconductor with spin-orbit coupling is placed in conjuction with an <span class="math notranslate nohighlight">\(s\)</span>-wave superconductor. Along with a magnetic field, this allows the <span class="math notranslate nohighlight">\(p\)</span>-wave pairing to occur</p>
+<p><span style="color:red">Insert Figs</span></p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>Results claiming to have observed Majoranas are still contested</p>
 </section>
 </section>
 
@@ -453,8 +506,15 @@ H = \left(\begin{matrix}H_{\bm k} &amp; 0 \\ 0 &amp; H^*_{-{\bm k}}\end{matrix}\
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">Topological Insulators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">Mercury Telluride</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">Band Inversion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatives">Alternatives</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-quantum-hall">Fractional Quantum Hall</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
 

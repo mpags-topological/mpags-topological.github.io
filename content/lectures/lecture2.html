@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Lecture 3 - Topological Insulators II" href="lecture3.html" />
     <link rel="prev" title="1. Lecture 1 - Introduction to Topology in Condensed Matter Physics" href="lecture1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,6 +189,8 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Lecture 2 - Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
 </ul>
 
     </div>
@@ -356,15 +359,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-topological-insulators-i">
 <h1><span class="section-number">2. </span>Lecture 2 - Topological Insulators I<a class="headerlink" href="#lecture-2-topological-insulators-i" title="Link to this heading">#</a></h1>
-<p>In this lecture we will begin to introduce some key topological models - namely the Su-Schrieffer-Heeger (SSH) model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties. Should you wish to read more about the models in this lecture then some useful references are <span id="id1">[<a class="reference internal" href="#id5" title="B. Andrei. Bernevig and Taylor L. Hughes. Topological Insulators and Topological Superconductors. Princeton University Press, Princeton, New Jersey, 2013.">BH13</a>, <a class="reference internal" href="#id14" title="János K. Asbóth, László Oroszlány, and András Pályi. A Short Course on Topological Insulators. Springer International Publishing, 2016. ISBN 9783319256078. URL: http://dx.doi.org/10.1007/978-3-319-25607-8, doi:10.1007/978-3-319-25607-8.">AOP16</a>, <a class="reference internal" href="#id13" title="M. Z. Hasan and C. L. Kane. Colloquium: topological insulators. Rev. Mod. Phys., 82:3045–3067, Nov 2010. URL: https://link.aps.org/doi/10.1103/RevModPhys.82.3045, doi:10.1103/RevModPhys.82.3045.">HK10</a>, <a class="reference internal" href="#id15" title="Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. Rev. Mod. Phys., 83:1057–1110, Oct 2011. URL: https://link.aps.org/doi/10.1103/RevModPhys.83.1057, doi:10.1103/RevModPhys.83.1057.">QZ11</a>]</span>.</p>
+<p>In this lecture we will begin to introduce some key topological models - namely the Su-Schrieffer-Heeger (SSH) model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties. Should you wish to read more about the models in this lecture then some useful references are <span id="id1">[<a class="reference internal" href="lecture4.html#id6" title="B. Andrei. Bernevig and Taylor L. Hughes. Topological Insulators and Topological Superconductors. Princeton University Press, Princeton, New Jersey, 2013.">BH13</a>, <a class="reference internal" href="#id16" title="János K. Asbóth, László Oroszlány, and András Pályi. A Short Course on Topological Insulators. Springer International Publishing, 2016. ISBN 9783319256078. URL: http://dx.doi.org/10.1007/978-3-319-25607-8, doi:10.1007/978-3-319-25607-8.">AOP16</a>, <a class="reference internal" href="#id15" title="M. Z. Hasan and C. L. Kane. Colloquium: topological insulators. Rev. Mod. Phys., 82:3045–3067, Nov 2010. URL: https://link.aps.org/doi/10.1103/RevModPhys.82.3045, doi:10.1103/RevModPhys.82.3045.">HK10</a>, <a class="reference internal" href="lecture4.html#id16" title="Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. Rev. Mod. Phys., 83:1057–1110, Oct 2011. URL: https://link.aps.org/doi/10.1103/RevModPhys.83.1057, doi:10.1103/RevModPhys.83.1057.">QZ11</a>]</span>.</p>
 <section id="the-ssh-model">
 <h2><span class="section-number">2.1. </span>The SSH Model<a class="headerlink" href="#the-ssh-model" title="Link to this heading">#</a></h2>
-<p>The SSH model is a simple model that demonstrates topological properties. Initially introdiced as a simple model of a polymer <span id="id2">[<a class="reference internal" href="#id16" title="W. P. Su, J. R. Schrieffer, and A. J. Heeger. Solitons in polyacetylene. Phys. Rev. Lett., 42:1698–1701, Jun 1979. URL: https://link.aps.org/doi/10.1103/PhysRevLett.42.1698, doi:10.1103/PhysRevLett.42.1698.">SSH79</a>]</span>, in this model there are unit cells consisting of two different sublattices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The intracell and intercell hopping strengths are given by <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> respectively.</p>
-<figure class="align-default" id="id18">
+<p>The SSH model is a simple model that demonstrates topological properties. Initially introdiced as a simple model of a polymer <span id="id2">[<a class="reference internal" href="#id18" title="W. P. Su, J. R. Schrieffer, and A. J. Heeger. Solitons in polyacetylene. Phys. Rev. Lett., 42:1698–1701, Jun 1979. URL: https://link.aps.org/doi/10.1103/PhysRevLett.42.1698, doi:10.1103/PhysRevLett.42.1698.">SSH79</a>]</span>, in this model there are unit cells consisting of two different sublattices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The intracell and intercell hopping strengths are given by <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> respectively.</p>
+<figure class="align-default" id="id30">
 <a class="reference internal image-reference" href="../../_images/SSH_Model.svg"><img alt="../../_images/SSH_Model.svg" src="../../_images/SSH_Model.svg" style="width: 100%; height: 100px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The SSH Model</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The SSH Model</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The Hamiltonian is given by</p>
@@ -427,20 +430,20 @@ d_x &amp;= t_1 + t_2 \cos k, \\ d_y &amp;= t_2 \sin k
 <section id="edge-states">
 <h3><span class="section-number">2.1.1. </span>Edge States<a class="headerlink" href="#edge-states" title="Link to this heading">#</a></h3>
 <p>Let’s start by considering the case where <span class="math notranslate nohighlight">\(|t_1|&gt;|t_2|\)</span>. To do this we will look at <span class="math notranslate nohighlight">\(t_1=1, t_2=0\)</span>. In this case, it is easy to see that all sites are “paired up”.</p>
-<figure class="align-default" id="id19">
+<figure class="align-default" id="id31">
 <a class="reference internal image-reference" href="../../_images/SSH_pairing.svg"><img alt="../../_images/SSH_pairing.svg" src="../../_images/SSH_pairing.svg" style="width: 100%; height: 100px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">All sites are paired in the trivial regime and there are no edge modes.</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">All sites are paired in the trivial regime and there are no edge modes.</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.</p>
 <p>Now if we consider the opposite limit of <span class="math notranslate nohighlight">\(t_1=0, t_2=1\)</span>, we can see that the pairing now misses out the two edge modes.</p>
-<figure class="align-default" id="id20">
+<figure class="align-default" id="id32">
 <a class="reference internal image-reference" href="../../_images/SSH_Edge_Modes.svg"><img alt="../../_images/SSH_Edge_Modes.svg" src="../../_images/SSH_Edge_Modes.svg" style="width: 100%; height: 100px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">In the topological regime we have edge modes that are unpaired and sit at zero energy</span><a class="headerlink" href="#id20" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">In the topological regime we have edge modes that are unpaired and sit at zero energy</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we look at the Hamiltonian in this limit,</p>
@@ -450,24 +453,24 @@ H = \sum_{n=1}^{N-1} \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right)
 \]</div>
 <p>we see that <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(b_N\)</span> (the edges of the system) are no longer involved in the Hamiltonian. This means that we can add a mode to these sites at no energy cost - we have zero-energy (gapless) edge modes. This is consistent with <span class="math notranslate nohighlight">\(\nu \neq 0\)</span> found earlier.</p>
 <p>Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below, where we plot the energy spectrum for 30 sites and the probability distribution for the highlighted mode, which is the mode with the smallest absolute energy.</p>
-<figure class="align-default" id="id21">
+<figure class="align-default" id="id33">
 <a class="reference internal image-reference" href="../../_images/SSH_RealSpace.svg"><img alt="../../_images/SSH_RealSpace.svg" src="../../_images/SSH_RealSpace.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The real space structure of the lowest energy modes (highlighted in the inset) of the SSH model in the trivial (left) and topological (right) regimes.</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The real space structure of the lowest energy modes (highlighted in the inset) of the SSH model in the trivial (left) and topological (right) regimes.</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="the-haldane-model">
 <h2><span class="section-number">2.2. </span>The Haldane Model<a class="headerlink" href="#the-haldane-model" title="Link to this heading">#</a></h2>
-<p>We now turn to the Haldane Model <span id="id3">[<a class="reference internal" href="#id17" title="F. D. M. Haldane. Model for a quantum hall effect without landau levels: condensed-matter realization of the &quot;parity anomaly&quot;. Phys. Rev. Lett., 61:2015–2018, Oct 1988. URL: https://link.aps.org/doi/10.1103/PhysRevLett.61.2015, doi:10.1103/PhysRevLett.61.2015.">Hal88</a>]</span>, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.</p>
+<p>We now turn to the Haldane Model <span id="id3">[<a class="reference internal" href="#id19" title="F. D. M. Haldane. Model for a quantum hall effect without landau levels: condensed-matter realization of the &quot;parity anomaly&quot;. Phys. Rev. Lett., 61:2015–2018, Oct 1988. URL: https://link.aps.org/doi/10.1103/PhysRevLett.61.2015, doi:10.1103/PhysRevLett.61.2015.">Hal88</a>]</span>, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.</p>
 <p>The Haldane model is defined on the honeycomb lattice  and consists on three terms.</p>
-<figure class="align-default" id="id22">
+<figure class="align-default" id="id34">
 <a class="reference internal image-reference" href="../../_images/HaldaneModel.svg"><img alt="../../_images/HaldaneModel.svg" src="../../_images/HaldaneModel.svg" style="width: 100%; height: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">The Haldane model. The <span class="math notranslate nohighlight">\(A\)</span> sublattice is purple and the <span class="math notranslate nohighlight">\(B\)</span> sublattice is green. The orange hops have an associated phase of <span class="math notranslate nohighlight">\(\varphi\)</span>.</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">The Haldane model. The <span class="math notranslate nohighlight">\(A\)</span> sublattice is purple and the <span class="math notranslate nohighlight">\(B\)</span> sublattice is green. The orange hops have an associated phase of <span class="math notranslate nohighlight">\(\varphi\)</span>.</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>First, we have the onsite terms where the different sublattices have an energy difference of <span class="math notranslate nohighlight">\(2M\)</span></p>
@@ -528,11 +531,11 @@ d_z({\boldsymbol k})= \frac{M}{2}-t_2\sum_j \sin \varphi \sin({\boldsymbol k}\cd
 M = \pm 3\sqrt{3}t_2\sin \varphi
 \]</div>
 <p>where the plus sign is for the <span class="math notranslate nohighlight">\(K\)</span> point and the minus is at the <span class="math notranslate nohighlight">\(K'\)</span> point. So we have now identified that when this condition is satisfied, the specturm will have a gap closure (at either the <span class="math notranslate nohighlight">\(K\)</span> or <span class="math notranslate nohighlight">\(K'\)</span> point). We can therefore plot a phase diagram of the Haldane model of <span class="math notranslate nohighlight">\(M\)</span> vs <span class="math notranslate nohighlight">\(\varphi\)</span> and calculate the invariant in each regime. For the Haldane model, the invariant is the Chern number and the result is shown below.</p>
-<figure class="align-default" id="id23">
+<figure class="align-default" id="id35">
 <a class="reference internal image-reference" href="../../_images/Haldane_Chern.svg"><img alt="../../_images/Haldane_Chern.svg" src="../../_images/Haldane_Chern.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">The Chern number for the Haldane model. Changes is Chern number occur when the bulk gap closes.</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">The Chern number for the Haldane model. Changes is Chern number occur when the bulk gap closes.</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -540,18 +543,18 @@ M = \pm 3\sqrt{3}t_2\sin \varphi
 <p>Sometimes in the literature, the <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(+1\)</span> phases will be the other way around. This corresponds to letting <span class="math notranslate nohighlight">\(\varphi \rightarrow -\varphi\)</span> in the original model</p>
 </div>
 <p>The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the <span class="math notranslate nohighlight">\(y\)</span> direction and open boundary conditions in the <span class="math notranslate nohighlight">\(x\)</span>. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum for <span class="math notranslate nohighlight">\(M=2, \varphi=\pi/2\)</span>, in this setup and clearly highlight the edge modes.</p>
-<figure class="align-default" id="id24">
+<figure class="align-default" id="id36">
 <a class="reference internal image-reference" href="../../_images/CylinderEdgeSketch.svg"><img alt="../../_images/CylinderEdgeSketch.svg" src="../../_images/CylinderEdgeSketch.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">A sketch of how chiral edge modes appear on a cylinder geometry.</span><a class="headerlink" href="#id24" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">A sketch of how chiral edge modes appear on a cylinder geometry.</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id25">
+<figure class="align-default" id="id37">
 <a class="reference internal image-reference" href="../../_images/Haldane_Cylinder.svg"><img alt="../../_images/Haldane_Cylinder.svg" src="../../_images/Haldane_Cylinder.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">The energy spectrum of the Haldane model in a cylinder setup. The colour shows the localisation of the edge modes.</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">The energy spectrum of the Haldane model in a cylinder setup. The colour shows the localisation of the edge modes.</span><a class="headerlink" href="#id37" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -564,27 +567,27 @@ M = \pm 3\sqrt{3}t_2\sin \varphi
 <h2><span class="section-number">2.4. </span>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id4">
 <div role="list" class="citation-list">
-<div class="citation" id="id14" role="doc-biblioentry">
+<div class="citation" id="id16" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">AOP16</a><span class="fn-bracket">]</span></span>
 <p>János K. Asbóth, László Oroszlány, and András Pályi. <em>A Short Course on Topological Insulators</em>. Springer International Publishing, 2016. ISBN 9783319256078. URL: <a class="reference external" href="http://dx.doi.org/10.1007/978-3-319-25607-8">http://dx.doi.org/10.1007/978-3-319-25607-8</a>, <a class="reference external" href="https://doi.org/10.1007/978-3-319-25607-8">doi:10.1007/978-3-319-25607-8</a>.</p>
 </div>
-<div class="citation" id="id5" role="doc-biblioentry">
+<div class="citation" id="id7" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">BH13</a><span class="fn-bracket">]</span></span>
 <p>B. Andrei. Bernevig and Taylor L. Hughes. <em>Topological Insulators and Topological Superconductors</em>. Princeton University Press, Princeton, New Jersey, 2013.</p>
 </div>
-<div class="citation" id="id17" role="doc-biblioentry">
+<div class="citation" id="id19" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Hal88</a><span class="fn-bracket">]</span></span>
 <p>F. D. M. Haldane. Model for a quantum hall effect without landau levels: condensed-matter realization of the &quot;parity anomaly&quot;. <em>Phys. Rev. Lett.</em>, 61:2015–2018, Oct 1988. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevLett.61.2015">https://link.aps.org/doi/10.1103/PhysRevLett.61.2015</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.61.2015">doi:10.1103/PhysRevLett.61.2015</a>.</p>
 </div>
-<div class="citation" id="id13" role="doc-biblioentry">
+<div class="citation" id="id15" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">HK10</a><span class="fn-bracket">]</span></span>
 <p>M. Z. Hasan and C. L. Kane. Colloquium: topological insulators. <em>Rev. Mod. Phys.</em>, 82:3045–3067, Nov 2010. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/RevModPhys.82.3045">https://link.aps.org/doi/10.1103/RevModPhys.82.3045</a>, <a class="reference external" href="https://doi.org/10.1103/RevModPhys.82.3045">doi:10.1103/RevModPhys.82.3045</a>.</p>
 </div>
-<div class="citation" id="id15" role="doc-biblioentry">
+<div class="citation" id="id17" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">QZ11</a><span class="fn-bracket">]</span></span>
 <p>Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. <em>Rev. Mod. Phys.</em>, 83:1057–1110, Oct 2011. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/RevModPhys.83.1057">https://link.aps.org/doi/10.1103/RevModPhys.83.1057</a>, <a class="reference external" href="https://doi.org/10.1103/RevModPhys.83.1057">doi:10.1103/RevModPhys.83.1057</a>.</p>
 </div>
-<div class="citation" id="id16" role="doc-biblioentry">
+<div class="citation" id="id18" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">SSH79</a><span class="fn-bracket">]</span></span>
 <p>W. P. Su, J. R. Schrieffer, and A. J. Heeger. Solitons in polyacetylene. <em>Phys. Rev. Lett.</em>, 42:1698–1701, Jun 1979. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevLett.42.1698">https://link.aps.org/doi/10.1103/PhysRevLett.42.1698</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.42.1698">doi:10.1103/PhysRevLett.42.1698</a>.</p>
 </div>
@@ -631,6 +634,15 @@ M = \pm 3\sqrt{3}t_2\sin \varphi
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">1. </span>Lecture 1 - Introduction to Topology in Condensed Matter Physics</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="lecture3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Lecture 3 - Topological Insulators II</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

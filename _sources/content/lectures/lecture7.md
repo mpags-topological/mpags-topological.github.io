@@ -138,6 +138,7 @@ align: center
 width: 65%
 name: fig:fusion_diagram_topdown
 ---
+A top-down view of a fusion diagram showing anyons a and b fusing to form anyon c. 
 ```
 
 For a given set of anyons, we can define a vector space of states associated with that configuration. For example, for two Fibonacci anyons $\tau$, we have two possible fusion channels, corresponding to two states

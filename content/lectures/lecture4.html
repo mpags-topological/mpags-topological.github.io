@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 4 - Topological Superconductors &#8212; Introduction to Topological Phases of Matter</title>
+    <title>4. Lecture 4 - Topological Superconductors &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture4';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="3. Lecture 3 - Topological Insulators II" href="lecture3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -186,9 +185,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Lecture 4 - Topological Superconductors</a></li>
 </ul>
 
     </div>
@@ -337,19 +338,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">The Kitaev Chain</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">Majorana Modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">4.1. The Kitaev Chain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">p+ip Superconductor</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-states">Topological States</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-edge-modes">Majorana Edge Modes</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vortices">Vortices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-states">4.2.1. Topological States</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-edge-modes">4.2.1.1. Majorana Edge Modes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vortices">4.2.1.2. Vortices</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">4.3. Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -362,12 +363,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-4-topological-superconductors">
-<h1>Lecture 4 - Topological Superconductors<a class="headerlink" href="#lecture-4-topological-superconductors" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Lecture 4 - Topological Superconductors<a class="headerlink" href="#lecture-4-topological-superconductors" title="Link to this heading">#</a></h1>
 <p>In this lecture, we turn our attention from topological insulators to topological superconductors. These systems have gained increasing interest in recent years, both due to their interesting fundamental physics but also for their potential use in realising a topological quantum computer.</p>
-<p>In order to introduce the concepts we start with a one-dimensional model initially introduced by Kitaev. Again, we will see that the topological properties are characterised by an invariant with associated edge modes. In the second half of the lecture we will look at a two-dimensional topological superconductor, where again there are edge modes, but in this case there are zero modes which are localised to the edge or to vortices and it is these modes that used in proposed implementations for topological quantum computing.</p>
+<p>In order to introduce the concepts we start with a one-dimensional model initially introduced by Kitaev. Again, we will see that the topological properties are characterised by an invariant with associated edge modes. In the second half of the lecture we will look at a two-dimensional topological superconductor, where again there are edge modes, but in this case there are zero modes which are localised to the edge or to vortices and it is these modes that used in proposed implementations for topological quantum computing. Should you wish to read more about topological superconductors, there are many good reviews and references on the subject <span id="id1">[<a class="reference internal" href="#id6" title="B. Andrei. Bernevig and Taylor L. Hughes. Topological Insulators and Topological Superconductors. Princeton University Press, Princeton, New Jersey, 2013.">BH13</a>, <a class="reference internal" href="#id16" title="Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. Rev. Mod. Phys., 83:1057–1110, Oct 2011. URL: https://link.aps.org/doi/10.1103/RevModPhys.83.1057, doi:10.1103/RevModPhys.83.1057.">QZ11</a>, <a class="reference internal" href="#id25" title="Jason Alicea. New directions in the pursuit of majorana fermions in solid state systems. Reports on Progress in Physics, 75(7):076501, jun 2012. URL: https://doi.org/10.1088/0034-4885/75/7/076501, doi:10.1088/0034-4885/75/7/076501.">Ali12</a>, <a class="reference internal" href="#id27" title="Andrei Bernevig and Titus Neupert. Topological superconductors and category theory. 2015. URL: https://arxiv.org/abs/1506.05805, arXiv:1506.05805.">BN15</a>, <a class="reference internal" href="#id24" title="Martin Leijnse and Karsten Flensberg. Introduction to topological superconductivity and majorana fermions. Semiconductor Science and Technology, 27(12):124003, nov 2012. URL: https://doi.org/10.1088/0268-1242/27/12/124003, doi:10.1088/0268-1242/27/12/124003.">LF12</a>, <a class="reference internal" href="#id23" title="Masatoshi Sato and Yoichi Ando. Topological superconductors: a review. Reports on Progress in Physics, 80(7):076501, may 2017. URL: https://doi.org/10.1088/1361-6633/aa6ac7, doi:10.1088/1361-6633/aa6ac7.">SA17</a>, <a class="reference internal" href="#id26" title="Masatoshi Sato and Satoshi Fujimoto. Majorana fermions and topology in superconductors. Journal of the Physical Society of Japan, 85(7):072001, 2016. URL: https://doi.org/10.7566/JPSJ.85.072001, arXiv:https://doi.org/10.7566/JPSJ.85.072001, doi:10.7566/JPSJ.85.072001.">SF16</a>]</span></p>
 <section id="the-kitaev-chain">
-<h2>The Kitaev Chain<a class="headerlink" href="#the-kitaev-chain" title="Link to this heading">#</a></h2>
-<p>There are many models named after Kitaev (and even others that are referred to the Kitaev chain), but here we refer to the model of a one-dimensional <span class="math notranslate nohighlight">\(p\)</span>-wave spinless superconductor. The Hamiltonian is</p>
+<h2><span class="section-number">4.1. </span>The Kitaev Chain<a class="headerlink" href="#the-kitaev-chain" title="Link to this heading">#</a></h2>
+<p>There are many models named after Kitaev, but here we refer to the model of a one-dimensional <span class="math notranslate nohighlight">\(p\)</span>-wave spinless superconductor <span id="id2">[<a class="reference internal" href="#id28" title="A Yu Kitaev. Unpaired majorana fermions in quantum wires. Physics-Uspekhi, 44(10S):131, oct 2001. URL: https://dx.doi.org/10.1070/1063-7869/44/10S/S29, doi:10.1070/1063-7869/44/10S/S29.">Kit01</a>]</span>. The Hamiltonian is</p>
 <div class="math notranslate nohighlight">
 \[
 H = -t\sum_{m=1}^{N-1}\left(c_{m+1}^\dagger c_m + c_m^\dagger c_{m+1}\right) - \mu\sum_{m=1}^Nc_m^\dagger c_m + \sum_{m=1}^{N-1}\left(\Delta c_m c_{m+1} + \Delta^*c_{m+1}^\dagger c_m^\dagger\right)
@@ -375,7 +376,7 @@ H = -t\sum_{m=1}^{N-1}\left(c_{m+1}^\dagger c_m + c_m^\dagger c_{m+1}\right) - \
 <p>As is the usual first step, we explore the bulk spectrum by performing the Fourier transform</p>
 <div class="math notranslate nohighlight">
 \[
-H = \sum_k (-2t \cos k -\mu)c_k^\dagger c_k + \sum_k(i\Delta \sin k \hspace{3pt}c_{-k}c_k-i\Delta \sin k \hspace{3pt} c_k^\dagger c_{-k}^\dagger)
+H = \sum_k (-2t \cos k -\mu)c_k^\dagger c_k + \sum_k(i\Delta \sin k \hspace{3pt}c_{-k}c_k-i\Delta^* \sin k \hspace{3pt} c_k^\dagger c_{-k}^\dagger)
 \]</div>
 <p>One of the key differences of this compared to the models we have looked at so far is that <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(-k\)</span> are mixed. This is a feature of superconductors and the standard way to solve Bardeen-Cooper-Schrieffer (BCS) superconductors is to use a Bogoliubov transformation that mixes electron (with energy-momentum <span class="math notranslate nohighlight">\((E,k)\)</span>) and hole (<span class="math notranslate nohighlight">\(E,-k\)</span>) operators. The resulting eigenstates (quasiparticles) of the theory are known as Bogoliubov quasiparticles. We effectively perform the same transformation here by writing the Hamiltonian in Bogoliubov-de Gennes (BdG) form. This symmetrises <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(-k\)</span> and in this case leads to</p>
 <div class="math notranslate nohighlight">
@@ -389,46 +390,67 @@ H = \frac{1}{2}\sum_k \Psi_k^\dagger H_k \Psi_k, \hspace{20pt} H_k= \left(\begin
 E(k) = \pm \sqrt{\varepsilon_k^2 - |\tilde{\Delta}_k|^2}=\pm \sqrt{(2t \cos k +\mu)^2 + 4|\Delta|^2\sin^2 k}
 \]</div>
 <p>For <span class="math notranslate nohighlight">\(\Delta\neq0\)</span>, the gap closes at two points; <span class="math notranslate nohighlight">\((1): \mu=-2t\)</span> (at <span class="math notranslate nohighlight">\(k=0\)</span>), and <span class="math notranslate nohighlight">\((2):\mu=2t\)</span> (at <span class="math notranslate nohighlight">\(k=\pi\)</span>).</p>
-<p>Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.</p>
+<p>Therefore, we have now identified where the different topological phases occur. In order to find out which are the topologically non-trivial phases, we can calculate a topological invariant. However, in this course we will focus on a more intuitive approach that focuses on the topological edge states.</p>
 <section id="majorana-modes">
-<h3>Majorana Modes<a class="headerlink" href="#majorana-modes" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.1.1. </span>Majorana Modes<a class="headerlink" href="#majorana-modes" title="Link to this heading">#</a></h3>
 <p>By writing the pairing amplitude in the form <span class="math notranslate nohighlight">\(\Delta = |\Delta|{\rm e}^{i\phi}\)</span>, we can introduce Majorana operators  (often called Majorana fermions) in the following way</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \gamma_{2m-1}= {\rm e}^{i\phi/2}c_m + {\rm e}^{-i\phi/2}c_m^\dagger
 \\ \gamma_{2m} = -i\left({\rm e}^{i\phi/2}c_m - {\rm e}^{-i\phi/2}c_m^\dagger \right)
 \end{split}\]</div>
-<p>We wish to make a few notes regarding the introduction of these operators</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A few notes regarding the Majorana operators</p>
 <ol class="arabic simple">
 <li><p>Both <span class="math notranslate nohighlight">\(\gamma_{2m-1}\)</span> and <span class="math notranslate nohighlight">\(\gamma_{2m}\)</span> are associated with the site <span class="math notranslate nohighlight">\(j\)</span>.</p></li>
 <li><p>The Majorana operators obey anticommutation relations, <span class="math notranslate nohighlight">\(\{\gamma_m, \gamma_n\} = 2\delta_{m,n}\)</span>, as well as <span class="math notranslate nohighlight">\(\gamma_{2m}^\dagger = \gamma_{2m}\)</span> and <span class="math notranslate nohighlight">\(\gamma_{2m}^2=1\)</span>.</p></li>
 <li><p>In theory, we can write any fermionic Hamiltonian in terms of these Majorana fermions, although this is often not useful.</p></li>
 </ol>
-<p><img src="../../_static/figs/Majoranas.svg" width="100%" height="100"></img></p>
+</div>
+<figure class="align-default" id="id29">
+<a class="reference internal image-reference" href="../../_images/Majoranas.svg"><img alt="../../_images/Majoranas.svg" src="../../_images/Majoranas.svg" style="width: 100%; height: 100px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Majorana fermions in the Kitaev chain.</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Using these operators, we can rewrite the Hamiltonian in the form</p>
 <div class="math notranslate nohighlight">
 \[
 H = \frac{-i\mu}{2}\sum_{m=1}^{N}\gamma_{2m-1}\gamma_{2m} +\frac{i}{2}\sum_{m=1}^{N-1} \left( (t+|\Delta|)\gamma_{2m}\gamma_{2m+1} +(-t+|\Delta|)\gamma_{2m-1}\gamma_{2m+2} \right)
 \]</div>
 <p>As we have found with previous models, one of the benefits of the topological protection is that we can study specific parameters and providing we don’t close a bulk gap, the effects remain robust.</p>
-<p>Let’s start with <span class="math notranslate nohighlight">\(t=|\Delta|=0, \mu \neq0\)</span>. This means that depending on the sign of <span class="math notranslate nohighlight">\(\mu\)</span>, we can satisfy either <span class="math notranslate nohighlight">\(\mu&lt;-2t\)</span> or <span class="math notranslate nohighlight">\(\mu &gt;2t\)</span>. For these parameter the Hamiltonian simply reduces to</p>
+<p>Let’s start with <span class="math notranslate nohighlight">\(t=|\Delta|=0, \mu \neq0\)</span>. This means that depending on the sign of <span class="math notranslate nohighlight">\(\mu\)</span>, we can satisfy either <span class="math notranslate nohighlight">\(\mu&lt;-2t\)</span> or <span class="math notranslate nohighlight">\(\mu &gt;2t\)</span>. For these parameters the Hamiltonian simply reduces to</p>
 <div class="math notranslate nohighlight">
 \[
 H=-\frac{i\mu}{2}\sum_{m=1}^N \gamma_{2m-1}\gamma_{2m} = -\mu\sum_{m=1}^N c_m^\dagger c_m
 \]</div>
-<p><img src="../../_static/figs/MajoranaTrivial.svg" width="100%" height="100"></img></p>
+<figure class="align-default" id="id30">
+<a class="reference internal image-reference" href="../../_images/MajoranaTrivial.svg"><img alt="../../_images/MajoranaTrivial.svg" src="../../_images/MajoranaTrivial.svg" style="width: 100%; height: 100px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">All Majoranas are paired in the trivial regime.</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Here, we have effectively paired the Majorana fermions belonging to the same lattice site. As we saw with the SSH model, all sites are paired up in this limit and the edges aren’t particularly relevant. This is therefore the trivial regime. The second equality above, allows us to easily understand this ground state. For <span class="math notranslate nohighlight">\(\mu &lt;0\)</span>, adding a spinless fermion to the lattice costs energy and so the ground state is simply the empty (vacuum state). For <span class="math notranslate nohighlight">\(\mu&gt;0\)</span>, the opposite happens and the ground state is the completely filled state.</p>
 <p>The region we now need to understand is <span class="math notranslate nohighlight">\(-2t&lt;\mu&lt;2t\)</span>. To analyse this we take <span class="math notranslate nohighlight">\(t=|\Delta|&gt;0, \mu=0\)</span>. In this limit the Hamiltonian becomes</p>
 <div class="math notranslate nohighlight">
 \[
 H = it\sum_{m=1}^{N-1} \gamma_{2m} \gamma_{2m+1} 
 \]</div>
-<p><img src="../../_static/figs/MajoranaEdgeModes.svg" width="100%" height="100"></img></p>
-<p>We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of <strong>Majorana</strong> zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by <span class="math notranslate nohighlight">\(f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})\)</span> and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!</p>
+<figure class="align-default" id="id31">
+<a class="reference internal image-reference" href="../../_images/MajoranaEdgeModes.svg"><img alt="../../_images/MajoranaEdgeModes.svg" src="../../_images/MajoranaEdgeModes.svg" style="width: 100%; height: 100px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Majorana edge modes.</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of Majorana zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by <span class="math notranslate nohighlight">\(f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})\)</span> and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!</p>
 </section>
 </section>
 <section id="p-ip-superconductor">
-<h2>p+ip Superconductor<a class="headerlink" href="#p-ip-superconductor" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span>p+ip Superconductor<a class="headerlink" href="#p-ip-superconductor" title="Link to this heading">#</a></h2>
 <p>We now turn our attention to two dimensions (although we still assume the system is spinless). The Hamiltonian is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -442,22 +464,29 @@ H_{\boldsymbol k}= \left(\begin{matrix}\varepsilon_{\boldsymbol k} &amp; \tilde{
 <p>this time with <span class="math notranslate nohighlight">\(\varepsilon_{\boldsymbol k}=-2t(\cos k_x + \cos k_y)-\mu\)</span> and <span class="math notranslate nohighlight">\(\tilde{\Delta}_{\boldsymbol k}=2i\Delta(\sin k_x + i\sin k_y)\)</span>.</p>
 <p>We wish to now highlight a couple of points regarding this Hamiltonian. The first regards the continuum limit (<span class="math notranslate nohighlight">\(k\rightarrow 0\)</span> here), where the pairing term becomes proportional to <span class="math notranslate nohighlight">\(k_x+ik_y\)</span>. Due to the relation <span class="math notranslate nohighlight">\(p=\hbar k\)</span>, this is commonly referred to as the <span class="math notranslate nohighlight">\(p_x+ip_y\)</span>, or <span class="math notranslate nohighlight">\(p+ip\)</span> superconductor.</p>
 <p>The second point we wish to address is the symmetries of the Hamiltonian. Out of the three symmetries we discussed in the last lecture (particle-hole, time-reversal, and chiral) only particle-hole symmetry is present here. Time-reversal symmetry is broken as we have a spinless system. Therefore the invaraint is a <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>-invariant and is simply the Chern number. We can calculate this numerically to obtain the following result.</p>
-<p><img src="../../_static/plots/p_ip_Chern.svg" width="100%" height="300"></img></p>
+<figure class="align-default" id="id32">
+<a class="reference internal image-reference" href="../../_images/p_ip_Chern.svg"><img alt="../../_images/p_ip_Chern.svg" src="../../_images/p_ip_Chern.svg" style="width: 100%; height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The Chern number as a function of chemical potential in the <span class="math notranslate nohighlight">\(p+ip\)</span> superconductor.</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <section id="topological-states">
-<h3>Topological States<a class="headerlink" href="#topological-states" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.2.1. </span>Topological States<a class="headerlink" href="#topological-states" title="Link to this heading">#</a></h3>
 <p>We now wish to understand the states found in the topological regime of which there are two types we will consider here - edge modes and zero modes.</p>
 <section id="majorana-edge-modes">
-<h4>Majorana Edge Modes<a class="headerlink" href="#majorana-edge-modes" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">4.2.1.1. </span>Majorana Edge Modes<a class="headerlink" href="#majorana-edge-modes" title="Link to this heading">#</a></h4>
 <p>As was true when we looked at the 1d case, the edge modes here are actually Majorana. In this model though they are chiral Majorana modes, described by a Hamiltonian with a linear dispersion <span class="math notranslate nohighlight">\(\varepsilon_k\sim \hbar vk\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 H_M = -i\hbar v \int {\rm d}x \gamma(x)\partial_x \gamma(x) = \hbar v \sum_k k \gamma_{-k}\gamma_k
 \]</div>
 <p>where we have used that <span class="math notranslate nohighlight">\(\gamma_k^\dagger = \gamma_{-k}\)</span>. In general the bulk-boundary correspondence for topological superconductors relates the Chern number of the number of chiral Majorana modes. This is in contrast to what we encountered with topological insulators where the Chern number relates to the number of chiral fermionic modes. We will now see that these two modes are related.</p>
-<p>A chiral fermion is described by
-$<span class="math notranslate nohighlight">\(
+<p>A chiral fermion is described by</p>
+<div class="math notranslate nohighlight">
+\[
 H_M = -i\hbar v_{\rm F} \int {\rm d}x \psi^\dagger (x)\partial_x \psi(x) = \hbar v_{\rm F} \sum_k k \psi^\dagger_{k}\psi_k
-\)</span>$</p>
+\]</div>
 <p>We can define Majorana operators via <span class="math notranslate nohighlight">\(\psi_k = \gamma_{1,k}+i\gamma_{2,k}\)</span> and <span class="math notranslate nohighlight">\(\psi_k^\dagger = \gamma_{1,-k}-i\gamma_{2,-k}\)</span>. We see that each fermion here corresponds to two Majoranas and therefore it is perhaps not suprising that when we substitute this into the above Hamiltonian, we find that</p>
 <div class="math notranslate nohighlight">
 \[
@@ -467,23 +496,65 @@ H = \hbar v_{\rm F} \sum_k k (\gamma_{1,-k}\gamma_{1,k}+\gamma_{2,-k}\gamma_{2,k
 <p>A natural question to ask at this point could be related to the usefulness or implications of this relation between fermionic and Majoran edge modes. Well this has direct consequences in heterostrucutres that combine and scatter the two modes and has also been proposed as a way to implement certain operations in quantum computing.</p>
 </section>
 <section id="vortices">
-<h4>Vortices<a class="headerlink" href="#vortices" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">4.2.1.2. </span>Vortices<a class="headerlink" href="#vortices" title="Link to this heading">#</a></h4>
 <p>In the 2d topological superconductors there is another type of boundary state - zero modes. Here we will outline a simple argument to show that vortices can host Majorana zero modes.</p>
-<p>Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with <span class="math notranslate nohighlight">\(k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})\)</span>, so that there are no exact zero modes at <span class="math notranslate nohighlight">\(E=0, k=0\)</span>. This arises due to the anti-periodic boundary conditions imposed on the wavefunction in this setyp but a more intuitive explanantion is that the spectrum needs to be symmetric due to the particle-hole symmetry. A single <span class="math notranslate nohighlight">\(k=0\)</span> mode would clearly violate this.</p>
+<p>Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with <span class="math notranslate nohighlight">\(k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})\)</span>, so that there are no exact zero modes at <span class="math notranslate nohighlight">\(E=0, k=0\)</span>. This arises due to the anti-periodic boundary conditions imposed on the wavefunction in this setup but a more intuitive explanation is that the spectrum should be symmetric due to the particle-hole symmetry. A single chiral <span class="math notranslate nohighlight">\(k=0, E=0\)</span> mode would clearly violate this.</p>
 <p>There are two ways to get around this problem though:</p>
 <ol class="arabic simple">
 <li><p>We could put the model on a cylinder. This has two edges and so we could have two modes at <span class="math notranslate nohighlight">\(k=0, E=0\)</span> (one on each edge). We won’t focus on this here though.</p></li>
 <li><p>We could introduce a flux through the system - in other words, introduce vortices.</p></li>
 </ol>
 <p>If we introduce a vortex (which has <span class="math notranslate nohighlight">\(\pi\)</span>-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed <span class="math notranslate nohighlight">\(k\)</span> are now <span class="math notranslate nohighlight">\(k = \tfrac{2\pi}{L}n\)</span>. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.</p>
-<p><img src="../../_static/figs/Vortices.svg" width="100%" height="400"></img></p>
-<p>These modes have come under a lot of interest in recent years as they have interesting exchange statistics. In fact the zero modes behave as anyons (in particular Ising anyons) and therefore can be used as part of schemes to implement topologically protected quantum computation. We will see more about Ising anyons in the coming lectures.</p>
+<figure class="align-default" id="id33">
+<a class="reference internal image-reference" href="../../_images/Vortices.svg"><img alt="../../_images/Vortices.svg" src="../../_images/Vortices.svg" style="width: 100%; height: 400px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">A disc geometry with one edge has no zero modes. When the model is put onto a cylinder or a vortex is included, zero energy modes are present.</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>These Majorana zero modes in vortices have come under a lot of interest in recent years as they have interesting exchange statistics. In fact the zero modes behave as anyons (in particular Ising anyons) and therefore can be used as part of schemes to implement topologically protected quantum computation.</p>
 </section>
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
-<p>In this lecture we have introduced topological superconductors and shown that, like the other topological phases we have encountered, there are gapless edge modes that are protected. Unique to the topological superconductors however is the possibility of using vortices to host Majorana zero modes. Spatially separating these modes allows us to define a protected qubit. Additionally, the vortices have non-abelian anyonic exchange statistics, which is something we will consider further in the coming lectures. Towards the end of this course we will aslo see why these anyons are relevant for quantum computing, which is an ongoing research area.</p>
+<h2><span class="section-number">4.3. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>In this lecture we have introduced topological superconductors and shown that, like the other topological phases we have encountered, there are gapless edge modes that are protected. Unique to the topological superconductors however is the possibility of using vortices to host Majorana zero modes. Spatially separating these modes allows us to define a protected qubit. Additionally, the vortices have non-abelian anyonic exchange statistics, which is something we will consider further in the coming lectures. Towards the end of this course we will also see why these anyons are relevant for quantum computing, which is an ongoing research area.</p>
+<div class="docutils container" id="id3">
+<div role="list" class="citation-list">
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Ali12</a><span class="fn-bracket">]</span></span>
+<p>Jason Alicea. New directions in the pursuit of majorana fermions in solid state systems. <em>Reports on Progress in Physics</em>, 75(7):076501, jun 2012. URL: <a class="reference external" href="https://doi.org/10.1088/0034-4885/75/7/076501">https://doi.org/10.1088/0034-4885/75/7/076501</a>, <a class="reference external" href="https://doi.org/10.1088/0034-4885/75/7/076501">doi:10.1088/0034-4885/75/7/076501</a>.</p>
+</div>
+<div class="citation" id="id27" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">BN15</a><span class="fn-bracket">]</span></span>
+<p>Andrei Bernevig and Titus Neupert. Topological superconductors and category theory. 2015. URL: <a class="reference external" href="https://arxiv.org/abs/1506.05805">https://arxiv.org/abs/1506.05805</a>, <a class="reference external" href="https://arxiv.org/abs/1506.05805">arXiv:1506.05805</a>.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">BH13</a><span class="fn-bracket">]</span></span>
+<p>B. Andrei. Bernevig and Taylor L. Hughes. <em>Topological Insulators and Topological Superconductors</em>. Princeton University Press, Princeton, New Jersey, 2013.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Kit01</a><span class="fn-bracket">]</span></span>
+<p>A Yu Kitaev. Unpaired majorana fermions in quantum wires. <em>Physics-Uspekhi</em>, 44(10S):131, oct 2001. URL: <a class="reference external" href="https://dx.doi.org/10.1070/1063-7869/44/10S/S29">https://dx.doi.org/10.1070/1063-7869/44/10S/S29</a>, <a class="reference external" href="https://doi.org/10.1070/1063-7869/44/10S/S29">doi:10.1070/1063-7869/44/10S/S29</a>.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">LF12</a><span class="fn-bracket">]</span></span>
+<p>Martin Leijnse and Karsten Flensberg. Introduction to topological superconductivity and majorana fermions. <em>Semiconductor Science and Technology</em>, 27(12):124003, nov 2012. URL: <a class="reference external" href="https://doi.org/10.1088/0268-1242/27/12/124003">https://doi.org/10.1088/0268-1242/27/12/124003</a>, <a class="reference external" href="https://doi.org/10.1088/0268-1242/27/12/124003">doi:10.1088/0268-1242/27/12/124003</a>.</p>
+</div>
+<div class="citation" id="id16" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">QZ11</a><span class="fn-bracket">]</span></span>
+<p>Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. <em>Rev. Mod. Phys.</em>, 83:1057–1110, Oct 2011. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/RevModPhys.83.1057">https://link.aps.org/doi/10.1103/RevModPhys.83.1057</a>, <a class="reference external" href="https://doi.org/10.1103/RevModPhys.83.1057">doi:10.1103/RevModPhys.83.1057</a>.</p>
+</div>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">SA17</a><span class="fn-bracket">]</span></span>
+<p>Masatoshi Sato and Yoichi Ando. Topological superconductors: a review. <em>Reports on Progress in Physics</em>, 80(7):076501, may 2017. URL: <a class="reference external" href="https://doi.org/10.1088/1361-6633/aa6ac7">https://doi.org/10.1088/1361-6633/aa6ac7</a>, <a class="reference external" href="https://doi.org/10.1088/1361-6633/aa6ac7">doi:10.1088/1361-6633/aa6ac7</a>.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">SF16</a><span class="fn-bracket">]</span></span>
+<p>Masatoshi Sato and Satoshi Fujimoto. Majorana fermions and topology in superconductors. <em>Journal of the Physical Society of Japan</em>, 85(7):072001, 2016. URL: <a class="reference external" href="https://doi.org/10.7566/JPSJ.85.072001">https://doi.org/10.7566/JPSJ.85.072001</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.7566/JPSJ.85.072001">arXiv:https://doi.org/10.7566/JPSJ.85.072001</a>, <a class="reference external" href="https://doi.org/10.7566/JPSJ.85.072001">doi:10.7566/JPSJ.85.072001</a>.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -517,6 +588,15 @@ H = \hbar v_{\rm F} \sum_k k (\gamma_{1,-k}\gamma_{1,k}+\gamma_{2,-k}\gamma_{2,k
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Lecture 3 - Topological Insulators II</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -533,19 +613,19 @@ H = \hbar v_{\rm F} \sum_k k (\gamma_{1,-k}\gamma_{1,k}+\gamma_{2,-k}\gamma_{2,k
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">The Kitaev Chain</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">Majorana Modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kitaev-chain">4.1. The Kitaev Chain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-modes">4.1.1. Majorana Modes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">p+ip Superconductor</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-states">Topological States</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-edge-modes">Majorana Edge Modes</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vortices">Vortices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p-ip-superconductor">4.2. p+ip Superconductor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-states">4.2.1. Topological States</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#majorana-edge-modes">4.2.1.1. Majorana Edge Modes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vortices">4.2.1.2. Vortices</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">4.3. Summary</a></li>
 </ul>
   </nav></div>
 
