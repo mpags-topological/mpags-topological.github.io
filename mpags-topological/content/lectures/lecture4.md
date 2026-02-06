@@ -145,7 +145,7 @@ where we have used that $\gamma_k^\dagger = \gamma_{-k}$. In general the bulk-bo
 A chiral fermion is described by
 
 $$
-H_M = -i\hbar v_{\rm F} \int {\rm d}x \psi^\dagger (x)\partial_x \psi(x) = \hbar v_{\rm F} \sum_k k \psi^\dagger_{k}\psi_k
+H_F = -i\hbar v_{\rm F} \int {\rm d}x \psi^\dagger (x)\partial_x \psi(x) = \hbar v_{\rm F} \sum_k k \psi^\dagger_{k}\psi_k
 $$
 
 We can define Majorana operators via $\psi_k = \gamma_{1,k}+i\gamma_{2,k}$ and $\psi_k^\dagger = \gamma_{1,-k}-i\gamma_{2,-k}$. We see that each fermion here corresponds to two Majoranas and therefore it is perhaps not suprising that when we substitute this into the above Hamiltonian, we find that
