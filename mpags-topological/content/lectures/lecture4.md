@@ -162,13 +162,13 @@ A natural question to ask at this point could be related to the usefulness or im
 
 In the 2d topological superconductors there is another type of boundary state - zero modes. Here we will outline a simple argument to show that vortices can host Majorana zero modes. 
 
-Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with $k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})$, so that there are no exact zero modes at $E=0, k=0$. This arises due to the anti-periodic boundary conditions imposed on the wavefunction in this setup but a more intuitive explanation is that the spectrum should be symmetric due to the particle-hole symmetry. A single chiral $k=0, E=0$ mode would clearly violate this.
+Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with $k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})$, so that there are no exact zero modes at $E=0, k=0$. A more intuitive way to see is that the spectrum should be symmetric due to the particle-hole symmetry. A single chiral $k=0, E=0$ mode would clearly violate this.
 
 There are two ways to get around this problem though:
 1. We could put the model on a cylinder. This has two edges and so we could have two modes at $k=0, E=0$ (one on each edge). We won't focus on this here though.
 2. We could introduce a flux through the system - in other words, introduce vortices.
 
-If we introduce a vortex (which has $\pi$-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed $k$ are now $k = \tfrac{2\pi}{L}n$. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
+If we introduce a vortex (which has $\pi$-flux), then the allowed momenta shift to $k = \tfrac{2\pi}{L}n$. This suggests that zero-energy modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
 
 ```{figure} ../../_static/figs/Vortices.svg
 :width: 100%
