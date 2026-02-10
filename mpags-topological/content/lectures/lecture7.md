@@ -303,3 +303,15 @@ We have now defined our TQFT in terms of anyon types, fusion rules, F-moves and 
 
 ## Summary
 
+
+
+<!--
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+-->

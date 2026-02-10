@@ -130,3 +130,14 @@ name: modular_s_matrix_evaluation
 
 
 
+
+<!--
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+-->
