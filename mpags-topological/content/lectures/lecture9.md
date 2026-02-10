@@ -220,6 +220,7 @@ One approach to circumvent this issue is to use a technique known as **magic sta
 
 ## Summary
 
+Bringing together all the aspects of TQFT that we have learnt in this course, we have seen how the braiding of non-abelian anyons can be used to perform quantum computation. We have focussed on the Ising anyon model, which is one of the simplest and most experimentally relevant cases. We have seen how to encode qubits in the fusion channels of the anyons, and how to perform gates by braiding them. We have also discussed how to perform measurements, and how to achieve universality by adding an additional gate that is not topologically protected. 
 
 
 <!--

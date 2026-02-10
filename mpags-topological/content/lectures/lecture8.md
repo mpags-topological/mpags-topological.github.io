@@ -128,6 +128,7 @@ name: modular_s_matrix_evaluation
 
 ## Summary
 
+In this section we have seen how to use the F- and R-moves to derive the braiding properties of anyons, which are encoded in the modular S and T matrices. The S and T matrices are fundamental quantities that encode the topological properties of the anyons in our theory, and they play a crucial role in understanding the physics of anyons and their applications in topological quantum computation.
 
 
 
