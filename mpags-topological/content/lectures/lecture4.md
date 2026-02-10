@@ -45,12 +45,13 @@ $$
 \\ \gamma_{2m} = -i\left({\rm e}^{i\phi/2}c_m - {\rm e}^{-i\phi/2}c_m^\dagger \right)
 $$
 
-We wish to make a few notes regarding the introduction of these operators
 
+```{note}
+A few notes regarding the Majorana operators
 1. Both $\gamma_{2m-1}$ and $\gamma_{2m}$ are associated with the site $j$. 
 2. The Majorana operators obey anticommutation relations, $\{\gamma_m, \gamma_n\} = 2\delta_{m,n}$, as well as $\gamma_{2m}^\dagger = \gamma_{2m}$ and $\gamma_{2m}^2=1$.
 3. In theory, we can write any fermionic Hamiltonian in terms of these Majorana fermions, although this is often not useful.
-
+```
 
 ```{figure} ../../_static/figs/Majoranas.svg
 :width: 100%
@@ -67,7 +68,7 @@ $$
 
 As we have found with previous models, one of the benefits of the topological protection is that we can study specific parameters and providing we don't close a bulk gap, the effects remain robust. 
 
-Let's start with $t=|\Delta|=0, \mu \neq0$. This means that depending on the sign of $\mu$, we can satisfy either $\mu<-2t$ or $\mu >2t$. For these parameter the Hamiltonian simply reduces to
+Let's start with $t=|\Delta|=0, \mu \neq0$. This means that depending on the sign of $\mu$, we can satisfy either $\mu<-2t$ or $\mu >2t$. For these parameters the Hamiltonian simply reduces to
 
 $$
 H=-\frac{i\mu}{2}\sum_{m=1}^N \gamma_{2m-1}\gamma_{2m} = -\mu\sum_{m=1}^N c_m^\dagger c_m
@@ -96,7 +97,7 @@ $$
 Majorana edge modes.
 ```
 
-We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of **Majorana** zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by $f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})$ and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!
+We are now effectively pairing Majoranas between different sites. As we saw with the SSH model this leaves modes at the ends of the system, which do not appear in the Hamiltonian and therefore are zero-energy modes. The key difference here is that we have a pair of Majorana zero modes. If we want to ask whether or not the Majorana mode is there we actually have to consider the occupation of corresponding fermionic mode, which in this case is non-local. The fermionic operator is given by $f=\tfrac{1}{2}(\gamma_1+i\gamma_{2N})$ and therefore the occupation of this mode also costs no energy in the limit of a large system size. The non-local nature of this mode (along with the fact that occupied/unoccupied represents two states) gives some initial indication that such a setup could be used to create a topologically protected qubit!
 
 
 ## p+ip Superconductor
@@ -142,8 +143,9 @@ $$
 where we have used that $\gamma_k^\dagger = \gamma_{-k}$. In general the bulk-boundary correspondence for topological superconductors relates the Chern number of the number of chiral Majorana modes. This is in contrast to what we encountered with topological insulators where the Chern number relates to the number of chiral fermionic modes. We will now see that these two modes are related.
 
 A chiral fermion is described by
+
 $$
-H_M = -i\hbar v_{\rm F} \int {\rm d}x \psi^\dagger (x)\partial_x \psi(x) = \hbar v_{\rm F} \sum_k k \psi^\dagger_{k}\psi_k
+H_F = -i\hbar v_{\rm F} \int {\rm d}x \psi^\dagger (x)\partial_x \psi(x) = \hbar v_{\rm F} \sum_k k \psi^\dagger_{k}\psi_k
 $$
 
 We can define Majorana operators via $\psi_k = \gamma_{1,k}+i\gamma_{2,k}$ and $\psi_k^\dagger = \gamma_{1,-k}-i\gamma_{2,-k}$. We see that each fermion here corresponds to two Majoranas and therefore it is perhaps not suprising that when we substitute this into the above Hamiltonian, we find that
@@ -160,13 +162,13 @@ A natural question to ask at this point could be related to the usefulness or im
 
 In the 2d topological superconductors there is another type of boundary state - zero modes. Here we will outline a simple argument to show that vortices can host Majorana zero modes. 
 
-Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with $k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})$, so that there are no exact zero modes at $E=0, k=0$. This arises due to the anti-periodic boundary conditions imposed on the wavefunction in this setyp but a more intuitive explanantion is that the spectrum needs to be symmetric due to the particle-hole symmetry. A single $k=0$ mode would clearly violate this.
+Start by consdiering a disc shaped topological superconudctor surrounded by a trivial regime. The system will have an chiral mode at its edge but with $k = \tfrac{2\pi}{L}(n+\tfrac{1}{2})$, so that there are no exact zero modes at $E=0, k=0$. A more intuitive way to see is that the spectrum should be symmetric due to the particle-hole symmetry. A single chiral $k=0, E=0$ mode would clearly violate this.
 
 There are two ways to get around this problem though:
 1. We could put the model on a cylinder. This has two edges and so we could have two modes at $k=0, E=0$ (one on each edge). We won't focus on this here though.
 2. We could introduce a flux through the system - in other words, introduce vortices.
 
-If we introduce a vortex (which has $\pi$-flux), then the boundary conditions on the wavefunction shift to periodic. Therefore the allowed $k$ are now $k = \tfrac{2\pi}{L}n$. This suggests that zero modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
+If we introduce a vortex (which has $\pi$-flux), then the allowed momenta shift to $k = \tfrac{2\pi}{L}n$. This suggests that zero-energy modes are allowed, however we still need to respect the symmetry of the spectrum and therefore we must have two zero modes. The first of these is located at the edge and the second of these must therefore be bound to the vortex - this is a Majorana zero mode. If we increase the number of vortices then we increase the number of zero modes. Even if the number of voritces is even and the boundary conditions are anti-perioidc again, the vortices can host an even number of zero modes so that the symmetry is respected, although in this case the edge mode does not have a zero mode.
 
 ```{figure} ../../_static/figs/Vortices.svg
 :width: 100%
@@ -179,4 +181,8 @@ These Majorana zero modes in vortices have come under a lot of interest in recen
 
 ## Summary
 
-In this lecture we have introduced topological superconductors and shown that, like the other topological phases we have encountered, there are gapless edge modes that are protected. Unique to the topological superconductors however is the possibility of using vortices to host Majorana zero modes. Spatially separating these modes allows us to define a protected qubit. Additionally, the vortices have non-abelian anyonic exchange statistics, which is something we will consider further in the coming lectures. Towards the end of this course we will aslo see why these anyons are relevant for quantum computing, which is an ongoing research area.
+In this lecture we have introduced topological superconductors and shown that, like the other topological phases we have encountered, there are gapless edge modes that are protected. Unique to the topological superconductors however is the possibility of using vortices to host Majorana zero modes. Spatially separating these modes allows us to define a protected qubit. Additionally, the vortices have non-abelian anyonic exchange statistics, which is something we will consider further in the coming lectures. Towards the end of this course we will also see why these anyons are relevant for quantum computing, which is an ongoing research area.
+
+```{bibliography}
+:filter: docname in docnames
+```
