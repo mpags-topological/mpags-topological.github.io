@@ -1,4 +1,4 @@
-# Lecture 6 - Intoduction to Anyons
+# Intoduction to Anyons
 
 ## Fermi and Bose Statistics Revisited
 

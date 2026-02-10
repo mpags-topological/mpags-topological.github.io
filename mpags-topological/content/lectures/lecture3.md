@@ -1,4 +1,4 @@
-# Lecture 3 - Topological Insulators II
+# Topological Insulators II
 
 In the previous lecture we looked at a couple of key models in the theory of topological insulators. These were the SSH model, which is a 1d topological insulator, and the Haldane model which is a Chern insulator. So what's the difference between a Chern insulator and a topological insulator? Both are insulating phases with topological properties and sometimes (depending on who you ask) Chern insulators are considered a subset of topological insulators. An alternative definition for topological insulators is related to symmetry protected topological (SPT) phases. In this definition, the topological modes are also protected by an additional symmetry, however this excludes Chern insulators from being a topological insulator.
 

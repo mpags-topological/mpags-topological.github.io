@@ -1,4 +1,4 @@
-# Lecture 4 - Topological Superconductors
+# Topological Superconductors
 
 In this lecture, we turn our attention from topological insulators to topological superconductors. These systems have gained increasing interest in recent years, both due to their interesting fundamental physics but also for their potential use in realising a topological quantum computer. 
 

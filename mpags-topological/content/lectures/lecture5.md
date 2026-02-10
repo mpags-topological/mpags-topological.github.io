@@ -1,4 +1,4 @@
-# Lecture 5 - The Toric Code
+# The Toric Code
 
 The toric code is a beautifually simple model for topological order introduced by Alexei Kitaev {cite}`Kitaev2003, TopologicalQuantum`. It is simple, soluble, and contains many of the key features of more general topologically ordered systems. In particular, it has anyonic excitations and ground state degeneracy that depends on the topology of the underlying manifold. We introduce it here as a key example of topological order, and to motivate the more formal theory of anyons that will follow.
 

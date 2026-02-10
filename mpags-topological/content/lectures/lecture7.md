@@ -1,4 +1,4 @@
-# Lecture 7 - Topological Quantum Field Theory: Fusion and Braiding
+# Topological Quantum Field Theory: Fusion and Braiding
 
 Previously, we introduced anyons and discussed at a high-level some of their properties. For instance, we saw that anyons can have non-trivial exchange and mutual statistics, and we introduced the idea of fusion of anyons. In the next two lectures, we will explore these ideas in more detail, and formulate them in the language of topological quantum field theory (TQFT).
 
