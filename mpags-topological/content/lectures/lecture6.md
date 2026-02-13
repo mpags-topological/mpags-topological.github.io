@@ -1,5 +1,8 @@
 # Intoduction to Anyons
 
+In this lecture, we'll introduce more carefully what we mean when we talk about anyons and in future lectures we will look at the underlying theory used to describe them, known as topological quantum field theory. For more details on this topic, the book by Steve Simon is highly recommended {cite}`TopologicalQuantum`.
+
+
 ## Fermi and Bose Statistics Revisited
 
 All fundamental particles in Nature of one of two types: fermions or bosons. The difference between the two can be neatly summarised by what happends when we exchange a pair of indistinguishable particles.
