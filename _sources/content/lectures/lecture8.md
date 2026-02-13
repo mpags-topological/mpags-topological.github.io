@@ -1,4 +1,4 @@
-# Lecture 8 - Topological Quantum Field Theory: Braiding and modular S and T
+# Topological Quantum Field Theory: Braiding and modular S and T
 
 Previously, we defined our topological quantum field theory (TQFT) in terms of anyon types, fusion rules, F-moves and R-moves. If these ingredients satisfy certain consistency conditions (the pentagon and hexagon equations), then we have a well-defined TQFT. In this lecture, we will focus on how to extract physical information about the anyons from these ingredients, specifically through braiding and the modular S and T matrices.
 
@@ -128,5 +128,17 @@ name: modular_s_matrix_evaluation
 
 ## Summary
 
+In this section we have seen how to use the F- and R-moves to derive the braiding properties of anyons, which are encoded in the modular S and T matrices. The S and T matrices are fundamental quantities that encode the topological properties of the anyons in our theory, and they play a crucial role in understanding the physics of anyons and their applications in topological quantum computation.
 
 
+
+<!--
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+-->

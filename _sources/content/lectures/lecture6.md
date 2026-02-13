@@ -1,4 +1,7 @@
-# Lecture 6 - Intoduction to Anyons
+# Intoduction to Anyons
+
+In this lecture, we'll introduce more carefully what we mean when we talk about anyons and in future lectures we will look at the underlying theory used to describe them, known as topological quantum field theory. For more details on this topic, the book by Steve Simon is highly recommended {cite}`TopologicalQuantum`.
+
 
 ## Fermi and Bose Statistics Revisited
 

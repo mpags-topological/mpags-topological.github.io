@@ -1,4 +1,4 @@
-# Lecture 2 - Topological Insulators I
+# Topological Insulators I
 
 In this lecture we will begin to introduce some key topological models - namely the Su-Schrieffer-Heeger (SSH) model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties. Should you wish to read more about the models in this lecture then some useful references are {cite}`BernevigHughes, QiZhang_Review, Asboth_TI_Course, HasanKane_Review`.
 

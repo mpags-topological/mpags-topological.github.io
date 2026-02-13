@@ -1,4 +1,4 @@
-# Lecture 10 - Experiments
+# Experiments
 
 In the final lecture of this course we aim to address some experimental developments as well as limitations. In particular we will focus on setups that utilise semiconducting heterostructures, though other setups are also possible.
 
@@ -115,6 +115,46 @@ Naturally occuring unconventional superconductors are still an active area of re
 In particular a semiconductor with spin-orbit coupling is placed in conjuction with an $s$-wave superconductor. Along with a magnetic field, this allows the $p$-wave pairing to occur
 
 <span style="color:red">Insert Figs</span>
+
+Once the samples have been created, it is necessary to have ways to detect Majoranas. Measuring braiding statistics directly using interferometry-style experiments is difficult in solid state setups, and so alternative transport experiments are preferred.
+
+### Zero-bias conductance
+
+The first of these is not on its own a conclusive signature of Majoranas, although any system with Majoranas will dieplay it. 
+
+Consider a one-dimensional setup (although the argumets here generalise to two dimensions too), where we have a lead in conjunction with a wire in a topological superconductor phase. Tunnelling occurs between the lead and the wire with a rate, $\Gamma$. 
+
+<span style="color:red">Insert Fig</span>
+
+At zero temperature, the current is expressed in terms of the applied voltage, $V$, and the density of states in the wire, $\nu(\varepsilon)$ as
+
+$$
+I = \frac{e\Gamma}{\hbar}\int_0^{eV} {\rm d} \varepsilon \hspace{3pt}\nu(\varepsilon)
+$$
+
+If we have a single mode in the superconductor (in our case this is the Majorana mode at the end of the wire), the retarded Green's function which describes the response to an external perturbation is given by
+
+$$
+G^R(\varepsilon) = \frac{1}{\varepsilon-E_0+i\frac{1}{2\tau}}
+$$
+
+where $E_0 = 0$ is the energy of the Majorana mode in the wire, and $\tau = 1/\Gamma$ is the lifetime of the particle before it "decays" into the lead.
+
+The density of states is then given by
+
+$$
+\nu(\varepsilon) = -\frac{1}{\pi}{\rm Im}\left[G^R(\varepsilon)\right]= \frac{1}{\pi}\frac{(\Gamma/2)}{\varepsilon^2+(\Gamma/2)^2}
+$$
+
+<span style="color:red">Be more careful with this calculation - the above isnt correct</span>
+
+
+### Fractional Josephson Effect
+
+A more conclusive signature would be the observation of the fractional Joesphson effect, as this probes the non-Abelian braiding statistics of the Majorana modes, however as of yet there haven't been any reproducible measurements of this.
+
+Let's start by breifly summarising the results of the standard Josephson effect. In this setup 
+
 
 ## Summary
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Lecture 3 - Topological Insulators II &#8212; Introduction to Topological Phases of Matter</title>
+    <title>3. Topological Insulators II &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,8 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture3';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Lecture 4 - Topological Superconductors" href="lecture4.html" />
-    <link rel="prev" title="2. Lecture 2 - Topological Insulators I" href="lecture2.html" />
+    <link rel="next" title="4. Topological Superconductors" href="lecture4.html" />
+    <link rel="prev" title="2. Topological Insulators I" href="lecture2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,10 +187,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Lecture 3 - Topological Insulators II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
 </ul>
 
     </div>
@@ -329,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 3 - Topological Insulators II</h1>
+    <h1>Topological Insulators II</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -363,8 +365,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-3-topological-insulators-ii">
-<h1><span class="section-number">3. </span>Lecture 3 - Topological Insulators II<a class="headerlink" href="#lecture-3-topological-insulators-ii" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="topological-insulators-ii">
+<h1><span class="section-number">3. </span>Topological Insulators II<a class="headerlink" href="#topological-insulators-ii" title="Link to this heading">#</a></h1>
 <p>In the previous lecture we looked at a couple of key models in the theory of topological insulators. These were the SSH model, which is a 1d topological insulator, and the Haldane model which is a Chern insulator. So what’s the difference between a Chern insulator and a topological insulator? Both are insulating phases with topological properties and sometimes (depending on who you ask) Chern insulators are considered a subset of topological insulators. An alternative definition for topological insulators is related to symmetry protected topological (SPT) phases. In this definition, the topological modes are also protected by an additional symmetry, however this excludes Chern insulators from being a topological insulator.</p>
 <p>In this lecture we will look to understand the importance of symmetries further. To begin, we introduce a classic model for a symmetry-protected topological insulator - the Kane-Mele model <span id="id1">[<a class="reference internal" href="#id22" title="C. L. Kane and E. J. Mele. $Z_2$ topological order and the quantum spin hall effect. Phys. Rev. Lett., 95:146802, Sep 2005. URL: https://link.aps.org/doi/10.1103/PhysRevLett.95.146802, doi:10.1103/PhysRevLett.95.146802.">KM05a</a>, <a class="reference internal" href="#id21" title="C. L. Kane and E. J. Mele. Quantum spin hall effect in graphene. Phys. Rev. Lett., 95:226801, Nov 2005. URL: https://link.aps.org/doi/10.1103/PhysRevLett.95.226801, doi:10.1103/PhysRevLett.95.226801.">KM05b</a>]</span>.</p>
 <section id="kane-mele">
@@ -578,7 +580,7 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Lecture 2 - Topological Insulators I</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Topological Insulators I</p>
       </div>
     </a>
     <a class="right-next"
@@ -586,7 +588,7 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Lecture 4 - Topological Superconductors</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Topological Superconductors</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

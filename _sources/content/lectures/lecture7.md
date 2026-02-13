@@ -1,4 +1,4 @@
-# Lecture 7 - Topological Quantum Field Theory: Fusion and Braiding
+# Topological Quantum Field Theory: Fusion and Braiding
 
 Previously, we introduced anyons and discussed at a high-level some of their properties. For instance, we saw that anyons can have non-trivial exchange and mutual statistics, and we introduced the idea of fusion of anyons. In the next two lectures, we will explore these ideas in more detail, and formulate them in the language of topological quantum field theory (TQFT).
 
@@ -303,3 +303,17 @@ We have now defined our TQFT in terms of anyon types, fusion rules, F-moves and 
 
 ## Summary
 
+In this section we have defined the key ingredients of a TQFT: anyon types, fusion rules, F-moves and R-moves. We have also discussed the consistency conditions that these ingredients must satisfy, namely the pentagon and hexagon equations. In the next lecture, we will see how to use these ingredients to extract physical information about the anyons, specifically through braiding and the modular S and T matrices.
+
+
+
+<!--
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+-->

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 6 - Intoduction to Anyons &#8212; Introduction to Topological Phases of Matter</title>
+    <title>6. Intoduction to Anyons &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture6';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="5. The Toric Code" href="lecture5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -186,11 +185,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Intoduction to Anyons</a></li>
 </ul>
 
     </div>
@@ -329,7 +330,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 6 - Intoduction to Anyons</h1>
+    <h1>Intoduction to Anyons</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -339,14 +340,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-and-bose-statistics-revisited">Fermi and Bose Statistics Revisited</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-and-mutual-statistics">Exchange and Mutual Statistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-fusion-outcomes-non-abelian-anyons">Multiple Fusion Outcomes: Non-Abelian Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-and-bose-statistics-revisited">6.1. Fermi and Bose Statistics Revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-and-mutual-statistics">6.2. Exchange and Mutual Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">6.3. Fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-fusion-outcomes-non-abelian-anyons">6.3.1. Multiple Fusion Outcomes: Non-Abelian Anyons</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braiding">Braiding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braiding">6.4. Braiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">6.5. Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -358,10 +359,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-6-intoduction-to-anyons">
-<h1>Lecture 6 - Intoduction to Anyons<a class="headerlink" href="#lecture-6-intoduction-to-anyons" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="intoduction-to-anyons">
+<h1><span class="section-number">6. </span>Intoduction to Anyons<a class="headerlink" href="#intoduction-to-anyons" title="Link to this heading">#</a></h1>
+<p>In this lecture, we’ll introduce more carefully what we mean when we talk about anyons and in future lectures we will look at the underlying theory used to describe them, known as topological quantum field theory. For more details on this topic, the book by Steve Simon is highly recommended <span id="id1">[<a class="reference internal" href="lecture5.html#id4" title="Steven H. Simon. Topological Quantum. Oxford University Press, 09 2023. ISBN 9780198886723. URL: https://doi.org/10.1093/oso/9780198886723.001.0001, doi:10.1093/oso/9780198886723.001.0001.">Sim23</a>]</span>.</p>
 <section id="fermi-and-bose-statistics-revisited">
-<h2>Fermi and Bose Statistics Revisited<a class="headerlink" href="#fermi-and-bose-statistics-revisited" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Fermi and Bose Statistics Revisited<a class="headerlink" href="#fermi-and-bose-statistics-revisited" title="Link to this heading">#</a></h2>
 <p>All fundamental particles in Nature of one of two types: fermions or bosons. The difference between the two can be neatly summarised by what happends when we exchange a pair of indistinguishable particles.</p>
 <p><strong>For bosons</strong>, the wavefunction is symmetric under exchange:</p>
 <figure class="align-center" id="boson-exchange">
@@ -394,7 +396,7 @@ document.write(`
 </div>
 </section>
 <section id="exchange-and-mutual-statistics">
-<h2>Exchange and Mutual Statistics<a class="headerlink" href="#exchange-and-mutual-statistics" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Exchange and Mutual Statistics<a class="headerlink" href="#exchange-and-mutual-statistics" title="Link to this heading">#</a></h2>
 <p>As well as the exchange statistics, in two-dimensions we can also have non-trivial <strong>mutual statistics</strong> between distinguishable particles. Roughly speaking, we have the two following processes</p>
 <figure class="align-center" id="mutual-statistics">
 <a class="reference internal image-reference" href="../../_images/MutualStatistics.svg"><img alt="../../_images/MutualStatistics.svg" src="../../_images/MutualStatistics.svg" style="width: 95%;" />
@@ -477,7 +479,7 @@ The $\sigma$ anyon corresponds to a Majorana fermion and can describe the non-Ab
 -->
 </section>
 <section id="fusion">
-<h2>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
 <p>In addition to exchange and mutual statistics, anyons also have a set of rules for how they can combine, or “fuse”, together. This is described by the <strong>fusion rules</strong>. For example, in the toric code, we saw that the <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(m\)</span> anyons could combine to form the <span class="math notranslate nohighlight">\(\epsilon\)</span> anyon.</p>
 <p>There are two ways to think of fusion:</p>
 <ol class="arabic simple">
@@ -501,7 +503,7 @@ a \times b = c
 \]</div>
 <p>meaning that anyons of type <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> fuse to form an anyon of type <span class="math notranslate nohighlight">\(c\)</span>.</p>
 <section id="multiple-fusion-outcomes-non-abelian-anyons">
-<h3>Multiple Fusion Outcomes: Non-Abelian Anyons<a class="headerlink" href="#multiple-fusion-outcomes-non-abelian-anyons" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.3.1. </span>Multiple Fusion Outcomes: Non-Abelian Anyons<a class="headerlink" href="#multiple-fusion-outcomes-non-abelian-anyons" title="Link to this heading">#</a></h3>
 <p>While we have seen the abelian fusion above in the context of the toric code, this can be generalised to allow for multiple possible fusion outcomes. That is, we can have</p>
 <div class="math notranslate nohighlight">
 \[
@@ -551,7 +553,7 @@ That is, two $\sigma$ anyons can fuse to form either the trivial anyon $1$ or th
 </section>
 </section>
 <section id="braiding">
-<h2>Braiding<a class="headerlink" href="#braiding" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.4. </span>Braiding<a class="headerlink" href="#braiding" title="Link to this heading">#</a></h2>
 <p>So far we have looked at the properties of a pair of anyons. When we have more than two, things get more complicated and interesting. With more than two anyons we can introduce “braiding” operations, where we move anyons around each other in specific ways. We will use Fibonacci anyons as an example.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -614,7 +616,7 @@ e^{-i4\pi/5} &amp; 0 \\
 <p>are sufficient to approximate any <span class="math notranslate nohighlight">\(2\times2\)</span> unitary matrix to arbitrary accuracy, in other words they can approximate an arbitrary single qubit gate. By finding the correct sequence of these two braids, we can implement any single qubit gate using Fibonacci anyons! This is the basis of topological quantum computation, which we will return to later in the course.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.5. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this session we revisted the statistics of fermions and bosons and showed that other options - anyons - are possible in two dimensions. These anyons can have non-trivial exchange and mutual statistics. We also introduced the concepts of fusion and braiding. We saw that for non-Abelian anyons, braiding can be represented by matrices instead of simple phase factors. In the next two sessions we formalise the ideas that we have introduced here.</p>
 <!--
 ---
@@ -658,6 +660,15 @@ e^{-i4\pi/5} &amp; 0 \\
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>The Toric Code</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -674,14 +685,14 @@ e^{-i4\pi/5} &amp; 0 \\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-and-bose-statistics-revisited">Fermi and Bose Statistics Revisited</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-and-mutual-statistics">Exchange and Mutual Statistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-fusion-outcomes-non-abelian-anyons">Multiple Fusion Outcomes: Non-Abelian Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-and-bose-statistics-revisited">6.1. Fermi and Bose Statistics Revisited</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-and-mutual-statistics">6.2. Exchange and Mutual Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">6.3. Fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-fusion-outcomes-non-abelian-anyons">6.3.1. Multiple Fusion Outcomes: Non-Abelian Anyons</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braiding">Braiding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braiding">6.4. Braiding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">6.5. Summary</a></li>
 </ul>
   </nav></div>
 

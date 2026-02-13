@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Lecture 2 - Topological Insulators I &#8212; Introduction to Topological Phases of Matter</title>
+    <title>2. Topological Insulators I &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,8 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Lecture 3 - Topological Insulators II" href="lecture3.html" />
-    <link rel="prev" title="1. Lecture 1 - Introduction to Topology in Condensed Matter Physics" href="lecture1.html" />
+    <link rel="next" title="3. Topological Insulators II" href="lecture3.html" />
+    <link rel="prev" title="1. Introduction to Topology in Condensed Matter Physics" href="lecture1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,10 +187,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Lecture 2 - Topological Insulators I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
 </ul>
 
     </div>
@@ -329,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 2 - Topological Insulators I</h1>
+    <h1>Topological Insulators I</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,8 +359,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-topological-insulators-i">
-<h1><span class="section-number">2. </span>Lecture 2 - Topological Insulators I<a class="headerlink" href="#lecture-2-topological-insulators-i" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="topological-insulators-i">
+<h1><span class="section-number">2. </span>Topological Insulators I<a class="headerlink" href="#topological-insulators-i" title="Link to this heading">#</a></h1>
 <p>In this lecture we will begin to introduce some key topological models - namely the Su-Schrieffer-Heeger (SSH) model and the Haldane Model. Through these we will focus on a couple of key features of topological physics - invariants and edge modes. Additionally these models will serve as introductory examples to the class of systems known as topological insulators. As the name suggests these are insulating materials that have topological properties. Should you wish to read more about the models in this lecture then some useful references are <span id="id1">[<a class="reference internal" href="lecture4.html#id6" title="B. Andrei. Bernevig and Taylor L. Hughes. Topological Insulators and Topological Superconductors. Princeton University Press, Princeton, New Jersey, 2013.">BH13</a>, <a class="reference internal" href="#id16" title="János K. Asbóth, László Oroszlány, and András Pályi. A Short Course on Topological Insulators. Springer International Publishing, 2016. ISBN 9783319256078. URL: http://dx.doi.org/10.1007/978-3-319-25607-8, doi:10.1007/978-3-319-25607-8.">AOP16</a>, <a class="reference internal" href="#id15" title="M. Z. Hasan and C. L. Kane. Colloquium: topological insulators. Rev. Mod. Phys., 82:3045–3067, Nov 2010. URL: https://link.aps.org/doi/10.1103/RevModPhys.82.3045, doi:10.1103/RevModPhys.82.3045.">HK10</a>, <a class="reference internal" href="lecture4.html#id16" title="Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. Rev. Mod. Phys., 83:1057–1110, Oct 2011. URL: https://link.aps.org/doi/10.1103/RevModPhys.83.1057, doi:10.1103/RevModPhys.83.1057.">QZ11</a>]</span>.</p>
 <section id="the-ssh-model">
 <h2><span class="section-number">2.1. </span>The SSH Model<a class="headerlink" href="#the-ssh-model" title="Link to this heading">#</a></h2>
@@ -632,7 +634,7 @@ M = \pm 3\sqrt{3}t_2\sin \varphi
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Lecture 1 - Introduction to Topology in Condensed Matter Physics</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction to Topology in Condensed Matter Physics</p>
       </div>
     </a>
     <a class="right-next"
@@ -640,7 +642,7 @@ M = \pm 3\sqrt{3}t_2\sin \varphi
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Lecture 3 - Topological Insulators II</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Topological Insulators II</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

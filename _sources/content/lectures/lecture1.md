@@ -1,4 +1,4 @@
-# Lecture 1 - Introduction to Topology in Condensed Matter Physics
+# Introduction to Topology in Condensed Matter Physics
 
 In this course, we aim to give an overview of many different aspects of topology in condensed matter physics. We hope to show the its importance in this area of physics and why it is an active research field. We will begin in this lecture by demonstrating the usefulness of a topological description and how it can be used to explain robust phenomena. To do this we will explore the integer quantum Hall effect. However, first we wish to introduce why we may wish to study topological phases.
 

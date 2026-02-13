@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 10 - Experiments &#8212; Introduction to Topological Phases of Matter</title>
+    <title>Experiments &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -187,10 +187,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Lecture 4 - Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
 </ul>
 
     </div>
@@ -329,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 10 - Experiments</h1>
+    <h1>Experiments</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -348,6 +350,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-quantum-hall">Fractional Quantum Hall</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">Zero-bias conductance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">Fractional Josephson Effect</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
@@ -362,8 +366,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-10-experiments">
-<h1>Lecture 10 - Experiments<a class="headerlink" href="#lecture-10-experiments" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="experiments">
+<h1>Experiments<a class="headerlink" href="#experiments" title="Link to this heading">#</a></h1>
 <p>In the final lecture of this course we aim to address some experimental developments as well as limitations. In particular we will focus on setups that utilise semiconducting heterostructures, though other setups are also possible.</p>
 <p>Recall that at the start of this course, we looked at the intger quantum Hall effect where there are integer plateaus measured in the differential conductance.</p>
 <p>The typical system in which this effect is measured is a semiconducting heterostructure that allows the formation of a two-dimensional electron gas (commonly referred to as a 2DEG).
@@ -449,6 +453,35 @@ H_{\bm k}=\alpha_1\sigma_0+M\sigma_z
 <p>Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductor is using a semiconducting heterostructure.</p>
 <p>In particular a semiconductor with spin-orbit coupling is placed in conjuction with an <span class="math notranslate nohighlight">\(s\)</span>-wave superconductor. Along with a magnetic field, this allows the <span class="math notranslate nohighlight">\(p\)</span>-wave pairing to occur</p>
 <p><span style="color:red">Insert Figs</span></p>
+<p>Once the samples have been created, it is necessary to have ways to detect Majoranas. Measuring braiding statistics directly using interferometry-style experiments is difficult in solid state setups, and so alternative transport experiments are preferred.</p>
+</section>
+<section id="zero-bias-conductance">
+<h3>Zero-bias conductance<a class="headerlink" href="#zero-bias-conductance" title="Link to this heading">#</a></h3>
+<p>The first of these is not on its own a conclusive signature of Majoranas, although any system with Majoranas will dieplay it.</p>
+<p>Consider a one-dimensional setup (although the argumets here generalise to two dimensions too), where we have a lead in conjunction with a wire in a topological superconductor phase. Tunnelling occurs between the lead and the wire with a rate, <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
+<p><span style="color:red">Insert Fig</span></p>
+<p>At zero temperature, the current is expressed in terms of the applied voltage, <span class="math notranslate nohighlight">\(V\)</span>, and the density of states in the wire, <span class="math notranslate nohighlight">\(\nu(\varepsilon)\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+I = \frac{e\Gamma}{\hbar}\int_0^{eV} {\rm d} \varepsilon \hspace{3pt}\nu(\varepsilon)
+\]</div>
+<p>If we have a single mode in the superconductor (in our case this is the Majorana mode at the end of the wire), the retarded Green’s function which describes the response to an external perturbation is given by</p>
+<div class="math notranslate nohighlight">
+\[
+G^R(\varepsilon) = \frac{1}{\varepsilon-E_0+i\frac{1}{2\tau}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(E_0 = 0\)</span> is the energy of the Majorana mode in the wire, and <span class="math notranslate nohighlight">\(\tau = 1/\Gamma\)</span> is the lifetime of the particle before it “decays” into the lead.</p>
+<p>The density of states is then given by</p>
+<div class="math notranslate nohighlight">
+\[
+\nu(\varepsilon) = -\frac{1}{\pi}{\rm Im}\left[G^R(\varepsilon)\right]= \frac{1}{\pi}\frac{(\Gamma/2)}{\varepsilon^2+(\Gamma/2)^2}
+\]</div>
+<p><span style="color:red">Be more careful with this calculation - the above isnt correct</span></p>
+</section>
+<section id="fractional-josephson-effect">
+<h3>Fractional Josephson Effect<a class="headerlink" href="#fractional-josephson-effect" title="Link to this heading">#</a></h3>
+<p>A more conclusive signature would be the observation of the fractional Joesphson effect, as this probes the non-Abelian braiding statistics of the Majorana modes, however as of yet there haven’t been any reproducible measurements of this.</p>
+<p>Let’s start by breifly summarising the results of the standard Josephson effect. In this setup</p>
 </section>
 </section>
 <section id="summary">
@@ -512,6 +545,8 @@ H_{\bm k}=\alpha_1\sigma_0+M\sigma_z
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-quantum-hall">Fractional Quantum Hall</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">Zero-bias conductance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">Fractional Josephson Effect</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>

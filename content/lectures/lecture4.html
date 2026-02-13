@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Lecture 4 - Topological Superconductors &#8212; Introduction to Topological Phases of Matter</title>
+    <title>4. Topological Superconductors &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -62,7 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture4';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="3. Lecture 3 - Topological Insulators II" href="lecture3.html" />
+    <link rel="next" title="5. The Toric Code" href="lecture5.html" />
+    <link rel="prev" title="3. Topological Insulators II" href="lecture3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,10 +187,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Lecture 1 - Introduction to Topology in Condensed Matter Physics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Lecture 2 - Topological Insulators I</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Lecture 3 - Topological Insulators II</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Lecture 4 - Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Topological Superconductors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
 </ul>
 
     </div>
@@ -328,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 4 - Topological Superconductors</h1>
+    <h1>Topological Superconductors</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,8 +365,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-4-topological-superconductors">
-<h1><span class="section-number">4. </span>Lecture 4 - Topological Superconductors<a class="headerlink" href="#lecture-4-topological-superconductors" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="topological-superconductors">
+<h1><span class="section-number">4. </span>Topological Superconductors<a class="headerlink" href="#topological-superconductors" title="Link to this heading">#</a></h1>
 <p>In this lecture, we turn our attention from topological insulators to topological superconductors. These systems have gained increasing interest in recent years, both due to their interesting fundamental physics but also for their potential use in realising a topological quantum computer.</p>
 <p>In order to introduce the concepts we start with a one-dimensional model initially introduced by Kitaev. Again, we will see that the topological properties are characterised by an invariant with associated edge modes. In the second half of the lecture we will look at a two-dimensional topological superconductor, where again there are edge modes, but in this case there are zero modes which are localised to the edge or to vortices and it is these modes that used in proposed implementations for topological quantum computing. Should you wish to read more about topological superconductors, there are many good reviews and references on the subject <span id="id1">[<a class="reference internal" href="#id6" title="B. Andrei. Bernevig and Taylor L. Hughes. Topological Insulators and Topological Superconductors. Princeton University Press, Princeton, New Jersey, 2013.">BH13</a>, <a class="reference internal" href="#id16" title="Xiao-Liang Qi and Shou-Cheng Zhang. Topological insulators and superconductors. Rev. Mod. Phys., 83:1057–1110, Oct 2011. URL: https://link.aps.org/doi/10.1103/RevModPhys.83.1057, doi:10.1103/RevModPhys.83.1057.">QZ11</a>, <a class="reference internal" href="#id25" title="Jason Alicea. New directions in the pursuit of majorana fermions in solid state systems. Reports on Progress in Physics, 75(7):076501, jun 2012. URL: https://doi.org/10.1088/0034-4885/75/7/076501, doi:10.1088/0034-4885/75/7/076501.">Ali12</a>, <a class="reference internal" href="#id27" title="Andrei Bernevig and Titus Neupert. Topological superconductors and category theory. 2015. URL: https://arxiv.org/abs/1506.05805, arXiv:1506.05805.">BN15</a>, <a class="reference internal" href="#id24" title="Martin Leijnse and Karsten Flensberg. Introduction to topological superconductivity and majorana fermions. Semiconductor Science and Technology, 27(12):124003, nov 2012. URL: https://doi.org/10.1088/0268-1242/27/12/124003, doi:10.1088/0268-1242/27/12/124003.">LF12</a>, <a class="reference internal" href="#id23" title="Masatoshi Sato and Yoichi Ando. Topological superconductors: a review. Reports on Progress in Physics, 80(7):076501, may 2017. URL: https://doi.org/10.1088/1361-6633/aa6ac7, doi:10.1088/1361-6633/aa6ac7.">SA17</a>, <a class="reference internal" href="#id26" title="Masatoshi Sato and Satoshi Fujimoto. Majorana fermions and topology in superconductors. Journal of the Physical Society of Japan, 85(7):072001, 2016. URL: https://doi.org/10.7566/JPSJ.85.072001, arXiv:https://doi.org/10.7566/JPSJ.85.072001, doi:10.7566/JPSJ.85.072001.">SF16</a>]</span></p>
 <section id="the-kitaev-chain">
@@ -594,8 +597,17 @@ H = \hbar v_{\rm F} \sum_k k (\gamma_{1,-k}\gamma_{1,k}+\gamma_{2,-k}\gamma_{2,k
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Lecture 3 - Topological Insulators II</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Topological Insulators II</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="lecture5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>The Toric Code</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
