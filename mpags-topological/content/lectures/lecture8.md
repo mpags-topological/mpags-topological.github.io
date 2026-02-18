@@ -1,6 +1,6 @@
 # Topological Quantum Field Theory: Braiding and modular S and T
 
-Previously, we defined our topological quantum field theory (TQFT) in terms of anyon types, fusion rules, F-moves and R-moves. If these ingredients satisfy certain consistency conditions (the pentagon and hexagon equations), then we have a well-defined TQFT. In this lecture, we will focus on how to extract physical information about the anyons from these ingredients, specifically through braiding and the modular S and T matrices.
+Previously, we defined our topological quantum field theory (TQFT) in terms of anyon types, fusion rules, F-moves and R-moves. If these ingredients satisfy certain consistency conditions (the pentagon and hexagon equations), then we have a well-defined TQFT. In this lecture, we will focus on how to extract physical information about the anyons from these ingredients, specifically through braiding and the modular S and T matrices. As with the last lecture, see {cite}`TopologicalQuantum, Nayak_Review` for more information.
 
 ## Braids
 
@@ -34,11 +34,11 @@ $$
 We have freedom of where we put the indices in the braid operator, and you may see different conventions in the literature. In particular, should the index ordering correspond to the anyon order before or after the braid? The important thing is to be consistent.
 ```
 
-```{admonition} Exercise
+<!-- ```{admonition} Exercise
 Show using the Fibonacci F- and R-moves that the two braid operators for three $\tau$ anyons are
 
 COMPLETE EXERCISE!!!
-```
+``` -->
 
 ## Exchange Statistics: The T matrix
 
@@ -132,7 +132,7 @@ In this section we have seen how to use the F- and R-moves to derive the braidin
 
 
 
-<!--
+
 ---
 
 ## References
@@ -141,4 +141,3 @@ In this section we have seen how to use the F- and R-moves to derive the braidin
 :filter: docname in docnames
 ```
 
--->

@@ -2,7 +2,7 @@
 
 Previously, we introduced anyons and discussed at a high-level some of their properties. For instance, we saw that anyons can have non-trivial exchange and mutual statistics, and we introduced the idea of fusion of anyons. In the next two lectures, we will explore these ideas in more detail, and formulate them in the language of topological quantum field theory (TQFT).
 
-The mathematical formulation of anyon models is (2+1)-dimensional topological quantum field theory (TQFT). More preciely, an anyon model is described by a unitary modular tensor category (UMTC), which encodes the fusion and braiding properties of the anyons. While we are not going to define things in full mathematical rigour, we will introduce the key concepts and structures that are used to describe anyon models.
+The mathematical formulation of anyon models is (2+1)-dimensional topological quantum field theory (TQFT). More preciely, an anyon model is described by a unitary modular tensor category (UMTC), which encodes the fusion and braiding properties of the anyons. While we are not going to define things in full mathematical rigour, we will introduce the key concepts and structures that are used to describe anyon models. For further reading see {cite}`TopologicalQuantum, Nayak_Review`.
 
 ## Anyons
 
@@ -163,7 +163,7 @@ name: fig:fibonacci_three_anyon_states
 
 Importantly here, we have been consistent with the order in which we fuse the anyons.
 
-```{admonition} Exercise:
+<!-- ```{admonition} Exercise:
 
 Given that F(N) = number of diagrams for $N$ anyons, show that F(N) satisfies the Fibonacci recurrence relation
 
@@ -177,7 +177,7 @@ Therefore, $F(N) \sim \phi^{N} = d_\tau^N$, for large $N$, where $\phi = (1 + \s
 
 Q. What fusion diagrams do we get for $N$ $\sigma$-type Ising anyons?
 
-```
+``` -->
 
 ## F-moves
 
@@ -226,7 +226,7 @@ $$
 
 So when we have four anyons, we must have F-moves that satisfy this equation. You might ask, "what about more than four anyons?" It turns out that if the F-moves satisfy the pentagon equation for four anyons, then they will automatically satisfy all higher consistency conditions for more than four anyons. Thus, the pentagon equation is the key consistency condition for the F-moves. 
 
-```{admonition} Exercise
+<!-- ```{admonition} Exercise
 For the Fibonacci anyon model, show that only $F^{\tau \tau \tau}_1$ and $F^{\tau \tau \tau}_\tau$ are non-trivial. Using an (unexplained) gauge freedom in the choice of F-moves, we can set $F^{\tau \tau \tau}_1 = 1$. Therefore, solve the pentagon equation to find the solution
 
 $$
@@ -237,7 +237,7 @@ F^{\tau \tau \tau}_\tau = \begin{pmatrix}
 $$
 where $\phi = (1 + \sqrt{5})/2$ is the golden ratio.
 
-```
+``` -->
 
 
 ## R-moves
@@ -288,7 +288,7 @@ An instance of the Maclance coherence theorem states that if the F- and R-moves 
 
 The pentagon and hexagon equations are generally a complicated set of coupled equations and there is no general closed-form solution for arbitrary anyon models. However, for specific anyon models, solutions can be found. 
 
-```{admonition} Exercise
+<!-- ```{admonition} Exercise
 1. Using that $R^{a1}_{a} = R^{1a}_{a} = 1$, and that $R^{ab}_c = 0$ if $N_{ab}^c = 0$, show that for the Fibonacci anyon model, only $R^{\tau \tau}_1$ and $R^{\tau \tau}_\tau$ are non-trivial.
 
 2. Solve the hexagon equation with $a = b = c = d = \tau$ to find the remaining R-moves. Note there are two solutions related by complex conjugation. One solution is
@@ -297,7 +297,7 @@ $$
 R^{\tau \tau}_1 = e^{-4 \pi i / 5}, \quad R^{\tau \tau}_\tau = e^{3 \pi i / 5}.
 $$  
 
-```
+``` -->
 
 We have now defined our TQFT in terms of anyon types, fusion rules, F-moves and R-moves. In the next lecture, we will see how to use these ingredients to define modular S and T matrices, which encode the braiding properties of the anyons.
 
@@ -307,7 +307,7 @@ In this section we have defined the key ingredients of a TQFT: anyon types, fusi
 
 
 
-<!--
+
 ---
 
 ## References
@@ -316,4 +316,3 @@ In this section we have defined the key ingredients of a TQFT: anyon types, fusi
 :filter: docname in docnames
 ```
 
--->
