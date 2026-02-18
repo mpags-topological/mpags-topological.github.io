@@ -192,7 +192,9 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Topological Insulators II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
 </ul>
 
     </div>
@@ -396,11 +398,11 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 <section id="kramers-theorem">
 <h3><span class="section-number">3.1.1. </span>Kramers’ theorem<a class="headerlink" href="#kramers-theorem" title="Link to this heading">#</a></h3>
 <p>One of the key differences between the Kane-Mele and Haldane models appears in the edge modes</p>
-<figure class="align-default" id="id31">
+<figure class="align-default" id="id33">
 <a class="reference internal image-reference" href="../../_images/HelicalEdgeModes.svg"><img alt="../../_images/HelicalEdgeModes.svg" src="../../_images/HelicalEdgeModes.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">The edge modes in a Chern insulator and a topological insulator.</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">The edge modes in a Chern insulator and a topological insulator.</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In the case of a Chern insulator, we exhibit quantum Hall physics without the magentic field (the quantum anomalous Hall effect) and therefore have chiral edge modes. In contrast to this, topological insulators (in the SPT sense) exhibit the quantum spin Hall effect and have helical edge modes. These are counterpropagating edge modes with opposite spin polarisation. This is expected even in the limit <span class="math notranslate nohighlight">\(\alpha \rightarrow 0\)</span>, where we have two copies of the Haldane model with opposite spins and phases. The question then becomes why don’t these edge modes gap out? The answer is Kramers’ theorem.</p>
@@ -459,11 +461,11 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 <section id="classification">
 <h2><span class="section-number">3.3. </span>Classification<a class="headerlink" href="#classification" title="Link to this heading">#</a></h2>
 <p>One of the key reasons to study symmetries is their relation to the classification to topological phases and identifying the corresponding invariants. In particular is the Altland-Zirnbauer classification scheme <span id="id2">[<a class="reference internal" href="#id23" title="Alexander Altland and Martin R. Zirnbauer. Nonstandard symmetry classes in mesoscopic normal-superconducting hybrid structures. Physical Review B, 55(2):1142–1161, January 1997. URL: http://dx.doi.org/10.1103/PhysRevB.55.1142, doi:10.1103/physrevb.55.1142.">AZ97</a>]</span> (sometimes referred to as a periodic table)</p>
-<figure class="align-default" id="id32">
+<figure class="align-default" id="id34">
 <a class="reference internal image-reference" href="../../_images/AltlandZirnbauer.svg"><img alt="../../_images/AltlandZirnbauer.svg" src="../../_images/AltlandZirnbauer.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">The Altland-Zirnbauer Periodic Table. Figure from <span id="id3">[<a class="reference internal" href="#id24" title="Shinsei Ryu, Andreas P Schnyder, Akira Furusaki, and Andreas W W Ludwig. Topological insulators and superconductors: tenfold way and dimensional hierarchy. New Journal of Physics, 12(6):065010, jun 2010. URL: https://doi.org/10.1088/1367-2630/12/6/065010, doi:10.1088/1367-2630/12/6/065010.">RSFL10</a>]</span>.</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">The Altland-Zirnbauer Periodic Table. Figure from <span id="id3">[<a class="reference internal" href="#id24" title="Shinsei Ryu, Andreas P Schnyder, Akira Furusaki, and Andreas W W Ludwig. Topological insulators and superconductors: tenfold way and dimensional hierarchy. New Journal of Physics, 12(6):065010, jun 2010. URL: https://doi.org/10.1088/1367-2630/12/6/065010, doi:10.1088/1367-2630/12/6/065010.">RSFL10</a>]</span>.</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This table gives the invariants in various dimensions for different symmetry classes. Let’s now explain the table. In the far-left column we have the Altland-Zirnbauer class. Then in the three columns next to this we have whether the symmetries are present. A value of zero indicates the symmetry is broken, whereas a value of <span class="math notranslate nohighlight">\(\pm 1\)</span> gives the value of the symmetry operator squared. The remaining columns give the type of invariant for various dimensions <span class="math notranslate nohighlight">\(d\)</span>. A value of zero means there is no topological phase, a <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> invariant can be any integer (positive or negative), such as the Chern number and a <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> invariant can only take two values.</p>
@@ -503,11 +505,11 @@ H_{\rm SOC} =  -\frac{i\alpha}{2} \sum_{\langle i,j \rangle} \left(b^\dagger_{i+
 \]</div>
 <p>Given the defintion of the Pfaffian above, it is not surprising that the right hand side of this equation is always equal to <span class="math notranslate nohighlight">\(\pm 1\)</span> and therefore <span class="math notranslate nohighlight">\(\nu =0,1\)</span>. It is a <span class="math notranslate nohighlight">\(\mathbb{Z}_2\)</span> invariant as expected.</p>
 <p>The bulk-boundary consequence gave us a nice relation between the Chern number and the number of edge modes in the system. This is less clear now the values of the invariant are heavily restricted. Instead, this invariant looks at the parity of the number of Kramers’ pairs of gapless edge modes. If we have an even number of pairs then the we are in the trivial phase, <span class="math notranslate nohighlight">\(\nu=0\)</span> and if the number of pairs is odd then we can have gapless edge modes and <span class="math notranslate nohighlight">\(\nu = 1\)</span>.</p>
-<figure class="align-default" id="id33">
+<figure class="align-default" id="id35">
 <a class="reference internal image-reference" href="../../_images/KaneMeleEdgeModes.svg"><img alt="../../_images/KaneMeleEdgeModes.svg" src="../../_images/KaneMeleEdgeModes.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">The edge modes in the Kane-Mele model. Figure from <span id="id4">[<a class="reference internal" href="#id22" title="C. L. Kane and E. J. Mele. $Z_2$ topological order and the quantum spin hall effect. Phys. Rev. Lett., 95:146802, Sep 2005. URL: https://link.aps.org/doi/10.1103/PhysRevLett.95.146802, doi:10.1103/PhysRevLett.95.146802.">KM05a</a>]</span>.</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">The edge modes in the Kane-Mele model. Figure from <span id="id4">[<a class="reference internal" href="#id22" title="C. L. Kane and E. J. Mele. $Z_2$ topological order and the quantum spin hall effect. Phys. Rev. Lett., 95:146802, Sep 2005. URL: https://link.aps.org/doi/10.1103/PhysRevLett.95.146802, doi:10.1103/PhysRevLett.95.146802.">KM05a</a>]</span>.</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

@@ -192,7 +192,9 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
 </ul>
 
     </div>
@@ -365,11 +367,11 @@ document.write(`
 <section id="the-ssh-model">
 <h2><span class="section-number">2.1. </span>The SSH Model<a class="headerlink" href="#the-ssh-model" title="Link to this heading">#</a></h2>
 <p>The SSH model is a simple model that demonstrates topological properties. Initially introdiced as a simple model of a polymer <span id="id2">[<a class="reference internal" href="#id18" title="W. P. Su, J. R. Schrieffer, and A. J. Heeger. Solitons in polyacetylene. Phys. Rev. Lett., 42:1698–1701, Jun 1979. URL: https://link.aps.org/doi/10.1103/PhysRevLett.42.1698, doi:10.1103/PhysRevLett.42.1698.">SSH79</a>]</span>, in this model there are unit cells consisting of two different sublattices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The intracell and intercell hopping strengths are given by <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> respectively.</p>
-<figure class="align-default" id="id30">
+<figure class="align-default" id="id32">
 <a class="reference internal image-reference" href="../../_images/SSH_Model.svg"><img alt="../../_images/SSH_Model.svg" src="../../_images/SSH_Model.svg" style="width: 100%; height: 100px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The SSH Model</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The SSH Model</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The Hamiltonian is given by</p>
@@ -432,20 +434,20 @@ d_x &amp;= t_1 + t_2 \cos k, \\ d_y &amp;= t_2 \sin k
 <section id="edge-states">
 <h3><span class="section-number">2.1.1. </span>Edge States<a class="headerlink" href="#edge-states" title="Link to this heading">#</a></h3>
 <p>Let’s start by considering the case where <span class="math notranslate nohighlight">\(|t_1|&gt;|t_2|\)</span>. To do this we will look at <span class="math notranslate nohighlight">\(t_1=1, t_2=0\)</span>. In this case, it is easy to see that all sites are “paired up”.</p>
-<figure class="align-default" id="id31">
+<figure class="align-default" id="id33">
 <a class="reference internal image-reference" href="../../_images/SSH_pairing.svg"><img alt="../../_images/SSH_pairing.svg" src="../../_images/SSH_pairing.svg" style="width: 100%; height: 100px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">All sites are paired in the trivial regime and there are no edge modes.</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">All sites are paired in the trivial regime and there are no edge modes.</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Therefore there are no edge states in this regime, which is consistent with the trivial value of the invariant.</p>
 <p>Now if we consider the opposite limit of <span class="math notranslate nohighlight">\(t_1=0, t_2=1\)</span>, we can see that the pairing now misses out the two edge modes.</p>
-<figure class="align-default" id="id32">
+<figure class="align-default" id="id34">
 <a class="reference internal image-reference" href="../../_images/SSH_Edge_Modes.svg"><img alt="../../_images/SSH_Edge_Modes.svg" src="../../_images/SSH_Edge_Modes.svg" style="width: 100%; height: 100px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">In the topological regime we have edge modes that are unpaired and sit at zero energy</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">In the topological regime we have edge modes that are unpaired and sit at zero energy</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we look at the Hamiltonian in this limit,</p>
@@ -455,11 +457,11 @@ H = \sum_{n=1}^{N-1} \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right)
 \]</div>
 <p>we see that <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(b_N\)</span> (the edges of the system) are no longer involved in the Hamiltonian. This means that we can add a mode to these sites at no energy cost - we have zero-energy (gapless) edge modes. This is consistent with <span class="math notranslate nohighlight">\(\nu \neq 0\)</span> found earlier.</p>
 <p>Even away from the the values of parameters considered here, the topological edge states are found to be robust, as we demonstrate numerically below, where we plot the energy spectrum for 30 sites and the probability distribution for the highlighted mode, which is the mode with the smallest absolute energy.</p>
-<figure class="align-default" id="id33">
+<figure class="align-default" id="id35">
 <a class="reference internal image-reference" href="../../_images/SSH_RealSpace.svg"><img alt="../../_images/SSH_RealSpace.svg" src="../../_images/SSH_RealSpace.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The real space structure of the lowest energy modes (highlighted in the inset) of the SSH model in the trivial (left) and topological (right) regimes.</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The real space structure of the lowest energy modes (highlighted in the inset) of the SSH model in the trivial (left) and topological (right) regimes.</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -468,11 +470,11 @@ H = \sum_{n=1}^{N-1} \left(a_{n+1}^\dagger b_n+b_n^\dagger a_{n+1}\right)
 <h2><span class="section-number">2.2. </span>The Haldane Model<a class="headerlink" href="#the-haldane-model" title="Link to this heading">#</a></h2>
 <p>We now turn to the Haldane Model <span id="id3">[<a class="reference internal" href="#id19" title="F. D. M. Haldane. Model for a quantum hall effect without landau levels: condensed-matter realization of the &quot;parity anomaly&quot;. Phys. Rev. Lett., 61:2015–2018, Oct 1988. URL: https://link.aps.org/doi/10.1103/PhysRevLett.61.2015, doi:10.1103/PhysRevLett.61.2015.">Hal88</a>]</span>, which was the first model of type of matter known as a Chern insulator. A Chern insulator shows the physics of the quantum Hall effect without the magnetic field. Here, we will introduce the model and demonstrate that it has a non-trivial Chern number which can be associated to robust edge modes via the bulk-boundary correspondence.</p>
 <p>The Haldane model is defined on the honeycomb lattice  and consists on three terms.</p>
-<figure class="align-default" id="id34">
+<figure class="align-default" id="id36">
 <a class="reference internal image-reference" href="../../_images/HaldaneModel.svg"><img alt="../../_images/HaldaneModel.svg" src="../../_images/HaldaneModel.svg" style="width: 100%; height: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">The Haldane model. The <span class="math notranslate nohighlight">\(A\)</span> sublattice is purple and the <span class="math notranslate nohighlight">\(B\)</span> sublattice is green. The orange hops have an associated phase of <span class="math notranslate nohighlight">\(\varphi\)</span>.</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">The Haldane model. The <span class="math notranslate nohighlight">\(A\)</span> sublattice is purple and the <span class="math notranslate nohighlight">\(B\)</span> sublattice is green. The orange hops have an associated phase of <span class="math notranslate nohighlight">\(\varphi\)</span>.</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>First, we have the onsite terms where the different sublattices have an energy difference of <span class="math notranslate nohighlight">\(2M\)</span></p>
@@ -533,11 +535,11 @@ d_z({\boldsymbol k})= \frac{M}{2}-t_2\sum_j \sin \varphi \sin({\boldsymbol k}\cd
 M = \pm 3\sqrt{3}t_2\sin \varphi
 \]</div>
 <p>where the plus sign is for the <span class="math notranslate nohighlight">\(K\)</span> point and the minus is at the <span class="math notranslate nohighlight">\(K'\)</span> point. So we have now identified that when this condition is satisfied, the specturm will have a gap closure (at either the <span class="math notranslate nohighlight">\(K\)</span> or <span class="math notranslate nohighlight">\(K'\)</span> point). We can therefore plot a phase diagram of the Haldane model of <span class="math notranslate nohighlight">\(M\)</span> vs <span class="math notranslate nohighlight">\(\varphi\)</span> and calculate the invariant in each regime. For the Haldane model, the invariant is the Chern number and the result is shown below.</p>
-<figure class="align-default" id="id35">
+<figure class="align-default" id="id37">
 <a class="reference internal image-reference" href="../../_images/Haldane_Chern.svg"><img alt="../../_images/Haldane_Chern.svg" src="../../_images/Haldane_Chern.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">The Chern number for the Haldane model. Changes is Chern number occur when the bulk gap closes.</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">The Chern number for the Haldane model. Changes is Chern number occur when the bulk gap closes.</span><a class="headerlink" href="#id37" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -545,18 +547,18 @@ M = \pm 3\sqrt{3}t_2\sin \varphi
 <p>Sometimes in the literature, the <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(+1\)</span> phases will be the other way around. This corresponds to letting <span class="math notranslate nohighlight">\(\varphi \rightarrow -\varphi\)</span> in the original model</p>
 </div>
 <p>The final thing we wish to demonstrate is the edge modes. To do this we consider the model on a cylinder, with periodic boundary conditions in the <span class="math notranslate nohighlight">\(y\)</span> direction and open boundary conditions in the <span class="math notranslate nohighlight">\(x\)</span>. In this setup, the chiral edge mode will appear as a mode on each edge propagating in opposite directions as we sketch below. We also plot the spectrum for <span class="math notranslate nohighlight">\(M=2, \varphi=\pi/2\)</span>, in this setup and clearly highlight the edge modes.</p>
-<figure class="align-default" id="id36">
+<figure class="align-default" id="id38">
 <a class="reference internal image-reference" href="../../_images/CylinderEdgeSketch.svg"><img alt="../../_images/CylinderEdgeSketch.svg" src="../../_images/CylinderEdgeSketch.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">A sketch of how chiral edge modes appear on a cylinder geometry.</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">A sketch of how chiral edge modes appear on a cylinder geometry.</span><a class="headerlink" href="#id38" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id37">
+<figure class="align-default" id="id39">
 <a class="reference internal image-reference" href="../../_images/Haldane_Cylinder.svg"><img alt="../../_images/Haldane_Cylinder.svg" src="../../_images/Haldane_Cylinder.svg" style="width: 100%; height: 300px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">The energy spectrum of the Haldane model in a cylinder setup. The colour shows the localisation of the edge modes.</span><a class="headerlink" href="#id37" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">The energy spectrum of the Haldane model in a cylinder setup. The colour shows the localisation of the edge modes.</span><a class="headerlink" href="#id39" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

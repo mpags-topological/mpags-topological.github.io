@@ -192,7 +192,9 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
 </ul>
 
     </div>
@@ -341,14 +343,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-dimensional-electron-gas-2deg">The two-dimensional electron gas (2DEG)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">Topological Insulators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">Mercury Telluride</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">Band Inversion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatives">Alternatives</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-quantum-hall">Fractional Quantum Hall</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">Zero-bias conductance</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">Fractional Josephson Effect</a></li>
@@ -369,13 +370,21 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="experiments">
 <h1>Experiments<a class="headerlink" href="#experiments" title="Link to this heading">#</a></h1>
 <p>In the final lecture of this course we aim to address some experimental developments as well as limitations. In particular we will focus on setups that utilise semiconducting heterostructures, though other setups are also possible.</p>
+<section id="the-two-dimensional-electron-gas-2deg">
+<h2>The two-dimensional electron gas (2DEG)<a class="headerlink" href="#the-two-dimensional-electron-gas-2deg" title="Link to this heading">#</a></h2>
 <p>Recall that at the start of this course, we looked at the intger quantum Hall effect where there are integer plateaus measured in the differential conductance.</p>
 <p>The typical system in which this effect is measured is a semiconducting heterostructure that allows the formation of a two-dimensional electron gas (commonly referred to as a 2DEG).
 Simple models of semiconductors consist of a filled valence band and an empty conduction band. The two bands are separated by a band gap, with the Fermi energy (below which electronic states are filled at zero temperature) typically sitting within the band gap.</p>
-<p><span style="color:red">Insert Figure</span></p>
 <p>In order to form a 2DEG experimentally, two semiconductors with different band gaps and Fermi energies are brought together. At the interface electrons flow from the semiconductor with the larger Fermi energy to the one with the lower Fermi energy. This flow of electrons leaves behind positively charged ions and therefore an electric field is created. This field bends the bands creating a narrow `well’ at the interface in which the electron gas sits - this is a 2DEG.</p>
-<p><span style="color:red">Insert Figure</span></p>
-<p>Semiconducting heterostructures are common experimental setups for a variety of reasons, some more practical such as being eadily available, affordable and therefore can be used in applications. From a more scientifc point of view they are well understood, their properties can be tuned (for example using gate voltages and doping), and they can also be used in the creation of very clean samples, which can be extremely useful in solid state physics even if it is not desired for the integer quantum Hall effect. A common class of experiments performed using 2DEGs are transport experiments where leads are attached to the sample and quantities such as currents and voltages are measured.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/2DEG.svg"><img alt="../../_images/2DEG.svg" src="../../_images/2DEG.svg" style="width: 100%; height: 200px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">A semiconducting heterostructure (left) can be used to create a two-dimensional electron gas, which sits at the `well’ created by the bands bending (right).</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Semiconducting heterostructures are common experimental setups for a variety of reasons, some more practical such as being readily available, affordable and therefore can be used in applications. From a more scientifc point of view they are well understood, their properties can be tuned (for example using gate voltages and doping), and they can also be used in the creation of very clean samples, which can be extremely useful in solid state physics even if it is not desired for the integer quantum Hall effect. A common class of experiments performed using 2DEGs are transport experiments where leads are attached to the sample and quantities such as currents and voltages are measured.</p>
+</section>
 <section id="topological-insulators">
 <h2>Topological Insulators<a class="headerlink" href="#topological-insulators" title="Link to this heading">#</a></h2>
 <p>Similar setups involving semiconductors can be used to realise topological insulators, using a mechanism known as band inversion.</p>
@@ -383,8 +392,7 @@ Simple models of semiconductors consist of a filled valence band and an empty co
 <section id="mercury-telluride">
 <h3>Mercury Telluride<a class="headerlink" href="#mercury-telluride" title="Link to this heading">#</a></h3>
 <p>The first example of a topological insulator was in mercury telluride heterostructures. These consisted of mercury telluride in conjunction with cadmium telluride.</p>
-<p>Cadmium telluride is a standard semiconductor in that it has an “s-wave” band (called the E1 band), with angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{1}{2}, \tfrac{1}{2})\)</span> at a higher energy than a “p-wave” band (the H1 band) which has angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{3}{2}, -\tfrac{1}{2}, \tfrac{1}{2}, \tfrac{3}{2})\)</span>. Mercury telluride has an inverted structure</p>
-<p><span style="color:red">Insert Figure</span></p>
+<p>Cadmium telluride is a standard semiconductor in that it has an “s-wave” band (called the E1 band), with angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{1}{2}, \tfrac{1}{2})\)</span> at a higher energy than a “p-wave” band (the H1 band) which has angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{3}{2}, -\tfrac{1}{2}, \tfrac{1}{2}, \tfrac{3}{2})\)</span>. Mercury telluride has an inverted structure where the energy levels are the other way round.</p>
 <p>When the two are brought together to form a quantum well, the ordering of the levels depends on the width of the well formed. Below a critical width, <span class="math notranslate nohighlight">\(w_c\sim 6-7 {\rm nm}\)</span>, the ordering is that of a conventional semiconductor and we have a topologically trivial regime. However, as the width of the well is increased beyond the critical value, the energy ordering of the bands switches or inverts and we are left with a topological regime.</p>
 <p><span style="color:red">Insert Figure</span></p>
 </section>
@@ -405,9 +413,9 @@ H = k_x\sigma_x + k_y\sigma_y + M\sigma_z
 <p>This is key in understanding the band inversion process in the quantum well. In this instance the Hamiltonian can be expressed near the <span class="math notranslate nohighlight">\(\Gamma\)</span> point <span class="math notranslate nohighlight">\(\big[(k_x, k_y)=(0,0)\big]\)</span> in the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-H = \left(\begin{matrix}H_{\bm k} &amp; 0 \\ 0 &amp; H^*_{-{\bm k}}\end{matrix}\right)
+H = \left(\begin{matrix}H_{\boldsymbol{k}} &amp; 0 \\ 0 &amp; H^*_{-\boldsymbol{k}}\end{matrix}\right)
 \end{split}\]</div>
-<p>where the upper block can be viewed as acting on spin-up and the lower block on spin-down. The two blocks are then related by time-reversal symmetry. The blocks have the standard two band form <span class="math notranslate nohighlight">\(H_{\bm k}=d_0\sigma_0+{\bm d}\cdot {\bm \sigma}\)</span> with</p>
+<p>where the upper block can be viewed as acting on spin-up and the lower block on spin-down. The two blocks are then related by time-reversal symmetry. The blocks have the standard two band form <span class="math notranslate nohighlight">\(H_{\boldsymbol{k}}=d_0\sigma_0+{\boldsymbol{d}}\cdot { \boldsymbol{\sigma}}\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align*}d_0 &amp;= \alpha_1-\alpha_2(k_x^2+k_y^2)\\d_x+id_y&amp;=\alpha_3(k_x+ik_y)\\ d_z &amp;= M-\alpha_4(k_x^2+k_y^2)\end{align*}
@@ -415,14 +423,14 @@ H = \left(\begin{matrix}H_{\bm k} &amp; 0 \\ 0 &amp; H^*_{-{\bm k}}\end{matrix}\
 <p>where <span class="math notranslate nohighlight">\(\{\alpha_i\}\)</span> are material specific parameters. Let’s consider the <span class="math notranslate nohighlight">\(\Gamma\)</span> point for simplicity. There, the Hamiltonian is simply</p>
 <div class="math notranslate nohighlight">
 \[
-H_{\bm k}=\alpha_1\sigma_0+M\sigma_z
+H_{\boldsymbol{k}}=\alpha_1\sigma_0+M\sigma_z
 \]</div>
 <p>From this it is clear that <span class="math notranslate nohighlight">\(\alpha_1\)</span> is simply an energy offset and <span class="math notranslate nohighlight">\(M\)</span> acts in the same way as the mass parameter in the Dirac equation. In particular, it gives the energy gap between the two-levels at the <span class="math notranslate nohighlight">\(\Gamma\)</span>-point. Now when the width of the well is increased beyond <span class="math notranslate nohighlight">\(w_c\)</span>, the bands invert and therefore the sign of <span class="math notranslate nohighlight">\(M\)</span> has flipped. As for the Dirac equation this leads to a change in the conductivity</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta\sigma_{xy}^{\uparrow} = \frac{e^2}{h}
 \]</div>
-<p>However, in our original Hamiltonian, we also have <span class="math notranslate nohighlight">\(H^*_{-{\bm k}}\)</span> for spin down. Due to time-reversal symmetry in this model, the change in conductivity for this block after the band inversion is</p>
+<p>However, in our original Hamiltonian, we also have <span class="math notranslate nohighlight">\(H^*_{-\boldsymbol{k}}\)</span> for spin down. Due to time-reversal symmetry in this model, the change in conductivity for this block after the band inversion is</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta\sigma_{xy}^{\downarrow} = -\frac{e^2}{h}
@@ -432,22 +440,25 @@ H_{\bm k}=\alpha_1\sigma_0+M\sigma_z
 \[\begin{split}
 \begin{align*}\Delta \sigma_{xy}^{(e)} &amp;= \Delta \sigma_{xy}^{\uparrow} +  \Delta \sigma_{xy}^{\downarrow}=0\\ \Delta \sigma_{xy}^{(s)} &amp;= \Delta \sigma_{xy}^{\uparrow} -  \Delta \sigma_{xy}^{\downarrow}=\frac{2e^2}{h}\end{align*}
 \end{split}\]</div>
-<p>Such an effect can be detected experimentally <span style="color:red">Insert Figure</span></p>
-</section>
-<section id="alternatives">
-<h3>Alternatives<a class="headerlink" href="#alternatives" title="Link to this heading">#</a></h3>
-<p>There are alternatives to the solid state setup described here, although we won’t go into much detial. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this cases, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised. <span style="color:red">Need to check this is true and ref. Also need to think how to finish this section. Pros and cons of this method perhaps</span></p>
+<p>Such an effect can be detected experimentally</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/QSH_Expt.svg"><img alt="../../_images/QSH_Expt.svg" src="../../_images/QSH_Expt.svg" style="width: 100%; height: 300px;" />
+</a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are alternatives to the solid state setup described here, although we won’t go into much detial. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this cases, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised.</p>
+</div>
 </section>
 </section>
 <section id="topological-superconductors">
 <h2>Topological Superconductors<a class="headerlink" href="#topological-superconductors" title="Link to this heading">#</a></h2>
-<p>Now we wish to look at experimental implementations of topological superconductors. These are of particular interest at the moment due to the prediction of Majorana zero modes which can be used in implementations of quantum computing. Before we turn our attention to topological superconductors however, we should be briefly mention another setup where Majoranas are predicted. This is the Franctional Quantum Hall Effect (FQHE).</p>
-<section id="fractional-quantum-hall">
-<h3>Fractional Quantum Hall<a class="headerlink" href="#fractional-quantum-hall" title="Link to this heading">#</a></h3>
-<p>In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of <span class="math notranslate nohighlight">\(e^2/h\)</span> (which can be viewed as having a fractional filling factor, <span class="math notranslate nohighlight">\(\nu\)</span>.)</p>
-<p>Whilst abelian anyons have been observed in the <span class="math notranslate nohighlight">\(\nu=\tfrac{1}{3}\)</span> state through observation of the braiding statistics, no such confirmation has occured for Majorana modes, which are predicted in the <span class="math notranslate nohighlight">\(\nu=\tfrac{5}{2}\)</span> state. As we will see is also true for topological superconductors, there has been some suggestive evidence in transport experiments, but so far nothing conclusive such as measurement of the braiding statistics.</p>
-<p><span style="color:red">Need to check this is all correct and ref</span></p>
-</section>
+<p>Now we wish to look at experimental implementations of topological superconductors. These are of particular interest at the moment due to the prediction of Majorana zero modes which can be used in implementations of quantum computing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Majorana modes are not unique to topological superconductors. They are also predicted to occur in the Fractional Quantum Hall Effect (FQHE). In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of <span class="math notranslate nohighlight">\(e^2/h\)</span> (which can be viewed as having a fractional filling factor, <span class="math notranslate nohighlight">\(\nu\)</span>.)</p>
+<p>Abelian anyons have been observed in the <span class="math notranslate nohighlight">\(\nu=\tfrac{1}{3}\)</span> state through observation of the braiding statistics, no such confirmation has occured for Majorana modes, which are predicted in the <span class="math notranslate nohighlight">\(\nu=\tfrac{5}{2}\)</span> state.</p>
+</div>
 <section id="engineering-topological-superconductors">
 <h3>Engineering Topological Superconductors<a class="headerlink" href="#engineering-topological-superconductors" title="Link to this heading">#</a></h3>
 <p>Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductor is using a semiconducting heterostructure.</p>
@@ -457,36 +468,95 @@ H_{\bm k}=\alpha_1\sigma_0+M\sigma_z
 </section>
 <section id="zero-bias-conductance">
 <h3>Zero-bias conductance<a class="headerlink" href="#zero-bias-conductance" title="Link to this heading">#</a></h3>
-<p>The first of these is not on its own a conclusive signature of Majoranas, although any system with Majoranas will dieplay it.</p>
-<p>Consider a one-dimensional setup (although the argumets here generalise to two dimensions too), where we have a lead in conjunction with a wire in a topological superconductor phase. Tunnelling occurs between the lead and the wire with a rate, <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
+<p>The first of these is not on its own a conclusive signature of Majoranas, although any system with Majoranas will display it.</p>
+<p>Consider a one-dimensional setup (although the argumets here generalise to two dimensions too), where we have a lead in conjunction with a wire in a topological superconductor phase. For voltages smaller than the superconducting gap, there are two possible processes present. These are normal reflection and Andreev reflection, and it is the latter that can result in current flowing through the system.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Normal reflection is a standard reflection process. An electron comes in and doesn’t have enough energy to enter the superconductor. It is simply reflected back in the direction it came. Andreev reflection is specific to a superconductor where at the interface, an electron can be reflected as a hole, and a Cooper pair then propagagtes in the superconductor.</p>
 <p><span style="color:red">Insert Fig</span></p>
-<p>At zero temperature, the current is expressed in terms of the applied voltage, <span class="math notranslate nohighlight">\(V\)</span>, and the density of states in the wire, <span class="math notranslate nohighlight">\(\nu(\varepsilon)\)</span> as</p>
+</div>
+<p>Since the Andreev reflection results in the propagation of a Copper pair, it is this process that facilitates a current passing through the system, with the current depending on the probability of Andreev reflection to occur, <span class="math notranslate nohighlight">\(|S_{he}|^2\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[
-I = \frac{e\Gamma}{\hbar}\int_0^{eV} {\rm d} \varepsilon \hspace{3pt}\nu(\varepsilon)
+I = \frac{2e}{h}\int_0^{eV} {\rm d}\varepsilon |S_{he}(\varepsilon)|^2 \implies G = \frac{{\rm d}I}{{\rm d}V} = \frac{2e^2}{h} |S_{he}(\varepsilon=eV)|^2
 \]</div>
-<p>If we have a single mode in the superconductor (in our case this is the Majorana mode at the end of the wire), the retarded Green’s function which describes the response to an external perturbation is given by</p>
+<p>Since we are interested in a zero bias peak in the conductance (the analysis can be done for finite <span class="math notranslate nohighlight">\(V\)</span> but it is beyond this course), we therefore nned to calculate the probability of Andreev reflection at zero energy. To do this we use the S-matrix which links the incoming to outgoing states.</p>
+<p><span style="color:red">Insert Fig</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Psi_{\rm out} = S \Psi_{\rm in} \implies \left(\begin{matrix} e \\ h \end{matrix}\right)_{\rm out} = \left(\begin{matrix} S_{ee} &amp; S_{eh} \\ S_{he} &amp; S_{hh} \end{matrix}\right)\left(\begin{matrix} e \\ h \end{matrix}\right)_{\rm in}
+\end{split}\]</div>
+<p>Using that the S-matrix obeys particle-hole symmetry means that at <span class="math notranslate nohighlight">\(\varepsilon=0\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[
-G^R(\varepsilon) = \frac{1}{\varepsilon-E_0+i\frac{1}{2\tau}}
+S_{hh}^* = S_{ee}, \hspace{10pt} S_{he}^* = S_{eh}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(E_0 = 0\)</span> is the energy of the Majorana mode in the wire, and <span class="math notranslate nohighlight">\(\tau = 1/\Gamma\)</span> is the lifetime of the particle before it “decays” into the lead.</p>
-<p>The density of states is then given by</p>
+<p>Additionally, we can use that the S-matrix is unitary to lead to the following two conditions: (1) <span class="math notranslate nohighlight">\(|S_{ee}|^2 + |S_{he}|^2\)</span> = 1, and (2) <span class="math notranslate nohighlight">\(2S_{ee}S_{he} = 0\)</span>.</p>
+<p>These conditions lead to two possible forms of the S-matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S_N(0) =  \left(\begin{matrix} {\rm e}^{i\alpha} &amp; 0 \\ 0 &amp; {\rm e}^{-i\alpha} \end{matrix}\right), \hspace{10pt} S_A(0) =  \left(\begin{matrix} 0 &amp; {\rm e}^{-i\beta} \\ {\rm e}^{i\beta} &amp; 0 \end{matrix}\right)
+\end{split}\]</div>
+<p>where the first corresponds to perfect normal reflection and the second, perfect Andreev reflection. If the superconductor is in the trivial regime, then we have perfect normal reflection, whereas if the superconductor is in the topological regime we have perfect Andreev reflection. The actual mechanism by which this occurs is slightly more involved than the introductory arguments presented here, but the zero-energy edge mode facilitates the conversion of the electron to the hole, therefore enabling the Andreev reflection. This results in a zero bias conductance peak</p>
 <div class="math notranslate nohighlight">
 \[
-\nu(\varepsilon) = -\frac{1}{\pi}{\rm Im}\left[G^R(\varepsilon)\right]= \frac{1}{\pi}\frac{(\Gamma/2)}{\varepsilon^2+(\Gamma/2)^2}
+ G(V=0) = \frac{2e^2}{h}
 \]</div>
-<p><span style="color:red">Be more careful with this calculation - the above isnt correct</span></p>
+<p>Some groups have reported measurements of this peak suggesting the observation of Majoranas, however it turns out that similar peaks can be caused by low-energy modes that arise due to disorder in the system. A definitive measurement of Majorana zero modes is still sought after.</p>
 </section>
 <section id="fractional-josephson-effect">
 <h3>Fractional Josephson Effect<a class="headerlink" href="#fractional-josephson-effect" title="Link to this heading">#</a></h3>
-<p>A more conclusive signature would be the observation of the fractional Joesphson effect, as this probes the non-Abelian braiding statistics of the Majorana modes, however as of yet there haven’t been any reproducible measurements of this.</p>
-<p>Let’s start by breifly summarising the results of the standard Josephson effect. In this setup</p>
+<p>A more conclusive signature would be the observation of the fractional Joesphson effect, however as of yet there haven’t been any reproducible measurements of this.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The standard Josephson effect considers two superconductors separated by a tunnel barrier.</p>
+<p><span style="color:red">Insert Fig</span></p>
+<p>The order parameters for these can be expressed in the form <span class="math notranslate nohighlight">\(\psi_i = \sqrt{n_i}{\rm e}^{i\phi_i}\)</span>, where <span class="math notranslate nohighlight">\(n_i\)</span> is the number density of Cooper pairs. The phase difference <span class="math notranslate nohighlight">\(\delta\phi=\phi_R-\phi_L\)</span> results in a current flowing between the superconductors</p>
+<div class="math notranslate nohighlight">
+\[
+I = I_{\rm c} \sin(\delta\phi) 
+\]</div>
+<p>Additionally, if we apply a voltage across the Josephson junction, we can write</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{{\rm d}\delta\phi}{{\rm d}t} = \frac{2e}{\hbar}V(t)
+\]</div>
+<p>which results in the Josephson current becoming time dependent <span class="math notranslate nohighlight">\(I(t) = I_{\rm c} \sin(\delta\phi(t)) \)</span></p>
+</div>
+<p>Consider two Kitaev chains (labelled by <span class="math notranslate nohighlight">\(\alpha=L,R\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\alpha}= -t\sum_{m=1}^{N-1}\left(c_{m+1, \alpha}^\dagger c_{m, \alpha} + c_{m, \alpha}^\dagger c_{m+1, \alpha}\right) - \mu\sum_{m=1}^Nc_{m, \alpha}^\dagger c_{m, \alpha} + \sum_{m=1}^{N-1}\left(\Delta c_{m, \alpha} c_{m+1, \alpha} + \Delta^*c_{m+1, \alpha}^\dagger c_{m, \alpha}^\dagger\right)
+\]</div>
+<p>The coupling between the superconductors is then given by</p>
+<div class="math notranslate nohighlight">
+\[
+H_{\rm tun} = -\Gamma(c_{L, N}^\dagger c_{R,1}+{\rm h.c.})
+\]</div>
+<p>In the topological regime, <span class="math notranslate nohighlight">\(\mu=0, t=|\Delta|\)</span>, we write the Hamiltonians in terms of the Majorana operators</p>
+<div class="math notranslate nohighlight">
+\[
+H_\alpha = it\sum_{m=1}^{N-1} \gamma_{2m, \alpha} \gamma_{2m+1,\alpha} 
+\]</div>
+<p>Recall that the zero energy edge modes don’t appear in this Hamiltonian and therefore if we want to just explore the effect of these zero modes on the Josephson current we need to see how these zero modes appear in the tunnelling term. Writing the tunnelling term in terms of Majorana operators and only keeping the zero-energy edge operators, leads to the effective low-energy Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+H_{\rm eff} &amp;= -\frac{\Gamma}{2}\left(-\frac{1}{2}{\rm e}^{-i\delta\phi/2}i\gamma_{2N}^{(L)}\gamma_1^{(R)} + {\rm h.c.}\right) \\ &amp;=-\frac{\Gamma}{2}\cos \left(\frac{\delta\phi}{2}\right)i\gamma_{2N}^{(L)}\gamma_1^{(R)} \\ &amp;=-\Gamma  \cos \left(\frac{\delta\phi}{2}\right) (n_f-\tfrac{1}{2})
+\end{align*}
+\end{split}\]</div>
+<p>where in the last line we have defined a fermion <span class="math notranslate nohighlight">\(f=\tfrac{1}{2}(\gamma_{2N}^{(L)} + i\gamma_1^{(R)} )\)</span> and <span class="math notranslate nohighlight">\(n_f = f^\dagger f\)</span>.</p>
+<p>The Josephson current. due to the zero-energy edge modes is then</p>
+<div class="math notranslate nohighlight">
+\[
+I = \frac{2e}{\hbar}\frac{{\rm d}E}{{\rm d}(\delta\phi)} = \pm \frac{e\Gamma}{\hbar}\sin \left(\frac{\delta\phi}{2}\right)
+\]</div>
+<p>where the plus sign is for <span class="math notranslate nohighlight">\(n_f=1\)</span> and the minus is for <span class="math notranslate nohighlight">\(n_f=0\)</span>. Note that <span class="math notranslate nohighlight">\(n_f\)</span> is conserved so we can’t go between the branches. This is the fractional Josephson effect. The reason for the name is that the current is proportional to <span class="math notranslate nohighlight">\((e/h)\)</span> rather than <span class="math notranslate nohighlight">\((2e/h)\)</span>, so we can think of a fraction of a Cooper pair being transmitted. Perhaps more importantly is that the current is proportional to <span class="math notranslate nohighlight">\(\sin(\delta\phi/2)\)</span> rather than <span class="math notranslate nohighlight">\(\sin(\delta\phi)\)</span>, which means we have double the period to <span class="math notranslate nohighlight">\(4\pi\)</span>. This, if observed, would be a clear signature of Majorana modes.</p>
 </section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
-<p>Results claiming to have observed Majoranas are still contested</p>
+<p>The original observation of topological insulators represented a key breakthrough in the study of topological physics and has led to many further studies. The path to observe Majoranas has been more challenging and there are other experiments that we have not had time to cover here, particularly interferometry style experiments which aim to probe the non-Abelian statistics of Majoranas more directly. Despite many different experimental avenues being explored,results claiming to have observed Majoranas are still contested and we still don’t have conclusive evidence of their existence. Their detection, however, is still an active area of research, particularly due to their proposed use in topological quantum computation.</p>
 </section>
 </section>
 
@@ -536,14 +606,13 @@ G^R(\varepsilon) = \frac{1}{\varepsilon-E_0+i\frac{1}{2\tau}}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-dimensional-electron-gas-2deg">The two-dimensional electron gas (2DEG)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">Topological Insulators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">Mercury Telluride</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">Band Inversion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternatives">Alternatives</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-quantum-hall">Fractional Quantum Hall</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">Zero-bias conductance</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">Fractional Josephson Effect</a></li>

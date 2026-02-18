@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Topological Quantum Field Theory: Fusion and Braiding &#8212; Introduction to Topological Phases of Matter</title>
+    <title>7. Topological Quantum Field Theory: Fusion and Braiding &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -62,6 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture7';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8. Topological Quantum Field Theory: Braiding and modular S and T" href="lecture8.html" />
+    <link rel="prev" title="6. Introduction to Anyons" href="lecture6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +126,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -186,13 +186,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
 </ul>
 
     </div>
@@ -341,22 +343,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">Anyons</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-fusion">Properties of Fusion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-dimensions">Quantum Dimensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">7.1. Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">7.2. Fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-fusion">7.2.1. Properties of Fusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-dimensions">7.2.2. Quantum Dimensions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion-diagrams">Fusion Diagrams</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-moves">F-moves</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pentagon-equation">The Pentagon Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion-diagrams">7.3. Fusion Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-moves">7.4. F-moves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pentagon-equation">7.4.1. The Pentagon Equation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-moves">R-moves</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hexagon-equations">The Hexagon Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-moves">7.5. R-moves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hexagon-equations">7.5.1. The Hexagon Equations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">7.6. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">7.7. References</a></li>
 </ul>
             </nav>
         </div>
@@ -369,22 +372,22 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="topological-quantum-field-theory-fusion-and-braiding">
-<h1>Topological Quantum Field Theory: Fusion and Braiding<a class="headerlink" href="#topological-quantum-field-theory-fusion-and-braiding" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">7. </span>Topological Quantum Field Theory: Fusion and Braiding<a class="headerlink" href="#topological-quantum-field-theory-fusion-and-braiding" title="Link to this heading">#</a></h1>
 <p>Previously, we introduced anyons and discussed at a high-level some of their properties. For instance, we saw that anyons can have non-trivial exchange and mutual statistics, and we introduced the idea of fusion of anyons. In the next two lectures, we will explore these ideas in more detail, and formulate them in the language of topological quantum field theory (TQFT).</p>
-<p>The mathematical formulation of anyon models is (2+1)-dimensional topological quantum field theory (TQFT). More preciely, an anyon model is described by a unitary modular tensor category (UMTC), which encodes the fusion and braiding properties of the anyons. While we are not going to define things in full mathematical rigour, we will introduce the key concepts and structures that are used to describe anyon models.</p>
+<p>The mathematical formulation of anyon models is (2+1)-dimensional topological quantum field theory (TQFT). More preciely, an anyon model is described by a unitary modular tensor category (UMTC), which encodes the fusion and braiding properties of the anyons. While we are not going to define things in full mathematical rigour, we will introduce the key concepts and structures that are used to describe anyon models. For further reading see <span id="id1">[<a class="reference internal" href="lecture8.html#id3" title="Steven H. Simon. Topological Quantum. Oxford University Press, 09 2023. ISBN 9780198886723. URL: https://doi.org/10.1093/oso/9780198886723.001.0001, doi:10.1093/oso/9780198886723.001.0001.">Sim23</a>, <a class="reference internal" href="lecture8.html#id28" title="Chetan Nayak, Steven H. Simon, Ady Stern, Michael Freedman, and Sankar Das Sarma. Non-abelian anyons and topological quantum computation. Rev. Mod. Phys., 80:1083–1159, Sep 2008. URL: https://link.aps.org/doi/10.1103/RevModPhys.80.1083, doi:10.1103/RevModPhys.80.1083.">NSS+08</a>]</span>.</p>
 <section id="anyons">
-<h2>Anyons<a class="headerlink" href="#anyons" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.1. </span>Anyons<a class="headerlink" href="#anyons" title="Link to this heading">#</a></h2>
 <figure class="align-center" id="fig-anyon-types">
 <a class="reference internal image-reference" href="../../_images/AnyonTypes.svg"><img alt="../../_images/AnyonTypes.svg" src="../../_images/AnyonTypes.svg" style="width: 65%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Different anyon types represented as labelled lines. The arrows indicate the direction of time.</span><a class="headerlink" href="#fig-anyon-types" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Different anyon types represented as labelled lines. The arrows indicate the direction of time.</span><a class="headerlink" href="#fig-anyon-types" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The first ingredient in our TQFT is the anyon types (otherwise known as topological charges or topological sectors). This is a finite set of labels, which we will denote by <span class="math notranslate nohighlight">\(\mathbb{A} = \{1, a, b, c, \ldots\}\)</span>. We will draw anyons in diagrams as lines labelled by their anyon type. The label <span class="math notranslate nohighlight">\(1\)</span> is reserved for the vacuum anyon, and must always be present in the anyon model. The vacuum anyon has the property that fusing (which we come to shortly) it with any other anyon leaves that anyon unchanged, and that it is its own anti-particle. Each anyon type <span class="math notranslate nohighlight">\(a\)</span> has a unique anti-particle <span class="math notranslate nohighlight">\(\bar{a}\)</span>, such that fusing <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(\bar{a}\)</span> can yield the vacuum anyon. In our diagrams, we will represent the anti-particle of an anyon by reversing the arrow on the line representing that anyon. If an anyon is its own anti-particle, i.e. <span class="math notranslate nohighlight">\(\bar{a} = a\)</span> we will simply draw it without an arrow.</p>
 </section>
 <section id="fusion">
-<h2>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.2. </span>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
 <p>Given our anyon labels we can define <strong>fusion rules</strong>, which describe how anyons can combine together. The fusion rules are written as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -430,7 +433,7 @@ m \times m &amp; = 1  &amp; m \times \epsilon &amp; = e \\
 <p>where the 8-dimensional representation appears twice on the right-hand side.</p>
 </div>
 <section id="properties-of-fusion">
-<h3>Properties of Fusion<a class="headerlink" href="#properties-of-fusion" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.2.1. </span>Properties of Fusion<a class="headerlink" href="#properties-of-fusion" title="Link to this heading">#</a></h3>
 <p>To define a tensor category (the core structure underlying TQFTs), the fusion rules must satisfy a number of properties:</p>
 <ul>
 <li><p><strong>Commutativity:</strong> Fusion is commutative, i.e.</p>
@@ -460,7 +463,7 @@ m \times m &amp; = 1  &amp; m \times \epsilon &amp; = e \\
 </ul>
 </section>
 <section id="quantum-dimensions">
-<h3>Quantum Dimensions<a class="headerlink" href="#quantum-dimensions" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.2.2. </span>Quantum Dimensions<a class="headerlink" href="#quantum-dimensions" title="Link to this heading">#</a></h3>
 <figure class="align-center" id="fig-quantum-dimension">
 <a class="reference internal image-reference" href="../../_images/QuantumDimension.svg"><img alt="../../_images/QuantumDimension.svg" src="../../_images/QuantumDimension.svg" style="width: 30%;" />
 </a>
@@ -474,21 +477,21 @@ d_a d_b = \sum_{c \in \mathbb{A}} N_{ab}^c \, d_c.
 </section>
 </section>
 <section id="fusion-diagrams">
-<h2>Fusion Diagrams<a class="headerlink" href="#fusion-diagrams" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.3. </span>Fusion Diagrams<a class="headerlink" href="#fusion-diagrams" title="Link to this heading">#</a></h2>
 <p>We can think of fusion rules as specifying the allowed ways that two anyons can fuse or combine. They also allow us to define a state space associated with a set of anyons. We will represent fusion processes using <strong>fusion diagrams</strong>.</p>
 <figure class="align-center" id="fig-fusion-diagram">
 <a class="reference internal image-reference" href="../../_images/FusionDiagram.svg"><img alt="../../_images/FusionDiagram.svg" src="../../_images/FusionDiagram.svg" style="width: 50%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">A fusion diagram showing anyons a and b fusing to form anyon c. A splitting diagram is also shown, where anyon c splits into anyons a and b.</span><a class="headerlink" href="#fig-fusion-diagram" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.2 </span><span class="caption-text">A fusion diagram showing anyons a and b fusing to form anyon c. A splitting diagram is also shown, where anyon c splits into anyons a and b.</span><a class="headerlink" href="#fig-fusion-diagram" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We can also use an alternative representation where we take a top-down view of the fusion process, as shown in Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:fusion_diagram_topdown</span></code>.</p>
+<p>We can also use an alternative representation where we take a top-down view of the fusion process, as shown in Figure <a class="reference internal" href="#fig-fusion-diagram-topdown"><span class="std std-numref">Fig. 7.3</span></a>.</p>
 <figure class="align-center" id="fig-fusion-diagram-topdown">
 <a class="reference internal image-reference" href="../../_images/FusionDiagramTopDown.svg"><img alt="../../_images/FusionDiagramTopDown.svg" src="../../_images/FusionDiagramTopDown.svg" style="width: 65%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">A top-down view of a fusion diagram showing anyons a and b fusing to form anyon c.</span><a class="headerlink" href="#fig-fusion-diagram-topdown" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">A top-down view of a fusion diagram showing anyons a and b fusing to form anyon c.</span><a class="headerlink" href="#fig-fusion-diagram-topdown" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For a given set of anyons, we can define a vector space of states associated with that configuration. For example, for two Fibonacci anyons <span class="math notranslate nohighlight">\(\tau\)</span>, we have two possible fusion channels, corresponding to two states</p>
@@ -502,26 +505,30 @@ d_a d_b = \sum_{c \in \mathbb{A}} N_{ab}^c \, d_c.
 </a>
 </figure>
 <p>Importantly here, we have been consistent with the order in which we fuse the anyons.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise:</p>
-<p>Given that F(N) = number of diagrams for <span class="math notranslate nohighlight">\(N\)</span> anyons, show that F(N) satisfies the Fibonacci recurrence relation</p>
-<div class="math notranslate nohighlight">
-\[
+<!-- ```{admonition} Exercise:
+
+Given that F(N) = number of diagrams for $N$ anyons, show that F(N) satisfies the Fibonacci recurrence relation
+
+$$
 F(N+1) = F(N) + F(N-1),
-\]</div>
-<p>with initial conditions F(1) = 1 and F(2) = 1.</p>
-<p>Therefore, <span class="math notranslate nohighlight">\(F(N) \sim \phi^{N} = d_\tau^N\)</span>, for large <span class="math notranslate nohighlight">\(N\)</span>, where <span class="math notranslate nohighlight">\(\phi = (1 + \sqrt{5})/2\)</span> is the golden ratio.</p>
-<p>Q. What fusion diagrams do we get for <span class="math notranslate nohighlight">\(N\)</span> <span class="math notranslate nohighlight">\(\sigma\)</span>-type Ising anyons?</p>
-</div>
+$$
+
+with initial conditions F(1) = 1 and F(2) = 1.
+
+Therefore, $F(N) \sim \phi^{N} = d_\tau^N$, for large $N$, where $\phi = (1 + \sqrt{5})/2$ is the golden ratio.
+
+Q. What fusion diagrams do we get for $N$ $\sigma$-type Ising anyons?
+
+``` -->
 </section>
 <section id="f-moves">
-<h2>F-moves<a class="headerlink" href="#f-moves" title="Link to this heading">#</a></h2>
-<p>An important point when defining the states in the previous section was that we had to fix the order in which we fused the anyons. However, we can change the order in which we fuse the anyons and also get a valid state. For example, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:different_fusion_orders</span></code> for three anyons <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, we can either fuse <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> first, and then fuse the result with <span class="math notranslate nohighlight">\(c\)</span>, or we can fuse <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> first, and then fuse the result with <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<h2><span class="section-number">7.4. </span>F-moves<a class="headerlink" href="#f-moves" title="Link to this heading">#</a></h2>
+<p>An important point when defining the states in the previous section was that we had to fix the order in which we fused the anyons. However, we can change the order in which we fuse the anyons and also get a valid state. For example, as shown in <a class="reference internal" href="#fig-different-fusion-orders"><span class="std std-numref">Fig. 7.4</span></a> for three anyons <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, we can either fuse <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> first, and then fuse the result with <span class="math notranslate nohighlight">\(c\)</span>, or we can fuse <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> first, and then fuse the result with <span class="math notranslate nohighlight">\(a\)</span>.</p>
 <figure class="align-center" id="fig-different-fusion-orders">
 <a class="reference internal image-reference" href="../../_images/DifferentFusionOrders.svg"><img alt="../../_images/DifferentFusionOrders.svg" src="../../_images/DifferentFusionOrders.svg" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Two different fusion orders for three anyons a, b and c.</span><a class="headerlink" href="#fig-different-fusion-orders" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Two different fusion orders for three anyons a, b and c.</span><a class="headerlink" href="#fig-different-fusion-orders" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The question is: how are these two different fusion orders related? To relate the two we need to add a new ingredient into our TQFT, known as the <strong>F-symbols</strong> or <strong>F-moves</strong>. The F-symbols are complex numbers that relate different fusion orders. For three anyons <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> fusing to form anyon <span class="math notranslate nohighlight">\(d\)</span>, the F-move is written as</p>
@@ -529,18 +536,18 @@ F(N+1) = F(N) + F(N-1),
 <a class="reference internal image-reference" href="../../_images/FMove.svg"><img alt="../../_images/FMove.svg" src="../../_images/FMove.svg" style="width: 80%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">An F-move relating two different fusion orders for three anyons a, b and c fusing to form anyon d.</span><a class="headerlink" href="#fig-f-move" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.5 </span><span class="caption-text">An F-move relating two different fusion orders for three anyons a, b and c fusing to form anyon d.</span><a class="headerlink" href="#fig-f-move" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For us, we consider the case where the F-moves are unitary transformations, i.e. <span class="math notranslate nohighlight">\([F^{abc}_d]^{-1}_{fe} = [F^{abc}_d]^{*}_{ef}\)</span>. We also have that <span class="math notranslate nohighlight">\(F^{abc}_d\)</span> is <em>trivial</em> if any of <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(d\)</span> is the vacuum anyon. What trivial means will depend on which anyon is the vacuum, in these cases the diagram boils down to a slightly deformed version of two-anyon fusion.</p>
 <section id="the-pentagon-equation">
-<h3>The Pentagon Equation<a class="headerlink" href="#the-pentagon-equation" title="Link to this heading">#</a></h3>
-<p>While the F-moves are an ingredient we add into our definition of the TQFT, they cannot be chosen arbitrarily. The F-moves must satisfy a consistency condition known as the <strong>pentagon equation</strong>. The pentagon equation arises when we consider four anyons <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span> fusing to form anyon <span class="math notranslate nohighlight">\(e\)</span>. Given any two fusion orders, there are two distinct sequences of F-moves that relate them, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:pentagon_equation</span></code>. For the TQFT to be consistent, these two sequences of F-moves must give the same result. This requirement leads to the pentagon equation, which can be written as</p>
+<h3><span class="section-number">7.4.1. </span>The Pentagon Equation<a class="headerlink" href="#the-pentagon-equation" title="Link to this heading">#</a></h3>
+<p>While the F-moves are an ingredient we add into our definition of the TQFT, they cannot be chosen arbitrarily. The F-moves must satisfy a consistency condition known as the <strong>pentagon equation</strong>. The pentagon equation arises when we consider four anyons <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span> fusing to form anyon <span class="math notranslate nohighlight">\(e\)</span>. Given any two fusion orders, there are two distinct sequences of F-moves that relate them, as shown in <a class="reference internal" href="#fig-pentagon-equation"><span class="std std-numref">Fig. 7.6</span></a>. For the TQFT to be consistent, these two sequences of F-moves must give the same result. This requirement leads to the pentagon equation, which can be written as</p>
 <figure class="align-center" id="fig-pentagon-equation">
 <a class="reference internal image-reference" href="../../_images/PentagonEquation.svg"><img alt="../../_images/PentagonEquation.svg" src="../../_images/PentagonEquation.svg" style="width: 95%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">The pentagon equation relating two different sequences of F-moves for four anyons a, b, c and d fusing to form anyon e.</span><a class="headerlink" href="#fig-pentagon-equation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.6 </span><span class="caption-text">The pentagon equation relating two different sequences of F-moves for four anyons a, b, c and d fusing to form anyon e.</span><a class="headerlink" href="#fig-pentagon-equation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Mathematically, the pentagon equation is written as</p>
@@ -549,28 +556,28 @@ F(N+1) = F(N) + F(N-1),
 \left[ F^{fcd}_e \right]_{gl} \left[ F^{abl}_e \right]_{fk} = \sum_{h} \left[ F^{abc}_g \right]_{fh}  \left[ F^{ahd}_e \right]_{gk} \left[ F^{bcd}_k \right]_{hl}. 
 \]</div>
 <p>So when we have four anyons, we must have F-moves that satisfy this equation. You might ask, “what about more than four anyons?” It turns out that if the F-moves satisfy the pentagon equation for four anyons, then they will automatically satisfy all higher consistency conditions for more than four anyons. Thus, the pentagon equation is the key consistency condition for the F-moves.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>For the Fibonacci anyon model, show that only <span class="math notranslate nohighlight">\(F^{\tau \tau \tau}_1\)</span> and <span class="math notranslate nohighlight">\(F^{\tau \tau \tau}_\tau\)</span> are non-trivial. Using an (unexplained) gauge freedom in the choice of F-moves, we can set <span class="math notranslate nohighlight">\(F^{\tau \tau \tau}_1 = 1\)</span>. Therefore, solve the pentagon equation to find the solution</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<!-- ```{admonition} Exercise
+For the Fibonacci anyon model, show that only $F^{\tau \tau \tau}_1$ and $F^{\tau \tau \tau}_\tau$ are non-trivial. Using an (unexplained) gauge freedom in the choice of F-moves, we can set $F^{\tau \tau \tau}_1 = 1$. Therefore, solve the pentagon equation to find the solution
+
+$$
 F^{\tau \tau \tau}_\tau = \begin{pmatrix}
-\phi^{-1} &amp; \phi^{-1/2} \\
-\phi^{-1/2} &amp; -\phi^{-1}
+\phi^{-1} & \phi^{-1/2} \\
+\phi^{-1/2} & -\phi^{-1}
 \end{pmatrix},
-\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi = (1 + \sqrt{5})/2\)</span> is the golden ratio.</p>
-</div>
+$$
+where $\phi = (1 + \sqrt{5})/2$ is the golden ratio.
+
+``` -->
 </section>
 </section>
 <section id="r-moves">
-<h2>R-moves<a class="headerlink" href="#r-moves" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.5. </span>R-moves<a class="headerlink" href="#r-moves" title="Link to this heading">#</a></h2>
 <p>So far, we have only considered fusion of anyons, but we also need to be able to exchange or braid anyons. To describe the braiding of anyons, we introduce another ingredient into our TQFT, known as the <strong>R-symbols</strong> or <strong>R-moves</strong>. The R-moves are complex numbers that relate a diagram with a crossing (i.e. an exchange of two anyons) to a diagram without a crossing. For two anyons <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> fusing to form anyon <span class="math notranslate nohighlight">\(c\)</span>, the R-move is written as</p>
 <figure class="align-center" id="fig-r-move">
 <a class="reference internal image-reference" href="../../_images/RMove.svg"><img alt="../../_images/RMove.svg" src="../../_images/RMove.svg" style="width: 50%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">An R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.</span><a class="headerlink" href="#fig-r-move" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text">An R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.</span><a class="headerlink" href="#fig-r-move" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>We have introduced crossing in our diagrams. We should think of having another spatial dimension sticking out of the page, so that we can have one anyon going “over” another anyon.</p>
@@ -578,12 +585,12 @@ F^{\tau \tau \tau}_\tau = \begin{pmatrix}
 <a class="reference internal image-reference" href="../../_images/RMoveTopDown.svg"><img alt="../../_images/RMoveTopDown.svg" src="../../_images/RMoveTopDown.svg" style="width: 60%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">A top-down view of an R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.</span><a class="headerlink" href="#fig-r-move-topdown" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.8 </span><span class="caption-text">A top-down view of an R-move relating a diagram with a crossing of anyons a and b to a diagram without a crossing, where a and b fuse to form anyon c.</span><a class="headerlink" href="#fig-r-move-topdown" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The R-moves, <span class="math notranslate nohighlight">\(R^{ab}_c\)</span>, are complex phases with <span class="math notranslate nohighlight">\([R^{ab}_c]^{-1} = [R^{ab}_c]^*\)</span>. Similar to the F-moves, the R-moves are trivial (meaning equal to 1) if <span class="math notranslate nohighlight">\(a\)</span> or <span class="math notranslate nohighlight">\(b\)</span> is the vacuum anyon. If <span class="math notranslate nohighlight">\(c\)</span> is the vacuum anyon, then the R-move corresponds to exchanging an anyon with its anti-particle, which can give a non-trivial phase.</p>
 <section id="the-hexagon-equations">
-<h3>The Hexagon Equations<a class="headerlink" href="#the-hexagon-equations" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.5.1. </span>The Hexagon Equations<a class="headerlink" href="#the-hexagon-equations" title="Link to this heading">#</a></h3>
 <p>Just as for the F-moves, not all choices of R-moves are allowed. Here the choice of <span class="math notranslate nohighlight">\(R\)</span> has to be consistent with the F-moves and satisfy the <strong>hexagon equation</strong>.</p>
 <figure class="align-center" id="fig-hexagon-equation">
 <a class="reference internal image-reference" href="../../_images/HexagonEquation.svg"><img alt="../../_images/HexagonEquation.svg" src="../../_images/HexagonEquation.svg" style="width: 95%;" />
@@ -596,33 +603,39 @@ R^{ab}_e \left[ F^{bac}_d \right]_{eg} R^{ac}_g = \sum_{f} \left[ F^{abc}_d \rig
 \]</div>
 <p>An instance of the Maclance coherence theorem states that if the F- and R-moves satisfy the pentagon and hexagon equations, then all higher consistency conditions for more anyons are automatically satisfied.</p>
 <p>The pentagon and hexagon equations are generally a complicated set of coupled equations and there is no general closed-form solution for arbitrary anyon models. However, for specific anyon models, solutions can be found.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<ol class="arabic simple">
-<li><p>Using that <span class="math notranslate nohighlight">\(R^{a1}_{a} = R^{1a}_{a} = 1\)</span>, and that <span class="math notranslate nohighlight">\(R^{ab}_c = 0\)</span> if <span class="math notranslate nohighlight">\(N_{ab}^c = 0\)</span>, show that for the Fibonacci anyon model, only <span class="math notranslate nohighlight">\(R^{\tau \tau}_1\)</span> and <span class="math notranslate nohighlight">\(R^{\tau \tau}_\tau\)</span> are non-trivial.</p></li>
-<li><p>Solve the hexagon equation with <span class="math notranslate nohighlight">\(a = b = c = d = \tau\)</span> to find the remaining R-moves. Note there are two solutions related by complex conjugation. One solution is</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
+<!-- ```{admonition} Exercise
+1. Using that $R^{a1}_{a} = R^{1a}_{a} = 1$, and that $R^{ab}_c = 0$ if $N_{ab}^c = 0$, show that for the Fibonacci anyon model, only $R^{\tau \tau}_1$ and $R^{\tau \tau}_\tau$ are non-trivial.
+
+2. Solve the hexagon equation with $a = b = c = d = \tau$ to find the remaining R-moves. Note there are two solutions related by complex conjugation. One solution is
+
+$$
 R^{\tau \tau}_1 = e^{-4 \pi i / 5}, \quad R^{\tau \tau}_\tau = e^{3 \pi i / 5}.
-\]</div>
-</div>
+$$  
+
+``` -->
 <p>We have now defined our TQFT in terms of anyon types, fusion rules, F-moves and R-moves. In the next lecture, we will see how to use these ingredients to define modular S and T matrices, which encode the braiding properties of the anyons.</p>
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.6. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this section we have defined the key ingredients of a TQFT: anyon types, fusion rules, F-moves and R-moves. We have also discussed the consistency conditions that these ingredients must satisfy, namely the pentagon and hexagon equations. In the next lecture, we will see how to use these ingredients to extract physical information about the anyons, specifically through braiding and the modular S and T matrices.</p>
-<!--
----
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
-
---></section>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h2><span class="section-number">7.7. </span>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">NSS+08</a><span class="fn-bracket">]</span></span>
+<p>Chetan Nayak, Steven H. Simon, Ady Stern, Michael Freedman, and Sankar Das Sarma. Non-abelian anyons and topological quantum computation. <em>Rev. Mod. Phys.</em>, 80:1083–1159, Sep 2008. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/RevModPhys.80.1083">https://link.aps.org/doi/10.1103/RevModPhys.80.1083</a>, <a class="reference external" href="https://doi.org/10.1103/RevModPhys.80.1083">doi:10.1103/RevModPhys.80.1083</a>.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Sim23</a><span class="fn-bracket">]</span></span>
+<p>Steven H. Simon. <em>Topological Quantum</em>. Oxford University Press, 09 2023. ISBN 9780198886723. URL: <a class="reference external" href="https://doi.org/10.1093/oso/9780198886723.001.0001">https://doi.org/10.1093/oso/9780198886723.001.0001</a>, <a class="reference external" href="https://doi.org/10.1093/oso/9780198886723.001.0001">doi:10.1093/oso/9780198886723.001.0001</a>.</p>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -655,6 +668,24 @@ R^{\tau \tau}_1 = e^{-4 \pi i / 5}, \quad R^{\tau \tau}_\tau = e^{3 \pi i / 5}.
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Introduction to Anyons</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lecture8.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Topological Quantum Field Theory: Braiding and modular S and T</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -671,22 +702,23 @@ R^{\tau \tau}_1 = e^{-4 \pi i / 5}, \quad R^{\tau \tau}_\tau = e^{3 \pi i / 5}.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">Anyons</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-fusion">Properties of Fusion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-dimensions">Quantum Dimensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anyons">7.1. Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">7.2. Fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-fusion">7.2.1. Properties of Fusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-dimensions">7.2.2. Quantum Dimensions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion-diagrams">Fusion Diagrams</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-moves">F-moves</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pentagon-equation">The Pentagon Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion-diagrams">7.3. Fusion Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-moves">7.4. F-moves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pentagon-equation">7.4.1. The Pentagon Equation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-moves">R-moves</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hexagon-equations">The Hexagon Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-moves">7.5. R-moves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hexagon-equations">7.5.1. The Hexagon Equations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">7.6. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">7.7. References</a></li>
 </ul>
   </nav></div>
 

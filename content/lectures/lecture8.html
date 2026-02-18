@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Topological Quantum Field Theory: Braiding and modular S and T &#8212; Introduction to Topological Phases of Matter</title>
+    <title>8. Topological Quantum Field Theory: Braiding and modular S and T &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture8';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="7. Topological Quantum Field Theory: Fusion and Braiding" href="lecture7.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -186,13 +185,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">4. Topological Superconductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">5. The Toric Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Intoduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
 </ul>
 
     </div>
@@ -341,10 +342,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">Braids</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-statistics-the-t-matrix">Exchange Statistics: The T matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutual-statistics-the-s-matrix">Mutual Statistics: The S matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">8.1. Braids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-statistics-the-t-matrix">8.2. Exchange Statistics: The T matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutual-statistics-the-s-matrix">8.3. Mutual Statistics: The S matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">8.4. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">8.5. References</a></li>
 </ul>
             </nav>
         </div>
@@ -357,10 +359,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="topological-quantum-field-theory-braiding-and-modular-s-and-t">
-<h1>Topological Quantum Field Theory: Braiding and modular S and T<a class="headerlink" href="#topological-quantum-field-theory-braiding-and-modular-s-and-t" title="Link to this heading">#</a></h1>
-<p>Previously, we defined our topological quantum field theory (TQFT) in terms of anyon types, fusion rules, F-moves and R-moves. If these ingredients satisfy certain consistency conditions (the pentagon and hexagon equations), then we have a well-defined TQFT. In this lecture, we will focus on how to extract physical information about the anyons from these ingredients, specifically through braiding and the modular S and T matrices.</p>
+<h1><span class="section-number">8. </span>Topological Quantum Field Theory: Braiding and modular S and T<a class="headerlink" href="#topological-quantum-field-theory-braiding-and-modular-s-and-t" title="Link to this heading">#</a></h1>
+<p>Previously, we defined our topological quantum field theory (TQFT) in terms of anyon types, fusion rules, F-moves and R-moves. If these ingredients satisfy certain consistency conditions (the pentagon and hexagon equations), then we have a well-defined TQFT. In this lecture, we will focus on how to extract physical information about the anyons from these ingredients, specifically through braiding and the modular S and T matrices. As with the last lecture, see <span id="id1">[<a class="reference internal" href="#id3" title="Steven H. Simon. Topological Quantum. Oxford University Press, 09 2023. ISBN 9780198886723. URL: https://doi.org/10.1093/oso/9780198886723.001.0001, doi:10.1093/oso/9780198886723.001.0001.">Sim23</a>, <a class="reference internal" href="#id28" title="Chetan Nayak, Steven H. Simon, Ady Stern, Michael Freedman, and Sankar Das Sarma. Non-abelian anyons and topological quantum computation. Rev. Mod. Phys., 80:1083–1159, Sep 2008. URL: https://link.aps.org/doi/10.1103/RevModPhys.80.1083, doi:10.1103/RevModPhys.80.1083.">NSS+08</a>]</span> for more information.</p>
 <section id="braids">
-<h2>Braids<a class="headerlink" href="#braids" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>Braids<a class="headerlink" href="#braids" title="Link to this heading">#</a></h2>
 <p>Equipped with the F and R-moves, we can now describe more general braiding operations on multiple anyons. The core idea is to fix a basis for the multi-anyon Hilbert space, which corresponds to choosing a particular order for fusing the anyons together. The we can swap (braid) anyons to get a twisted diagram. We then use the F- and R-moves to untwist the diagram back into our original basis. This procedure gives us a unitary operator that describes the braiding operation in our chosen basis. For example, let use consider a braid <span class="math notranslate nohighlight">\(B_{i, i+1}\)</span> that exchanges anyons <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(i+1\)</span> in a system of <span class="math notranslate nohighlight">\(n\)</span> anyons. Diagramatically, we have</p>
 <figure class="align-center" id="braid-diagram">
 <a class="reference internal image-reference" href="../../_images/BraidDiagram.svg"><img alt="../../_images/BraidDiagram.svg" src="../../_images/BraidDiagram.svg" style="width: 95%;" />
@@ -380,14 +382,14 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>We have freedom of where we put the indices in the braid operator, and you may see different conventions in the literature. In particular, should the index ordering correspond to the anyon order before or after the braid? The important thing is to be consistent.</p>
 </div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Show using the Fibonacci F- and R-moves that the two braid operators for three <span class="math notranslate nohighlight">\(\tau\)</span> anyons are</p>
-<p>COMPLETE EXERCISE!!!</p>
-</div>
+<!-- ```{admonition} Exercise
+Show using the Fibonacci F- and R-moves that the two braid operators for three $\tau$ anyons are
+
+COMPLETE EXERCISE!!!
+``` -->
 </section>
 <section id="exchange-statistics-the-t-matrix">
-<h2>Exchange Statistics: The T matrix<a class="headerlink" href="#exchange-statistics-the-t-matrix" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.2. </span>Exchange Statistics: The T matrix<a class="headerlink" href="#exchange-statistics-the-t-matrix" title="Link to this heading">#</a></h2>
 <p>One of the most important physics properties of anyons that we have encountered before is their exchange statistics. Previously, we simply wrote down that on exchange of anyons we get a phase <span class="math notranslate nohighlight">\(\theta_a\)</span> for anyon type <span class="math notranslate nohighlight">\(a\)</span>. Now we have the machinery to derive this phase from the R-moves.</p>
 <p>The <strong>topological spin</strong> <span class="math notranslate nohighlight">\(\theta_a\)</span> of an anyon type <span class="math notranslate nohighlight">\(a\)</span> is defined by the following diagram.</p>
 <figure class="align-center" id="topological-spin">
@@ -421,7 +423,7 @@ document.write(`
 -->
 </section>
 <section id="mutual-statistics-the-s-matrix">
-<h2>Mutual Statistics: The S matrix<a class="headerlink" href="#mutual-statistics-the-s-matrix" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.3. </span>Mutual Statistics: The S matrix<a class="headerlink" href="#mutual-statistics-the-s-matrix" title="Link to this heading">#</a></h2>
 <p>The next quantity we want to derive is the mutual statistics between different anyon types. This is encoded in the modular S matrix, which we will now define and evaluate. The modular S matrix is defined by the following diagram.</p>
 <figure class="align-center" id="modular-s-matrix">
 <a class="reference internal image-reference" href="../../_images/ModularSMatrix.svg"><img alt="../../_images/ModularSMatrix.svg" src="../../_images/ModularSMatrix.svg" style="width: 50%;" />
@@ -440,18 +442,25 @@ document.write(`
 </figure>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.4. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this section we have seen how to use the F- and R-moves to derive the braiding properties of anyons, which are encoded in the modular S and T matrices. The S and T matrices are fundamental quantities that encode the topological properties of the anyons in our theory, and they play a crucial role in understanding the physics of anyons and their applications in topological quantum computation.</p>
-<!--
----
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
-
---></section>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h2><span class="section-number">8.5. </span>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">NSS+08</a><span class="fn-bracket">]</span></span>
+<p>Chetan Nayak, Steven H. Simon, Ady Stern, Michael Freedman, and Sankar Das Sarma. Non-abelian anyons and topological quantum computation. <em>Rev. Mod. Phys.</em>, 80:1083–1159, Sep 2008. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/RevModPhys.80.1083">https://link.aps.org/doi/10.1103/RevModPhys.80.1083</a>, <a class="reference external" href="https://doi.org/10.1103/RevModPhys.80.1083">doi:10.1103/RevModPhys.80.1083</a>.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Sim23</a><span class="fn-bracket">]</span></span>
+<p>Steven H. Simon. <em>Topological Quantum</em>. Oxford University Press, 09 2023. ISBN 9780198886723. URL: <a class="reference external" href="https://doi.org/10.1093/oso/9780198886723.001.0001">https://doi.org/10.1093/oso/9780198886723.001.0001</a>, <a class="reference external" href="https://doi.org/10.1093/oso/9780198886723.001.0001">doi:10.1093/oso/9780198886723.001.0001</a>.</p>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -484,6 +493,15 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Topological Quantum Field Theory: Fusion and Braiding</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -500,10 +518,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">Braids</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-statistics-the-t-matrix">Exchange Statistics: The T matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutual-statistics-the-s-matrix">Mutual Statistics: The S matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">8.1. Braids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exchange-statistics-the-t-matrix">8.2. Exchange Statistics: The T matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutual-statistics-the-s-matrix">8.3. Mutual Statistics: The S matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">8.4. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">8.5. References</a></li>
 </ul>
   </nav></div>
 
