@@ -2,7 +2,7 @@
 
 Previously, we introduced anyons and discussed at a high-level some of their properties. For instance, we saw that anyons can have non-trivial exchange and mutual statistics, and we introduced the idea of fusion of anyons. In the next two lectures, we will explore these ideas in more detail, and formulate them in the language of topological quantum field theory (TQFT).
 
-The mathematical formulation of anyon models is (2+1)-dimensional topological quantum field theory (TQFT). More preciely, an anyon model is described by a unitary modular tensor category (UMTC), which encodes the fusion and braiding properties of the anyons. While we are not going to define things in full mathematical rigour, we will introduce the key concepts and structures that are used to describe anyon models. For further reading see {cite}`TopologicalQuantum, Nayak_Review`.
+The mathematical formulation of anyon models is (2+1)-dimensional topological quantum field theory (TQFT). More preciely, an anyon model is described by a unitary modular tensor category (UMTC), which encodes the fusion and braiding properties of the anyons. While we are not going to define things in full mathematical rigour, we will introduce the key concepts and structures that are used to describe anyon models. For further reading see {cite}`TopologicalQuantum, Nayak_Review, TSCCategoryTheory`.
 
 ## Anyons
 
