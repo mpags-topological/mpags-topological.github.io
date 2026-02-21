@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>9. Topological Quantum Computation &#8212; Introduction to Topological Phases of Matter</title>
+    <title>Topological Quantum Computation &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -62,8 +62,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture9';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10. Experiments" href="lecture10.html" />
-    <link rel="prev" title="8. Topological Quantum Field Theory: Braiding and modular S and T" href="lecture8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -186,7 +186,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
@@ -195,8 +195,6 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Topological Quantum Computation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture10.html">10. Experiments</a></li>
 </ul>
 
     </div>
@@ -345,21 +343,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incredibly-brief-overview-of-quantum-computation">9.1. Incredibly Brief Overview of Quantum Computation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ising-anyons">9.2. Ising Anyons</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-qubit">9.3. A Single Qubit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#states">9.3.1. States</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">9.3.2. Braids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incredibly-brief-overview-of-quantum-computation">Incredibly Brief Overview of Quantum Computation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ising-anyons">Ising Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-qubit">A Single Qubit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#states">States</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">Braids</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-qubits">9.4. Multiple Qubits</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.4.1. States</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.4.2. Braids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-qubits">Multiple Qubits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">States</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Braids</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement">9.5. Measurement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universality">9.6. Universality</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">9.7. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement">Measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universality">Universality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -372,15 +370,15 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="topological-quantum-computation">
-<h1><span class="section-number">9. </span>Topological Quantum Computation<a class="headerlink" href="#topological-quantum-computation" title="Link to this heading">#</a></h1>
+<h1>Topological Quantum Computation<a class="headerlink" href="#topological-quantum-computation" title="Link to this heading">#</a></h1>
 <p>In previous sessions, we saw how the braiding of non-abelian anyons results in non-commuting matrices acting on the space of fusion channels. Furthermore, these matrices are unitary. In this session we will show how these braiding operations can be used for quantum computation. Due to the non-local properties of anyons, such operations are expected to be <em>intrinsically robust</em> against noise, and this approach to quantum computation is known as <strong>topological quantum computation</strong>.</p>
 <section id="incredibly-brief-overview-of-quantum-computation">
-<h2><span class="section-number">9.1. </span>Incredibly Brief Overview of Quantum Computation<a class="headerlink" href="#incredibly-brief-overview-of-quantum-computation" title="Link to this heading">#</a></h2>
+<h2>Incredibly Brief Overview of Quantum Computation<a class="headerlink" href="#incredibly-brief-overview-of-quantum-computation" title="Link to this heading">#</a></h2>
 <p>Since this is not a course on quantum computation, let us very briefly introduce the main ideas at an abstract level. Quantum computation works with quantum states, typically finite-dimensional. In practice, quantum computers are nearly always built out of qubits (two-level systems) and so the total Hilbert space is a <span class="math notranslate nohighlight">\(2^N\)</span>-dimensional space for <span class="math notranslate nohighlight">\(N\)</span> qubits. In the simplest models of quantum computation we then have two types of operations that we can perform: unitary gates and measurements. Unitary gates are unitary operators that act on the Hilbert space, and they are used to manipulate the quantum state. Measurements are typically projective measurements that collapse the quantum state onto a particular basis state, and they are used to extract information from the quantum computer. The goal of quantum computation is to perform a sequence of unitary gates and measurements that allows us to solve a particular problem more efficiently than classical algorithms.</p>
 <p>In this section we will show how we can build our state space out of anyons, and how we can perform unitary gates by braiding them. We will briefly discuss how to perform measurements, but will not go into detail of how this might be done in practice. We will also discuss the concept of universality, which is the idea that a particular set of gates is sufficient to perform any quantum computation. More precisely, a set of gates is universal if any unitary operation can be approximated to arbitrary accuracy by a finite sequence of gates from the set.</p>
 </section>
 <section id="ising-anyons">
-<h2><span class="section-number">9.2. </span>Ising Anyons<a class="headerlink" href="#ising-anyons" title="Link to this heading">#</a></h2>
+<h2>Ising Anyons<a class="headerlink" href="#ising-anyons" title="Link to this heading">#</a></h2>
 <p>In this sections we will focus on the Ising anyon model, which is a simple example of a non-abelian anyon model that can be used for topological quantum computation. We choose to focus on this model because it ties together various aspects of this course. It is a particularly important model both in the context of topologically ordered systems but also in the context of topological insulators and superconductors. It is currently one of the most experimentally relevant models in the context of fault-tolerant quantum computation. Unfortunately, it turns out that it is not universal for quantum computation using noise-resiliant operations along, but we will discuss how to achieve universality in this model later on.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -417,27 +415,27 @@ F = F^{\sigma\sigma\sigma}_\sigma = \frac{1}{\sqrt{2}}\left(\begin{matrix}1 &amp
 <p>The braids that we will compute can be written in terms of these matrices.</p>
 </section>
 <section id="a-single-qubit">
-<h2><span class="section-number">9.3. </span>A Single Qubit<a class="headerlink" href="#a-single-qubit" title="Link to this heading">#</a></h2>
+<h2>A Single Qubit<a class="headerlink" href="#a-single-qubit" title="Link to this heading">#</a></h2>
 <p>Let us start by considering how to represent a single qubit using Ising anyons, and understanding the gates that we can perform on this qubit by braiding. On its own, a single qubit is not particularly useful, but looking at this simple case first will simplify the discussion when we move on to multiple qubits later on.</p>
 <section id="states">
-<h3><span class="section-number">9.3.1. </span>States<a class="headerlink" href="#states" title="Link to this heading">#</a></h3>
-<p>To represent a single qubit, we can use four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons. The total fusion outcome of these four anyons is the identity anyon <span class="math notranslate nohighlight">\(1\)</span>. We will then work in a basis where we fuse the first two anyons together, and the last two anyons together, as shown in <a class="reference internal" href="#fig-single-qubit-states"><span class="std std-numref">Fig. 9.1</span></a>. Because of the fusion rules, these two fusion channels must be the same and can be either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\psi\)</span>, giving us our two states. We can then identify the state where both fusion channels are <span class="math notranslate nohighlight">\(1\)</span> as the logical <span class="math notranslate nohighlight">\(|0\rangle\)</span> state, and the state where both fusion channels are <span class="math notranslate nohighlight">\(\psi\)</span> as the logical <span class="math notranslate nohighlight">\(|1\rangle\)</span> state. In this way we have encoded a single qubit in the fusion channels of four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons. In <a class="reference internal" href="#fig-single-qubit-states"><span class="std std-numref">Fig. 9.1</span></a> we show both the top-down and the diagrammatic representation of these states.</p>
+<h3>States<a class="headerlink" href="#states" title="Link to this heading">#</a></h3>
+<p>To represent a single qubit, we can use four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons. The total fusion outcome of these four anyons is the identity anyon <span class="math notranslate nohighlight">\(1\)</span>. We will then work in a basis where we fuse the first two anyons together, and the last two anyons together, as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:single_qubit_states</span></code>. Because of the fusion rules, these two fusion channels must be the same and can be either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\psi\)</span>, giving us our two states. We can then identify the state where both fusion channels are <span class="math notranslate nohighlight">\(1\)</span> as the logical <span class="math notranslate nohighlight">\(|0\rangle\)</span> state, and the state where both fusion channels are <span class="math notranslate nohighlight">\(\psi\)</span> as the logical <span class="math notranslate nohighlight">\(|1\rangle\)</span> state. In this way we have encoded a single qubit in the fusion channels of four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons. In <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:single_qubit_states</span></code> we show both the top-down and the diagrammatic representation of these states.</p>
 <figure class="align-center" id="fig-single-qubit-states">
 <a class="reference internal image-reference" href="../../_images/SingleQubitStates.svg"><img alt="../../_images/SingleQubitStates.svg" src="../../_images/SingleQubitStates.svg" style="width: 75%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Definition of the two states of a single qubit encoded in four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons with trivial total topological charge. The top-down view is shown on the left, and the diagrammatic representation is shown on the right.</span><a class="headerlink" href="#fig-single-qubit-states" title="Link to this image">#</a></p>
+<p><span class="caption-text">Definition of the two states of a single qubit encoded in four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons with trivial total topological charge. The top-down view is shown on the left, and the diagrammatic representation is shown on the right.</span><a class="headerlink" href="#fig-single-qubit-states" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="braids">
-<h3><span class="section-number">9.3.2. </span>Braids<a class="headerlink" href="#braids" title="Link to this heading">#</a></h3>
+<h3>Braids<a class="headerlink" href="#braids" title="Link to this heading">#</a></h3>
 <p>Now that we have defined our states, we can look at the braids that we can perform on these anyons. Since we have four anyons, any braid can be generated by the three elementary braids that exchange anyons <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span>, anyons <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span>, and anyons <span class="math notranslate nohighlight">\(3\)</span> and <span class="math notranslate nohighlight">\(4\)</span>.</p>
 <figure class="align-center" id="fig-single-qubit-braids">
 <a class="reference internal image-reference" href="../../_images/SingleQubitBraids.svg"><img alt="../../_images/SingleQubitBraids.svg" src="../../_images/SingleQubitBraids.svg" style="width: 95%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 9.2 </span><span class="caption-text">The three elementary braids that we can perform on our single qubit. All other braids can be generated by combinations of these three and their inverses.</span><a class="headerlink" href="#fig-single-qubit-braids" title="Link to this image">#</a></p>
+<p><span class="caption-text">The three elementary braids that we can perform on our single qubit. All other braids can be generated by combinations of these three and their inverses.</span><a class="headerlink" href="#fig-single-qubit-braids" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Braid 1 <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> 2:</strong> When we exchange anyons <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span>, we can directly apply the R-move to get the braid operator. The phase accumulated on the <span class="math notranslate nohighlight">\(|0\rangle\)</span> state is <span class="math notranslate nohighlight">\(e^{-i\pi/8}\)</span>, and the phase accumulated on the <span class="math notranslate nohighlight">\(|1\rangle\)</span> state is <span class="math notranslate nohighlight">\(e^{3i\pi/8}\)</span>. Therefore the braid operator for this exchange is given by the <span class="math notranslate nohighlight">\(R\)</span> matrix defined above. Up to an overall phase of <span class="math notranslate nohighlight">\(e^{-i\pi/8}\)</span>, this is the <span class="math notranslate nohighlight">\(S\)</span> gate in quantum computation, i.e.,</p>
@@ -470,19 +468,19 @@ B_{23} = F^{-1} R F = \frac{e^{-i\pi/8}}{2}\left(\begin{matrix}1+i &amp; 1-i \\ 
 </section>
 </section>
 <section id="multiple-qubits">
-<h2><span class="section-number">9.4. </span>Multiple Qubits<a class="headerlink" href="#multiple-qubits" title="Link to this heading">#</a></h2>
+<h2>Multiple Qubits<a class="headerlink" href="#multiple-qubits" title="Link to this heading">#</a></h2>
 <p>Let us now consider the case of multiple qubits. For concretenes, we will focus on the case of two qubits and leave the generalisation to more qubits as an exercise.</p>
 <section id="id1">
-<h3><span class="section-number">9.4.1. </span>States<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>States<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>There are different ways to encode multiple qubits using anyons, and the choice of encoding can affect the gates that we can perform by braiding. One common encoding is the <strong>sparse encoding</strong>, where we use four <span class="math notranslate nohighlight">\(\sigma\)</span> anyons for each qubit. However, we cannot generate entangling gates between these qubits using braiding along in this encoding, but they can instead be generated by measurements. Another common encoding, and the one we will consider, is the <strong>dense encoding</strong>. This uses 2 <span class="math notranslate nohighlight">\(\sigma\)</span> anyons per qubit, and an additional pair of <span class="math notranslate nohighlight">\(\sigma\)</span> anyons to ensure that the total fusion outcome is the identity anyon <span class="math notranslate nohighlight">\(1\)</span>. For the case of two qubits, this requires a total of six <span class="math notranslate nohighlight">\(\sigma\)</span> anyons. In this encoding, we can generate entangling gates by braiding alone, and therefore we can achieve universality by braiding alone in this encoding.</p>
 <figure class="align-center" id="fig-two-qubit-states">
 <a class="reference internal image-reference" href="../../_images/TwoQubitStates.svg"><img alt="../../_images/TwoQubitStates.svg" src="../../_images/TwoQubitStates.svg" style="width: 85%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 9.3 </span><span class="caption-text">The general state of our six <span class="math notranslate nohighlight">\(\sigma\)</span> anyons encoding two qubits. Left shows the top-down view, and right shows the diagrammatic representation. The four fusion channels <span class="math notranslate nohighlight">\(a, b, c, d\)</span> can be either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\psi\)</span>, but they are not all independent (see main text).</span><a class="headerlink" href="#fig-two-qubit-states" title="Link to this image">#</a></p>
+<p><span class="caption-text">The general state of our six <span class="math notranslate nohighlight">\(\sigma\)</span> anyons encoding two qubits. Left shows the top-down view, and right shows the diagrammatic representation. The four fusion channels <span class="math notranslate nohighlight">\(a, b, c, d\)</span> can be either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\psi\)</span>, but they are not all independent (see main text).</span><a class="headerlink" href="#fig-two-qubit-states" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The general fusion diagram for these six <span class="math notranslate nohighlight">\(\sigma\)</span> anyons is shown in <a class="reference internal" href="#fig-two-qubit-states"><span class="std std-numref">Fig. 9.3</span></a>. The total fusion outcome of all six anyons is fixed to the identity anyon <span class="math notranslate nohighlight">\(1\)</span>. We are then left with four fusion channels that can be either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\psi\)</span>. However, not all of these fusion channels are independent. The total fusion channel being <span class="math notranslate nohighlight">\(1\)</span> means that <span class="math notranslate nohighlight">\(d\)</span> and <span class="math notranslate nohighlight">\(c\)</span> must be the same. Furthermore, we have that <span class="math notranslate nohighlight">\(d = a \times b\)</span>. This leave use with two independent fusion channels, resulting in a four-dimensional Hilbert space that can encode two qubits. We can then identify the logical states as follows:</p>
+<p>The general fusion diagram for these six <span class="math notranslate nohighlight">\(\sigma\)</span> anyons is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:two_qubit_states</span></code>. The total fusion outcome of all six anyons is fixed to the identity anyon <span class="math notranslate nohighlight">\(1\)</span>. We are then left with four fusion channels that can be either <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(\psi\)</span>. However, not all of these fusion channels are independent. The total fusion channel being <span class="math notranslate nohighlight">\(1\)</span> means that <span class="math notranslate nohighlight">\(d\)</span> and <span class="math notranslate nohighlight">\(c\)</span> must be the same. Furthermore, we have that <span class="math notranslate nohighlight">\(d = a \times b\)</span>. This leave use with two independent fusion channels, resulting in a four-dimensional Hilbert space that can encode two qubits. We can then identify the logical states as follows:</p>
 <figure class="align-center" id="fig-two-qubit-logical-states">
 <a class="reference internal image-reference" href="../../_images/TwoQubitLogicalStates.svg"><img alt="../../_images/TwoQubitLogicalStates.svg" src="../../_images/TwoQubitLogicalStates.svg" style="width: 45%;" />
 </a>
@@ -490,7 +488,7 @@ B_{23} = F^{-1} R F = \frac{e^{-i\pi/8}}{2}\left(\begin{matrix}1+i &amp; 1-i \\ 
 <p>We can think of <span class="math notranslate nohighlight">\(a\)</span> labelling the state of the first qubit, <span class="math notranslate nohighlight">\(c\)</span> labelling the state of the second qubit, and <span class="math notranslate nohighlight">\(b\)</span> is the parity bit that ensures that the total fusion outcome is <span class="math notranslate nohighlight">\(1\)</span>.</p>
 </section>
 <section id="id2">
-<h3><span class="section-number">9.4.2. </span>Braids<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<h3>Braids<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Let us now look at the five elementary braids that we can perform on these six anyons.</p>
 <p><strong>Braid 1 <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> 2:</strong> This simply applies the R-move to the first two anyons, giving <span class="math notranslate nohighlight">\(R^{\sigma\sigma}_a\)</span>, which is the same as the braid operator for exchanging anyons <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> in the single qubit case. Therefore this braid applies the <span class="math notranslate nohighlight">\(S\)</span> gate (up to a phase) to the first qubit and leaves the second qubit unchanged.</p>
 <p><strong>Braid 5 <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> 6:</strong> For the same reasons this braid applies the <span class="math notranslate nohighlight">\(S\)</span> gate to the second qubit and leaves the first qubit unchanged.</p>
@@ -520,11 +518,11 @@ B_{34} B^{-1}_{12} B^{-1}_{56} \propto CZ.
 </section>
 </section>
 <section id="measurement">
-<h2><span class="section-number">9.5. </span>Measurement<a class="headerlink" href="#measurement" title="Link to this heading">#</a></h2>
+<h2>Measurement<a class="headerlink" href="#measurement" title="Link to this heading">#</a></h2>
 <p>The final ingredient we need for quantum computation is measurement. The simplest type of projective measurement is to bring a pair of <span class="math notranslate nohighlight">\(\sigma\)</span> anyons close together and measure the total fusion outcome. That is, measure whether there is a fermion in that regions (<span class="math notranslate nohighlight">\(\psi\)</span>) or not (<span class="math notranslate nohighlight">\(1\)</span>). This is a projective measurement because it collapses the state of the system onto a particular fusion channel. How the measurement is performed in practice depends on the physical system that we are working with, and we will not go into details of this here. However, it is important to note that this measurement is topologically protected because the fusion outcome is a global property of the system that cannot be changed by local perturbations. Therefore, this measurement is robust against noise and errors, which is one of the key advantages of topological quantum computation.</p>
 </section>
 <section id="universality">
-<h2><span class="section-number">9.6. </span>Universality<a class="headerlink" href="#universality" title="Link to this heading">#</a></h2>
+<h2>Universality<a class="headerlink" href="#universality" title="Link to this heading">#</a></h2>
 <p>While we will not consider the general case of <span class="math notranslate nohighlight">\(N\)</span> qubits here, we can show that all gates that we can perform by braiding in the dense encoding of <span class="math notranslate nohighlight">\(N\)</span> qubits are generated by the set <span class="math notranslate nohighlight">\(\{S, H, CNOT\}\)</span>. This is not a universal set of gates. This generates the Clifford group on <span class="math notranslate nohighlight">\(N\)</span> qubits, which is a finite subgroup of the unitary group. Therefore we cannot perform arbitrary unitary operations by braiding alone in this model.</p>
 <p>To achieve universality, we only need to add one additional gate that is outside of the Clifford group. A common choice is the <span class="math notranslate nohighlight">\(T\)</span> gate, which is given by</p>
 <div class="math notranslate nohighlight">
@@ -535,7 +533,7 @@ T = \left(\begin{matrix}1 &amp; 0 \\ 0 &amp; e^{i\pi/4}\end{matrix}\right)
 <p>One approach to circumvent this issue is to use a technique known as <strong>magic state distillation</strong>. The idea is to prepare a special state, known as a magic state by applying unprotected operations to a state that we can prepare using topologically protected operations. This will result in a noisy magic state. If we then make many versions of this noisy magic state, we can use the topologically protected operations, combined with measurements, to create a single higher quality magic state. This process can be repeated to create magic states of arbitrarily high quality. Given this high quality magic state, we can then use it to implement the <span class="math notranslate nohighlight">\(T\)</span> gate in a fault-tolerant way through a combination of topologically protected operations and measurements. This allows us to achieve universality while maintaining the intrinsic robustness.</p>
 </section>
 <section id="summary">
-<h2><span class="section-number">9.7. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>Bringing together all the aspects of TQFT that we have learnt in this course, we have seen how the braiding of non-abelian anyons can be used to perform quantum computation. We have focussed on the Ising anyon model, which is one of the simplest and most experimentally relevant cases. We have seen how to encode qubits in the fusion channels of the anyons, and how to perform gates by braiding them. We have also discussed how to perform measurements, and how to achieve universality by adding an additional gate that is not topologically protected.</p>
 <!--
 ---
@@ -579,24 +577,6 @@ T = \left(\begin{matrix}1 &amp; 0 \\ 0 &amp; e^{i\pi/4}\end{matrix}\right)
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="lecture8.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Topological Quantum Field Theory: Braiding and modular S and T</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="lecture10.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Experiments</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -613,21 +593,21 @@ T = \left(\begin{matrix}1 &amp; 0 \\ 0 &amp; e^{i\pi/4}\end{matrix}\right)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incredibly-brief-overview-of-quantum-computation">9.1. Incredibly Brief Overview of Quantum Computation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ising-anyons">9.2. Ising Anyons</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-qubit">9.3. A Single Qubit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#states">9.3.1. States</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">9.3.2. Braids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incredibly-brief-overview-of-quantum-computation">Incredibly Brief Overview of Quantum Computation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ising-anyons">Ising Anyons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-qubit">A Single Qubit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#states">States</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#braids">Braids</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-qubits">9.4. Multiple Qubits</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.4.1. States</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.4.2. Braids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-qubits">Multiple Qubits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">States</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Braids</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement">9.5. Measurement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universality">9.6. Universality</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">9.7. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement">Measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#universality">Universality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
 
