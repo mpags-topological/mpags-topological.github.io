@@ -19,6 +19,6 @@ parts:
   - file: content/lectures/lecture6
   - file: content/lectures/lecture7
   - file: content/lectures/lecture8
-  # - file: content/lectures/lecture9
-  # - file: content/lectures/lecture10
+  - file: content/lectures/lecture9
+  - file: content/lectures/lecture10
 

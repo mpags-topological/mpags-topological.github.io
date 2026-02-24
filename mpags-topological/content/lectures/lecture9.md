@@ -1,16 +1,16 @@
-# Lecture 9 - Topological Quantum Computation
+# Topological Quantum Computation
 
 In previous sessions, we saw how the braiding of non-abelian anyons results in non-commuting matrices acting on the space of fusion channels. Furthermore, these matrices are unitary. In this session we will show how these braiding operations can be used for quantum computation. Due to the non-local properties of anyons, such operations are expected to be *intrinsically robust* against noise, and this approach to quantum computation is known as **topological quantum computation**.
 
 ## Incredibly Brief Overview of Quantum Computation
 
-Since this is not a course on quantum computation, let us very briefly introduce the main ideas at an abstract level. Quantum computation works with quantum states, typically finite-dimensional. In practice, quantum computers are nearly always built out of qubits (two-level systems) and so the total Hilbert space is a $2^N$-dimensional space for $N$ qubits. In the simplest models of quantum computation we then have two types of operations that we can perform: unitary gates and measurements. Unitary gates are unitary operators that act on the Hilbert space, and they are used to manipulate the quantum state. Measurements are typically projective measurements that collapse the quantum state onto a particular basis state, and they are used to extract information from the quantum computer. The goal of quantum computation is to perform a sequence of unitary gates and measurements that allows us to solve a particular problem more efficiently than classical algorithms.
+Since this is not a course on quantum computation, let us very briefly introduce the main ideas at an abstract level (also see {cite}`TopologicalQuantum, NielsenChuang, Nayak_Review`). Quantum computation works with quantum states, typically finite-dimensional. In practice, quantum computers are nearly always built out of qubits (two-level systems) and so the total Hilbert space is a $2^N$-dimensional space for $N$ qubits. In the simplest models of quantum computation we then have two types of operations that we can perform: unitary gates and measurements. Unitary gates are unitary operators that act on the Hilbert space, and they are used to manipulate the quantum state. Measurements are typically projective measurements that collapse the quantum state onto a particular basis state, and they are used to extract information from the quantum computer. The goal of quantum computation is to perform a sequence of unitary gates and measurements that allows us to solve a particular problem more efficiently than classical algorithms.
 
 In this section we will show how we can build our state space out of anyons, and how we can perform unitary gates by braiding them. We will briefly discuss how to perform measurements, but will not go into detail of how this might be done in practice. We will also discuss the concept of universality, which is the idea that a particular set of gates is sufficient to perform any quantum computation. More precisely, a set of gates is universal if any unitary operation can be approximated to arbitrary accuracy by a finite sequence of gates from the set.
 
 ## Ising Anyons
 
-In this sections we will focus on the Ising anyon model, which is a simple example of a non-abelian anyon model that can be used for topological quantum computation. We choose to focus on this model because it ties together various aspects of this course. It is a particularly important model both in the context of topologically ordered systems but also in the context of topological insulators and superconductors. It is currently one of the most experimentally relevant models in the context of fault-tolerant quantum computation. Unfortunately, it turns out that it is not universal for quantum computation using noise-resiliant operations along, but we will discuss how to achieve universality in this model later on.
+In this sections we will focus on the Ising anyon model, which is a simple example of a non-abelian anyon model that can be used for topological quantum computation {cite}`MZM_TQC`. We choose to focus on this model because it ties together various aspects of this course. It is a particularly important model both in the context of topologically ordered systems but also in the context of topological insulators and superconductors. It is currently one of the most experimentally relevant models in the context of fault-tolerant quantum computation. Unfortunately, it turns out that it is not universal for quantum computation using noise-resiliant operations along, but we will discuss how to achieve universality in this model later on.
 
 ```{note}
 Another important non-abelian anyon model that we have encountered earlier is the Fibonacci anyon model. This model is universal for quantum computation using braiding alone. It is possible that these anyons may be realised in fractional quantum Hall systems, however, they have not yet been observed or braided in experiments to date.
@@ -215,7 +215,7 @@ $$
 
 This gate can be implemented by bringing a pair of $\sigma$ anyons close together, making them interact (resulting in an energy splitting between the $1$ and $\psi$ fusion channels), and then separating them again after a certain amount of time. By tuning the amount of time that the anyons are close together, we can implement the $T$ gate. However, this operation is analogue, and is not topologically protected. By bringing the anyons close together, local noise can cause errors in the implementation of the $T$ gate. Therefore, while we can achieve universality by adding this gate, we lose the topological protection for this gate, and therefore we lose the intrinsic robustness against noise for this gate.
 
-One approach to circumvent this issue is to use a technique known as **magic state distillation**. The idea is to prepare a special state, known as a magic state by applying unprotected operations to a state that we can prepare using topologically protected operations. This will result in a noisy magic state. If we then make many versions of this noisy magic state, we can use the topologically protected operations, combined with measurements, to create a single higher quality magic state. This process can be repeated to create magic states of arbitrarily high quality. Given this high quality magic state, we can then use it to implement the $T$ gate in a fault-tolerant way through a combination of topologically protected operations and measurements. This allows us to achieve universality while maintaining the intrinsic robustness.
+One approach to circumvent this issue is to use a technique known as **magic state distillation** {cite}`BravyiKitaev`. The idea is to prepare a special state, known as a magic state by applying unprotected operations to a state that we can prepare using topologically protected operations. This will result in a noisy magic state. If we then make many versions of this noisy magic state, we can use the topologically protected operations, combined with measurements, to create a single higher quality magic state. This process can be repeated to create magic states of arbitrarily high quality. Given this high quality magic state, we can then use it to implement the $T$ gate in a fault-tolerant way through a combination of topologically protected operations and measurements. This allows us to achieve universality while maintaining the intrinsic robustness.
 
 
 ## Summary
@@ -223,7 +223,7 @@ One approach to circumvent this issue is to use a technique known as **magic sta
 Bringing together all the aspects of TQFT that we have learnt in this course, we have seen how the braiding of non-abelian anyons can be used to perform quantum computation. We have focussed on the Ising anyon model, which is one of the simplest and most experimentally relevant cases. We have seen how to encode qubits in the fusion channels of the anyons, and how to perform gates by braiding them. We have also discussed how to perform measurements, and how to achieve universality by adding an additional gate that is not topologically protected. 
 
 
-<!--
+
 ---
 
 ## References
@@ -232,4 +232,3 @@ Bringing together all the aspects of TQFT that we have learnt in this course, we
 :filter: docname in docnames
 ```
 
--->
