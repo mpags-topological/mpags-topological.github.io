@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Experiments &#8212; Introduction to Topological Phases of Matter</title>
+    <title>10. Experiments &#8212; Introduction to Topological Phases of Matter</title>
   
   
   
@@ -62,6 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/lecture10';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="9. Topological Quantum Computation" href="lecture9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -186,7 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../outline/courseStructure.html">Course Structure</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">1. Introduction to Topology in Condensed Matter Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">2. Topological Insulators I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">3. Topological Insulators II</a></li>
@@ -195,6 +194,8 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture9.html">9. Topological Quantum Computation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Experiments</a></li>
 </ul>
 
     </div>
@@ -343,19 +344,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-dimensional-electron-gas-2deg">The two-dimensional electron gas (2DEG)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">Topological Insulators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">Mercury Telluride</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">Band Inversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-dimensional-electron-gas-2deg">10.1. The two-dimensional electron gas (2DEG)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">10.2. Topological Insulators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">10.2.1. Mercury Telluride</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">10.2.2. Band Inversion</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">Zero-bias conductance</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">Fractional Josephson Effect</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">10.3. Topological Superconductors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">10.3.1. Engineering Topological Superconductors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">10.3.2. Zero-bias conductance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">10.3.3. Fractional Josephson Effect</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">10.4. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">10.5. References</a></li>
 </ul>
             </nav>
         </div>
@@ -368,37 +370,43 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="experiments">
-<h1>Experiments<a class="headerlink" href="#experiments" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">10. </span>Experiments<a class="headerlink" href="#experiments" title="Link to this heading">#</a></h1>
 <p>In the final lecture of this course we aim to address some experimental developments as well as limitations. In particular we will focus on setups that utilise semiconducting heterostructures, though other setups are also possible.</p>
 <section id="the-two-dimensional-electron-gas-2deg">
-<h2>The two-dimensional electron gas (2DEG)<a class="headerlink" href="#the-two-dimensional-electron-gas-2deg" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">10.1. </span>The two-dimensional electron gas (2DEG)<a class="headerlink" href="#the-two-dimensional-electron-gas-2deg" title="Link to this heading">#</a></h2>
 <p>Recall that at the start of this course, we looked at the intger quantum Hall effect where there are integer plateaus measured in the differential conductance.</p>
 <p>The typical system in which this effect is measured is a semiconducting heterostructure that allows the formation of a two-dimensional electron gas (commonly referred to as a 2DEG).
 Simple models of semiconductors consist of a filled valence band and an empty conduction band. The two bands are separated by a band gap, with the Fermi energy (below which electronic states are filled at zero temperature) typically sitting within the band gap.</p>
-<p>In order to form a 2DEG experimentally, two semiconductors with different band gaps and Fermi energies are brought together. At the interface electrons flow from the semiconductor with the larger Fermi energy to the one with the lower Fermi energy. This flow of electrons leaves behind positively charged ions and therefore an electric field is created. This field bends the bands creating a narrow `well’ at the interface in which the electron gas sits - this is a 2DEG.</p>
-<figure class="align-default" id="id1">
+<p>In order to form a 2DEG experimentally, two semiconductors with different band gaps and Fermi energies are brought together. At the interface electrons flow from the semiconductor with the larger Fermi energy to the one with the lower Fermi energy. This flow of electrons leaves behind positively charged ions and therefore an electric field is created <span id="id1">[<a class="reference internal" href="#id41" title="S. Datta. Electronic Transport in Mesoscopic Systems. Cambridge Studies in Semiconductor Physics and Microelectronic Engineering. Cambridge University Press, Cambridge, 1995. doi:10.1017/CBO9780511805776.">Dat95</a>]</span>. This field bends the bands creating a narrow well at the interface in which the electron gas sits - this is a 2DEG.</p>
+<figure class="align-default" id="id49">
 <a class="reference internal image-reference" href="../../_images/2DEG.svg"><img alt="../../_images/2DEG.svg" src="../../_images/2DEG.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">A semiconducting heterostructure (left) can be used to create a two-dimensional electron gas, which sits at the `well’ created by the bands bending (right).</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 10.1 </span><span class="caption-text">A semiconducting heterostructure (left) can be used to create a two-dimensional electron gas, which sits at the well created by the bands bending (right) Figure from <span id="id2">[<a class="reference internal" href="#id42" title="T. Ihn. Semiconductor Nanostructures: Quantum states and electronic transport. Oxford University Press, Oxford, 2009. ISBN 9780199534425. URL: https://doi.org/10.1093/acprof:oso/9780199534425.001.0001, doi:10.1093/acprof:oso/9780199534425.001.0001.">Ihn09</a>]</span>.</span><a class="headerlink" href="#id49" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Semiconducting heterostructures are common experimental setups for a variety of reasons, some more practical such as being readily available, affordable and therefore can be used in applications. From a more scientifc point of view they are well understood, their properties can be tuned (for example using gate voltages and doping), and they can also be used in the creation of very clean samples, which can be extremely useful in solid state physics even if it is not desired for the integer quantum Hall effect. A common class of experiments performed using 2DEGs are transport experiments where leads are attached to the sample and quantities such as currents and voltages are measured.</p>
+<p>Semiconducting heterostructures are common experimental setups for a variety of reasons, some more practical such as being readily available, affordable and therefore can be used in applications. From a more scientfic point of view they are well understood, their properties can be tuned (for example using gate voltages and doping), and they can also be used in the creation of very clean samples, which can be extremely useful in solid state physics even if it is not desired for the integer quantum Hall effect. A common class of experiments performed using 2DEGs are transport experiments where leads are attached to the sample and quantities such as currents and voltages are measured.</p>
 </section>
 <section id="topological-insulators">
-<h2>Topological Insulators<a class="headerlink" href="#topological-insulators" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">10.2. </span>Topological Insulators<a class="headerlink" href="#topological-insulators" title="Link to this heading">#</a></h2>
 <p>Similar setups involving semiconductors can be used to realise topological insulators, using a mechanism known as band inversion.</p>
 <p>Many of the models we saw in previous lectures, such as the Haldane and Kane-Mele models were constructed on a honeycomb lattice. Therefore a candidate for their realisation is graphene, however it turns out that due to weak spin-oribit coupling, the bulk gap is very small and the topologically insulating phase can’t be observed. Instead, semiconducting heterostrucutres with strong spin-orbit coupling are used.</p>
 <section id="mercury-telluride">
-<h3>Mercury Telluride<a class="headerlink" href="#mercury-telluride" title="Link to this heading">#</a></h3>
-<p>The first example of a topological insulator was in mercury telluride heterostructures. These consisted of mercury telluride in conjunction with cadmium telluride.</p>
+<h3><span class="section-number">10.2.1. </span>Mercury Telluride<a class="headerlink" href="#mercury-telluride" title="Link to this heading">#</a></h3>
+<p>The first example of a topological insulator was in mercury telluride heterostructures <span id="id3">[<a class="reference internal" href="#id43" title="B. Andrei Bernevig, Taylor L. Hughes, and Shou-Cheng Zhang. Quantum spin hall effect and topological phase transition in hgte quantum wells. Science, 314(5806):1757-1761, 2006. URL: https://www.science.org/doi/abs/10.1126/science.1133734, arXiv:https://www.science.org/doi/pdf/10.1126/science.1133734, doi:10.1126/science.1133734.">BHZ06</a>, <a class="reference internal" href="#id38" title="Markus König, Steffen Wiedmann, Christoph Brüne, Andreas Roth, Hartmut Buhmann, Laurens W. Molenkamp, Xiao-Liang Qi, and Shou-Cheng Zhang. Quantum spin hall insulator state in hgte quantum wells. Science, 318(5851):766-770, 2007. URL: https://www.science.org/doi/abs/10.1126/science.1148047, arXiv:https://www.science.org/doi/pdf/10.1126/science.1148047, doi:10.1126/science.1148047.">KWB+07</a>]</span>. These consisted of mercury telluride in conjunction with cadmium telluride.</p>
 <p>Cadmium telluride is a standard semiconductor in that it has an “s-wave” band (called the E1 band), with angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{1}{2}, \tfrac{1}{2})\)</span> at a higher energy than a “p-wave” band (the H1 band) which has angular momentum states <span class="math notranslate nohighlight">\((-\tfrac{3}{2}, -\tfrac{1}{2}, \tfrac{1}{2}, \tfrac{3}{2})\)</span>. Mercury telluride has an inverted structure where the energy levels are the other way round.</p>
 <p>When the two are brought together to form a quantum well, the ordering of the levels depends on the width of the well formed. Below a critical width, <span class="math notranslate nohighlight">\(w_c\sim 6-7 {\rm nm}\)</span>, the ordering is that of a conventional semiconductor and we have a topologically trivial regime. However, as the width of the well is increased beyond the critical value, the energy ordering of the bands switches or inverts and we are left with a topological regime.</p>
-<p><span style="color:red">Insert Figure</span></p>
+<figure class="align-default" id="id50">
+<a class="reference internal image-reference" href="../../_images/InvertedWell.svg"><img alt="../../_images/InvertedWell.svg" src="../../_images/InvertedWell.svg" style="width: 100%; height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.2 </span><span class="caption-text">Band inversion occurs for wide quantum wells.</span><a class="headerlink" href="#id50" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="band-inversion">
-<h3>Band Inversion<a class="headerlink" href="#band-inversion" title="Link to this heading">#</a></h3>
-<p>In order to understand why the inverted regime is topological we need to understand what is happening in the band inversion process.</p>
+<h3><span class="section-number">10.2.2. </span>Band Inversion<a class="headerlink" href="#band-inversion" title="Link to this heading">#</a></h3>
+<p>In order to understand why the inverted regime is topological we need to understand what is happening in the band inversion process <span id="id4">[<a class="reference internal" href="#id43" title="B. Andrei Bernevig, Taylor L. Hughes, and Shou-Cheng Zhang. Quantum spin hall effect and topological phase transition in hgte quantum wells. Science, 314(5806):1757-1761, 2006. URL: https://www.science.org/doi/abs/10.1126/science.1133734, arXiv:https://www.science.org/doi/pdf/10.1126/science.1133734, doi:10.1126/science.1133734.">BHZ06</a>]</span>.</p>
 <p>To start with, recall that the Dirac equation is given by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -409,7 +417,7 @@ H = k_x\sigma_x + k_y\sigma_y + M\sigma_z
 \[
 \Delta\sigma_{xy}=\frac{e^2}{h}
 \]</div>
-<p>Therefore if one of the regimes has no Hall conductance and a Chern number of 0 and we change the mass parameter across the transition, the Hall conductance will change to a regime with a Chern number of 1. The inversion of the mass parameter leads to a topological phase trnasition.</p>
+<p>Therefore if one of the regimes has no Hall conductance and a Chern number of 0 and we change the mass parameter across the transition, the Hall conductance will change to a regime with a Chern number of 1. The inversion of the mass parameter leads to a topological phase transition.</p>
 <p>This is key in understanding the band inversion process in the quantum well. In this instance the Hamiltonian can be expressed near the <span class="math notranslate nohighlight">\(\Gamma\)</span> point <span class="math notranslate nohighlight">\(\big[(k_x, k_y)=(0,0)\big]\)</span> in the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -440,40 +448,55 @@ H_{\boldsymbol{k}}=\alpha_1\sigma_0+M\sigma_z
 \[\begin{split}
 \begin{align*}\Delta \sigma_{xy}^{(e)} &amp;= \Delta \sigma_{xy}^{\uparrow} +  \Delta \sigma_{xy}^{\downarrow}=0\\ \Delta \sigma_{xy}^{(s)} &amp;= \Delta \sigma_{xy}^{\uparrow} -  \Delta \sigma_{xy}^{\downarrow}=\frac{2e^2}{h}\end{align*}
 \end{split}\]</div>
-<p>Such an effect can be detected experimentally</p>
-<figure class="align-default">
+<p>Such an effect can be detected experimentally, as shown below for samples III and IV.</p>
+<figure class="align-default" id="id51">
 <a class="reference internal image-reference" href="../../_images/QSH_Expt.svg"><img alt="../../_images/QSH_Expt.svg" src="../../_images/QSH_Expt.svg" style="width: 100%; height: 300px;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Experimental observation of the quantum spin Hall effect. This is particularly clear in samples III and IV. Figure from <span id="id5">[<a class="reference internal" href="#id38" title="Markus König, Steffen Wiedmann, Christoph Brüne, Andreas Roth, Hartmut Buhmann, Laurens W. Molenkamp, Xiao-Liang Qi, and Shou-Cheng Zhang. Quantum spin hall insulator state in hgte quantum wells. Science, 318(5851):766-770, 2007. URL: https://www.science.org/doi/abs/10.1126/science.1148047, arXiv:https://www.science.org/doi/pdf/10.1126/science.1148047, doi:10.1126/science.1148047.">KWB+07</a>]</span></span><a class="headerlink" href="#id51" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are alternatives to the solid state setup described here, although we won’t go into much detial. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this cases, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised.</p>
+<p>There are alternatives to the solid state setup described here, although we won’t go into much detail. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this case, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised <span id="id6">[<a class="reference internal" href="#id48" title="Gregor Jotzu, Michael Messer, Rémi Desbuquois, Martin Lebrat, Thomas Uehlinger, Daniel Greif, and Tilman Esslinger. Experimental realization of the topological haldane model with ultracold fermions. Nature, 515(7526):237–240, 2014.">JMD+14</a>, <a class="reference internal" href="#id47" title="Xiong-Jun Liu, Xin Liu, Congjun Wu, and Jairo Sinova. Quantum anomalous hall effect with cold atoms trapped in a square lattice. Phys. Rev. A, 81:033622, Mar 2010. URL: https://link.aps.org/doi/10.1103/PhysRevA.81.033622, doi:10.1103/PhysRevA.81.033622.">LLWS10</a>]</span>.</p>
 </div>
 </section>
 </section>
 <section id="topological-superconductors">
-<h2>Topological Superconductors<a class="headerlink" href="#topological-superconductors" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">10.3. </span>Topological Superconductors<a class="headerlink" href="#topological-superconductors" title="Link to this heading">#</a></h2>
 <p>Now we wish to look at experimental implementations of topological superconductors. These are of particular interest at the moment due to the prediction of Majorana zero modes which can be used in implementations of quantum computing.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Majorana modes are not unique to topological superconductors. They are also predicted to occur in the Fractional Quantum Hall Effect (FQHE). In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of <span class="math notranslate nohighlight">\(e^2/h\)</span> (which can be viewed as having a fractional filling factor, <span class="math notranslate nohighlight">\(\nu\)</span>.)</p>
-<p>Abelian anyons have been observed in the <span class="math notranslate nohighlight">\(\nu=\tfrac{1}{3}\)</span> state through observation of the braiding statistics, no such confirmation has occured for Majorana modes, which are predicted in the <span class="math notranslate nohighlight">\(\nu=\tfrac{5}{2}\)</span> state.</p>
+<p>Majorana modes are not unique to topological superconductors <span id="id7">[<a class="reference internal" href="lecture9.html#id40" title="Sankar Das Sarma, Michael Freedman, and Chetan Nayak. Majorana zero modes and topological quantum computation. npj Quantum Information, 1(1):15001, 2015.">SFN15</a>]</span>. They are also predicted to occur in the Fractional Quantum Hall Effect (FQHE). In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of <span class="math notranslate nohighlight">\(e^2/h\)</span> (which can be viewed as having a fractional filling factor, <span class="math notranslate nohighlight">\(\nu\)</span>).</p>
+<p>Abelian anyons have been observed in the <span class="math notranslate nohighlight">\(\nu=\tfrac{1}{3}\)</span> state through observation of the braiding statistics <span id="id8">[<a class="reference internal" href="#id44" title="J. Nakamura, S. Liang, G. C. Gardner, and M. J. Manfra. Direct observation of anyonic braiding statistics. Nature Physics, 16(9):931–936, 2020.">NLGM20</a>]</span>, no such confirmation has occured for Majorana modes, which are predicted in the <span class="math notranslate nohighlight">\(\nu=\tfrac{5}{2}\)</span> state.</p>
 </div>
 <section id="engineering-topological-superconductors">
-<h3>Engineering Topological Superconductors<a class="headerlink" href="#engineering-topological-superconductors" title="Link to this heading">#</a></h3>
-<p>Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductor is using a semiconducting heterostructure.</p>
-<p>In particular a semiconductor with spin-orbit coupling is placed in conjuction with an <span class="math notranslate nohighlight">\(s\)</span>-wave superconductor. Along with a magnetic field, this allows the <span class="math notranslate nohighlight">\(p\)</span>-wave pairing to occur</p>
-<p><span style="color:red">Insert Figs</span></p>
+<h3><span class="section-number">10.3.1. </span>Engineering Topological Superconductors<a class="headerlink" href="#engineering-topological-superconductors" title="Link to this heading">#</a></h3>
+<p>Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a <span class="math notranslate nohighlight">\(p\)</span>-wave topological superconductor is using a semiconducting heterostructure (see <span id="id9">[<a class="reference internal" href="lecture4.html#id25" title="Jason Alicea. New directions in the pursuit of majorana fermions in solid state systems. Reports on Progress in Physics, 75(7):076501, jun 2012. URL: https://doi.org/10.1088/0034-4885/75/7/076501, doi:10.1088/0034-4885/75/7/076501.">Ali12</a>, <a class="reference internal" href="lecture4.html#id24" title="Martin Leijnse and Karsten Flensberg. Introduction to topological superconductivity and majorana fermions. Semiconductor Science and Technology, 27(12):124003, nov 2012. URL: https://doi.org/10.1088/0268-1242/27/12/124003, doi:10.1088/0268-1242/27/12/124003.">LF12</a>, <a class="reference internal" href="lecture4.html#id23" title="Masatoshi Sato and Yoichi Ando. Topological superconductors: a review. Reports on Progress in Physics, 80(7):076501, may 2017. URL: https://doi.org/10.1088/1361-6633/aa6ac7, doi:10.1088/1361-6633/aa6ac7.">SA17</a>, <a class="reference internal" href="lecture4.html#id26" title="Masatoshi Sato and Satoshi Fujimoto. Majorana fermions and topology in superconductors. Journal of the Physical Society of Japan, 85(7):072001, 2016. URL: https://doi.org/10.7566/JPSJ.85.072001, arXiv:https://doi.org/10.7566/JPSJ.85.072001, doi:10.7566/JPSJ.85.072001.">SF16</a>]</span> for reviews on the setup and signatures).</p>
+<p>In particular a semiconductor with spin-orbit coupling is placed in conjuction with an <span class="math notranslate nohighlight">\(s\)</span>-wave superconductor. Along with a magnetic field, this allows the <span class="math notranslate nohighlight">\(p\)</span>-wave pairing to occur. We show this below by considering how the band structure changes.</p>
+<figure class="align-default" id="id52">
+<a class="reference internal image-reference" href="../../_images/TSC_Engineered.svg"><img alt="../../_images/TSC_Engineered.svg" src="../../_images/TSC_Engineered.svg" style="width: 100%; height: 400px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.4 </span><span class="caption-text">Semiconductor heterostructures can be used to engineer topological superconductivity.</span><a class="headerlink" href="#id52" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Once the samples have been created, it is necessary to have ways to detect Majoranas. Measuring braiding statistics directly using interferometry-style experiments is difficult in solid state setups, and so alternative transport experiments are preferred.</p>
 </section>
 <section id="zero-bias-conductance">
-<h3>Zero-bias conductance<a class="headerlink" href="#zero-bias-conductance" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">10.3.2. </span>Zero-bias conductance<a class="headerlink" href="#zero-bias-conductance" title="Link to this heading">#</a></h3>
 <p>The first of these is not on its own a conclusive signature of Majoranas, although any system with Majoranas will display it.</p>
 <p>Consider a one-dimensional setup (although the argumets here generalise to two dimensions too), where we have a lead in conjunction with a wire in a topological superconductor phase. For voltages smaller than the superconducting gap, there are two possible processes present. These are normal reflection and Andreev reflection, and it is the latter that can result in current flowing through the system.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Normal reflection is a standard reflection process. An electron comes in and doesn’t have enough energy to enter the superconductor. It is simply reflected back in the direction it came. Andreev reflection is specific to a superconductor where at the interface, an electron can be reflected as a hole, and a Cooper pair then propagagtes in the superconductor.</p>
-<p><span style="color:red">Insert Fig</span></p>
+<figure class="align-default" id="id53">
+<a class="reference internal image-reference" href="../../_images/Andreev.svg"><img alt="../../_images/Andreev.svg" src="../../_images/Andreev.svg" style="width: 100%; height: 100px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.5 </span><span class="caption-text">Normal and Andreev reflection.</span><a class="headerlink" href="#id53" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 <p>Since the Andreev reflection results in the propagation of a Copper pair, it is this process that facilitates a current passing through the system, with the current depending on the probability of Andreev reflection to occur, <span class="math notranslate nohighlight">\(|S_{he}|^2\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -481,7 +504,13 @@ H_{\boldsymbol{k}}=\alpha_1\sigma_0+M\sigma_z
 I = \frac{2e}{h}\int_0^{eV} {\rm d}\varepsilon |S_{he}(\varepsilon)|^2 \implies G = \frac{{\rm d}I}{{\rm d}V} = \frac{2e^2}{h} |S_{he}(\varepsilon=eV)|^2
 \]</div>
 <p>Since we are interested in a zero bias peak in the conductance (the analysis can be done for finite <span class="math notranslate nohighlight">\(V\)</span> but it is beyond this course), we therefore nned to calculate the probability of Andreev reflection at zero energy. To do this we use the S-matrix which links the incoming to outgoing states.</p>
-<p><span style="color:red">Insert Fig</span></p>
+<figure class="align-default" id="id54">
+<a class="reference internal image-reference" href="../../_images/ScatteringStates.svg"><img alt="../../_images/ScatteringStates.svg" src="../../_images/ScatteringStates.svg" style="width: 100%; height: 100px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.6 </span><span class="caption-text">The incoming and outgoing states, as defined in the scattering problem.</span><a class="headerlink" href="#id54" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \Psi_{\rm out} = S \Psi_{\rm in} \implies \left(\begin{matrix} e \\ h \end{matrix}\right)_{\rm out} = \left(\begin{matrix} S_{ee} &amp; S_{eh} \\ S_{he} &amp; S_{hh} \end{matrix}\right)\left(\begin{matrix} e \\ h \end{matrix}\right)_{\rm in}
@@ -502,15 +531,14 @@ S_N(0) =  \left(\begin{matrix} {\rm e}^{i\alpha} &amp; 0 \\ 0 &amp; {\rm e}^{-i\
 \[
  G(V=0) = \frac{2e^2}{h}
 \]</div>
-<p>Some groups have reported measurements of this peak suggesting the observation of Majoranas, however it turns out that similar peaks can be caused by low-energy modes that arise due to disorder in the system. A definitive measurement of Majorana zero modes is still sought after.</p>
+<p>Some groups have reported measurements of this peak suggesting the observation of Majoranas, however it turns out that similar peaks can be caused by low-energy modes that arise due to disorder in the system. A definitive measurement of Majorana zero modes is still sought after <span id="id10">[<a class="reference internal" href="#id46" title="Sankar Das Sarma. In search of majorana. Nature Physics, 19(2):165–170, 2023.">DS23</a>]</span>.</p>
 </section>
 <section id="fractional-josephson-effect">
-<h3>Fractional Josephson Effect<a class="headerlink" href="#fractional-josephson-effect" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">10.3.3. </span>Fractional Josephson Effect<a class="headerlink" href="#fractional-josephson-effect" title="Link to this heading">#</a></h3>
 <p>A more conclusive signature would be the observation of the fractional Joesphson effect, however as of yet there haven’t been any reproducible measurements of this.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The standard Josephson effect considers two superconductors separated by a tunnel barrier.</p>
-<p><span style="color:red">Insert Fig</span></p>
 <p>The order parameters for these can be expressed in the form <span class="math notranslate nohighlight">\(\psi_i = \sqrt{n_i}{\rm e}^{i\phi_i}\)</span>, where <span class="math notranslate nohighlight">\(n_i\)</span> is the number density of Cooper pairs. The phase difference <span class="math notranslate nohighlight">\(\delta\phi=\phi_R-\phi_L\)</span> results in a current flowing between the superconductors</p>
 <div class="math notranslate nohighlight">
 \[
@@ -551,12 +579,74 @@ H_{\rm eff} &amp;= -\frac{\Gamma}{2}\left(-\frac{1}{2}{\rm e}^{-i\delta\phi/2}i\
 \[
 I = \frac{2e}{\hbar}\frac{{\rm d}E}{{\rm d}(\delta\phi)} = \pm \frac{e\Gamma}{\hbar}\sin \left(\frac{\delta\phi}{2}\right)
 \]</div>
-<p>where the plus sign is for <span class="math notranslate nohighlight">\(n_f=1\)</span> and the minus is for <span class="math notranslate nohighlight">\(n_f=0\)</span>. Note that <span class="math notranslate nohighlight">\(n_f\)</span> is conserved so we can’t go between the branches. This is the fractional Josephson effect. The reason for the name is that the current is proportional to <span class="math notranslate nohighlight">\((e/h)\)</span> rather than <span class="math notranslate nohighlight">\((2e/h)\)</span>, so we can think of a fraction of a Cooper pair being transmitted. Perhaps more importantly is that the current is proportional to <span class="math notranslate nohighlight">\(\sin(\delta\phi/2)\)</span> rather than <span class="math notranslate nohighlight">\(\sin(\delta\phi)\)</span>, which means we have double the period to <span class="math notranslate nohighlight">\(4\pi\)</span>. This, if observed, would be a clear signature of Majorana modes.</p>
+<p>where the plus sign is for <span class="math notranslate nohighlight">\(n_f=1\)</span> and the minus is for <span class="math notranslate nohighlight">\(n_f=0\)</span>. Note that <span class="math notranslate nohighlight">\(n_f\)</span> is conserved so we can’t go between the branches. This is the fractional Josephson effect. The reason for the name is that the current is proportional to <span class="math notranslate nohighlight">\((e/h)\)</span> rather than <span class="math notranslate nohighlight">\((2e/h)\)</span>, so we can think of a fraction of a Cooper pair being transmitted. Perhaps more importantly is that the current is proportional to <span class="math notranslate nohighlight">\(\sin(\delta\phi/2)\)</span> rather than <span class="math notranslate nohighlight">\(\sin(\delta\phi)\)</span>, which means we have doubled the period to <span class="math notranslate nohighlight">\(4\pi\)</span>. This, if observed, would be a clear signature of Majorana modes.</p>
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">10.4. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>The original observation of topological insulators represented a key breakthrough in the study of topological physics and has led to many further studies. The path to observe Majoranas has been more challenging and there are other experiments that we have not had time to cover here, particularly interferometry style experiments which aim to probe the non-Abelian statistics of Majoranas more directly. Despite many different experimental avenues being explored,results claiming to have observed Majoranas are still contested and we still don’t have conclusive evidence of their existence. Their detection, however, is still an active area of research, particularly due to their proposed use in topological quantum computation.</p>
+</section>
+<hr class="docutils" />
+<section id="references">
+<h2><span class="section-number">10.5. </span>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id11">
+<div role="list" class="citation-list">
+<div class="citation" id="id33" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">Ali12</a><span class="fn-bracket">]</span></span>
+<p>Jason Alicea. New directions in the pursuit of majorana fermions in solid state systems. <em>Reports on Progress in Physics</em>, 75(7):076501, jun 2012. URL: <a class="reference external" href="https://doi.org/10.1088/0034-4885/75/7/076501">https://doi.org/10.1088/0034-4885/75/7/076501</a>, <a class="reference external" href="https://doi.org/10.1088/0034-4885/75/7/076501">doi:10.1088/0034-4885/75/7/076501</a>.</p>
+</div>
+<div class="citation" id="id43" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BHZ06<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<p>B. Andrei Bernevig, Taylor L. Hughes, and Shou-Cheng Zhang. Quantum spin hall effect and topological phase transition in hgte quantum wells. <em>Science</em>, 314(5806):1757–1761, 2006. URL: <a class="reference external" href="https://www.science.org/doi/abs/10.1126/science.1133734">https://www.science.org/doi/abs/10.1126/science.1133734</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/science.1133734">arXiv:https://www.science.org/doi/pdf/10.1126/science.1133734</a>, <a class="reference external" href="https://doi.org/10.1126/science.1133734">doi:10.1126/science.1133734</a>.</p>
+</div>
+<div class="citation" id="id46" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">DS23</a><span class="fn-bracket">]</span></span>
+<p>Sankar Das Sarma. In search of majorana. <em>Nature Physics</em>, 19(2):165–170, 2023.</p>
+</div>
+<div class="citation" id="id41" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Dat95</a><span class="fn-bracket">]</span></span>
+<p>S. Datta. <em>Electronic Transport in Mesoscopic Systems</em>. Cambridge Studies in Semiconductor Physics and Microelectronic Engineering. Cambridge University Press, Cambridge, 1995. <a class="reference external" href="https://doi.org/10.1017/CBO9780511805776">doi:10.1017/CBO9780511805776</a>.</p>
+</div>
+<div class="citation" id="id42" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Ihn09</a><span class="fn-bracket">]</span></span>
+<p>T. Ihn. <em>Semiconductor Nanostructures: Quantum states and electronic transport</em>. Oxford University Press, Oxford, 2009. ISBN 9780199534425. URL: <a class="reference external" href="https://doi.org/10.1093/acprof:oso/9780199534425.001.0001">https://doi.org/10.1093/acprof:oso/9780199534425.001.0001</a>, <a class="reference external" href="https://doi.org/10.1093/acprof:oso/9780199534425.001.0001">doi:10.1093/acprof:oso/9780199534425.001.0001</a>.</p>
+</div>
+<div class="citation" id="id48" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">JMD+14</a><span class="fn-bracket">]</span></span>
+<p>Gregor Jotzu, Michael Messer, Rémi Desbuquois, Martin Lebrat, Thomas Uehlinger, Daniel Greif, and Tilman Esslinger. Experimental realization of the topological haldane model with ultracold fermions. <em>Nature</em>, 515(7526):237–240, 2014.</p>
+</div>
+<div class="citation" id="id38" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>KWB+07<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>Markus König, Steffen Wiedmann, Christoph Brüne, Andreas Roth, Hartmut Buhmann, Laurens W. Molenkamp, Xiao-Liang Qi, and Shou-Cheng Zhang. Quantum spin hall insulator state in hgte quantum wells. <em>Science</em>, 318(5851):766–770, 2007. URL: <a class="reference external" href="https://www.science.org/doi/abs/10.1126/science.1148047">https://www.science.org/doi/abs/10.1126/science.1148047</a>, <a class="reference external" href="https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/science.1148047">arXiv:https://www.science.org/doi/pdf/10.1126/science.1148047</a>, <a class="reference external" href="https://doi.org/10.1126/science.1148047">doi:10.1126/science.1148047</a>.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">LF12</a><span class="fn-bracket">]</span></span>
+<p>Martin Leijnse and Karsten Flensberg. Introduction to topological superconductivity and majorana fermions. <em>Semiconductor Science and Technology</em>, 27(12):124003, nov 2012. URL: <a class="reference external" href="https://doi.org/10.1088/0268-1242/27/12/124003">https://doi.org/10.1088/0268-1242/27/12/124003</a>, <a class="reference external" href="https://doi.org/10.1088/0268-1242/27/12/124003">doi:10.1088/0268-1242/27/12/124003</a>.</p>
+</div>
+<div class="citation" id="id47" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">LLWS10</a><span class="fn-bracket">]</span></span>
+<p>Xiong-Jun Liu, Xin Liu, Congjun Wu, and Jairo Sinova. Quantum anomalous hall effect with cold atoms trapped in a square lattice. <em>Phys. Rev. A</em>, 81:033622, Mar 2010. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevA.81.033622">https://link.aps.org/doi/10.1103/PhysRevA.81.033622</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevA.81.033622">doi:10.1103/PhysRevA.81.033622</a>.</p>
+</div>
+<div class="citation" id="id44" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">NLGM20</a><span class="fn-bracket">]</span></span>
+<p>J. Nakamura, S. Liang, G. C. Gardner, and M. J. Manfra. Direct observation of anyonic braiding statistics. <em>Nature Physics</em>, 16(9):931–936, 2020.</p>
+</div>
+<div class="citation" id="id45" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">SFN15</a><span class="fn-bracket">]</span></span>
+<p>Sankar Das Sarma, Michael Freedman, and Chetan Nayak. Majorana zero modes and topological quantum computation. <em>npj Quantum Information</em>, 1(1):15001, 2015.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">SA17</a><span class="fn-bracket">]</span></span>
+<p>Masatoshi Sato and Yoichi Ando. Topological superconductors: a review. <em>Reports on Progress in Physics</em>, 80(7):076501, may 2017. URL: <a class="reference external" href="https://doi.org/10.1088/1361-6633/aa6ac7">https://doi.org/10.1088/1361-6633/aa6ac7</a>, <a class="reference external" href="https://doi.org/10.1088/1361-6633/aa6ac7">doi:10.1088/1361-6633/aa6ac7</a>.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">SF16</a><span class="fn-bracket">]</span></span>
+<p>Masatoshi Sato and Satoshi Fujimoto. Majorana fermions and topology in superconductors. <em>Journal of the Physical Society of Japan</em>, 85(7):072001, 2016. URL: <a class="reference external" href="https://doi.org/10.7566/JPSJ.85.072001">https://doi.org/10.7566/JPSJ.85.072001</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.7566/JPSJ.85.072001">arXiv:https://doi.org/10.7566/JPSJ.85.072001</a>, <a class="reference external" href="https://doi.org/10.7566/JPSJ.85.072001">doi:10.7566/JPSJ.85.072001</a>.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -590,6 +680,15 @@ I = \frac{2e}{\hbar}\frac{{\rm d}E}{{\rm d}(\delta\phi)} = \pm \frac{e\Gamma}{\h
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture9.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Topological Quantum Computation</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -606,19 +705,20 @@ I = \frac{2e}{\hbar}\frac{{\rm d}E}{{\rm d}(\delta\phi)} = \pm \frac{e\Gamma}{\h
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-dimensional-electron-gas-2deg">The two-dimensional electron gas (2DEG)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">Topological Insulators</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">Mercury Telluride</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">Band Inversion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-dimensional-electron-gas-2deg">10.1. The two-dimensional electron gas (2DEG)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-insulators">10.2. Topological Insulators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mercury-telluride">10.2.1. Mercury Telluride</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#band-inversion">10.2.2. Band Inversion</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">Topological Superconductors</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">Engineering Topological Superconductors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">Zero-bias conductance</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">Fractional Josephson Effect</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-superconductors">10.3. Topological Superconductors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engineering-topological-superconductors">10.3.1. Engineering Topological Superconductors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-bias-conductance">10.3.2. Zero-bias conductance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-josephson-effect">10.3.3. Fractional Josephson Effect</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">10.4. Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">10.5. References</a></li>
 </ul>
   </nav></div>
 

@@ -195,6 +195,8 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">6. Introduction to Anyons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">7. Topological Quantum Field Theory: Fusion and Braiding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture8.html">8. Topological Quantum Field Theory: Braiding and modular S and T</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture9.html">9. Topological Quantum Computation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture10.html">10. Experiments</a></li>
 </ul>
 
     </div>
@@ -375,11 +377,11 @@ document.write(`
 <section id="topological-phases-of-matter-an-overview">
 <h2><span class="section-number">1.1. </span>Topological Phases of Matter - An Overview<a class="headerlink" href="#topological-phases-of-matter-an-overview" title="Link to this heading">#</a></h2>
 <p>The role of topology in condensed matter physics has been a key area of research in recent years with a key motivator being the desire to further our classification of phases of matter. ‘Traditional’ phases of matter are characterised by a local order parameter which we can use to identify the phase. Transitions to more ordered states then involve the breaking of a symmetry. This is the Ginzburg-Landau theory of spontaneous symmetry breaking and underpins many of the phase transitions we are familiar with <span id="id1">[<a class="reference internal" href="#id17" title="Piers Coleman. Introduction to Many-Body Physics. Cambridge University Press, Cambridge, UK, 2015.">Col15</a>, <a class="reference internal" href="#id16" title="Michael Tinkham. Introduction to Superconductivity. Dover Publications, New York, 2004.">Tin04</a>]</span> - for example, magnetisation, superconductors and the water phase diagram.</p>
-<figure class="align-default" id="id37">
+<figure class="align-default" id="id47">
 <a class="reference internal image-reference" href="../../_images/SSB.svg"><img alt="../../_images/SSB.svg" src="../../_images/SSB.svg" style="width: 100%; height: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Spontaneous symmetry breaking in a superconductor leads to a non-zero superconducting density below the transition temperature.</span><a class="headerlink" href="#id37" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Spontaneous symmetry breaking in a superconductor leads to a non-zero superconducting density below the transition temperature.</span><a class="headerlink" href="#id47" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>However not all phases of matter are characterised by a local parameter, examples of which are the topological phases that will be discussed in this course (as well as those that go beyond the scope of these introductory lectures). In particular we will consider three classes</p>
@@ -389,11 +391,11 @@ document.write(`
 <li><p>Topologically ordered states</p></li>
 </ul>
 <p>A simplistic view of a topological state is that it remains the same under continuous deformations - the classic example is that a coffee cup is the same as a doughnut, with the characterisation being that they have the same number of holes.</p>
-<figure class="align-default" id="id38">
+<figure class="align-default" id="id48">
 <a class="reference internal image-reference" href="../../_images/CoffeeCup_Doghnut.gif"><img alt="../../_images/CoffeeCup_Doghnut.gif" src="../../_images/CoffeeCup_Doghnut.gif" style="width: 100%; height: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">A coffee cup is topologically equivalent to a doughnut. <span id="id2">[<a class="reference internal" href="#id13" title="File:mug and torus morph.gif. https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif. Accessed: 2026-01-26.">Top</a>]</span></span><a class="headerlink" href="#id38" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">A coffee cup is topologically equivalent to a doughnut. <span id="id2">[<a class="reference internal" href="#id13" title="File:mug and torus morph.gif. https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif. Accessed: 2026-01-26.">Top</a>]</span></span><a class="headerlink" href="#id48" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In quantum mechanics the topology is often viewed as continuous deformations of the Hamiltonian and providing a gap in the spectrum is not closed then a phase transition does not occur. In this way we have topologically protected states.</p>
@@ -402,11 +404,11 @@ document.write(`
 <h2><span class="section-number">1.2. </span>The Quantum Hall Effect<a class="headerlink" href="#the-quantum-hall-effect" title="Link to this heading">#</a></h2>
 <p>One of the early examples of using topology to explain physical phenomena came in the form of the integer quantum Hall effect. We will introduce it here and focus on the links to topology, but for a more complete overview, see <span id="id3">[<a class="reference internal" href="#id15" title="David Tong. Lectures on the quantum hall effect. 2016. URL: https://arxiv.org/abs/1606.06687, arXiv:1606.06687.">Ton16</a>]</span>.</p>
 <p>The integer quantum Hall effect was first measured in 1980 <span id="id4">[<a class="reference internal" href="#id18" title="K. v. Klitzing, G. Dorda, and M. Pepper. New method for high-accuracy determination of the fine-structure constant based on quantized hall resistance. Phys. Rev. Lett., 45:494–497, Aug 1980. URL: https://link.aps.org/doi/10.1103/PhysRevLett.45.494, doi:10.1103/PhysRevLett.45.494.">KDP80</a>]</span>, with typical experimental results being shown below.</p>
-<figure class="align-default" id="id39">
+<figure class="align-default" id="id49">
 <a class="reference internal image-reference" href="../../_images/IQHE.svg"><img alt="../../_images/IQHE.svg" src="../../_images/IQHE.svg" style="width: 100%; height: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Experimental results for the Integer quantum Hall effect. Figure from <span id="id5">[<a class="reference internal" href="#id14" title="B Jeckelmann and B Jeanneret. The quantum hall effect as an electrical resistance standard. Reports on Progress in Physics, 64(12):1603, nov 2001. URL: https://doi.org/10.1088/0034-4885/64/12/201, doi:10.1088/0034-4885/64/12/201.">JJ01</a>]</span></span><a class="headerlink" href="#id39" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Experimental results for the Integer quantum Hall effect. Figure from <span id="id5">[<a class="reference internal" href="#id14" title="B Jeckelmann and B Jeanneret. The quantum hall effect as an electrical resistance standard. Reports on Progress in Physics, 64(12):1603, nov 2001. URL: https://doi.org/10.1088/0034-4885/64/12/201, doi:10.1088/0034-4885/64/12/201.">JJ01</a>]</span></span><a class="headerlink" href="#id49" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The experiments are performed on a two-dimensional semiconducting structure (often referred to as a 2d electron gas, or 2DEG). A voltage is applied in the <span class="math notranslate nohighlight">\(x\)</span>-direction and then in the presence of a magnetic field, a current is observed in the <span class="math notranslate nohighlight">\(y\)</span>-direction too. In the integer quantum Hall effect, we find that in a disordered system there are plateaus in the Hall resistance (the resistance in the <span class="math notranslate nohighlight">\(y\)</span>-direction). These have a height (if we consider resistivity rather than resistance) of</p>
@@ -428,11 +430,11 @@ document.write(`
 <section id="classical-hall-effect">
 <h2><span class="section-number">1.3. </span>Classical Hall Effect<a class="headerlink" href="#classical-hall-effect" title="Link to this heading">#</a></h2>
 <p>Let’s begin with a discussion of the classical Hall effect. The setup is similar. We consider a 2d metal with an in-plane electric field and a magnetic field perpendicular, <span class="math notranslate nohighlight">\({\boldsymbol B} = B_z \hat{\boldsymbol z}\)</span> to the sample.</p>
-<figure class="align-default" id="id40">
+<figure class="align-default" id="id50">
 <a class="reference internal image-reference" href="../../_images/HallEffect.svg"><img alt="../../_images/HallEffect.svg" src="../../_images/HallEffect.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Setup for the classical Hall effect.</span><a class="headerlink" href="#id40" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Setup for the classical Hall effect.</span><a class="headerlink" href="#id50" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The equation of motion for the electrons is given by</p>
@@ -461,11 +463,11 @@ m\dot{\boldsymbol v} = -e{\boldsymbol E} - e{\boldsymbol v}\times {\boldsymbol B
 E_n = \hbar \omega_{\rm c}(n+\tfrac{1}{2})
 \]</div>
 <p>This looks like the harmonic oscialltor, however the levels here are highly degenerate, with the number of degenerate levels being given by <span class="math notranslate nohighlight">\(N=eB_z L^2/h\)</span>. We can break this degeneracy using an electric field</p>
-<figure class="align-default" id="id41">
+<figure class="align-default" id="id51">
 <a class="reference internal image-reference" href="../../_images/LandauLevels.svg"><img alt="../../_images/LandauLevels.svg" src="../../_images/LandauLevels.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.5 </span><span class="caption-text">The degeneracy of the Landau levels is lifted by the presence of an electric field.</span><a class="headerlink" href="#id41" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.5 </span><span class="caption-text">The degeneracy of the Landau levels is lifted by the presence of an electric field.</span><a class="headerlink" href="#id51" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The velocity associated with these modes is then propotional to the gradient which is given by <span class="math notranslate nohighlight">\(-(E_x/B_z)\)</span>. Therefore we have</p>
@@ -549,11 +551,11 @@ C = \frac{1}{2\pi}\int_{BZ}\Omega({\boldsymbol k}) \hspace{2pt} {\rm d}{\bf k}
 <section id="edge-modes">
 <h3><span class="section-number">1.6.1. </span>Edge Modes<a class="headerlink" href="#edge-modes" title="Link to this heading">#</a></h3>
 <p>There is also an additional remark we wish to make about this result. This is that a non-zero Chern number corresponds to the presence of gapless edge modes (<span class="math notranslate nohighlight">\(C\)</span> of them to be precise) due a result known as the bulk-boundary correspondence. It is easy to see why the quantum Hall system might host these and how they might contribute to the conductivity even in the semiclassical picture. In the bulk of the system we know that we have cyclotron orbits. Now, near the edge of the system, these orbit must give rise to so-called `skipping orbits’, which can carry current across the system. Such a result can also be explained in the Landau level picture, but this topological approach makes clear their presence, importance and robustness. We will encounter edge modes further in the coming lectures.</p>
-<figure class="align-default" id="id42">
+<figure class="align-default" id="id52">
 <a class="reference internal image-reference" href="../../_images/SkippingOrbits.svg"><img alt="../../_images/SkippingOrbits.svg" src="../../_images/SkippingOrbits.svg" style="width: 100%; height: 200px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.6 </span><span class="caption-text">A semiclassical view of the edge modes. Cyclotron modes near the edge of the sample result in modes that propagate along the edge.</span><a class="headerlink" href="#id42" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.6 </span><span class="caption-text">A semiclassical view of the edge modes. Cyclotron modes near the edge of the sample result in modes that propagate along the edge.</span><a class="headerlink" href="#id52" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

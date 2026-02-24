@@ -9,16 +9,16 @@ Recall that at the start of this course, we looked at the intger quantum Hall ef
 The typical system in which this effect is measured is a semiconducting heterostructure that allows the formation of a two-dimensional electron gas (commonly referred to as a 2DEG).
 Simple models of semiconductors consist of a filled valence band and an empty conduction band. The two bands are separated by a band gap, with the Fermi energy (below which electronic states are filled at zero temperature) typically sitting within the band gap.
 
-In order to form a 2DEG experimentally, two semiconductors with different band gaps and Fermi energies are brought together. At the interface electrons flow from the semiconductor with the larger Fermi energy to the one with the lower Fermi energy. This flow of electrons leaves behind positively charged ions and therefore an electric field is created. This field bends the bands creating a narrow `well' at the interface in which the electron gas sits - this is a 2DEG.
+In order to form a 2DEG experimentally, two semiconductors with different band gaps and Fermi energies are brought together. At the interface electrons flow from the semiconductor with the larger Fermi energy to the one with the lower Fermi energy. This flow of electrons leaves behind positively charged ions and therefore an electric field is created {cite}`Datta`. This field bends the bands creating a narrow well at the interface in which the electron gas sits - this is a 2DEG.
 
 ```{figure} ../../_static/figs/2DEG.svg
 :width: 100%
 :height: 200
 
-A semiconducting heterostructure (left) can be used to create a two-dimensional electron gas, which sits at the `well' created by the bands bending (right).
+A semiconducting heterostructure (left) can be used to create a two-dimensional electron gas, which sits at the well created by the bands bending (right) Figure from {cite}`IhnBook`.
 ```
 
-Semiconducting heterostructures are common experimental setups for a variety of reasons, some more practical such as being readily available, affordable and therefore can be used in applications. From a more scientifc point of view they are well understood, their properties can be tuned (for example using gate voltages and doping), and they can also be used in the creation of very clean samples, which can be extremely useful in solid state physics even if it is not desired for the integer quantum Hall effect. A common class of experiments performed using 2DEGs are transport experiments where leads are attached to the sample and quantities such as currents and voltages are measured.
+Semiconducting heterostructures are common experimental setups for a variety of reasons, some more practical such as being readily available, affordable and therefore can be used in applications. From a more scientfic point of view they are well understood, their properties can be tuned (for example using gate voltages and doping), and they can also be used in the creation of very clean samples, which can be extremely useful in solid state physics even if it is not desired for the integer quantum Hall effect. A common class of experiments performed using 2DEGs are transport experiments where leads are attached to the sample and quantities such as currents and voltages are measured.
 
 
 ## Topological Insulators
@@ -29,17 +29,22 @@ Many of the models we saw in previous lectures, such as the Haldane and Kane-Mel
 
 ### Mercury Telluride
 
-The first example of a topological insulator was in mercury telluride heterostructures. These consisted of mercury telluride in conjunction with cadmium telluride.
+The first example of a topological insulator was in mercury telluride heterostructures {cite}`BHZ_Science, QSHExpt`. These consisted of mercury telluride in conjunction with cadmium telluride.
 
 Cadmium telluride is a standard semiconductor in that it has an "s-wave" band (called the E1 band), with angular momentum states $(-\tfrac{1}{2}, \tfrac{1}{2})$ at a higher energy than a "p-wave" band (the H1 band) which has angular momentum states $(-\tfrac{3}{2}, -\tfrac{1}{2}, \tfrac{1}{2}, \tfrac{3}{2})$. Mercury telluride has an inverted structure where the energy levels are the other way round.
 
 When the two are brought together to form a quantum well, the ordering of the levels depends on the width of the well formed. Below a critical width, $w_c\sim 6-7 {\rm nm}$, the ordering is that of a conventional semiconductor and we have a topologically trivial regime. However, as the width of the well is increased beyond the critical value, the energy ordering of the bands switches or inverts and we are left with a topological regime. 
 
-<span style="color:red">Insert Figure</span>
+```{figure} ../../_static/figs/InvertedWell.svg
+:width: 100%
+:height: 300
+
+Band inversion occurs for wide quantum wells.
+```
 
 ### Band Inversion
 
-In order to understand why the inverted regime is topological we need to understand what is happening in the band inversion process. 
+In order to understand why the inverted regime is topological we need to understand what is happening in the band inversion process {cite}`BHZ_Science`. 
 
 To start with, recall that the Dirac equation is given by 
 
@@ -53,7 +58,7 @@ $$
 \Delta\sigma_{xy}=\frac{e^2}{h}
 $$
 
-Therefore if one of the regimes has no Hall conductance and a Chern number of 0 and we change the mass parameter across the transition, the Hall conductance will change to a regime with a Chern number of 1. The inversion of the mass parameter leads to a topological phase trnasition.
+Therefore if one of the regimes has no Hall conductance and a Chern number of 0 and we change the mass parameter across the transition, the Hall conductance will change to a regime with a Chern number of 1. The inversion of the mass parameter leads to a topological phase transition.
 
 This is key in understanding the band inversion process in the quantum well. In this instance the Hamiltonian can be expressed near the $\Gamma$ point $\big[(k_x, k_y)=(0,0)\big]$ in the form
 
@@ -91,34 +96,40 @@ $$
 \begin{align*}\Delta \sigma_{xy}^{(e)} &= \Delta \sigma_{xy}^{\uparrow} +  \Delta \sigma_{xy}^{\downarrow}=0\\ \Delta \sigma_{xy}^{(s)} &= \Delta \sigma_{xy}^{\uparrow} -  \Delta \sigma_{xy}^{\downarrow}=\frac{2e^2}{h}\end{align*}
 $$
 
-Such an effect can be detected experimentally 
+Such an effect can be detected experimentally, as shown below for samples III and IV. 
 
 ```{figure} ../../_static/figs/QSH_Expt.svg
 :width: 100%
 :height: 300
 
+Experimental observation of the quantum spin Hall effect. This is particularly clear in samples III and IV. Figure from {cite}`QSHExpt`
 ```
 
 ```{note}
-There are alternatives to the solid state setup described here, although we won't go into much detial. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this cases, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised. 
+There are alternatives to the solid state setup described here, although we won't go into much detail. One key alternative is the use of optical lattices in systems of cold atoms, which allow for a large degree of control as well as a clean system. In this case, magnetic fields are not required and lasers can be used to manipulate/drive the lattice. This can lead to complex couplings/hoppings and the Haldane and Kane-Mele models can be realised {cite}`ColdAtomsExpt, OpticalLatticeExpt`. 
 ```
 ## Topological Superconductors
 
 Now we wish to look at experimental implementations of topological superconductors. These are of particular interest at the moment due to the prediction of Majorana zero modes which can be used in implementations of quantum computing. 
 
 ```{note}
-Majorana modes are not unique to topological superconductors. They are also predicted to occur in the Fractional Quantum Hall Effect (FQHE). In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of $e^2/h$ (which can be viewed as having a fractional filling factor, $\nu$.) 
+Majorana modes are not unique to topological superconductors {cite}`MZM_TQC`. They are also predicted to occur in the Fractional Quantum Hall Effect (FQHE). In the FQHE, the setup is similar to the integer quantum Hall effect we came across at the beginning of this course, except now electron-electron interactions must additionally be considered. Whilst the particular microscopic mechanisms for this are an active area of research, what is clear is that there are robust plateaus in the conductance at fractional values of $e^2/h$ (which can be viewed as having a fractional filling factor, $\nu$). 
 
-Abelian anyons have been observed in the $\nu=\tfrac{1}{3}$ state through observation of the braiding statistics, no such confirmation has occured for Majorana modes, which are predicted in the $\nu=\tfrac{5}{2}$ state. 
+Abelian anyons have been observed in the $\nu=\tfrac{1}{3}$ state through observation of the braiding statistics {cite}`FQHE_Anyons`, no such confirmation has occured for Majorana modes, which are predicted in the $\nu=\tfrac{5}{2}$ state. 
 ```
 
 ### Engineering Topological Superconductors
 
-Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a $p$-wave topological superconductor is using a semiconducting heterostructure. 
+Naturally occuring unconventional superconductors are still an active area of research and often a more controllable way to realise a $p$-wave topological superconductor is using a semiconducting heterostructure (see {cite}`AliceaReview, LeijnseFlensberg, SatoReview, SatoReview2` for reviews on the setup and signatures). 
 
-In particular a semiconductor with spin-orbit coupling is placed in conjuction with an $s$-wave superconductor. Along with a magnetic field, this allows the $p$-wave pairing to occur
+In particular a semiconductor with spin-orbit coupling is placed in conjuction with an $s$-wave superconductor. Along with a magnetic field, this allows the $p$-wave pairing to occur. We show this below by considering how the band structure changes. 
 
-<span style="color:red">Insert Figs</span>
+```{figure} ../../_static/figs/TSC_Engineered.svg
+:width: 100%
+:height: 400
+
+Semiconductor heterostructures can be used to engineer topological superconductivity.
+```
 
 Once the samples have been created, it is necessary to have ways to detect Majoranas. Measuring braiding statistics directly using interferometry-style experiments is difficult in solid state setups, and so alternative transport experiments are preferred.
 
@@ -131,8 +142,14 @@ Consider a one-dimensional setup (although the argumets here generalise to two d
 ```{note}
 Normal reflection is a standard reflection process. An electron comes in and doesn't have enough energy to enter the superconductor. It is simply reflected back in the direction it came. Andreev reflection is specific to a superconductor where at the interface, an electron can be reflected as a hole, and a Cooper pair then propagagtes in the superconductor.
 
-<span style="color:red">Insert Fig</span>
+```{figure} ../../_static/figs/Andreev.svg
+:width: 100%
+:height: 100
+
+Normal and Andreev reflection.
 ```
+
+
 
 Since the Andreev reflection results in the propagation of a Copper pair, it is this process that facilitates a current passing through the system, with the current depending on the probability of Andreev reflection to occur, $|S_{he}|^2$,
 
@@ -142,7 +159,12 @@ $$
 
 Since we are interested in a zero bias peak in the conductance (the analysis can be done for finite $V$ but it is beyond this course), we therefore nned to calculate the probability of Andreev reflection at zero energy. To do this we use the S-matrix which links the incoming to outgoing states.  
 
-<span style="color:red">Insert Fig</span>
+```{figure} ../../_static/figs/ScatteringStates.svg
+:width: 100%
+:height: 100
+
+The incoming and outgoing states, as defined in the scattering problem.
+```
 
 $$
 \Psi_{\rm out} = S \Psi_{\rm in} \implies \left(\begin{matrix} e \\ h \end{matrix}\right)_{\rm out} = \left(\begin{matrix} S_{ee} & S_{eh} \\ S_{he} & S_{hh} \end{matrix}\right)\left(\begin{matrix} e \\ h \end{matrix}\right)_{\rm in}
@@ -168,7 +190,7 @@ $$
  G(V=0) = \frac{2e^2}{h}
 $$
 
-Some groups have reported measurements of this peak suggesting the observation of Majoranas, however it turns out that similar peaks can be caused by low-energy modes that arise due to disorder in the system. A definitive measurement of Majorana zero modes is still sought after.
+Some groups have reported measurements of this peak suggesting the observation of Majoranas, however it turns out that similar peaks can be caused by low-energy modes that arise due to disorder in the system. A definitive measurement of Majorana zero modes is still sought after {cite}`DasSarma_Expt_Review`.
 
 
 ### Fractional Josephson Effect
@@ -177,8 +199,6 @@ A more conclusive signature would be the observation of the fractional Joesphson
 
 ```{note}
 The standard Josephson effect considers two superconductors separated by a tunnel barrier. 
-
-<span style="color:red">Insert Fig</span>
 
 The order parameters for these can be expressed in the form $\psi_i = \sqrt{n_i}{\rm e}^{i\phi_i}$, where $n_i$ is the number density of Cooper pairs. The phase difference $\delta\phi=\phi_R-\phi_L$ results in a current flowing between the superconductors
 
@@ -229,9 +249,19 @@ $$
 I = \frac{2e}{\hbar}\frac{{\rm d}E}{{\rm d}(\delta\phi)} = \pm \frac{e\Gamma}{\hbar}\sin \left(\frac{\delta\phi}{2}\right)
 $$
 
-where the plus sign is for $n_f=1$ and the minus is for $n_f=0$. Note that $n_f$ is conserved so we can't go between the branches. This is the fractional Josephson effect. The reason for the name is that the current is proportional to $(e/h)$ rather than $(2e/h)$, so we can think of a fraction of a Cooper pair being transmitted. Perhaps more importantly is that the current is proportional to $\sin(\delta\phi/2)$ rather than $\sin(\delta\phi)$, which means we have double the period to $4\pi$. This, if observed, would be a clear signature of Majorana modes.
+where the plus sign is for $n_f=1$ and the minus is for $n_f=0$. Note that $n_f$ is conserved so we can't go between the branches. This is the fractional Josephson effect. The reason for the name is that the current is proportional to $(e/h)$ rather than $(2e/h)$, so we can think of a fraction of a Cooper pair being transmitted. Perhaps more importantly is that the current is proportional to $\sin(\delta\phi/2)$ rather than $\sin(\delta\phi)$, which means we have doubled the period to $4\pi$. This, if observed, would be a clear signature of Majorana modes.
 
 
 ## Summary
 
 The original observation of topological insulators represented a key breakthrough in the study of topological physics and has led to many further studies. The path to observe Majoranas has been more challenging and there are other experiments that we have not had time to cover here, particularly interferometry style experiments which aim to probe the non-Abelian statistics of Majoranas more directly. Despite many different experimental avenues being explored,results claiming to have observed Majoranas are still contested and we still don't have conclusive evidence of their existence. Their detection, however, is still an active area of research, particularly due to their proposed use in topological quantum computation. 
+
+
+---
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
